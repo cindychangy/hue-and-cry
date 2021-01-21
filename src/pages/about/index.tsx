@@ -1,10 +1,11 @@
 import React from 'react'
-import { Box, Typography } from 'components/atoms'
+import { Box, Typography, SubHeading } from 'components/atoms'
 
 const About = () => {
   return (
     <Box>
       <Typography variant="h1">About Page</Typography>
+      <SubHeading text="I am a subheading" />
     </Box>
   );
 };

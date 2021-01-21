@@ -1,9 +1,6 @@
 import React from 'react'
+import Home  from './home'
 
-export default function Home() {
-  return (
-    <div>
-      <h1>Hue and Cry Blog!</h1>
-    </div>
-  )
-}
+const Index = () => <Home />
+
+export default Index;
