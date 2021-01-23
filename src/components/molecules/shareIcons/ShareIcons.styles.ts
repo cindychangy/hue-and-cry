@@ -3,19 +3,23 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(({ palette }) => ({
   shareContainer: {
     display: 'flex',
-    justifyContent: 'center',
+    alignContent: 'center',
+    paddingTop: '8px',
   },
   button: {
-    border: '2px solid #e3e6e6',
+    border: '1px solid #d8d8d8',
     marginRight: '6px',
     opacity: 1,
+    height: '35px',
+    width: '35px',
+    color: palette.text.primary,
 
     '&:hover': {
       background: 'transparent',
-      border: '2px solid #d2d2d2',
+      border: '1px solid #e8e8e8',
     },
-    '& > svg': {
-      fontSize: '20px',
+    '& svg': {
+      fontSize: '1rem',
     }
   },
   attachement: {

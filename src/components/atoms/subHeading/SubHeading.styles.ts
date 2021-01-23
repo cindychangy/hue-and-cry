@@ -5,5 +5,6 @@ export const useStyles = makeStyles(({ palette }) => ({
     color: palette.primary.main,
     textTransform: 'uppercase',
     fontWeight: 500,
+    marginBottom: '10px',
   },
 }));

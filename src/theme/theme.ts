@@ -1,17 +1,19 @@
 import { createMuiTheme }  from '@material-ui/core/styles'
+import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
+
+const breakpoints = createBreakpoints({})
 
 const theme = createMuiTheme({
   palette: {
     primary: {
       main: '#F86F35',
       light: '#FBF1E9',
-
     },
     secondary: {
       main: '#f0f0f0'
     },
     text: {
-      primary: '#151A1F'
+      primary: '#333'
     },
   },
   typography: {
@@ -20,7 +22,10 @@ const theme = createMuiTheme({
     h1: {
       fontFamily: "'gilroy-extrabold', sans-serif",
       fontSize: '4.5rem',
-      lineHeight: 0.9,
+      lineHeight: 1,
+      [breakpoints.down('sm')]: {
+        fontSize: '2.5rem',
+      },
     },
     h2: {
       fontFamily: "'gilroy-extrabold', sans-serif",
@@ -34,14 +39,15 @@ const theme = createMuiTheme({
       lineHeight: 1,
     },
     h4: {
-      fontFamily: "'gilroy-light', sans-serif",
+      fontFamily: "'gilroy-medium', sans-serif",
       fontSize: '1rem',
       lineHeight: 1,
     },
     h5: {
-      fontFamily: "'gilroy-light', sans-serif",
-      fontSize: '0.8rem',
+      fontFamily: "'gilroy-medium', sans-serif",
+      fontSize: '0.85rem',
       lineHeight: 1,
+      letterSpacing: 1.3,
     },
   }
 })
