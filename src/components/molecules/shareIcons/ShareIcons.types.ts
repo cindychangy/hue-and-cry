@@ -1,4 +1,4 @@
 
 export type SubHeadingProps = {
-  text: string;
+  heading: string;
 }

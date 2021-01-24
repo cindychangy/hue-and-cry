@@ -23,7 +23,7 @@ export const ArticleHero = ({ category, title, bgImage, featureImage }: ArticleH
       <Box className={classes.blockColor}>
         <Box className={classes.blockText}>
           <SubHeading 
-            text={category} 
+            heading={category} 
           />
           <Typography variant="h1">
             {title}

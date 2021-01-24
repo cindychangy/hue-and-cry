@@ -1,18 +1,16 @@
 import React from 'react'
-import { Box, Typography } from 'components/atoms'
+import { Box, Typography, Divider } from 'components/atoms'
 
 import { useStyles } from './SectionHeading.styles';
 import { SectionHeadingProps } from './SectionHeading.types';
 
-export const SectionHeading = ({ title, icon }: SectionHeadingProps) => {
+export const SectionHeading = ({ heading }: SectionHeadingProps) => {
   const classes = useStyles();
 
   return (
-    <Box className={classes.container}>
-      <Typography variant="h3">{title}</Typography>
-      <Box className={classes.icon}>
-        {icon}
-      </Box>
+    <Box>
+      <Divider className={classes.divider} />
+      <Typography variant="h3">{heading}</Typography>
     </Box>
   )
 }

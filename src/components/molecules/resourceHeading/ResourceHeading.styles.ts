@@ -1,9 +1,11 @@
 import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(() => ({
-  text: {
-    fontFamily: '"gilroy-medium", sans-serif',
-    fontSize: '0.9rem',
-    marginTop: '5px',
+  container: {
+    display: 'flex',
+    alignContent: 'center',
   },
+  icon: {
+    marginLeft: '4px',
+  }
 }));

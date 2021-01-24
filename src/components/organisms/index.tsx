@@ -1,3 +1,5 @@
 export { CalloutBox } from './calloutBox/CalloutBox'
 export { ArticleMeta } from './articleMeta/ArticleMeta'
 export { ArticleHero } from './articleHero/ArticleHero'
+export { ArticlePreview } from './articlePreview/ArticlePreview'
+export { Footer } from './footer/Footer'

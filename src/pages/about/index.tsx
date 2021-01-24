@@ -5,7 +5,7 @@ const About = () => {
   return (
     <Box>
       <Typography variant="h1">About Page</Typography>
-      <SubHeading text="I am a subheading" />
+      <SubHeading heading="I am a subheading" />
     </Box>
   );
 };
