@@ -4,5 +4,6 @@ export const useStyles = makeStyles(({ palette }) => ({
   subHeading: {
     color: palette.primary.main,
     marginBottom: '6px',
+    
   },
 }));

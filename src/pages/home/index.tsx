@@ -54,7 +54,8 @@ const Home = () => {
       category="Murder" 
       title="The Murder of Gilory Lack"
       excerpt="On the morning of June 27, Molly had woken up to bad news as she found out a soccer..."
-      href="http://www.google.com"
+      articleLink="http://www.google.com"
+      categoryLink="http://nhl.com"
     />
     <Box mb={4}/>
 
