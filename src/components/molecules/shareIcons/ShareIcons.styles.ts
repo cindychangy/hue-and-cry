@@ -10,8 +10,8 @@ export const useStyles = makeStyles(({ palette }) => ({
     border: '1px solid #d8d8d8',
     marginRight: '6px',
     opacity: 1,
-    height: '35px',
-    width: '35px',
+    height: '42px',
+    width: '42px',
     color: palette.text.primary,
 
     '&:hover': {
@@ -19,7 +19,7 @@ export const useStyles = makeStyles(({ palette }) => ({
       border: '1px solid #e8e8e8',
     },
     '& svg': {
-      fontSize: '1rem',
+      fontSize: '1.1rem',
     }
   },
   attachement: {

@@ -10,7 +10,7 @@ export const ArticleMeta = ({ category, location, year }: ArticleMetaProps) => {
   const classes = useStyles();
 
   return (
-    <Box>
+    <Box className={classes.metaContainer}>
       <Box mb={3}>
         <Typography variant="h5" color="primary">Category</Typography>
         <Typography className={classes.text}>{category}</Typography>

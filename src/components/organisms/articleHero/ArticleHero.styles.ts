@@ -3,10 +3,15 @@ import { makeStyles } from '@material-ui/core/styles';
 export const useStyles = makeStyles(({ palette, breakpoints }) => ({
   heroContainer: {
     width: '100%',
+    height: '700px',
+    marginBottom: 0,
+    [breakpoints.down('xs')]: {
+      height: 'auto',
+      marginBottom: '40px'
+    },
   },
   blockImage: {
     position: 'absolute',
-    top: 0,
     height: '600px',
     width: '48%',
     zIndex: 2,
@@ -43,7 +48,6 @@ export const useStyles = makeStyles(({ palette, breakpoints }) => ({
     height: '650px',
     width: '60%',
     right: 0,
-    top: 0,
     zIndex: -1,
     [breakpoints.down('sm')]: {
       position: 'relative',

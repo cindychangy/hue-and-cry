@@ -7,5 +7,7 @@ export const useStyles = makeStyles(() => ({
   },
   icon: {
     marginLeft: '4px',
+    position: 'relative',
+    top: '-4px',
   }
 }));

@@ -1,6 +1,6 @@
 import { ReactNode } from 'react'
 
 export type ResourceHeadingProps = {
-  title: string;
+  heading: string;
   icon: ReactNode;
 }

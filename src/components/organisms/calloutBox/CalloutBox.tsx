@@ -11,7 +11,7 @@ export const CalloutBox = ({ helpInfo, sourcesInfo }: CalloutBoxProps) => {
   return (
     <Grid container className={classes.ctaBox}> 
       <Grid item xs={12} md={6}>
-        <Box p={4} className={classes.helpInfo}>
+        <Box className={classes.helpInfo}>
           <Typography variant="h4" className={classes.headline} gutterBottom>
             Help this Case
           </Typography>
@@ -19,7 +19,7 @@ export const CalloutBox = ({ helpInfo, sourcesInfo }: CalloutBoxProps) => {
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box p={4} className={classes.sourcesLinks}>
+        <Box className={classes.sourcesLinks}>
           <Typography variant="h4" className={classes.headline} gutterBottom>
             Sources and Links
           </Typography>
