@@ -26,6 +26,7 @@ const theme = createMuiTheme({
       fontFamily: '"Bebas Neue", sans-serif',
       fontSize: '5.625rem',
       lineHeight: 0.9,
+      textTransform: 'uppercase',
       [breakpoints.down('sm')]: {
         fontSize: '2.5rem',
       },
@@ -33,19 +34,20 @@ const theme = createMuiTheme({
     h2: {
       fontFamily: '"Bebas Neue", sans-serif',
       fontSize: '1.875rem',
+      textTransform: 'uppercase',
       lineHeight: 0.95,
     },
     h3: {
       fontFamily: '"Bebas Neue", sans-serif',
-      fontWeight: 700,
       fontSize: '1.313rem',
+      textTransform: 'uppercase',
       lineHeight: 1,
-      letterSpacing: 0.3,
     },
     h4: {
       fontFamily: "'gilroy-extrabold', sans-serif",
       fontSize: '1.2rem',
       lineHeight: 1,
+      fontWeight: 500,
     },
     h5: {
       fontFamily: "'gilroy-medium', sans-serif",
