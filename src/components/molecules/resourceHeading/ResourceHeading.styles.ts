@@ -1,13 +1,14 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles(({ spacing }) => ({
   container: {
     display: 'flex',
     alignContent: 'center',
+    marginBottom: spacing(2),
   },
   icon: {
-    marginLeft: '4px',
+    marginLeft: spacing(0.5),
     position: 'relative',
-    top: '-4px',
+    top: spacing(-0.5),
   }
 }));

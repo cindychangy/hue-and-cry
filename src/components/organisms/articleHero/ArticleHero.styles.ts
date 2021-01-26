@@ -1,18 +1,18 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ palette, breakpoints }) => ({
+export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   heroContainer: {
     width: '100%',
-    height: '700px',
+    height: spacing(87),
     marginBottom: 0,
     [breakpoints.down('xs')]: {
       height: 'auto',
-      marginBottom: '40px'
+      marginBottom: spacing(5),
     },
   },
   blockImage: {
     position: 'absolute',
-    height: '600px',
+    height: spacing(75),
     width: '48%',
     zIndex: 2,
     display: 'flex',
@@ -27,8 +27,8 @@ export const useStyles = makeStyles(({ palette, breakpoints }) => ({
   },
   featureImage: {
     overflow: 'hidden',
-    width: '450px',
-    height: '480px',
+    width: spacing(55),
+    height: spacing(55),
     objectFit: 'cover',
     [breakpoints.down('xs')]: {
       width: '100%',
@@ -45,7 +45,7 @@ export const useStyles = makeStyles(({ palette, breakpoints }) => ({
     position: 'absolute',
     background: '#151A1F',
     color: palette.common.white,
-    height: '650px',
+    height: spacing(82),
     width: '60%',
     right: 0,
     zIndex: -1,
@@ -57,12 +57,12 @@ export const useStyles = makeStyles(({ palette, breakpoints }) => ({
   },
   blockText: {
     width: '70%', 
-    marginLeft: '200px',
-    paddingRight: '20px',
+    marginLeft: spacing(30),
+    paddingRight: spacing(2.5),
     [breakpoints.down('sm')]: {
       width: '100%',
       marginLeft: 0,
-      padding: '20px',
+      padding: spacing(2.5),
     },
   }
 }));

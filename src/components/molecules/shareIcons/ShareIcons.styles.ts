@@ -1,22 +1,22 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ palette }) => ({
+export const useStyles = makeStyles(({ spacing, palette }) => ({
   shareContainer: {
     display: 'flex',
     alignContent: 'center',
-    paddingTop: '8px',
+    paddingTop: spacing(1),
   },
   button: {
-    border: '1px solid #d8d8d8',
-    marginRight: '6px',
+    border: `1px solid ${palette.grey[300]}`,
+    marginRight: spacing(0.5),
     opacity: 1,
-    height: '42px',
-    width: '42px',
+    height: spacing(6),
+    width: spacing(6),
     color: palette.text.primary,
 
     '&:hover': {
       background: 'transparent',
-      border: '1px solid #e8e8e8',
+      border: `1px solid ${palette.grey[200]}`,
     },
     '& svg': {
       fontSize: '1.1rem',

@@ -1,17 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ palette, typography, breakpoints }) => ({
+export const useStyles = makeStyles(({ palette, typography, breakpoints, spacing }) => ({
   ctaBox: {
     background: palette.primary.light,
-    padding: '30px',
+    padding: spacing(4),
     [breakpoints.down('xs')]: {
-      padding: '20px',
+      padding: spacing(2),
     },
   },
   headline: {
     color: palette.primary.main,
     fontWeight: typography.fontWeightBold,
-    marginBottom: '18px',
+    marginBottom: spacing(2),
   },
   helpInfo: {
     fontSize: '1.1rem',
@@ -20,7 +20,7 @@ export const useStyles = makeStyles(({ palette, typography, breakpoints }) => ({
     fontSize: '1rem',
     marginTop: 0,
     [breakpoints.down('xs')]: {
-      marginTop: '30px',
+      marginTop: spacing(2.5),
     },
   }
 }));

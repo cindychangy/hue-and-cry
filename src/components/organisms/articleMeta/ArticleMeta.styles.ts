@@ -1,12 +1,12 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(() => ({
+export const useStyles = makeStyles(({ spacing }) => ({
   metaContainer: {
-    paddingBottom: '5px',
+    paddingBottom: spacing(1),
   },
   text: {
     fontFamily: '"gilroy-medium", sans-serif',
     fontSize: '0.9rem',
-    marginTop: '5px',
+    marginTop: spacing(0.5),
   },
 }));

@@ -1,7 +1,7 @@
 import React from 'react'
 
 import { Grid, Container,  Box, Typography, SubHeading, Icons } from 'components/atoms'
-import { ResourceHeading } from 'components/molecules'
+import { ResourceHeading, VideoBox } from 'components/molecules'
 import { Header, Footer, ArticleHero, ArticleMeta, CalloutBox } from 'components/organisms'
 import { Page } from 'components/templates'
 
@@ -44,10 +44,14 @@ const Article = () => {
             sourcesInfo="dsadadsadsaaa"
           />
 
-          <Box>
+          <Box mt={6}>
             <ResourceHeading
               heading="Videos about this case"
               icon={<Icons.Videocam/>}
+            />
+            <VideoBox 
+              link="#"
+              title="I am a video title"
             />
           </Box>
         </Box>

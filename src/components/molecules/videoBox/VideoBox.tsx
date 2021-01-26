@@ -1,5 +1,5 @@
 import React from 'react'
-import { Box, Typography } from 'components/atoms'
+import { Box, Typography, Link } from 'components/atoms'
 
 import { useStyles } from './VideoBox.styles';
 import { VideoBoxProps } from './VideoBox.types';
@@ -9,8 +9,12 @@ export const  VideoBox = ({ link, title }:VideoBoxProps ) => {
 
   return (
     <>
-    <Box></Box>
-    <Typography>{title}</Typography>
+    <Box className={classes.videoContainer}></Box>
+    <Typography className={classes.videoTitle}>
+      <Link href={link} className={classes.link}>
+        {title}
+      </Link>
+    </Typography>
     </>
   )
 }
