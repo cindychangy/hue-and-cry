@@ -10,7 +10,7 @@ export const Header = () => {
   const classes = useStyles();
 
   return (  
-    <Box maxWidth={1400} m="auto" className={classes.header}>
+    <Box maxWidth={1280} m="auto" className={classes.header}>
       <Typography className={classes.logo}>
         <Link href={PageRoutes.HOME}>
           Hue and Cry

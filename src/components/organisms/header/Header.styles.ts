@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(( { palette }) => ({
+export const useStyles = makeStyles(( { spacing, palette }) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -24,6 +24,6 @@ export const useStyles = makeStyles(( { palette }) => ({
   },
   navItem: {
     fontSize: '1.4rem',
-    marginRight: '25px',
+    marginRight: spacing(3),
   }
 }));

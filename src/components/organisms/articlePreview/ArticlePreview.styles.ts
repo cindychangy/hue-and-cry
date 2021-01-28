@@ -2,8 +2,8 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(({ palette }) => ({
   imageBox: {
-    height: '248px',
-    width: '265px',
+    height: '284px',
+    width: '100%',
     background: '#cecece',
     marginBottom: '14px',
   },
@@ -16,4 +16,7 @@ export const useStyles = makeStyles(({ palette }) => ({
       textDecoration: 'none',
     }
   },
+  excerpt: {
+    fontSize: '0.96rem',
+  }
 }));

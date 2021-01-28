@@ -1,14 +1,23 @@
 import React from 'react'
 
-import { Grid, Container,  Box, Typography, SubHeading, Icons } from 'components/atoms'
-// import { ShareIcons, ResourceHeading, SectionHeading } from 'components/molecules'
-import { Header, Footer } from 'components/organisms'
+import { Grid, } from 'components/atoms'
+import { FeaturedArticles } from './featuredArticles/FeaturedArticles'
 import { Page } from 'components/templates'
 
-const Home = () => {
+import { HomeProps } from './Home.types'
+
+const Home = ({ articles }: HomeProps) => {
+
   return (
     <Page>
-      <h1>Homepage</h1>
+      <Grid container spacing={8}>
+        <Grid item xs={12} md={9}>
+          <FeaturedArticles articles={articles} />
+        </Grid>
+        <Grid item xs={12} md={2}>
+          sidebar
+        </Grid>
+      </Grid>
     </Page>      
   )
 }
