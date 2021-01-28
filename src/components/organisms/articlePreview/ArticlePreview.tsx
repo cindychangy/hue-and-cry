@@ -15,7 +15,9 @@ export const ArticlePreview = ({ image, category, title, excerpt, categoryLink, 
 
   return (
     <Box mb={1}>
-      <Box className={classes.imageBox} style={featureImage}></Box>
+      <Link href={articleLink}>
+        <Box className={classes.imageBox} style={featureImage}></Box>
+      </Link>
       <SubHeading 
         heading={category}
         link={categoryLink}

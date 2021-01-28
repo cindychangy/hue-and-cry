@@ -4,6 +4,6 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
   divider: {
     background: palette.common.black,
     height: '2px',
-    marginBottom: spacing(3),
+    marginBottom: spacing(2),
   }
 }));

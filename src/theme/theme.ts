@@ -21,7 +21,6 @@ const theme = createMuiTheme({
   },
   typography: {
     fontFamily: '"tiempos-regular", sans-serif',
-    fontSize: 17,
     h1: {
       fontFamily: '"Bebas Neue", sans-serif',
       fontSize: '5.625rem',
@@ -55,6 +54,13 @@ const theme = createMuiTheme({
       lineHeight: 1,
       letterSpacing: 0.5,
     },
+    body1: {
+      fontSize: '1rem',
+    },
+    body2: {
+      fontSize: '1.1rem',
+      lineHeight: 1.7,
+    }
   }
 })
 export default theme
