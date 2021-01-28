@@ -1,7 +1,7 @@
 import { Link as MuiLink } from '@material-ui/core';
 import { withStyles } from '@material-ui/core/styles';
 
-export const Link = withStyles(() => ({
+export const Link = withStyles(({ palette }) => ({
   root: {
     textDecoration: 'none',
   },

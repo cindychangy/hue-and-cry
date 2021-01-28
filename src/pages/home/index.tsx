@@ -2,6 +2,7 @@ import React from 'react'
 
 import { Grid, } from 'components/atoms'
 import { SectionHeading, } from 'components/molecules'
+import { ArticleGrid, } from 'components/organisms'
 import { FeaturedArticles } from './featuredArticles/FeaturedArticles'
 import { Page } from 'components/templates'
 import { CtaBanner } from './ctaBanner/CtaBanner'
@@ -31,8 +32,7 @@ const Home = ({ articles }: HomeProps) => {
       <Grid container>
         <Grid item xs={12}>
           <SectionHeading heading="More Stories" />
-        </Grid>
-        <Grid item xs={12} md={3}>
+          <ArticleGrid articles={articles} />
         </Grid>
       </Grid>
     </Page>      

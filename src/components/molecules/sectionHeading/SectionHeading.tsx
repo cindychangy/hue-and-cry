@@ -10,7 +10,7 @@ export const SectionHeading = ({ heading }: SectionHeadingProps) => {
   return (
     <Box>
       <Divider className={classes.divider} />
-      <Typography variant="h3">{heading}</Typography>
+      <Typography variant="h3" className={classes.heading}>{heading}</Typography>
     </Box>
   )
 }

@@ -5,6 +5,8 @@ export const useStyles = makeStyles(( { spacing, palette }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'space-between',
+    paddingTop: spacing(2),
+    margin: '0 auto 40px auto',
     '& a': {
       color: palette.common.black,
     }

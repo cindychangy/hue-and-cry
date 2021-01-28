@@ -50,7 +50,7 @@ const theme = createMuiTheme({
     },
     h5: {
       fontFamily: "'gilroy-medium', sans-serif",
-      fontSize: '0.9rem',
+      fontSize: '0.83rem',
       lineHeight: 1,
       letterSpacing: 0.5,
     },

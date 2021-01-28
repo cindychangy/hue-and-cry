@@ -5,5 +5,8 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     background: palette.common.black,
     height: '2px',
     marginBottom: spacing(2),
+  },
+  heading: {
+    marginBottom: spacing(4),
   }
 }));

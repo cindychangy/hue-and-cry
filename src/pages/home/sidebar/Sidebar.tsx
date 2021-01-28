@@ -10,12 +10,12 @@ export const Sidebar = ({ articles }: SidebarProps) => {
   const classes = useStyles();
 
   const sidebarArticles = articles.map(article => (
-    <Box my={3}>
+    <Box my={3} key={article.title}>
       <SubHeading
         heading={article.category}
         link={article.articleLink}
       />
-      <Typography>
+      <Typography className={classes.articleTitle}>
         <Link href={article.articleLink} color="inherit">
           {article.title}
         </Link>
