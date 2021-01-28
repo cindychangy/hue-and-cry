@@ -3,6 +3,7 @@ import React from 'react'
 import { Grid, } from 'components/atoms'
 import { FeaturedArticles } from './featuredArticles/FeaturedArticles'
 import { Page } from 'components/templates'
+import { CtaBanner } from './ctaBanner/CtaBanner'
 
 import { HomeProps } from './Home.types'
 
@@ -18,6 +19,13 @@ const Home = ({ articles }: HomeProps) => {
           sidebar
         </Grid>
       </Grid>
+
+      <Grid container>
+        <Grid item xs={12}>
+          <CtaBanner/>
+        </Grid>
+      </Grid>
+
     </Page>      
   )
 }

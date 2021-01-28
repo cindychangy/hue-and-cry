@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(({ palette }) => ({
   imageBox: {
-    height: '284px',
+    height: '214px',
     width: '100%',
     background: '#cecece',
     marginBottom: '14px',
