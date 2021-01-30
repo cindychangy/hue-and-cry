@@ -9,7 +9,7 @@ export const RelatedPosts = ({ articles }: RelatedPostsProps) => {
   const classes = useStyles();
 
   const showRelatedPosts = articles.map(article => (
-    <Grid item xs={12} sm={6} md={4} lg={2}>
+    <Grid item xs={12} sm={6} md={4} lg={2} key={article.title}>
       <Box 
         className={classes.imageBox} 
         style={{
@@ -29,7 +29,7 @@ export const RelatedPosts = ({ articles }: RelatedPostsProps) => {
 
   return (
     <Box className={classes.relatedContainer}>
-      <Box maxWidth={1070} m="auto" p={6}>
+      <Box maxWidth={1260} m="auto" py={6} my={6}>
         <Typography variant="h4">Related Cases</Typography>
         <Box mb={4}/>
 

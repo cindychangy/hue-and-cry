@@ -1,18 +1,21 @@
 import React from 'react'
 
-import { Grid, Box, Icons } from 'components/atoms'
-import { ResourceHeading, VideoBox } from 'components/molecules'
+import { Grid, Box, Divider } from 'components/atoms'
 import { Header, Footer } from 'components/organisms'
 import { ArticleHero } from './articleHero/ArticleHero'
 import { ArticleMeta } from './articleMeta/ArticleMeta'
 import { CalloutBox } from './calloutBox/CalloutBox' 
-import { RelatedPosts } from './relatedPosts/RelatedPosts'
+import { RelatedPosts } from './related/relatedPosts/RelatedPosts'
+import { RelatedVideos } from './related/relatedVideos/RelatedVideos'
+import { RelatedPodcasts } from './related/relatedPodcasts/RelatedPodcasts'
+import { Comments } from './comments/Comments'
+import { Copyright } from './copyright/Copyright'
 
 import { ArticleProps } from './Article.types'
-import { mockArticle, articlesMock } from 'api/mocks/mockData'
+import { mockArticle, articlesMock, mockVideos, mockPodcasts } from 'api/mocks/mockData'
 import { useStyles } from './Article.styles';
 
-const Article = ({ article = mockArticle, articles }: ArticleProps) => {
+const Article = ({ article = mockArticle }: ArticleProps) => {
   const classes = useStyles();
 
   return (
@@ -20,11 +23,12 @@ const Article = ({ article = mockArticle, articles }: ArticleProps) => {
       <Header/>
         <ArticleHero
           category={article.category}
+          categoryLink={article.categoryLink}
           title={article.title}
           bgImage={article.bgImage}
           featureImage={article.featureImage}
         />
-        <Box maxWidth={1000} m="auto">
+        <Box maxWidth={1000} m="auto" pt={4}>
           <Grid container>
             <Grid item xs={12} md={3}>
               <ArticleMeta
@@ -39,25 +43,31 @@ const Article = ({ article = mockArticle, articles }: ArticleProps) => {
               </Box>
             </Grid>
           </Grid>
+        </Box>
 
+        <Box maxWidth={1260} m="auto">
           <CalloutBox
             helpInfo="dsdsadad" 
             sourcesInfo="dsadadsadsaaa"
           />
 
-          <Box mt={6}>
-            <ResourceHeading
-              heading="Videos about this case"
-              icon={<Icons.Videocam/>}
-            />
-            <VideoBox 
-              link="#"
-              title="I am a video title"
-            />
-          </Box>
+          <Box mt={8}/>
+          <RelatedVideos videos={mockVideos} />
+
+          <Divider />
+          <RelatedPodcasts podcasts={mockPodcasts} />
+
+          <Divider />
+          <Comments />
         </Box>
 
         <RelatedPosts articles={articlesMock} />
+
+        <Box maxWidth={700} m="auto" pb={1}>
+          <Copyright 
+            sources="ABC News and The Atlantic"
+          />
+        </Box>
       <Footer/>
     </>
   )

@@ -9,6 +9,9 @@ export const useStyles = makeStyles(({ spacing }) => ({
   icon: {
     marginLeft: spacing(0.5),
     position: 'relative',
-    top: spacing(-0.5),
+    top: spacing(-0.4),
+    '& svg': {
+      fontSize: '1.7rem',
+    }
   }
 }));

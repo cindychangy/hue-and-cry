@@ -4,7 +4,7 @@ import { Box, Typography, SubHeading } from 'components/atoms'
 import { useStyles } from './ArticleHero.styles';
 import { ArticleHeroProps } from './ArticleHero.types'
 
-export const ArticleHero = ({ category, title, bgImage, featureImage }: ArticleHeroProps) => {
+export const ArticleHero = ({ category, categoryLink, title, bgImage, featureImage }: ArticleHeroProps) => {
   const classes = useStyles();
 
   const backgroundImage = {
@@ -24,10 +24,9 @@ export const ArticleHero = ({ category, title, bgImage, featureImage }: ArticleH
         <Box className={classes.blockText}>
           <SubHeading 
             heading={category} 
-          />
-          <Typography variant="h1">
-            {title}
-          </Typography>
+            link={categoryLink}
+            />
+          <Typography variant="h1">{title}</Typography>
         </Box>
       </Box>
     </Box>

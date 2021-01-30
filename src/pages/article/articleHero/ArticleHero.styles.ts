@@ -48,7 +48,6 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     height: spacing(82),
     width: '60%',
     right: 0,
-    zIndex: -1,
     [breakpoints.down('sm')]: {
       position: 'relative',
       width: '100%',
