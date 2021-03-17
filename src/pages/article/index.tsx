@@ -15,20 +15,20 @@ import { ArticleProps } from './Article.types'
 import { mockArticle, articlesMock, mockVideos, mockPodcasts } from 'api/mocks/mockData'
 import { useStyles } from './Article.styles';
 
-const Article = ({ article = mockArticle }: ArticleProps) => {
+const Article = ({ article }: ArticleProps) => {
   const classes = useStyles();
 
   return (
     <>
       <Header/>
-        <ArticleHero
+        {/* <ArticleHero
           category={article.category}
           categoryLink={article.categoryLink}
-          title={article.title}
+          title={article.title.rendered}
           bgImage={article.bgImage}
-          featureImage={article.featureImage}
-        />
-        <Box maxWidth={1000} m="auto" pt={4}>
+          featureImage={article.jetpack_featured_media_url}
+        /> */}
+        <Box maxWidth={1000} m="auto" pt={4} px={{ xs: 2, md: 4 }}>
           <Grid container>
             <Grid item xs={12} md={3}>
               <ArticleMeta
@@ -45,7 +45,7 @@ const Article = ({ article = mockArticle }: ArticleProps) => {
           </Grid>
         </Box>
 
-        <Box maxWidth={1260} m="auto">
+        <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
           <CalloutBox
             helpInfo="dsdsadad" 
             sourcesInfo="dsadadsadsaaa"
@@ -61,9 +61,9 @@ const Article = ({ article = mockArticle }: ArticleProps) => {
           <Comments />
         </Box>
 
-        <RelatedPosts articles={articlesMock} />
+        {/* <RelatedPosts articles={articlesMock} /> */}
 
-        <Box maxWidth={700} m="auto" pb={1}>
+        <Box maxWidth={700} m="auto" pb={1} px={2}>
           <Copyright 
             sources="ABC News and The Atlantic"
           />

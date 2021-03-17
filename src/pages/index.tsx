@@ -1,8 +1,20 @@
-import React from 'react'
-import Home  from './home'
+import React from 'react';
+import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import Home  from './home/Home';
 
-import { articlesMock } from 'api/mocks/mockData';
+import { getPosts, getCategories } from 'api/actions';
+import { HomeProps } from './home/Home.types';
 
-const Index = () => <Home articles={articlesMock} />
+export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+
+  const articles = await getPosts();
+
+  return {
+    props: { articles },
+  };
+};
+
+const Index = ({ articles }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <Home articles={articles} />;
 
 export default Index;

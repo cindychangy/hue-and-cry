@@ -8,15 +8,15 @@ import { FeaturedArticlesProps } from './FeaturedArticles.types'
 export const FeaturedArticles = ({ articles }: FeaturedArticlesProps ) => {
 
   const featuredArticleList = articles.map(article => (
-    <Grid item xs={12} md={4} key={article.title}>
+    <Grid item xs={12} md={4} key={article.id}>
       <ArticlePreview
-        image={article.featureImage} 
+        image={article.jetpack_featured_media_url} 
         category={article.category} 
-        title={article.title} 
-        excerpt={article.excerpt}  
+        title={article.title.rendered} 
+        excerpt={article.excerpt.rendered}
         categoryLink={article.categoryLink} 
-        articleLink={article.articleLink}
-      />
+        articleSlug={article.slug}
+      />  
     </Grid>
   ));
 

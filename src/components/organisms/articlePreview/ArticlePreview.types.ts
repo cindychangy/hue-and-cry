@@ -3,6 +3,6 @@ export type ArticlePreviewProps = {
   category: string; 
   title: string;
   excerpt: string;
-  articleLink: string;
+  articleSlug: string;
   categoryLink: string;
 }

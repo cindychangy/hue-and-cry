@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(( { spacing, palette }) => ({
+export const useStyles = makeStyles(( { spacing, palette, breakpoints }) => ({
   header: {
     display: 'flex',
     alignItems: 'center',
@@ -9,7 +9,7 @@ export const useStyles = makeStyles(( { spacing, palette }) => ({
     margin: '0 auto 40px auto',
     '& a': {
       color: palette.common.black,
-    }
+    },
   },
   logo: {
     fontFamily: 'Bebas Neue',
@@ -20,12 +20,33 @@ export const useStyles = makeStyles(( { spacing, palette }) => ({
       opacity: 0.8,
     }
   },
+    navIemsContainer: {
+      display: 'inline-block',
+      [breakpoints.down('sm')]: {
+        display: 'none',
+      },
+    },
   nav: {
     display: 'flex',
     alignItems: 'center',
+    [breakpoints.down('sm')]: {
+      display: 'block',
+    },
   },
   navItem: {
     fontSize: '1.4rem',
     marginRight: spacing(3),
+  },
+  mobileIcon: {
+    display: 'none',
+    '&.MuiIconButton-root': {
+      color: palette.common.black,
+    },
+    '& svg': {
+      fontSize: '2rem',
+    },
+    [breakpoints.down('sm')]: {
+      display: 'block',
+    },
   }
 }));

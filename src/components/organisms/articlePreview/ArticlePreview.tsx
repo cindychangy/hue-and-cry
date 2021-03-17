@@ -4,7 +4,7 @@ import { Box, Typography, SubHeading, Link } from 'components/atoms'
 import { useStyles } from './ArticlePreview.styles';
 import { ArticlePreviewProps } from './ArticlePreview.types'
 
-export const ArticlePreview = ({ image, category, title, excerpt, categoryLink, articleLink }: ArticlePreviewProps) => {
+export const ArticlePreview = ({ image, category, title, excerpt, categoryLink, articleSlug }: ArticlePreviewProps) => {
   const classes = useStyles();
 
   const featureImage = {
@@ -15,7 +15,7 @@ export const ArticlePreview = ({ image, category, title, excerpt, categoryLink, 
 
   return (
     <Box mb={1}>
-      <Link href={articleLink}>
+      <Link href={articleSlug}>
         <Box className={classes.imageBox} style={featureImage}></Box>
       </Link>
       <SubHeading 
@@ -23,11 +23,15 @@ export const ArticlePreview = ({ image, category, title, excerpt, categoryLink, 
         link={categoryLink}
       />
       <Typography variant="h2" gutterBottom>
-        <Link href={articleLink} className={classes.title}>
+        <Link href={articleSlug} className={classes.title}>
           {title}
         </Link>
       </Typography>
-      <Typography className={classes.excerpt}>{excerpt}</Typography>
+      <Typography 
+        className={classes.excerpt}
+        dangerouslySetInnerHTML={{__html: excerpt}}
+      >
+      </Typography>
     </Box>
   )
 }

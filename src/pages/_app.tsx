@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
-import { AppProps } from 'next/app'
-import Head from 'next/head'
-import { ThemeProvider } from '@material-ui/core/styles'
-import CssBaseline from '@material-ui/core/CssBaseline'
-import theme from '../theme/theme'
+import React, { useEffect } from 'react';
+import { AppProps } from 'next/app';
+import Head from 'next/head';
+import { ThemeProvider } from '@material-ui/core/styles';
+import CssBaseline from '@material-ui/core/CssBaseline';
+import theme from '../theme/theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
 
@@ -21,7 +21,7 @@ const App = ({ Component, pageProps }: AppProps) => {
     </Head>
     <ThemeProvider theme={theme}>
       <CssBaseline />
-      <Component {...pageProps} />
+        <Component {...pageProps} />
     </ThemeProvider>
   </>
   )

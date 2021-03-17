@@ -5,6 +5,9 @@ export { default as Typography } from '@material-ui/core/Typography'
 export { default as Grid } from '@material-ui/core/Grid'
 export { default as IconButton } from '@material-ui/core/IconButton'
 export { default as Divider } from '@material-ui/core/Divider'
+export { default as Collapse } from '@material-ui/core/Collapse'
+export { default as Drawer } from '@material-ui/core/Drawer'
+export { default as CircularProgress } from '@material-ui/core/CircularProgress';
 
 export { SubHeading } from './subHeading/SubHeading'
 export { Link } from './link/Link'

@@ -11,9 +11,12 @@ export const useStyles = makeStyles(({ palette }) => ({
     color: palette.common.black,
     transition: '.2s, box-shadow .2s, -webkit-box-shadow .2s',
     textDecoration: 'none',
+    lineHeight: 1,
+    cursor: 'pointer',
     '&:hover': {
-      boxShadow: 'inset 0 -3px 0 #141A20',
+      boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
       textDecoration: 'none',
+      opacity: 1,
     }
   },
   excerpt: {
