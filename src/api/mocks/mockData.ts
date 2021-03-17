@@ -1,4 +1,4 @@
-export const articlesMock = [
+export const postsMock = [
   {
     title: {
       rendered: 'The Murder of PFC Vanessa Guillen'
@@ -41,7 +41,7 @@ export const articlesMock = [
   },
 ]
 
-export const mockArticle = {
+export const mockPost = {
   title: {
     rendered: 'The Murder of Ramona Wilson'
   },

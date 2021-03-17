@@ -1,5 +1,5 @@
 import { Post } from 'api/types'
 
-export type SidebarProps = {
+export type RelatedPostsProps = {
   posts: Post[];
 }

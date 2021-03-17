@@ -3,7 +3,7 @@ import React, { useState } from 'react'
 import { Box, Typography, IconButton, Icons, Link } from 'components/atoms'
 import { MobileMenu } from './mobileMenu/MobileMenu'
 import { useStyles } from './Header.styles';
-import { PageRoutes } from '../../../pages/Pages.types';
+import { PageRoute } from '../../../pages/Pages.types';
 
 
 export const Header = () => {
@@ -14,7 +14,7 @@ export const Header = () => {
   return (  
     <Box  maxWidth={1280} px={{ xs: 2, md: 4 }} className={classes.header}>
       <Typography className={classes.logo}>
-        <Link href={PageRoutes.HOME}>
+        <Link href={PageRoute.HOME}>
           Hue and Cry
         </Link>
       </Typography>
@@ -28,19 +28,19 @@ export const Header = () => {
       <Box className={classes.navIemsContainer}>
         <Box className={classes.nav}>
           <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoutes.MILITARY}>Military</Link>
+            <Link href={PageRoute.MILITARY}>Military</Link>
           </Typography>
           <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoutes.INDIGENOUS_WOMEN}>Indigenous Women</Link>
+            <Link href={PageRoute.INDIGENOUS_WOMEN}>Indigenous Women</Link>
           </Typography>
           <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoutes.MISSING}>Missing</Link>
+            <Link href={PageRoute.MISSING}>Missing</Link>
           </Typography>
           <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoutes.MURDERED}>Murdered</Link>
+            <Link href={PageRoute.MURDERED}>Murdered</Link>
           </Typography>
           <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoutes.ABOUT}>About</Link>
+            <Link href={PageRoute.ABOUT}>About</Link>
           </Typography>
           <Icons.Twitter/>
         </Box>

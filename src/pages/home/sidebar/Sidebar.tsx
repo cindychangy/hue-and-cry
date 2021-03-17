@@ -6,18 +6,18 @@ import { SectionHeading, } from 'components/molecules'
 import { SidebarProps } from './Sidebar.types'
 import { useStyles } from './Sidebar.styles';
 
-export const Sidebar = ({ articles }: SidebarProps) => {
+export const Sidebar = ({ posts }: SidebarProps) => {
   const classes = useStyles();
 
-  const sidebarArticles = articles.map(article => (
-    <Box my={3} key={article.id}>
+  const sidebarPosts = posts.map(post => (
+    <Box my={3} key={post.id}>
       {/* <SubHeading
-        heading={article.category}
-        link={article.slug}
+        heading={post.category}
+        link={post.slug}
       /> */}
       <Typography className={classes.articleTitle}>
-        <Link href={article.slug} color="inherit">
-          {article.title.rendered}
+        <Link href={post.slug} color="inherit">
+          {post.title.rendered}
         </Link>
       </Typography>
     </Box>
@@ -26,7 +26,7 @@ export const Sidebar = ({ articles }: SidebarProps) => {
   return (
     <>
       <SectionHeading heading="Featured Stories" />
-      {sidebarArticles}
+      {sidebarPosts}
 
       <Box className={classes.aboutBox}>
         <Typography className={classes.aboutHeader}>

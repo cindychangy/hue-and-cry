@@ -6,3 +6,8 @@ export const getPosts = async () => {
   const res = await fetch(`${siteURL}/posts`);
   return res.json();
 }
+
+export const getSinglePost = async (query: string) => {
+  const res = await fetch(`${siteURL}/${query}`);
+  return res.json();
+}

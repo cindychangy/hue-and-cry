@@ -2,7 +2,7 @@ export type Rendered = {
   rendered: string;
 }
 
-export type Article = {
+export type Post = {
   id: number;
   title: Rendered;
   category: string;
