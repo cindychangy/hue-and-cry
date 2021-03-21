@@ -4,7 +4,7 @@ export type Rendered = {
 
 export type Podcast = {
   link: string;
-  title: string;
+  show_title: string;
   podcast_show: string;
 }
 

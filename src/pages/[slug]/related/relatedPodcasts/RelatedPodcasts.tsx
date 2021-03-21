@@ -1,6 +1,6 @@
 import React from 'react';
 
-import { Box, Grid, Typography, Link, Icons } from 'components/atoms';
+import { Box, Typography, Link, Icons } from 'components/atoms';
 import { ResourceHeading } from 'components/molecules';
 
 import { useStyles } from './RelatedPodcasts.styles';
@@ -11,14 +11,14 @@ export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
   const classes = useStyles();
 
   const podcastList = podcasts.map((podcast, index)  => (
-    <Grid item xs={12} md={6} lg={3} key={index}>
-        <Typography className={classes.showTitle}>
-          {podcast.podcast_show}
-        </Typography>
-        <Link href={podcast.link} className={classes.link} color='inherit'>
-          {podcast.title}
-        </Link>
-    </Grid>
+    <Box key={index} className={classes.podcastConatiner}>
+      <Typography className={classes.showTitle}>
+        {podcast.podcast_show}
+      </Typography>
+      <Link href={podcast.link} className={classes.link} color='inherit' rel={'noreferrer noopener'} target={'_blank'}>
+        {podcast.show_title}
+      </Link>
+    </Box>
   ))
 
   return (
@@ -28,9 +28,10 @@ export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
       icon={<Icons.VolumeUp/>}
     />
     <Box mt={3}/>
-    <Grid container spacing={3}>
+
+    <Box className={classes.podcastWrapper}>
       {podcastList}
-    </Grid>
+    </Box>
     </Box>
   )
 }
