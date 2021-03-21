@@ -10,8 +10,8 @@ export type Podcast = {
 
 export type Video = {
   video_title: string;
-  title: string;
   video: string;
+  link: string;
 }
 
 export type Acf = {

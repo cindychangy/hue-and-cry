@@ -15,7 +15,13 @@ export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
       <Typography className={classes.showTitle}>
         {podcast.podcast_show}
       </Typography>
-      <Link href={podcast.link} className={classes.link} color='inherit' rel={'noreferrer noopener'} target={'_blank'}>
+      <Link 
+        href={podcast.link} 
+        className={classes.link} 
+        color='inherit' 
+        rel={'noreferrer noopener'} 
+        target={'_blank'}
+      >
         {podcast.show_title}
       </Link>
     </Box>

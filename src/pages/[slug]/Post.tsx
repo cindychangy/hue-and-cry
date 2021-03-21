@@ -65,9 +65,7 @@ const PostHome = ({ post }: { post: Post }) => {
         {/* <RelatedPosts posts={postsMock} /> */}
 
         <Box maxWidth={700} m="auto" pb={1} px={2}>
-          <Copyright 
-            sources={post.acf.copyright_sources}
-          />
+          <Copyright sources={post.acf.copyright_sources} />
         </Box>
       <Footer/>
     </>

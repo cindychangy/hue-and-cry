@@ -18,17 +18,15 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
   }
 };
 
-export const getStaticProps: GetStaticProps<{ post: Post }> = async () => {
+export const getStaticProps: GetStaticProps = async ( { params }) => {
 
-  const post = await getSinglePost(2277);
+  const post = await getSinglePost(params?.slug as string);
 
   return {
     props: { post },
   };
 };
 
-const PostContainer = ({ post }: { post: Post}) => 
-  <PostHome post={post} />;
-
+const PostContainer = ({ post }: { post: Post[] }) => <PostHome post={post[0]} />;
 
 export default PostContainer;
