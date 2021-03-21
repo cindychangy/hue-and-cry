@@ -7,6 +7,12 @@ export const useStyles = makeStyles(({ palette, typography, breakpoints, spacing
     [breakpoints.down('xs')]: {
       padding: spacing(2),
     },
+    '& a': {
+      color: palette.common.black,
+    },
+    '& a:hover': {
+      textDecoration: 'none',
+    }
   },
   headline: {
     color: palette.primary.main,
@@ -15,6 +21,10 @@ export const useStyles = makeStyles(({ palette, typography, breakpoints, spacing
   },
   helpInfo: {
     fontSize: '1.1rem',
+    paddingRight: spacing(2),
+    [breakpoints.down('xs')]: {
+      paddingRight: 0,
+    },
   },
   sourcesLinks: {
     fontSize: '1rem',
@@ -22,5 +32,9 @@ export const useStyles = makeStyles(({ palette, typography, breakpoints, spacing
     [breakpoints.down('xs')]: {
       marginTop: spacing(2.5),
     },
+    '& p a': {
+      display: 'inline-block',
+      paddingBottom: spacing(1.4),
+    }
   }
 }));
