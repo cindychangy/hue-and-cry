@@ -1,45 +1,34 @@
 import React from 'react'
-import { GetStaticPaths, GetStaticProps, InferGetStaticPropsType } from 'next';
+import { GetStaticProps, GetStaticPaths } from 'next';
 
-import Post from './Post';
-import { PostProps } from './Post.types';
-import { getPosts, getSinglePost } from 'api/actions';
+import PostHome from './Post';
+import { Post } from 'api/types';
+import { getSinglePost } from 'api/actions';
+import { getPosts } from 'api/actions';
 
-// export const getStaticPaths: GetStaticPaths = async () => {
+export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
-//   const data = await getPosts();
+  const posts = await getPosts(100);
+  const slugs = await posts.map((post: Post) => post.slug);
+  const paths = await slugs.map((slug: string) => ({ params: { slug }}));
 
-//   if (data && data.length) {
-//     return {
-//       paths: data.map(({ slug }) => ({ params: { slug } }))
-//     }
-//   }
+  return {
+    paths,
+    fallback: false,
+  }
+};
 
-//   return {
-//     paths: [],
-//     fallback: true,
-//   };
-// };
+export const getStaticProps: GetStaticProps<{ post: Post }> = async () => {
 
+  const post = await getSinglePost(2277);
 
-// export const getStaticProps: GetStaticProps<PostProps> = async () => {
+  return {
+    props: { post },
+  };
+};
 
-//   const singlePost = await getSinglePost();
+const PostContainer = ({ post }: { post: Post}) => 
+  <PostHome post={post} />;
 
-//   return {
-//     props: { singlePost },
-//   };
-// };
-
-// const PostContainer = ({ post }: InferGetStaticPropsType<typeof getStaticProps>) => {
-
-//   return <Post post={post} />
-// }
-
-const PostContainer = () => {
-
-  // return <Post post={post} />
-  return <h1>single post</h1>
-}
 
 export default PostContainer;

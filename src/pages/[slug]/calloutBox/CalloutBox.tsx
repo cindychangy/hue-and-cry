@@ -15,7 +15,7 @@ export const CalloutBox = ({ helpInfo, sourcesInfo }: CalloutBoxProps) => {
           <Typography variant="h4" className={classes.headline} gutterBottom>
             Help this Case
           </Typography>
-          {helpInfo}
+          <Box dangerouslySetInnerHTML={{__html: helpInfo}} />
         </Box>
       </Grid>
       <Grid item xs={12} md={6}>
@@ -23,7 +23,7 @@ export const CalloutBox = ({ helpInfo, sourcesInfo }: CalloutBoxProps) => {
           <Typography variant="h4" className={classes.headline} gutterBottom>
             Sources and Links
           </Typography>
-          {sourcesInfo}
+          <Box dangerouslySetInnerHTML={{__html: sourcesInfo}} />
         </Box>
       </Grid>
     </Grid>

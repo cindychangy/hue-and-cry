@@ -1,5 +1,4 @@
 import React from 'react'
-import { GetStaticPaths } from 'next';
 
 import { Grid, Box, Divider } from 'components/atoms';
 import { Header, Footer } from 'components/organisms';
@@ -12,36 +11,36 @@ import { RelatedPodcasts } from './related/relatedPodcasts/RelatedPodcasts';
 import { Comments } from './comments/Comments';
 import { Copyright } from './copyright/Copyright';
 
-import { PostProps } from './Post.types';
-import { mockPost, postsMock, mockVideos, mockPodcasts } from 'api/mocks/mockData';
+import { Post } from 'api/types';
 import { useStyles } from './Post.styles';
 
-const Post = ({ post }: PostProps) => {
+const PostHome = ({ post }: { post: Post }) => {
   const classes = useStyles();
 
   return (
     <>
-    <p>Single Post</p>
-      {/* <Header/>
-        <ArticleHero
-          category={article.category}
-          categoryLink={article.categoryLink}
-          title={article.title.rendered}
-          bgImage={article.bgImage}
-          featureImage={article.jetpack_featured_media_url}
+      <Header/>
+        <PostHero
+          category={post.category}
+          categoryLink={post.categoryLink}
+          title={post.title.rendered}
+          bgImage={post.acf.background_image}
+          featureImage={post.jetpack_featured_media_url}
         />
         <Box maxWidth={1000} m="auto" pt={4} px={{ xs: 2, md: 4 }}>
           <Grid container>
             <Grid item xs={12} md={3}>
-              <ArticleMeta
-              category={article.category}
-              location={article.location}
-              year={article.year}
+              <PostMeta
+              category={post.category}
+              location={post.acf.location}
+              year={post.acf.year}
               />
             </Grid>
             <Grid item xs={12} md={9}>
-              <Box className={classes.articleBody}>
-                {article.body}
+              <Box 
+                className={classes.articleBody}
+                dangerouslySetInnerHTML={{__html: post.content.rendered}}
+              >
               </Box>
             </Grid>
           </Grid>
@@ -49,30 +48,30 @@ const Post = ({ post }: PostProps) => {
 
         <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
           <CalloutBox
-            helpInfo="dsdsadad" 
-            sourcesInfo="dsadadsadsaaa"
+            helpInfo={post.acf.how_to_help}
+            sourcesInfo={post.acf.dig_deeper}
           />
 
           <Box mt={8}/>
-          <RelatedVideos videos={mockVideos} />
+          <RelatedVideos videos={post.acf.videos} />
 
           <Divider />
-          <RelatedPodcasts podcasts={mockPodcasts} />
+          <RelatedPodcasts podcasts={post.acf.podcasts} />
 
           <Divider />
           <Comments />
         </Box>
 
-        <RelatedPosts posts={postsMock} />
+        {/* <RelatedPosts posts={postsMock} /> */}
 
         <Box maxWidth={700} m="auto" pb={1} px={2}>
           <Copyright 
-            sources="ABC News and The Atlantic"
+            sources={post.acf.copyright_sources}
           />
         </Box>
-      <Footer/> */}
+      <Footer/>
     </>
   )
 }
 
-export default Post;
+export default PostHome;

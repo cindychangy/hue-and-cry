@@ -1,8 +1,5 @@
-export type Video = {
-  link: string;
-  title: string;
-}
+import { Video } from 'api/types';
 
 export type RelatedVideosProps = {
-  videos: Video[];
+  videos: Video[]
 }

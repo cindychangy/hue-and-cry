@@ -1,5 +1,4 @@
 import React from 'react'
-import { useRouter } from 'next/router';
 
 import { Grid } from 'components/atoms'
 import { PostPreview } from 'components/organisms'
@@ -17,6 +16,7 @@ export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
         excerpt={post.excerpt.rendered}
         categoryLink={post.categoryLink} 
         postSlug={post.slug}
+        postId={post.id}
       />  
     </Grid>
   ));

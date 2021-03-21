@@ -1,6 +1,6 @@
 
 export type PostMetaProps = {
-  category: string;
+  category: number[];
   location: string;
   year: string;
 }

@@ -16,6 +16,7 @@ export const PostGrid = ({ posts }: PostGridProps ) => {
         excerpt={post.excerpt.rendered}  
         categoryLink={post.categoryLink} 
         postSlug={post.slug}
+        postId={post.id}
       />
     </Grid>
   ));

@@ -4,13 +4,17 @@ import { Box, Typography, SubHeading, Link } from 'components/atoms'
 import { useStyles } from './PostPreview.styles';
 import { PostPreviewProps } from './PostPreview.types'
 
-export const PostPreview = ({ image, category, title, excerpt, categoryLink, postSlug }: PostPreviewProps) => {
+export const PostPreview = ({ image, category, title, excerpt, categoryLink, postSlug, postId }: PostPreviewProps) => {
   const classes = useStyles();
 
   const featureImage = {
     backgroundImage: `url('${image}')`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
+  }
+
+  const handleClick = (value:number) => {
+    console.log(value);
   }
 
   return (
@@ -23,7 +27,11 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, pos
         link={categoryLink}
       />
       <Typography variant="h2" gutterBottom>
-        <Link href={postSlug} className={classes.title}>
+        <Link 
+          href={postSlug} 
+          className={classes.title}
+          onClick={() => handleClick(postId)}
+        >
           {title}
         </Link>
       </Typography>

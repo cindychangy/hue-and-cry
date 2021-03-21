@@ -1,13 +1,11 @@
-const siteURL = 'https://thehueandcry.com/wp-json/wp/v2';
+const siteURL = 'https://thehueandcry.com/wp-json';
 
-export const getCategories = `${siteURL}/categories`;
-
-export const getPosts = async () => {
-  const res = await fetch(`${siteURL}/posts`);
+export const getPosts = async (postNumber: number) => {
+  const res = await fetch(`${siteURL}/wp/v2/posts?per_page=${postNumber}`);
   return res.json();
 }
 
-export const getSinglePost = async (query: string) => {
-  const res = await fetch(`${siteURL}/${query}`);
+export const getSinglePost = async (postId: number) => {
+  const res = await fetch(`${siteURL}/wp/v2/posts/${postId}`);
   return res.json();
 }

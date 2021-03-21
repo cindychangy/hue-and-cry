@@ -10,10 +10,10 @@ export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
 
   const classes = useStyles();
 
-  const podcastList = podcasts.map(podcast => (
-    <Grid item xs={12} md={6} lg={3} key={podcast.show}>
+  const podcastList = podcasts.map((podcast, index)  => (
+    <Grid item xs={12} md={6} lg={3} key={index}>
         <Typography className={classes.showTitle}>
-          {podcast.show}
+          {podcast.podcast_show}
         </Typography>
         <Link href={podcast.link} className={classes.link} color='inherit'>
           {podcast.title}

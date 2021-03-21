@@ -1,5 +1,5 @@
 
 export type SubHeadingProps = {
-  heading: string;
+  heading: number[];
   link?: string;
 }

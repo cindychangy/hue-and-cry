@@ -1,9 +1,7 @@
-import { Rendered } from 'api/types';
-
 export type PostHeroProps = {
-  category: string;
+  category: number[];
   categoryLink: string;
-  title: Rendered;
+  title: string;
   bgImage: string;
   featureImage: string;
 }

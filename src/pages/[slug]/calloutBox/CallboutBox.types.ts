@@ -1,6 +1,4 @@
-import { ReactNode } from 'react'
-
 export type CalloutBoxProps = {
-  helpInfo: ReactNode;
-  sourcesInfo: ReactNode;
+  helpInfo: string;
+  sourcesInfo: string;
 }
