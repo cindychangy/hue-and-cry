@@ -5,7 +5,7 @@ export const useStyles = makeStyles(({ spacing }) => ({
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
-    marginTop: spacing(4),
+    margin: spacing(4, 0),
     '& > svg': {
       fontSize: '2rem',
       position: 'relative',

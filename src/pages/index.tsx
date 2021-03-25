@@ -2,7 +2,7 @@ import React from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home  from './home/Home';
 
-import { getPosts } from 'api/actions';
+import { getPosts } from 'api/actions/posts/postsActions';
 import { HomeProps } from './home/Home.types';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {

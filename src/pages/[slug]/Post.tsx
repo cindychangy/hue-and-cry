@@ -14,7 +14,7 @@ import { Copyright } from './copyright/Copyright';
 import { Post } from 'api/types';
 import { useStyles } from './Post.styles';
 
-const PostHome = ({ post }: { post: Post }) => {
+export const PostHome = ({ post }: { post: Post }) => {
   const classes = useStyles();
 
   return (
@@ -52,14 +52,24 @@ const PostHome = ({ post }: { post: Post }) => {
             sourcesInfo={post.acf.dig_deeper}
           />
 
-          <Box mt={8}/>
-          <RelatedVideos videos={post.acf.videos} />
+          {!!post.acf.videos.length && (
+            <>
+              <Box mt={8}/>
+              <RelatedVideos videos={post.acf.videos} />
+              <Divider />
+            </>
+          )}
+
+          {!!post.acf.podcasts.length && (
+            <RelatedPodcasts podcasts={post.acf.podcasts} />
+          )}
 
           <Divider />
-          <RelatedPodcasts podcasts={post.acf.podcasts} />
-
-          <Divider />
-          <Comments />
+          <Comments 
+            postSlug={post.slug} 
+            postId={post.id} 
+            postTitle={post.title} 
+          />
         </Box>
 
         {/* <RelatedPosts posts={postsMock} /> */}

@@ -29,13 +29,15 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     overflow: 'hidden',
     width: spacing(55),
     height: spacing(55),
-    objectFit: 'cover',
+    display: 'flex',
+    justifyContent: 'center',
     [breakpoints.down('xs')]: {
       width: '100%',
       height: 'auto',
     },
     '& img': {
-      width: '100%',
+      width: 'auto',
+      height: '100%',
     }
   },
   blockColor: {

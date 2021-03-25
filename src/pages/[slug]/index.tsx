@@ -3,8 +3,8 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 
 import PostHome from './Post';
 import { Post } from 'api/types';
-import { getSinglePost } from 'api/actions';
-import { getPosts } from 'api/actions';
+import { getSinglePost } from 'api/actions/posts/postsActions';
+import { getPosts } from 'api/actions/posts/postsActions';
 
 export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
