@@ -30,11 +30,11 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, pos
           {title}
         </Link>
       </Typography>
-      <Typography 
+      <Box 
         className={classes.excerpt}
         dangerouslySetInnerHTML={{__html: excerpt}}
       >
-      </Typography>
+      </Box>
     </Box>
   )
 }
