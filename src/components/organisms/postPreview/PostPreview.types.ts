@@ -1,9 +1,9 @@
 export type PostPreviewProps = {
   image: string;
-  category: number[]; 
+  category: string; 
   title: string;
   excerpt: string;
-  postSlug: string;
-  postId: number;
+  slug: string;
+  id: number;
   categoryLink: string;
 }

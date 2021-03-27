@@ -1,5 +1,5 @@
 export type PostHeroProps = {
-  category: number[];
+  category: string;
   categoryLink: string;
   title: string;
   bgImage: string;

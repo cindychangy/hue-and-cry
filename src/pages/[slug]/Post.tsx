@@ -21,7 +21,7 @@ export const PostHome = ({ post }: { post: Post }) => {
     <>
       <Header/>
         <PostHero
-          category={post.category}
+          category={post.categories_names[0]}
           categoryLink={post.categoryLink}
           title={post.title.rendered}
           bgImage={post.acf.background_image}
@@ -31,9 +31,9 @@ export const PostHome = ({ post }: { post: Post }) => {
           <Grid container>
             <Grid item xs={12} md={3}>
               <PostMeta
-              category={post.category}
-              location={post.acf.location}
-              year={post.acf.year}
+                category={post.categories_names}
+                location={post.acf.location}
+                year={post.acf.year}
               />
             </Grid>
             <Grid item xs={12} md={9}>

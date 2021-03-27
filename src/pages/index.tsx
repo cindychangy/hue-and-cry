@@ -7,7 +7,7 @@ import { HomeProps } from './home/Home.types';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
-  const posts = await getPosts(10);
+  const posts = await getPosts(14);
 
   return {
     props: { posts },

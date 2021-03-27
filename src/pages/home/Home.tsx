@@ -19,7 +19,7 @@ const Home = ({ posts }: HomeProps) => {
   useEffect(() => {
     if(posts) {
       setFeaturedTop(posts.splice(0, 6));
-      setFeaturedBottom(posts.splice(-4));
+      setFeaturedBottom(posts.splice(-8));
     }
   }, []);
 

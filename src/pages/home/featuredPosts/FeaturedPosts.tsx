@@ -11,12 +11,12 @@ export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
     <Grid item xs={12} md={4} key={post.id}>
       <PostPreview
         image={post.jetpack_featured_media_url} 
-        category={post.category} 
+        category={post.categories_names[0]} 
         title={post.title.rendered} 
         excerpt={post.excerpt.rendered}
         categoryLink={post.categoryLink} 
-        postSlug={post.slug}
-        postId={post.id}
+        slug={post.slug}
+        id={post.id}
       />  
     </Grid>
   ));

@@ -24,7 +24,8 @@ export const PostHero = ({ category, categoryLink, title, bgImage, featureImage 
         <Box className={classes.blockText}>
           <SubHeading 
             heading={category} 
-            link={categoryLink}
+            link={categoryLink} 
+            heroHeading
             />
           <Typography variant="h1">{title}</Typography>
         </Box>

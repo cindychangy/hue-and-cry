@@ -1,10 +1,10 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Typography, SubHeading, Link } from 'components/atoms'
+import { Box, Typography, SubHeading, Link } from 'components/atoms';
 import { useStyles } from './PostPreview.styles';
-import { PostPreviewProps } from './PostPreview.types'
+import { PostPreviewProps } from './PostPreview.types';
 
-export const PostPreview = ({ image, category, title, excerpt, categoryLink, postSlug }: PostPreviewProps) => {
+export const PostPreview = ({ image, category, title, excerpt, categoryLink, slug }: PostPreviewProps) => {
   const classes = useStyles();
 
   const featureImage = {
@@ -15,7 +15,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, pos
 
   return (
     <Box mb={1}>
-      <Link href={`/${encodeURIComponent(postSlug)}`}>
+      <Link href={`/${encodeURIComponent(slug)}`}>
         <Box className={classes.imageBox} style={featureImage}></Box>
       </Link>
       <SubHeading 
@@ -24,7 +24,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, pos
       />
       <Typography variant="h2" gutterBottom>
         <Link 
-          href={postSlug} 
+          href={slug} 
           className={classes.title}
         >
           {title}

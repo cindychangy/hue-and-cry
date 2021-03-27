@@ -29,10 +29,10 @@ export type Acf = {
 export type Post = {
   id: number;
   title: Rendered;
-  category: number[];
   excerpt: Rendered;
   jetpack_featured_media_url: string;
   categoryLink: string,
+  categories_names: string[];
   slug: string,
   content: Rendered;
   acf: Acf;
