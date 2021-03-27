@@ -6,7 +6,7 @@ import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const posts = await getCategories(2);
+  const posts = await getCategories(9);
 
   return {
     props: { posts },

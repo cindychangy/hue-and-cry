@@ -7,13 +7,13 @@ import { Page } from 'components/templates';
 
 import { Category, Post } from 'api/types';
 
-const MissingHome = ({ posts }: { posts: Post[] }) => {
+const MurderedHome = ({ posts }: { posts: Post[] }) => {
 
   return (
     <Page>
       <Grid container>
         <Grid item xs={12}>
-          <SectionHeading heading={Category.MISSING} />
+          <SectionHeading heading={Category.MURDERED} />
           <PostGrid posts={posts} />
         </Grid>
       </Grid>
@@ -21,4 +21,4 @@ const MissingHome = ({ posts }: { posts: Post[] }) => {
   );
 };
 
-export default MissingHome;
+export default MurderedHome;

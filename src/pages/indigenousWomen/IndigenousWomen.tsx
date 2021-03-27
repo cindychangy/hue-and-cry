@@ -13,7 +13,7 @@ const IndigenousWomenHome = ({ posts }: { posts: Post[] }) => {
     <Page>
       <Grid container>
         <Grid item xs={12}>
-          <SectionHeading heading={Category.MISSING} />
+          <SectionHeading heading={Category.INDIGENOUS_WOMEN} />
           <PostGrid posts={posts} />
         </Grid>
       </Grid>

@@ -1,19 +1,19 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import MissingHome from './Missing';
+import MurderedHome from './Murdered';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const posts = await getCategories(2);
+  const posts = await getCategories(3);
 
   return {
     props: { posts },
   };
 };
 
-const MissingContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <MissingHome posts={posts} />;
+const MurderedContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <MurderedHome posts={posts} />;
 
-export default MissingContainer;
+export default MurderedContainer;
