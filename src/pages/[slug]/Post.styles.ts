@@ -24,6 +24,11 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         fontFamily: "'gilroy-medium', sans-serif",
         fontSize: 15,
         opacity: 0.6,
+      },
+
+      '& img': {
+        width: '100%',
+        height: 'auto',
       }
     },
     '& blockquote': {

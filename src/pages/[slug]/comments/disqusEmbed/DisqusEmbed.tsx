@@ -7,7 +7,7 @@ export const DisqusEmbed = ({ postSlug, postTitle, postId }: CommentsProps) => {
 
   const disqusShortname = 'the-hue-and-cry';
   const disqusConfig = {
-    url: `https://www.thehueandcry.com/${postSlug}`,
+    url: `https://thehueandcry.com/${postSlug}`,
     identifier: postId.toString(),
     title: postTitle.rendered,
   }
