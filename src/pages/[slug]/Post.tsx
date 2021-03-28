@@ -34,6 +34,8 @@ export const PostHome = ({ post }: { post: Post }) => {
                 category={post.categories_names}
                 location={post.acf.location}
                 year={post.acf.year}
+                postTitle={post.title.rendered}
+                postLink={post.link}
               />
             </Grid>
             <Grid item xs={12} md={9}>

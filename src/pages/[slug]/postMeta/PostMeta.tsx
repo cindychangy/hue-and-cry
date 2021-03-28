@@ -6,7 +6,7 @@ import { useStyles } from './PostMeta.styles';
 import { PostMetaProps } from './PostMeta.types';
 
 
-export const PostMeta = ({ category, location, year }: PostMetaProps) => {
+export const PostMeta = ({ category, location, year, postLink, postTitle }: PostMetaProps) => {
   const classes = useStyles();
 
   return (
@@ -25,7 +25,7 @@ export const PostMeta = ({ category, location, year }: PostMetaProps) => {
       </Box>
       <Box mb={3}>
         <Typography variant="h5" color="primary">Share</Typography>
-        <ShareIcons/>
+        <ShareIcons postTitle={postTitle} postLink={postLink} />
       </Box>
     </Box>
   )

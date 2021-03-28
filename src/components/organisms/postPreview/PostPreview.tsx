@@ -10,7 +10,8 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
   const featureImage = {
     backgroundImage: `url('${image}')`,
     backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat'
+    backgroundRepeat: 'no-repeat',
+    backgroundPosition: 'center',
   }
 
   return (

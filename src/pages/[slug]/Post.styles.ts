@@ -27,7 +27,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       },
 
       '& img': {
-        width: '100%',
+        maxWidth: '100%',
         height: 'auto',
       }
     },

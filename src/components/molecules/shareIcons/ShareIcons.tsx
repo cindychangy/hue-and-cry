@@ -1,27 +1,41 @@
 import React from 'react';
-import { useRouter } from 'next/router';
 import { Box, Icons, IconButton } from 'components/atoms';
 
+import { ShareIconProps } from './ShareIcons.types';
 import { useStyles } from './ShareIcons.styles';
 
-export const  ShareIcons = () => {
+export const  ShareIcons = ({ postTitle, postLink}: ShareIconProps) => {
   const classes = useStyles();
-  const router = useRouter();
 
   return (
     <Box className={classes.shareContainer}>
       <IconButton 
         className={classes.button} 
-        aria-label="share"
-        href="`https://www.facebook.com/sharer/sharer.php?u=${router.path}`">
+        aria-label='share'
+        href={`https://www.facebook.com/sharer/sharer.php?u=${postLink}`}
+        rel={'noreferrer noopener'} 
+        target={'_blank'}
+      >
         <Icons.Facebook/>
       </IconButton>
 
-      <IconButton className={classes.button} aria-label="share">
+      <IconButton 
+        className={classes.button} 
+        aria-label="share"
+        href={`https://www.twitter.com/intent/tweet?url=${postLink}`}
+        rel={'noreferrer noopener'} 
+        target={'_blank'}
+      >
         <Icons.Twitter/>
       </IconButton>
 
-      <IconButton className={classes.button} aria-label="share">
+      <IconButton 
+        className={classes.button} 
+        aria-label='share'
+        href={`mailto:?subject=${postTitle}&amp;body=${postLink}`}
+        rel={'noreferrer noopener'} 
+        target={'_blank'}
+      >
         <Icons.Attachment className={classes.attachement} />
       </IconButton>
     </Box>
