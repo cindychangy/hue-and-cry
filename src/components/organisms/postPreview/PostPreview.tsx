@@ -23,7 +23,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
         heading={category}
         link={categoryLink}
       />
-      <Typography variant="h2" gutterBottom>
+      <Typography variant="h2">
         <Link 
           href={slug} 
           className={classes.title}

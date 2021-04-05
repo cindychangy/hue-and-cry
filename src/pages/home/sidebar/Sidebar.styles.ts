@@ -13,7 +13,7 @@ export const useStyles = makeStyles(({ spacing, breakpoints }) => ({
     fontFamily: 'Bebas Neue',
     fontSize: '2.8rem',
     lineHeight: 0.9,
-    marginTop: spacing(6),
+    marginTop: spacing(4),
   },
   aboutText: {
     fontFamily: '"gilroy-regular", sans-serif',

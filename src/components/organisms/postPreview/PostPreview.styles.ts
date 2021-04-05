@@ -1,11 +1,13 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ palette }) => ({
+export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
   imageBox: {
-    height: '214px',
+    height: spacing(24),
     width: '100%',
-    background: '#cecece',
     marginBottom: '14px',
+    [breakpoints.down('md')]: {
+      height: spacing(34),
+    },
   },
   title: {
     color: palette.common.black,
@@ -21,5 +23,12 @@ export const useStyles = makeStyles(({ palette }) => ({
   },
   excerpt: {
     fontSize: '0.96rem',
+    color: '#505356',
+    lineHeight: 1.6,
+    display: '-webkit-box',
+    width: '100%',
+    overflow: 'hidden',
+    '-webkit-line-clamp': 2,
+    '-webkit-box-orient': 'vertical',
   }
 }));
