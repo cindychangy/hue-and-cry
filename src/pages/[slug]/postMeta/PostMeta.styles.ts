@@ -14,7 +14,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     fontFamily: '"gilroy-medium", sans-serif',
     fontSize: '0.9rem',
     lineHeight: 1.2,
-    color: palette.common.black,
+    color: '#464646',
   },
   list: {
     paddingLeft: 0,

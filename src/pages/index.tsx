@@ -2,19 +2,22 @@ import React from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Home  from './home/Home';
 
-import { getPosts } from 'api/actions/posts/postsActions';
+import { getPosts, getFeaturedPosts } from 'api/actions/posts/postsActions';
 import { HomeProps } from './home/Home.types';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
-  const posts = await getPosts(14);
+  const [posts, sidebarPosts] = await Promise.all([
+    await getPosts(14),
+    await getFeaturedPosts()
+  ]);
 
   return {
-    props: { posts },
+    props: { posts, sidebarPosts },
   };
 };
 
-const Index = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <Home posts={posts} />;
+const Index = ({ posts, sidebarPosts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <Home posts={posts} sidebarPosts={sidebarPosts} />;
 
 export default Index;

@@ -8,7 +8,7 @@ import { Post } from 'api/types';
 export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
 
   const featuredPostList = posts.map(post => (
-    <Grid item xs={12} md={4} key={post.id}>
+    <Grid item xs={12} sm={6} md={4} key={post.id}>
       <PostPreview
         image={post.jetpack_featured_media_url} 
         category={post.categories_names[0]} 

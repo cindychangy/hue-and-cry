@@ -9,3 +9,8 @@ export const getSinglePost = async(slug: string) => {
   const res = await fetch(`${siteURL}/wp/v2/posts?slug=${slug}`);
   return res.json();
 }
+
+export const getFeaturedPosts = async() => {
+  const res = await fetch(`${siteURL}/wp/v2/posts?tags=11`);
+  return res.json();
+}

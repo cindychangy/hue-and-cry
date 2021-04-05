@@ -35,6 +35,7 @@ export type Post = {
   categories_names: string[];
   slug: string,
   link: string,
+  tags: [];
   content: Rendered;
   acf: Acf;
 }

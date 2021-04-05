@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 
 import { Box, Typography, Link, SubHeading } from 'components/atoms'
 import { SectionHeading, } from 'components/molecules'
@@ -8,13 +8,13 @@ import { useStyles } from './Sidebar.styles';
 
 export const Sidebar = ({ posts }: SidebarProps) => {
   const classes = useStyles();
-
+  
   const sidebarPosts = posts.map(post => (
     <Box my={3} key={post.id}>
-      {/* <SubHeading
-        heading={post.category}
+      <SubHeading
+        heading={post.categories_names[0]}
         link={post.slug}
-      /> */}
+      />
       <Typography className={classes.articleTitle}>
         <Link href={post.slug} color="inherit">
           {post.title.rendered}
@@ -24,7 +24,7 @@ export const Sidebar = ({ posts }: SidebarProps) => {
   ));
 
   return (
-    <>
+    <Box pl={{ sm: 0, md: 4}}>
       <SectionHeading heading="Featured Stories" />
       {sidebarPosts}
 
@@ -36,6 +36,6 @@ export const Sidebar = ({ posts }: SidebarProps) => {
           Learn more about the mission of Hue and Cry
         </Typography>
       </Box>
-    </>
+    </Box>
   )
 }

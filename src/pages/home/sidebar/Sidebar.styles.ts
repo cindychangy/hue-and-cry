@@ -1,6 +1,6 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
+export const useStyles = makeStyles(({ spacing, palette }) => ({
   aboutBox: {
     background: palette.grey[200],
     padding: spacing(2),
@@ -11,6 +11,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     fontSize: '2rem',
   },
   articleTitle: {
-    fontSize: '1.1rem',
+    fontSize: '1.05rem',
+    letterSpacing: '-0.2px',
   }
 }));

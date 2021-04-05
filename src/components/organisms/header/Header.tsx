@@ -45,7 +45,6 @@ export const Header = () => {
         <Icons.Twitter/>
       </Box>
     </Hidden>
-
     </Box> 
   )
 }

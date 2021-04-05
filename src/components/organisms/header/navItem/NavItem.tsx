@@ -10,7 +10,7 @@ export const NavItem = ( { navItems }: NavItemProps) => {
   return (  
     <>
     {navItems.map(item => (
-      <Typography variant="h3" className={classes.navItem}>
+      <Typography variant="h3" className={classes.navItem} key={item.label}>
         <Link href={item.value}>{item.label}</Link>
       </Typography>
     ))}
