@@ -6,7 +6,11 @@ export const useStyles = makeStyles(( { spacing, palette, breakpoints }) => ({
     alignItems: 'center',
     justifyContent: 'space-between',
     paddingTop: spacing(2),
-    margin: '0 auto 40px auto',
+    margin: '0 auto 30px auto',
+    [breakpoints.down('sm')]: {
+      flexWrap: 'wrap',
+      margin: '0',
+    },
     '& a': {
       color: palette.common.black,
     },
@@ -33,9 +37,17 @@ export const useStyles = makeStyles(( { spacing, palette, breakpoints }) => ({
       display: 'block',
     },
   },
-  navItem: {
-    fontSize: '1.4rem',
-    marginRight: spacing(3),
+  navMobile: {
+    background: '#fafafa',
+    flexBasis: '100%',
+    paddingTop: spacing(5),
+    borderTop: '1px solid #d7dcde',
+    height: '100vh',
+
+    '& h3': {
+      fontSize: '2rem',
+      marginBottom: '2rem',
+    }
   },
   mobileIcon: {
     display: 'none',
@@ -47,6 +59,11 @@ export const useStyles = makeStyles(( { spacing, palette, breakpoints }) => ({
     },
     [breakpoints.down('sm')]: {
       display: 'block',
+      position: 'relative',
+      top: '-7px',
     },
+  },
+  hide: {
+    display: 'none',
   }
 }));

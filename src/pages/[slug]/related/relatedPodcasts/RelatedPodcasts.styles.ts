@@ -17,11 +17,11 @@ export const useStyles = makeStyles(({ typography, breakpoints, spacing }) => ({
     },
   },
   showTitle: {
-    fontSize: 18,
+    fontSize: '1.125rem',
     fontWeight: typography.fontWeightBold,
   },
   link: {
-    fontSize: 16,
+    fontSize: '1rem',
     textDecoration: 'underline',
     '&:hover': {
       textDecoration: 'none',

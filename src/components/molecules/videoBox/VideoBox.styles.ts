@@ -2,7 +2,7 @@ import { makeStyles } from '@material-ui/core/styles';
 
 export const useStyles = makeStyles(( { spacing, palette }) => ({
   videoTitle: {
-    fontSize: 16,
+    fontSize: '1rem',
     lineHeight: 1.6,
     marginTop: spacing(2),
   },

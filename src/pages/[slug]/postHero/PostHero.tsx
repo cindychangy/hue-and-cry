@@ -27,7 +27,7 @@ export const PostHero = ({ category, categoryLink, title, bgImage, featureImage 
             link={categoryLink} 
             heroHeading
             />
-          <Typography variant="h1">{title}</Typography>
+          <Typography variant="h1" className={classes.postTitle}>{title}</Typography>
         </Box>
       </Box>
     </Box>

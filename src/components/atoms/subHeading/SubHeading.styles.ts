@@ -6,7 +6,7 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     marginBottom: spacing(1.2),
   },
   subHeadingHero: {
-    fontSize: 15,
+    fontSize: '	0.9375rem',
   },
   categoryName: {
     letterSpacing: '0.2px',

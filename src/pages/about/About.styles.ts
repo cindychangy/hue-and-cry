@@ -10,10 +10,10 @@ export const useStyles = makeStyles(({ spacing, palette, typography, breakpoints
     },
   },
   title: {
-    fontSize: 44,
+    fontSize: '2.75rem',
   },
   bodyText: {
-    fontSize: 20,
+    fontSize: '1.25rem',
     marginBottom: spacing(4),
   },
   link: {

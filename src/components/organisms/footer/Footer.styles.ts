@@ -9,6 +9,6 @@ export const useStyles = makeStyles(({ palette }) => ({
     justifyContent: 'center',
     alignItems: 'center',
     fontFamily: 'gilroy-medium',
-    fontSize: '12px',
+    fontSize: '0.9rem',
   },
 }));

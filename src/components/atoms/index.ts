@@ -8,6 +8,7 @@ export { default as Divider } from '@material-ui/core/Divider'
 export { default as Collapse } from '@material-ui/core/Collapse'
 export { default as Drawer } from '@material-ui/core/Drawer'
 export { default as Button } from '@material-ui/core/Button';
+export { default as Hidden } from '@material-ui/core/Hidden';
 
 export { SubHeading } from './subHeading/SubHeading'
 export { Link } from './link/Link'

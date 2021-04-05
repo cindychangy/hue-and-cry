@@ -13,7 +13,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     '& h3': {
       fontFamily: "'gilroy-extrabold', sans-serif",
       letterSpacing: -0.3,
-      fontSize: 22,
+      fontSize: '1.375rem',
       marginTop: 0,
     },
     '& figure': {
@@ -22,7 +22,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
 
       '& figcaption': {
         fontFamily: "'gilroy-medium', sans-serif",
-        fontSize: 15,
+        fontSize: '0.9375rem',
         opacity: 0.6,
       },
 
@@ -39,16 +39,16 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         margin: spacing(4, 0, 6, 0),
       },
       '& p': {
-        fontSize: 24,
+        fontSize: '1.5rem',
         margin: spacing(4, 0, 2.5, 0),
         [breakpoints.down('sm')]: {
-          fontSize: 22,
+          fontSize: '1.375rem',
           margin: spacing(2, 0, 2, 0)
         },
       }
     },
     '& cite': {
-      fontSize: 17,
+      fontSize: '1.0625rem',
       opacity: 0.6,
     },
     '& a': {

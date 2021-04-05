@@ -1,10 +1,18 @@
-import React, { useState } from 'react'
+import React, { useState } from 'react';
 
-import { Box, Typography, IconButton, Icons, Link } from 'components/atoms'
-import { MobileMenu } from './mobileMenu/MobileMenu'
+import { Box, Typography, IconButton, Icons, Link, Hidden } from 'components/atoms';
+import { NavItem } from './navItem/NavItem';
+
 import { useStyles } from './Header.styles';
 import { PageRoute } from '../../../pages/Pages.types';
 
+const navItems = [
+  { label: 'Military', value: PageRoute.MILITARY },
+  { label: 'Indigenous Women', value: PageRoute.INDIGENOUS_WOMEN },
+  { label: 'Missing', value: PageRoute.MISSING },
+  { label: 'Murdered', value: PageRoute.MURDERED },
+  { label: 'About', value: PageRoute.ABOUT },
+]
 
 export const Header = () => {
   const classes = useStyles();
@@ -19,32 +27,24 @@ export const Header = () => {
         </Link>
       </Typography>
 
-      <IconButton className={classes.mobileIcon}>
+      <Hidden smDown>
+        <Box className={classes.navIemsContainer}>
+          <Box className={classes.nav}>
+            <NavItem navItems={navItems}/>
+            <Icons.Twitter/>
+          </Box>
+        </Box>
+      </Hidden>
+
+    <Hidden mdUp>
+      <IconButton className={classes.mobileIcon} onClick={()=> setHideMenu(!hideMenu)}>
         <Icons.Menu/>
       </IconButton>
-
-      <MobileMenu/>
-
-      <Box className={classes.navIemsContainer}>
-        <Box className={classes.nav}>
-          <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoute.MILITARY}>Military</Link>
-          </Typography>
-          <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoute.INDIGENOUS_WOMEN}>Indigenous Women</Link>
-          </Typography>
-          <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoute.MISSING}>Missing</Link>
-          </Typography>
-          <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoute.MURDERED}>Murdered</Link>
-          </Typography>
-          <Typography variant="h3" className={classes.navItem}>
-            <Link href={PageRoute.ABOUT}>About</Link>
-          </Typography>
-          <Icons.Twitter/>
-        </Box>
+      <Box className={hideMenu ? classes.hide: classes.navMobile}>
+        <NavItem navItems={navItems}/>
+        <Icons.Twitter/>
       </Box>
+    </Hidden>
 
     </Box> 
   )

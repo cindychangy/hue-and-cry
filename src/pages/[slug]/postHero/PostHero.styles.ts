@@ -7,7 +7,12 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     marginBottom: 0,
     [breakpoints.down('xs')]: {
       height: 'auto',
-      marginBottom: spacing(5),
+      marginBottom: 0,
+    },
+  },
+  postTitle: {
+    [breakpoints.down('xs')]: {
+      fontSize: '3.125rem',
     },
   },
   blockImage: {
@@ -33,7 +38,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     justifyContent: 'center',
     [breakpoints.down('xs')]: {
       width: '100%',
-      height: 'auto',
+      height: spacing(50),
     },
     '& img': {
       width: 'auto',
