@@ -11,10 +11,10 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     marginBottom: spacing(1.2),
   },
   text: {
-    fontFamily: '"gilroy-medium", sans-serif',
+    fontFamily: '"gilroy-regular", sans-serif',
     fontSize: '0.9rem',
     lineHeight: 1.2,
-    color: '#464646',
+    color: palette.common.black,
   },
   list: {
     paddingLeft: 0,

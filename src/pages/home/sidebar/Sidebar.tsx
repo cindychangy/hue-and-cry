@@ -30,9 +30,9 @@ export const Sidebar = ({ posts }: SidebarProps) => {
 
       <Box className={classes.aboutBox}>
         <Typography className={classes.aboutHeader}>
-          What happened to her?
+          What<br/>happened<br/>to her?
         </Typography>
-        <Typography>
+        <Typography className={classes.aboutText}>
           Learn more about the mission of Hue and Cry
         </Typography>
       </Box>

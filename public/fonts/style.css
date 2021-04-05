@@ -1,3 +1,10 @@
+@font-face {
+  font-family: 'gilroy-regular';
+  src: url('gilroy-regular-webfont.woff2') format('woff2'),
+       url('gilroy-regular-webfont.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+}
 
 @font-face {
   font-family: 'gilroy-medium';
@@ -24,12 +31,3 @@
   font-style: normal;
 
 }
-/* 
-@font-face {
-  font-family: 'bebas-neue';
-  src: url('BebasNeue-Regular.woff2') format('woff2'),
-       url('BebasNeue-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-
-} */
