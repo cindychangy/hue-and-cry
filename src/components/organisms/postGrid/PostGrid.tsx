@@ -1,9 +1,9 @@
-import React from 'react'
+import React from 'react';
 
-import { Grid } from 'components/atoms'
-import { PostPreview } from 'components/organisms'
+import { Grid } from 'components/atoms';
+import { PostPreview } from 'components/organisms';
 
-import { PostGridProps } from './PostGrid.types'
+import { PostGridProps } from './PostGrid.types';
 
 export const PostGrid = ({ posts }: PostGridProps ) => {
 

@@ -1,9 +1,9 @@
-import React, { useEffect } from 'react'
+import React from 'react';
 
-import { Box, Typography, Link, SubHeading } from 'components/atoms'
-import { SectionHeading, } from 'components/molecules'
+import { Box, Typography, Link, SubHeading } from 'components/atoms';
+import { SectionHeading, } from 'components/molecules';
 
-import { SidebarProps } from './Sidebar.types'
+import { SidebarProps } from './Sidebar.types';
 import { useStyles } from './Sidebar.styles';
 
 export const Sidebar = ({ posts }: SidebarProps) => {

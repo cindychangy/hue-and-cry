@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Typography } from 'components/atoms'
+import React from 'react';
+import { Box, Typography } from 'components/atoms';
 
 import { useStyles } from './ResourceHeading.styles';
 import { ResourceHeadingProps } from './ResourceHeading.types';

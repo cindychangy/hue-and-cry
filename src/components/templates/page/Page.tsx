@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Box } from 'components/atoms'
-import { Header, Footer } from 'components/organisms'
+import { Box } from 'components/atoms';
+import { Header, Footer } from 'components/organisms';
 
 export const Page: React.FC = ({ children }) => {
 

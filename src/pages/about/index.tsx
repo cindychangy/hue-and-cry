@@ -1,7 +1,7 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Typography, Link } from 'components/atoms'
-import { Header, Footer } from 'components/organisms'
+import { Box, Typography, Link } from 'components/atoms';
+import { Header, Footer } from 'components/organisms';
 
 import { useStyles } from './About.styles';
 

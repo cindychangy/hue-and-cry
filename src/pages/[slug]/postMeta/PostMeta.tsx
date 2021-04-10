@@ -10,8 +10,8 @@ export const PostMeta = ({ categories, location, year, postLink, postTitle }: Po
   const classes = useStyles();
 
   const categoryList = categories.map((category, index)  => (
-      <li>
-      <Link className={classes.text} key={index} href="#">
+      <li key={index}>
+      <Link className={classes.text} href="#">
         {category}
       </Link>
       </li>

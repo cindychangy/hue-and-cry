@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import { LinkProps } from '@material-ui/core';
 import * as S from './Link.styles';

@@ -1,5 +1,5 @@
-import React from 'react'
-import { Box, Typography, Divider } from 'components/atoms'
+import React from 'react';
+import { Box, Typography, Divider } from 'components/atoms';
 
 import { useStyles } from './SectionHeading.styles';
 import { SectionHeadingProps } from './SectionHeading.types';

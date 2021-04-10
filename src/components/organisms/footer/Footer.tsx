@@ -1,6 +1,6 @@
-import React from 'react'
+import React from 'react';
 
-import { Box, Typography } from 'components/atoms'
+import { Box, Typography } from 'components/atoms';
 import { useStyles } from './Footer.styles';
 
 
