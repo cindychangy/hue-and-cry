@@ -4,7 +4,7 @@ import { Box, Typography, SubHeading } from 'components/atoms';
 import { useStyles } from './PostHero.styles';
 import { PostHeroProps } from './PostHero.types';
 
-export const PostHero = ({ category, categoryLink, title, bgImage, featureImage }: PostHeroProps) => {
+export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroProps) => {
   const classes = useStyles();
 
   const backgroundImage = {
@@ -24,7 +24,7 @@ export const PostHero = ({ category, categoryLink, title, bgImage, featureImage 
         <Box className={classes.blockText}>
           <SubHeading 
             heading={category} 
-            link={categoryLink} 
+            link={`${encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase())}`} 
             heroHeading
             />
           <Typography variant="h1" className={classes.postTitle}>{title}</Typography>

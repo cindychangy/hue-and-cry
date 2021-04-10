@@ -14,7 +14,7 @@ export const PostGrid = ({ posts }: PostGridProps ) => {
         category={post.categories_names[0]} 
         title={post.title.rendered} 
         excerpt={post.excerpt.rendered}  
-        categoryLink={post.categoryLink} 
+        categoryLink={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`} 
         slug={post.slug}
         id={post.id}
       />

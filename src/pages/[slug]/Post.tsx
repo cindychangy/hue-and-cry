@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 
 import { Grid, Box, Divider } from 'components/atoms';
 import { Header, Footer } from 'components/organisms';
@@ -22,7 +22,6 @@ export const PostHome = ({ post }: { post: Post }) => {
       <Header/>
         <PostHero
           category={post.categories_names[0]}
-          categoryLink={post.categoryLink}
           title={post.title.rendered}
           bgImage={post.acf.background_image}
           featureImage={post.jetpack_featured_media_url}

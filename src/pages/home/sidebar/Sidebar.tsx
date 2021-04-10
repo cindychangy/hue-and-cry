@@ -13,7 +13,7 @@ export const Sidebar = ({ posts }: SidebarProps) => {
     <Box my={3} key={post.id}>
       <SubHeading
         heading={post.categories_names[0]}
-        link={post.slug}
+        link={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`}
       />
       <Typography className={classes.articleTitle}>
         <Link href={post.slug} color="inherit">
