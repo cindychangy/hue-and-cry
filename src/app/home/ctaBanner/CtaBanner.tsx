@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Typography, Link } from 'components/atoms'
 
-import { PageRoute } from '../../../pages/Pages.types';
+import { AppRoute } from 'app/App.types';
 import { useStyles } from './CtaBanner.styles';
 
 export const CtaBanner = () => {
@@ -25,7 +25,7 @@ export const CtaBanner = () => {
           The Highway of Tears is an isolated 725-kilometer stretch of Highway 16 between Prince George and Prince Rupert in British Columbia, Canada. This highway has been the location of many unsolved murders and disappearances of Indigenous women beginning as early as the 1970s.
         </Typography>
         <Typography variant="h5">
-        <Link href={PageRoute.INDIGENOUS_WOMEN} className={classes.seeMore}>See all stories</Link>
+        <Link href={AppRoute.INDIGENOUS_WOMEN} className={classes.seeMore}>See all stories</Link>
         </Typography>
       </Box>
     </Box>

@@ -1,4 +1,4 @@
-export enum PageRoute {
+export enum AppRoute {
   HOME = '/',
   ARTICLE = '/:slug',
   MISSING = '/missing',

@@ -4,14 +4,14 @@ import { Box, Typography, IconButton, Icons, Link, Hidden } from 'components/ato
 import { NavItem } from './navItem/NavItem';
 
 import { useStyles } from './Header.styles';
-import { PageRoute } from '../../../pages/Pages.types';
+import { AppRoute } from 'app/App.types';
 
 const navItems = [
-  { label: 'Military', value: PageRoute.MILITARY },
-  { label: 'Indigenous Women', value: PageRoute.INDIGENOUS_WOMEN },
-  { label: 'Missing', value: PageRoute.MISSING },
-  { label: 'Murdered', value: PageRoute.MURDERED },
-  { label: 'About', value: PageRoute.ABOUT },
+  { label: 'Military', value: AppRoute.MILITARY },
+  { label: 'Indigenous Women', value: AppRoute.INDIGENOUS_WOMEN },
+  { label: 'Missing', value: AppRoute.MISSING },
+  { label: 'Murdered', value: AppRoute.MURDERED },
+  { label: 'About', value: AppRoute.ABOUT },
 ]
 
 export const Header = () => {
@@ -22,7 +22,7 @@ export const Header = () => {
   return (  
     <Box  maxWidth={1280} px={{ xs: 2, md: 4 }} className={classes.header}>
       <Typography className={classes.logo}>
-        <Link href={PageRoute.HOME}>
+        <Link href={AppRoute.HOME}>
           Hue and Cry
         </Link>
       </Typography>
