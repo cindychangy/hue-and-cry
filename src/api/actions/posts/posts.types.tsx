@@ -33,6 +33,8 @@ export type Post = {
   jetpack_featured_media_url: string;
   categoryLink: string,
   categories_names: string[];
+  date_gmt?: string;
+  modified_gmt?: string;
   slug: string,
   link: string,
   tags: [];

@@ -26,8 +26,8 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-        <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
-        <link href="/fonts/style.css" rel="stylesheet"></link>
+          <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" rel="stylesheet"></link>
+          <link href="/fonts/style.css" rel="stylesheet"></link>
         </Head>
         <body>
           <Main />

@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-import { Grid } from 'components/atoms';
+import { Box, Grid } from 'components/atoms';
 import { SectionHeading, } from 'components/molecules';
 import { PostGrid, } from 'components/organisms';
 import { FeaturedPosts } from './featuredPosts/FeaturedPosts';
