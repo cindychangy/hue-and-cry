@@ -33,6 +33,7 @@ const PostPage = ({ post }: { post: Post[] }) =>  {
   return (
     <>
     <Head>
+      <title>{post[0].title.rendered}</title>
       <link rel="canonical" href={post[0].link} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
