@@ -1,6 +1,6 @@
 ## Hue and Cry Blog
 
-This site is built with React, NextJS and Typescript off of a Wordpress backend.
+Frontend build consists of React, NextJS and Typescript, backend is built off Wordpress API.
 
 To install:
 
