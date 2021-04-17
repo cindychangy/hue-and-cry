@@ -7,18 +7,16 @@ import { Page } from 'components/templates';
 
 import { Category, Post } from 'api/types';
 
-const MiliatryHome = ({ posts }: { posts: Post[] }) => {
+export const Missing = ({ posts }: { posts: Post[] }) => {
 
   return (
     <Page>
       <Grid container>
         <Grid item xs={12}>
-          <SectionHeading heading={Category.MILITARY} />
+          <SectionHeading heading={Category.MISSING} />
           <PostGrid posts={posts} />
         </Grid>
       </Grid>
     </Page>
   );
 };
-
-export default MiliatryHome;

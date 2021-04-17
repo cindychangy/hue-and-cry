@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import MurderedHome from './Murdered';
+import { Murdered } from 'app/murdered/Murdered';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const MurderedContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <MurderedHome posts={posts} />;
+const MurderedPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <Murdered posts={posts} />;
 
-export default MurderedContainer;
+export default MurderedPage;

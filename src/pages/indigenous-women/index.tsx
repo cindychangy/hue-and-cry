@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import IndigenousWomenHome from './IndigenousWomen';
+import { IndigenousWomen } from 'app/indigenousWomen/IndigenousWomen';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const IndigenousWomenContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <IndigenousWomenHome posts={posts} />;
+const IndigenousWomenPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <IndigenousWomen posts={posts} />;
 
-export default IndigenousWomenContainer;
+export default IndigenousWomenPage;

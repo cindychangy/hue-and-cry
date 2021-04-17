@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import MissingHome from './Missing';
+import { Missing } from 'app/missing/Missing';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const MissingContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <MissingHome posts={posts} />;
+const MissingPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <Missing posts={posts} />;
 
-export default MissingContainer;
+export default MissingPage;

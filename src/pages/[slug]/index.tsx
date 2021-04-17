@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, GetStaticPaths } from 'next';
 
-import PostHome from './Post';
+import { PostContainer } from 'app/post/Post';
 import { Post } from 'api/types';
 import { getSinglePost } from 'api/actions/posts/postsActions';
 import { getPosts } from 'api/actions/posts/postsActions';
@@ -27,6 +27,6 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
   };
 };
 
-const PostContainer = ({ post }: { post: Post[] }) => <PostHome post={post[0]} />;
+const PostPage = ({ post }: { post: Post[] }) => <PostContainer post={post[0]} />;
 
-export default PostContainer;
+export default PostPage;

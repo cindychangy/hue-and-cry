@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import HighwayOfTearsHome from './HighwayOfTears';
+import { HighwayOfTearsHome } from '../../app/highwayOfTears/HighwayOfTears';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const HighwayOfTearsContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+const HighwayOfTearsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
   <HighwayOfTearsHome posts={posts} />;
 
-export default HighwayOfTearsContainer;
+export default HighwayOfTearsPage;

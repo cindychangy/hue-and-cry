@@ -1,7 +1,7 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
-import MilitaryHome from './Military';
+import { Military } from 'app/military/Military';
 import { getCategories } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
@@ -13,7 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
   };
 };
 
-const MilitaryContainer = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
-  <MilitaryHome posts={posts} />;
+const MilitaryPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => 
+  <Military posts={posts} />;
 
-export default MilitaryContainer;
+export default MilitaryPage;

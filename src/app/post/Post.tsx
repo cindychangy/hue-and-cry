@@ -14,7 +14,7 @@ import { Copyright } from './copyright/Copyright';
 import { Post } from 'api/types';
 import { useStyles } from './Post.styles';
 
-export const PostHome = ({ post }: { post: Post }) => {
+export const PostContainer = ({ post }: { post: Post }) => {
   const classes = useStyles();
 
   return (
@@ -81,6 +81,4 @@ export const PostHome = ({ post }: { post: Post }) => {
       <Footer/>
     </>
   )
-}
-
-export default PostHome;
+};

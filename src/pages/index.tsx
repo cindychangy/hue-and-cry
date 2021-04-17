@@ -1,9 +1,9 @@
 import React from 'react';
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
-import Home  from './home/Home';
+import { Home }  from 'app/home/Home';
 
 import { getPosts, getFeaturedPosts } from 'api/actions/posts/postsActions';
-import { HomeProps } from './home/Home.types';
+import { HomeProps } from 'app/home/Home.types';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 

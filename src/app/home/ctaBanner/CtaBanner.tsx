@@ -2,7 +2,7 @@ import React from 'react'
 
 import { Box, Typography, Link } from 'components/atoms'
 
-import { PageRoute } from '../../Pages.types';
+import { PageRoute } from '../../../pages/Pages.types';
 import { useStyles } from './CtaBanner.styles';
 
 export const CtaBanner = () => {
@@ -30,5 +30,5 @@ export const CtaBanner = () => {
       </Box>
     </Box>
   )
-}
+};
 
