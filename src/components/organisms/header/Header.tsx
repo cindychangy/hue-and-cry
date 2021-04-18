@@ -31,7 +31,13 @@ export const Header = () => {
         <Box className={classes.navIemsContainer}>
           <Box className={classes.nav}>
             <NavItem navItems={navItems}/>
-            <Icons.Twitter/>
+            <Link 
+              href="https://twitter.com/thehueandcry"
+              rel={'noreferrer noopener'} 
+              target="_blank"
+            >
+              <Icons.Twitter/>
+            </Link>
           </Box>
         </Box>
       </Hidden>

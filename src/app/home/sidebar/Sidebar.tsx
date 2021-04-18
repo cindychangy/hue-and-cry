@@ -3,6 +3,7 @@ import React from 'react';
 import { Box, Typography, Link, SubHeading } from 'components/atoms';
 import { SectionHeading, } from 'components/molecules';
 
+import { AppRoute } from 'app/App.types';
 import { SidebarProps } from './Sidebar.types';
 import { useStyles } from './Sidebar.styles';
 
@@ -27,15 +28,16 @@ export const Sidebar = ({ posts }: SidebarProps) => {
     <Box pl={{ sm: 0, md: 4}}>
       <SectionHeading heading="Featured Stories" />
       {sidebarPosts}
-
-      <Box className={classes.aboutBox}>
-        <Typography className={classes.aboutHeader}>
-          What<br/>happened<br/>to her?
-        </Typography>
-        <Typography className={classes.aboutText}>
-          Learn more about the mission of Hue and Cry
-        </Typography>
-      </Box>
+      <Link href={AppRoute.ABOUT}>
+        <Box className={classes.aboutBox}>
+          <Typography className={classes.aboutHeader}>
+            What<br/>happened<br/>to her?
+          </Typography>
+          <Typography className={classes.aboutText}>
+            Learn more about the mission of Hue and Cry
+          </Typography>
+        </Box>
+      </Link>
     </Box>
   )
 }
