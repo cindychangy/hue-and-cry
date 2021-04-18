@@ -30,8 +30,8 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     overflow: 'hidden',
     '-webkit-line-clamp': 2,
     '-webkit-box-orient': 'vertical',
-    [breakpoints.down('md')]: {
-      lineHeight: 'inherit',
-    },
+    'text-overflow': 'ellipsis',
+    margin: 0,
+    height: '62px',
   }
 }));
