@@ -11,7 +11,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     marginBottom: spacing(1.2),
   },
   text: {
-    fontFamily: '"gilroy-regular", sans-serif',
+    fontFamily: '"gilroy-medum", sans-serif',
     fontSize: '0.9rem',
     lineHeight: 1.2,
     color: palette.common.black,
