@@ -1,13 +1,17 @@
 import { makeStyles } from '@material-ui/core/styles';
 
-export const useStyles = makeStyles(({ spacing, breakpoints }) => ({
+export const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
   aboutBox: {
     background: '#EFF1F5',
     padding: spacing(4),
     marginTop: spacing(6),
+    color: palette.common.black,
     [breakpoints.down('sm')]: {
       display: 'none',
     },
+    '&:hover': {
+      background: '#E4E7EC',
+    }
   },
   aboutHeader: {
     fontFamily: 'Bebas Neue',
