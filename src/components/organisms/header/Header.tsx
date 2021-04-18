@@ -48,7 +48,13 @@ export const Header = () => {
       </IconButton>
       <Box className={hideMenu ? classes.hide: classes.navMobile}>
         <NavItem navItems={navItems}/>
-        <Icons.Twitter/>
+        <Link 
+          href="https://twitter.com/thehueandcry"
+          rel={'noreferrer noopener'} 
+          target="_blank"
+        >
+          <Icons.Twitter/>
+        </Link>
       </Box>
     </Hidden>
     </Box> 
