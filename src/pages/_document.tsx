@@ -23,6 +23,8 @@ class MyDocument extends Document {
   }
 
   render() {
+    const isDev = process.env.NODE_ENV === "development";
+
     return (
       <Html>
         <Head>
@@ -31,7 +33,7 @@ class MyDocument extends Document {
         </Head>
         <body>
           <Main />
-          <NextScript />
+          {isDev && <NextScript />}
         </body>
       </Html>
     )
