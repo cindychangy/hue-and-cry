@@ -10,5 +10,6 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     alignItems: 'center',
     fontFamily: 'gilroy-medium',
     fontSize: '0.8rem',
+    marginTop: spacing(12),
   },
 }));
