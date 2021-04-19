@@ -39,7 +39,7 @@ export const useStyles = makeStyles(({ spacing, breakpoints, palette }) => ({
     },
     '& > span:not(:first-child)': {
       marginLeft: 0,
-      [breakpoints.down('lg')]: {
+      [breakpoints.down('md')]: {
         marginLeft: spacing(0.6),
       },
     }
