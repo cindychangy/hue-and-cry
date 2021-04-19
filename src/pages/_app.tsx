@@ -1,11 +1,15 @@
 import React, { useEffect } from 'react';
 import { AppProps } from 'next/app';
 import Head from 'next/head';
+import ReactGA from 'react-ga';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../theme/theme';
 
 const App = ({ Component, pageProps }: AppProps) => {
+
+  // ReactGA.initialize('UA-154554037-1');
+  // ReactGA.pageview(window.location.pathname + window.location.search);
 
   useEffect(() => {
     // Remove the server-side injected CSS.
