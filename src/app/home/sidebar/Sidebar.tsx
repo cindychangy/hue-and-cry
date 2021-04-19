@@ -25,13 +25,13 @@ export const Sidebar = ({ posts }: SidebarProps) => {
   ));
 
   return (
-    <Box pl={{ sm: 0, md: 4}}>
+    <Box className={classes.sidebarWrapper}>
       <SectionHeading heading="Featured Stories" />
       {sidebarPosts}
       <Link href={AppRoute.ABOUT}>
         <Box className={classes.aboutBox}>
           <Typography className={classes.aboutHeader}>
-            What<br/>happened<br/>to her?
+            <span>What</span><span>happened</span><span>to her?</span>
           </Typography>
           <Typography className={classes.aboutText}>
             Learn more about the mission of Hue and Cry

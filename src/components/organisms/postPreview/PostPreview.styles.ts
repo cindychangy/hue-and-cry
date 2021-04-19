@@ -19,7 +19,10 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
       textDecoration: 'none',
       opacity: 1,
-    }
+    },
+    [breakpoints.down('md')]: {
+      fontSize: '2.2rem',
+    },
   },
   excerpt: {
     fontSize: '0.96rem',
