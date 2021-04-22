@@ -9,7 +9,7 @@ export const About = () => {
   const classes = useStyles();
 
   const backgroundImage = {
-    backgroundImage: 'url("https://thehueandcry.com/wp-content/uploads/thumbprint-banner.jpg");',
+    backgroundImage: 'url("https://wordpress.thehueandcry.com/wp-content/uploads/thumbprint-banner.jpg");',
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
