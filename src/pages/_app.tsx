@@ -1,21 +1,30 @@
 import React, { useEffect } from 'react';
+import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-import ReactGA from 'react-ga';
+
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../theme/theme';
+import * as gtag from '../../lib/gtag'
 
 const App = ({ Component, pageProps }: AppProps) => {
-
-  // ReactGA.initialize('UA-154554037-1');
-  // ReactGA.pageview(window.location.pathname + window.location.search);
+  const router = useRouter();
 
   useEffect(() => {
     // Remove the server-side injected CSS.
     const jssStyles = document.querySelector('#jss-server-side');
     jssStyles?.parentElement?.removeChild(jssStyles);
-  }, []);
+
+    
+    const handleRouteChange = (url: URL) => {
+      gtag.pageview(url)
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events]);
 
   return (
     <>
