@@ -14,3 +14,9 @@ a {
 * {
   box-sizing: border-box;
 }
+
+.comment__header .author,
+.publisher-anchor-color a {
+  color: #424a5a;
+  font-size: 15px;
+}
