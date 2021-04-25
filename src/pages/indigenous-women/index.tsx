@@ -2,11 +2,11 @@ import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { IndigenousWomen } from 'app/indigenousWomen/IndigenousWomen';
-import { getCategories } from 'api/actions/categories/categoriesActions';
+import { getCategory } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const posts = await getCategories(9);
+  const posts = await getCategory(9);
 
   return {
     props: { posts },

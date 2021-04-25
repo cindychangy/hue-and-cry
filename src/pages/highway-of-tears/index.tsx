@@ -2,11 +2,11 @@ import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 
 import { HighwayOfTearsHome } from '../../app/highwayOfTears/HighwayOfTears';
-import { getCategories } from 'api/actions/categories/categoriesActions';
+import { getCategory } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
 
-  const posts = await getCategories(10);
+  const posts = await getCategory(10);
 
   return {
     props: { posts },
