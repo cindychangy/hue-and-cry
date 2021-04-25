@@ -29,19 +29,6 @@ class MyDocument extends Document {
     return (
       <Html>
         <Head>
-          <link 
-            as="style"
-            rel="stylesheet preload" 
-            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap" 
-            type="text/css" 
-          >
-          </link>
-          <link 
-            as="style" 
-            rel="stylesheet preload"
-            href="/fonts/style.css"
-          >
-          </link>
           {/* enable analytics script only for production */}
           {isProduction && (
             <>

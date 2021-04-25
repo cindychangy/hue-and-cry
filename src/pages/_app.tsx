@@ -6,7 +6,7 @@ import Head from 'next/head';
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
 import theme from '../theme/theme';
-import * as gtag from '../../lib/gtag'
+import * as gtag from '../../lib/gtag';
 
 const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
@@ -35,6 +35,22 @@ const App = ({ Component, pageProps }: AppProps) => {
       <link rel="icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" sizes="192x192" />
       <link rel="apple-touch-icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
       <meta name="msapplication-TileImage" content="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
+
+      <link 
+        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"       
+        type="text/css" 
+        rel="stylesheet preload"
+        as="font"
+        crossOrigin="anonymous"
+      >
+      </link>
+      <link 
+        as="style" 
+        rel="stylesheet preload"
+        href="/fonts/style.css"
+        crossOrigin="anonymous"
+      >
+      </link>
     </Head>
     <ThemeProvider theme={theme}>
       <CssBaseline />
