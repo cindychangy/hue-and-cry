@@ -3,13 +3,13 @@ import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
 
 import { Home }  from 'app/home/Home';
-import { getPosts, getFeaturedPosts } from 'api/actions/posts/postsActions';
+import { getHomepagePosts, getFeaturedPosts } from 'api/actions/posts/postsActions';
 import { HomeProps } from 'app/home/Home.types';
 
 export const getStaticProps: GetStaticProps<HomeProps> = async () => {
 
   const [posts, sidebarPosts] = await Promise.all([
-    await getPosts(14),
+    await getHomepagePosts(),
     await getFeaturedPosts()
   ]);
 
