@@ -21,7 +21,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       opacity: 1,
     },
     [breakpoints.down('md')]: {
-      fontSize: '2.2rem',
+      fontSize: '2.4rem',
     },
   },
   excerpt: {
@@ -36,5 +36,9 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     'text-overflow': 'ellipsis',
     margin: 0,
     height: '62px',
+    [breakpoints.down('md')]: {
+      fontSize: '1.1rem',
+      height: '68px',
+    },
   }
 }));

@@ -15,8 +15,8 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     color: palette.text.primary,
 
     '&:hover': {
-      background: 'transparent',
-      border: `1px solid ${palette.grey[200]}`,
+      background: '#efefef',
+      border: `none`,
     },
     '& svg': {
       fontSize: '1.1rem',

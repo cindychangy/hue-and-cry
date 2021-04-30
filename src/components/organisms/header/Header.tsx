@@ -44,7 +44,7 @@ export const Header = () => {
 
     <Hidden mdUp>
       <IconButton className={classes.mobileIcon} onClick={()=> setHideMenu(!hideMenu)}>
-        <Icons.Menu/>
+        {hideMenu ? <Icons.Menu/> : <Icons.Close/>}
       </IconButton>
       <Box className={hideMenu ? classes.hide: classes.navMobile}>
         <NavItem navItems={navItems}/>

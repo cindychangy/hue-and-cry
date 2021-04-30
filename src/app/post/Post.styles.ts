@@ -5,7 +5,10 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     position: 'relative',
     top: spacing(-0.6),
     '& p': {
-      lineHeight: 1.7,
+      lineHeight: 1.8,
+      '&:first-child': {
+        marginTop: 0,
+      },
     },
     '& h2': {
       marginTop: 0,
@@ -40,12 +43,12 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       },
       '& p': {
         fontSize: '1.5rem',
-        margin: spacing(4, 0, 2.5, 0),
+        paddingTop: spacing(4),
         [breakpoints.down('sm')]: {
           fontSize: '1.375rem',
-          margin: spacing(2, 0, 2, 0)
+          paddingTop: spacing(2),
         },
-      }
+      },
     },
     '& cite': {
       fontSize: '1.0625rem',

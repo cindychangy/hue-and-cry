@@ -33,7 +33,7 @@ const theme = createMuiTheme({
     },
     h2: {
       fontFamily: '"Bebas Neue", sans-serif',
-      fontSize: '1.875rem',
+      fontSize: '1.975rem',
       textTransform: 'uppercase',
       lineHeight: 0.95,
     },
@@ -51,7 +51,7 @@ const theme = createMuiTheme({
     },
     h5: {
       fontFamily: "'gilroy-medium', sans-serif",
-      fontSize: '0.83rem',
+      fontSize: '0.89rem',
       lineHeight: 1,
       letterSpacing: 0.5,
     },
@@ -59,7 +59,7 @@ const theme = createMuiTheme({
       fontSize: '1rem',
     },
     body2: {
-      fontSize: '1.1rem',
+      fontSize: '1.12rem',
       lineHeight: 1.8,
     }
   }

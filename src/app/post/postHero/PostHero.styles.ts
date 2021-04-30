@@ -5,14 +5,14 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     width: '100%',
     height: spacing(87),
     marginBottom: 0,
-    [breakpoints.down('xs')]: {
+    [breakpoints.down('sm')]: {
       height: 'auto',
       marginBottom: 0,
     },
   },
   postTitle: {
     [breakpoints.down('xs')]: {
-      fontSize: '3.125rem',
+      fontSize: '3.6rem',
     },
   },
   blockImage: {
