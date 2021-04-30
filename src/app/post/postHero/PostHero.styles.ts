@@ -11,7 +11,10 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     },
   },
   postTitle: {
-    [breakpoints.down('xs')]: {
+    [breakpoints.down('md')]: {
+      fontSize: '4.6rem',
+    },
+    [breakpoints.down('sm')]: {
       fontSize: '3.6rem',
     },
   },
@@ -65,6 +68,9 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     width: '70%', 
     marginLeft: spacing(30),
     paddingRight: spacing(2.5),
+    [breakpoints.down('md')]: {
+      marginLeft: spacing(18),
+    },
     [breakpoints.down('sm')]: {
       width: '100%',
       marginLeft: 0,
