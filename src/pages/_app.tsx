@@ -44,9 +44,21 @@ const App = ({ Component, pageProps }: AppProps) => {
         crossOrigin="anonymous"
       >
       </link>
+      <link
+        rel="preload"
+        href="/fonts/tiempos-regular-webfont.woff2"
+        as="font"
+        crossOrigin=""
+      />
+      <link
+        rel="preload"
+        href="/fonts/gilroy-medium-webfont.woff2"
+        as="font"
+        crossOrigin=""
+      />
       <link 
         as="style" 
-        rel="stylesheet preload"
+        rel="stylesheet"
         href="/fonts/style.css"
         crossOrigin="anonymous"
       >
