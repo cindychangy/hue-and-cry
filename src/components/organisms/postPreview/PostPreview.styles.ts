@@ -19,6 +19,9 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
       textDecoration: 'none',
       opacity: 1,
+      [breakpoints.down('sm')]: {
+        boxShadow: 'none',
+      },
     },
     [breakpoints.down('md')]: {
       fontSize: '2.4rem',

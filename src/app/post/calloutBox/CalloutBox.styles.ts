@@ -12,7 +12,10 @@ export const useStyles = makeStyles(({ palette, typography, breakpoints, spacing
     },
     '& a:hover': {
       textDecoration: 'none',
-    }
+    },
+    '& strong': {
+      fontFamily: "'tiempos-semibold', serif",
+    },
   },
   headline: {
     color: palette.primary.main,

@@ -34,7 +34,7 @@ export const Sidebar = ({ posts }: SidebarProps) => {
             <span>What</span><span>happened</span><span>to her?</span>
           </Typography>
           <Typography className={classes.aboutText}>
-            Learn more about the mission of Hue and Cry
+            Learn more about the mission of Hue and Cry.
           </Typography>
         </Box>
       </Link>

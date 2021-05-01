@@ -47,12 +47,8 @@ const PostPage = ({ post }: { post: Post[] }) =>  {
       <meta property="article:modified_time" content={post[0].modified_gmt}  />
       <meta property="og:image" content={post[0].jetpack_featured_media_url} />
       <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@thehue_andcry" />
-      <meta name="twitter:site" content="@thehue_andcry" />
-      <meta name="twitter:label1" content="Written by" />
-      <meta name="twitter:data1" content="Hue and Cry" />
-      <meta name="twitter:label2" content="Est. reading time"/>
-      <meta name="twitter:data2" content="5 minutes" />
+      <meta name="twitter:creator" content="@thehueandcry" />
+      <meta name="twitter:site" content="@thehueandcry" />
     </Head>
     <PostContainer post={post[0]} /> 
     </>

@@ -15,6 +15,7 @@ export const useStyles = makeStyles(({ spacing, palette, typography, breakpoints
   bodyText: {
     fontSize: '1.25rem',
     marginBottom: spacing(4),
+    lineHeight: 1.8,
   },
   link: {
     color: palette.common.black,
