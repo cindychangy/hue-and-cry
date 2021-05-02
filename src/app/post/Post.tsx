@@ -13,6 +13,7 @@ import { Copyright } from './copyright/Copyright';
 
 import { Post } from 'api/types';
 import { useStyles } from './Post.styles';
+import { baseURL } from 'api/types';
 
 export const PostContainer = ({ post }: { post: Post }) => {
   const classes = useStyles();
@@ -34,7 +35,7 @@ export const PostContainer = ({ post }: { post: Post }) => {
                 location={post.acf.location}
                 year={post.acf.year}
                 postTitle={post.title.rendered}
-                postLink={post.link}
+                postLink={`${baseURL}/${post.slug}`}
               />
             </Grid>
             <Grid item xs={12} md={9}>

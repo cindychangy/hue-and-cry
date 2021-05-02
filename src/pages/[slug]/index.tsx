@@ -6,8 +6,7 @@ import { PostContainer } from 'app/post/Post';
 import { Post } from 'api/types';
 import { getSinglePost } from 'api/actions/posts/postsActions';
 import { getPosts } from 'api/actions/posts/postsActions';
-
-const siteURL = 'https://www.thehueandcry.com';
+import { baseURL } from 'api/types';
 
 export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
@@ -36,12 +35,12 @@ const PostPage = ({ post }: { post: Post[] }) =>  {
     <>
     <Head>
       <title>{post[0].title.rendered}</title>
-      <link rel="canonical" href={`${siteURL}/${post[0].slug}`} />
+      <link rel="canonical" href={`${baseURL}/${post[0].slug}`} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={post[0].title.rendered} />
       <meta property="og:description" content={post[0].excerpt.rendered} />
-      <meta property="og:url" content={`${siteURL}/${post[0].slug}`} />
+      <meta property="og:url" content={`${baseURL}/${post[0].slug}`} />
       <meta property="og:site_name" content="Hue and Cry" />
       <meta property="article:published_time" content={post[0].date_gmt} />
       <meta property="article:modified_time" content={post[0].modified_gmt}  />
