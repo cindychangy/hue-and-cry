@@ -10,9 +10,6 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         marginTop: 0,
       },
     },
-    '& strong': {
-      fontFamily: "'tiempos-semibold', serif",
-    },
     '& h2': {
       marginTop: 0,
     },
@@ -45,11 +42,14 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         margin: spacing(4, 0, 6, 0),
       },
       '& p': {
-        fontSize: '1.5rem',
+        fontSize: '1.3rem',
         paddingTop: spacing(4),
         [breakpoints.down('sm')]: {
           fontSize: '1.375rem',
           paddingTop: spacing(2),
+        },
+        '& strong': {
+          fontFamily: "'tiempos-semibold', serif",
         },
       },
     },
