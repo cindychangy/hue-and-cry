@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import { Box, Typography, SubHeading, Link } from 'components/atoms';
 import { useStyles } from './PostPreview.styles';
@@ -17,7 +18,9 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
   return (
     <Box mb={1}>
       <Link href={`/${encodeURIComponent(slug)}`}>
-        <Box className={classes.imageBox} style={featureImage}></Box>
+        <LazyLoad height={200} once>
+          <Box className={classes.imageBox} style={featureImage}></Box>
+        </LazyLoad>
       </Link>
       <SubHeading 
         heading={category}

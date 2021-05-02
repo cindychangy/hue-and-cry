@@ -2,7 +2,6 @@ import React from 'react'
 
 import { Grid } from 'components/atoms'
 import { PostPreview } from 'components/organisms'
-
 import { Post } from 'api/types';
 
 export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
@@ -18,7 +17,7 @@ export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
         categoryLink={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`} 
         slug={post.slug}
         id={post.id}
-      />  
+      />
     </Grid>
   ));
 
