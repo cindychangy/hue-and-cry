@@ -41,7 +41,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"       
         rel="stylesheet preload"
         as="font"
-        crossOrigin="anonymous"
+        crossOrigin=""
       >
       </link>
       <link
@@ -59,8 +59,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       <link 
         as="style" 
         rel="stylesheet"
-        href="/fonts/style.css"
-        crossOrigin="anonymous"
+        href="styles.css"
+        crossOrigin=""
       >
       </link>
     </Head>

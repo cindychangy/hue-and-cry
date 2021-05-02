@@ -45,7 +45,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         fontSize: '1.3rem',
         paddingTop: spacing(4),
         [breakpoints.down('sm')]: {
-          fontSize: '1.375rem',
+          fontSize: '1.2rem',
           paddingTop: spacing(2),
         },
         '& strong': {

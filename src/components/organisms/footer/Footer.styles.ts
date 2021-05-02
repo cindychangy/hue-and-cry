@@ -11,5 +11,13 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     fontFamily: 'gilroy-medium',
     fontSize: '0.8rem',
     marginTop: spacing(12),
+
+    '& a': {
+      color: 'rgba(255,255,255,0.8)',
+
+      '&:hover': {
+        color: palette.common.white,
+      }
+    }
   },
 }));
