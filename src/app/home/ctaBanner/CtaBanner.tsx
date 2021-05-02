@@ -9,7 +9,7 @@ export const CtaBanner = () => {
   const classes = useStyles();
 
   const featureImage = {
-    backgroundImage: `url('https://wordpress.thehueandcry.com/wp-content/uploads/cta-banner.jpg')`,
+    backgroundImage: `url('https://wordpress.thehueandcry.com/wp-content/uploads/highway-of-tears-banner.jpg')`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat',
     backgroundPosition: 'center',
