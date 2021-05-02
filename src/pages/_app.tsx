@@ -48,12 +48,14 @@ const App = ({ Component, pageProps }: AppProps) => {
         rel="preload"
         href="/fonts/tiempos-regular-webfont.woff2"
         as="font"
+        type="font/woff2" 
         crossOrigin=""
       />
       <link
         rel="preload"
         href="/fonts/gilroy-medium-webfont.woff2"
         as="font"
+        type="font/woff2" 
         crossOrigin=""
       />
       <link 
