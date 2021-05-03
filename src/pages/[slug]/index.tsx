@@ -31,6 +31,8 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
 
 const PostPage = ({ post }: { post: Post[] }) =>  {
 
+  const excerpt = post[0].excerpt.rendered.replace(/(<([^>]+)>)/ig, '');
+
   return (
     <>
     <Head>
@@ -39,7 +41,7 @@ const PostPage = ({ post }: { post: Post[] }) =>  {
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={post[0].title.rendered} />
-      <meta property="og:description" content={post[0].excerpt.rendered} />
+      <meta property="og:description" content={excerpt} />
       <meta property="og:url" content={`${baseURL}/${post[0].slug}`} />
       <meta property="og:site_name" content="Hue and Cry" />
       <meta property="article:published_time" content={post[0].date_gmt} />
