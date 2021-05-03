@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import { Box, Icons } from 'components/atoms';
 import { ResourceHeading, VideoBox } from 'components/molecules';
@@ -21,9 +22,11 @@ export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
         heading="Videos about this case"
         icon={<Icons.Videocam/>}
       />
-      <Box mb={8} display={{ xs: 'block', md: 'flex'}}>
-        {videoList}
-      </Box>
+      <LazyLoad height={220} once>
+        <Box mb={8} display={{ xs: 'block', md: 'flex'}}>
+          {videoList}
+        </Box>
+      </LazyLoad>
     </>
   )
 }

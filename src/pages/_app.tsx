@@ -51,13 +51,6 @@ const App = ({ Component, pageProps }: AppProps) => {
         type="font/woff2" 
         crossOrigin=""
       />
-      <link
-        rel="preload"
-        href="/fonts/gilroy-medium-webfont.woff2"
-        as="font"
-        type="font/woff2" 
-        crossOrigin=""
-      />
       <link 
         as="style" 
         rel="stylesheet"
