@@ -19,7 +19,7 @@ export const Comments = ({ postSlug, postId, postTitle}: CommentsProps) => {
         <Icons.Comment/>
       </Box>
 
-      <LazyLoad height={400} once>
+      <LazyLoad height={400} offset={600} once>
         <DisqusEmbed  
           postSlug={postSlug} 
           postId={postId} 
