@@ -1,4 +1,5 @@
 import React from 'react';
+import LazyLoad from 'react-lazyload';
 
 import { Grid, Box, Divider } from 'components/atoms';
 import { Header, Footer } from 'components/organisms';
@@ -54,6 +55,7 @@ export const PostContainer = ({ post }: { post: Post }) => {
             sourcesInfo={post.acf.dig_deeper}
           />
 
+        <LazyLoad height={400} once>
           {!!post.acf.videos.length && (
             <>
               <Box mt={8}/>
@@ -72,6 +74,7 @@ export const PostContainer = ({ post }: { post: Post }) => {
             postId={post.id} 
             postTitle={post.title} 
           />
+        </LazyLoad>
         </Box>
 
         {/* <RelatedPosts posts={postsMock} /> */}

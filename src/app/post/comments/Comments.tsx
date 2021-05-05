@@ -1,5 +1,4 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
 
 import { Box, Typography, Icons } from 'components/atoms';
 import { DisqusEmbed } from './disqusEmbed/DisqusEmbed';
@@ -19,13 +18,11 @@ export const Comments = ({ postSlug, postId, postTitle}: CommentsProps) => {
         <Icons.Comment/>
       </Box>
 
-      <LazyLoad height={400} offset={600} once>
-        <DisqusEmbed  
-          postSlug={postSlug} 
-          postId={postId} 
-          postTitle={postTitle} 
-        />
-      </LazyLoad>
+      <DisqusEmbed  
+        postSlug={postSlug} 
+        postId={postId} 
+        postTitle={postTitle} 
+      />
     </Box>
   )
 }
