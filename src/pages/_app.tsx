@@ -41,7 +41,7 @@ const App = ({ Component, pageProps }: AppProps) => {
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"       
         rel="stylesheet preload"
         as="font"
-        crossOrigin=""
+        crossOrigin="anonymous" 
       >
       </link>
       <link
@@ -49,13 +49,13 @@ const App = ({ Component, pageProps }: AppProps) => {
         href="/fonts/tiempos-regular-webfont.woff2"
         as="font"
         type="font/woff2" 
-        crossOrigin=""
+        crossOrigin="anonymous" 
       />
       <link 
         as="style" 
         rel="stylesheet"
         href="styles.css"
-        crossOrigin=""
+        crossOrigin="anonymous"
       >
       </link>
     </Head>

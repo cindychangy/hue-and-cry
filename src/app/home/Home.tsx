@@ -28,7 +28,9 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
     <Page>
       <Grid container spacing={4}>
         <Grid item xs={12} lg={9}>
+        <LazyLoad height={450} once>
           <FeaturedPosts posts={featuredTop} />
+        </LazyLoad>
         </Grid>
         <Grid item xs={12} lg={3}>
           <Sidebar posts={sidebarPosts} />
