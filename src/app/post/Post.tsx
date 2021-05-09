@@ -50,31 +50,32 @@ export const PostContainer = ({ post }: { post: Post }) => {
         </Box>
 
         <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
-          <CalloutBox
-            helpInfo={post.acf.how_to_help}
-            sourcesInfo={post.acf.dig_deeper}
-          />
+          <LazyLoad height={250} once>
+            <CalloutBox
+              helpInfo={post.acf.how_to_help}
+              sourcesInfo={post.acf.dig_deeper}
+            />
+          </LazyLoad>
+          <LazyLoad height={400} once>
+            {!!post.acf.videos.length && (
+              <>
+                <Box mt={8}/>
+                <RelatedVideos videos={post.acf.videos} />
+                <Divider />
+              </>
+            )}
 
-        <LazyLoad height={400} once>
-          {!!post.acf.videos.length && (
-            <>
-              <Box mt={8}/>
-              <RelatedVideos videos={post.acf.videos} />
-              <Divider />
-            </>
-          )}
+            {!!post.acf.podcasts.length && (
+              <RelatedPodcasts podcasts={post.acf.podcasts} />
+            )}
 
-          {!!post.acf.podcasts.length && (
-            <RelatedPodcasts podcasts={post.acf.podcasts} />
-          )}
-
-          <Divider />
-          <Comments 
-            postSlug={post.slug} 
-            postId={post.id} 
-            postTitle={post.title} 
-          />
-        </LazyLoad>
+            <Divider />
+            <Comments 
+              postSlug={post.slug} 
+              postId={post.id} 
+              postTitle={post.title} 
+            />
+          </LazyLoad>
         </Box>
 
         {/* <RelatedPosts posts={postsMock} /> */}
