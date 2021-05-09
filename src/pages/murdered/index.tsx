@@ -25,7 +25,7 @@ const MurderedPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>)
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Murdered" />
-        <meta property="og:description" content="Cases of murdered women an girls." />
+        <meta property="og:description" content="Cases of murdered women and girls." />
         <meta property="og:url" content={`${baseURL}/murdered`} />
         <meta property="og:site_name" content="Hue and Cry" />
         <meta property="og:image" content={metaImage} />
