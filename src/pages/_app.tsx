@@ -29,7 +29,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   return (
     <>
     <Head>
-      <title>The Hue and Cry | True Crime Blog</title>
+      <title>Hue and Cry | True Crime Blog</title>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <meta name="google-site-verification" content="yIN8gBn7vykoYb98wQQu9PAzJi9_1JAi5rcwDYS4kB4" />
       <link rel="icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=32%2C29&#038;ssl=1" sizes="32x32" />
