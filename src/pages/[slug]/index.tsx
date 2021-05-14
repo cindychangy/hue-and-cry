@@ -3,10 +3,9 @@ import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 
 import { PostContainer } from 'app/post/Post';
-import { Post } from 'api/types';
-import { getSinglePost } from 'api/actions/posts/postsActions';
-import { getPosts } from 'api/actions/posts/postsActions';
-import { baseURL } from 'api/types';
+import { Post, baseURL } from 'api/types';
+import { PostContainerProps } from 'app/post/Post.types';
+import { getPosts, getSinglePost, getRelatedPosts } from 'api/actions/posts/postsActions';
 
 export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 
@@ -23,13 +22,14 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
 export const getStaticProps: GetStaticProps = async ( { params }) => {
 
   const post = await getSinglePost(params?.slug as string);
+  const relatedPosts = await getRelatedPosts(post[0].id);
 
   return {
-    props: { post },
+    props: { post, relatedPosts },
   };
 };
 
-const PostPage = ({ post }: { post: Post[] }) =>  {
+const PostPage = ({ post, relatedPosts }: PostContainerProps) =>  {
 
   const excerpt = post[0].excerpt.rendered.replace(/(<([^>]+)>)/ig, '');
 
@@ -51,7 +51,7 @@ const PostPage = ({ post }: { post: Post[] }) =>  {
       <meta name="twitter:creator" content="@thehueandcry" />
       <meta name="twitter:site" content="@thehueandcry" />
     </Head>
-    <PostContainer post={post[0]} /> 
+    <PostContainer post={post[0]} relatedPosts={relatedPosts} /> 
     </>
   )
 };

@@ -10,7 +10,7 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     alignItems: 'center',
     fontFamily: 'gilroy-medium',
     fontSize: '0.8rem',
-    marginTop: spacing(12),
+    marginTop: spacing(3),
 
     '& a': {
       color: 'rgba(255,255,255,0.8)',

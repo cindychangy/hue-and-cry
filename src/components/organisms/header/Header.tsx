@@ -15,6 +15,8 @@ const navItems = [
   { label: 'About', value: AppRoute.ABOUT },
 ]
 
+const twitterLink = 'https://twitter.com/thehueandcry';
+
 export const Header = () => {
   const classes = useStyles();
 
@@ -33,7 +35,7 @@ export const Header = () => {
           <Box className={classes.nav}>
             <NavItem navItems={navItems}/>
             <Link 
-              href="https://twitter.com/thehueandcry"
+              href={twitterLink}
               rel={'noreferrer noopener'} 
               target="_blank"
             >
@@ -50,7 +52,7 @@ export const Header = () => {
       <Box className={hideMenu ? classes.hide: classes.navMobile}>
         <NavItem navItems={navItems}/>
         <Link 
-          href="https://twitter.com/thehueandcry"
+          href={twitterLink}
           rel={'noreferrer noopener'} 
           target="_blank"
         >

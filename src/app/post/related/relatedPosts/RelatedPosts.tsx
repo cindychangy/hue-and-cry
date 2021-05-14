@@ -3,38 +3,42 @@ import React from 'react';
 import { Grid, Box, Typography, Link } from 'components/atoms';
 
 import { useStyles } from './RelatedPosts.styles';
-import { RelatedPostsProps } from './RelatedPosts.types';
+import { Post } from 'api/types';
 
-export const RelatedPosts = ({ posts }: RelatedPostsProps) => {
+export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
   const classes = useStyles();
 
   const showRelatedPosts = posts.map(post => (
-    // <Grid item xs={12} sm={6} md={4} lg={2} key={post.title}>
-    //   <Box 
-    //     className={classes.imageBox} 
-    //     style={{
-    //       backgroundImage: `url('${post.featureImage}')`,
-    //       backgroundSize: 'cover',
-    //       backgroundRepeat: 'no-repeat'
-    //     }}
-    //   >
-    //   </Box>
-    //   <Typography className={classes.articleTitle}>
-    //     <Link href={post.postLink} color="inherit">
-    //       {post.title}
-    //     </Link>
-    //   </Typography>
-    // </Grid>
-    <p>Related Posts</p>
+    <Grid item xs={6} sm={3} md={2} key={post.id}>
+      <Link href={post.slug}>
+        <Box 
+          className={classes.imageBox} 
+          style={{
+            backgroundImage: `url('${post.jetpack_featured_media_url}')`,
+            backgroundSize: 'cover',
+            backgroundRepeat: 'no-repeat',
+            backgroundPosition: 'center',
+          }}
+        >
+        </Box>
+      </Link>
+      <Typography className={classes.articleTitle}>
+        <Link href={post.slug} color="inherit">
+          {post.title.rendered}
+        </Link>
+      </Typography>
+    </Grid>
   ));
 
   return (
     <Box className={classes.relatedContainer}>
-      <Box maxWidth={1260} m="auto" py={12} px={{ xs: 2, md: 4 }}>
-        <Typography variant="h4">Related Cases</Typography>
+      <Box m="auto" py={6} px={{ xs: 2, md: 4 }}>
+        <Box textAlign="center">
+          <Typography variant="h4">Related Cases</Typography>
+        </Box>
         <Box mb={4}/>
 
-        <Grid container spacing={4}>
+        <Grid container spacing={6} className={classes.gridContainer}>
           {showRelatedPosts}
         </Grid>
       </Box>

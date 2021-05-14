@@ -12,11 +12,11 @@ import { RelatedPodcasts } from './related/relatedPodcasts/RelatedPodcasts';
 import { Comments } from './comments/Comments';
 import { Copyright } from './copyright/Copyright';
 
-import { Post } from 'api/types';
+import { PostProps } from './Post.types';
 import { useStyles } from './Post.styles';
 import { baseURL } from 'api/types';
 
-export const PostContainer = ({ post }: { post: Post }) => {
+export const PostContainer = ({ post, relatedPosts }: PostProps) => {
   const classes = useStyles();
 
   return (
@@ -77,8 +77,10 @@ export const PostContainer = ({ post }: { post: Post }) => {
             />
           </LazyLoad>
         </Box>
-
-        {/* <RelatedPosts posts={postsMock} /> */}
+        
+        <LazyLoad height={330} once>
+          <RelatedPosts posts={relatedPosts} />
+        </LazyLoad>
 
         <Box maxWidth={700} m="auto" pb={1} px={2}>
           <Copyright sources={post.acf.copyright_sources} />
