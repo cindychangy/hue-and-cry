@@ -9,7 +9,7 @@ export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
   const classes = useStyles();
 
   const showRelatedPosts = posts.map(post => (
-    <Grid item xs={6} md={2} key={post.id}>
+    <Grid item xs={6} sm={3} md={2} key={post.id}>
       <Link href={post.slug}>
         <Box 
           className={classes.imageBox} 

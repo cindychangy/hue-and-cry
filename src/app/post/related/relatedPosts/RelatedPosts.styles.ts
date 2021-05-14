@@ -6,10 +6,11 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
   },
   relatedContainer: {
     background: palette.grey[100],
+    marginBottom: spacing(8),
   },
   imageBox: {
     height: spacing(15),
-    width: spacing(20),
+    width: '100%',
   },
   articleTitle: {
     fontFamily: 'gilroy-bold',
