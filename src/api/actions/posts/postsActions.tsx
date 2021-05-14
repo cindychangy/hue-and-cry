@@ -19,3 +19,8 @@ export const getHomepagePosts = async() => {
   const res = await fetch(`${apiURL}/wp/v2/posts?per_page=14&tags=12`);
   return res.json();
 }
+
+export const getRelatedPosts = async(postId: number) => {
+  const res = await fetch(`${apiURL}/yarpp/v1/related/${postId}`);
+  return res.json();
+}
