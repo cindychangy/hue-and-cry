@@ -1,97 +1,92 @@
-export const postsMock = [
-  {
-    title: {
-      rendered: 'The Murder of PFC Vanessa Guillen'
-    },
-    category: 'Military',
-    excerpt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-    featureImage: 'https://thehueandcry.com/wp-content/uploads/vanessa-guillen-image.jpg',
-    categoryLink: "#",
-    articleLink: "#",
-  },
-  {
-    title: {
-      rendered: 'The Disappearance of Jepsy Amaga Kallungi'
-    },
-    category: 'Murder',
-    excerpt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-    featureImage: 'https://i2.wp.com/thehueandcry.com/wp-content/uploads/jepsy-amaga-kallungi-photo.jpg',
-    categoryLink: "#",
-    articleLink: "#",
-  },
-  {
-    title: {
-      rendered: 'The Disappearance of Delphine Nikal'
-    },
-    category: 'Military',
-    excerpt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the',
-    featureImage: 'https://thehueandcry.com/wp-content/uploads/delphine-nikal-poster.jpg',
-    categoryLink: "#",
-    articleLink: "#",
-  },
-  {
-    title: {
-      rendered: 'The Murder of Ramona Wilson'
-    },
-    category: 'Highway of Tears ',
-    excerpt: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been',
-    featureImage: 'https://thehueandcry.com/wp-content/uploads/ramona-wilson-photo-1.jpg',
-    categoryLink: "#",
-    articleLink: "#",
-  },
-]
-
-export const mockPost = {
+export const postMock = {
+  id: 3053,
+  slug: 'alishia-germaine',
+  status: 'publish',
+  type: 'post',
+  link: 'https://wordpress.thehueandcry.com/alishia-germaine/',
   title: {
-    rendered: 'The Murder of Ramona Wilson'
+      rendered: 'The Murder of Alishia Germaine'
   },
-  category: 'Missing',
-  bgImage: 'https://thehueandcry.com/wp-content/uploads/bg-rw.jpg',
-  featureImage: 'https://thehueandcry.com/wp-content/uploads/ramona-wilson-photo-1.jpg',
-  body: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.',
-  location: 'San Jose, California',
-  year: '2019',
-  categoryLink: "#",
-  articleLink: "#",
+  content: {
+    rendered: '\n<p style=\"font-size:15px; font-weight:300;\">**This story is part of our series examining the cases of missing and murdered women along <a rel=\"noreferrer noopener\" aria-label=\" (opens in a new tab)\" href=\"https://en.wikipedia.org/wiki/Highway_of_Tears\" target=\"_blank\">The&nbsp;Highway of Tears</a>.'
+  },
+  excerpt: {
+    rendered: '<p>15-year-old Alishia Germaine was last seen leaving a Christmas party in Prince Rupert.</p>\n',
+    protected: false
+  },
+  categories: [ 10, 9, 3 ],
+  acf: {
+    background_image: 'https://wordpress.thehueandcry.com/background-image.jpg',
+    copyright_sources: 'Justice for Native Women',
+    podcasts: [
+        {
+            link: 'https://www.podcast1.com',
+            podcast_show: 'Podcast 1',
+            show_title: 'Podcast 1 Title'
+        },
+        {
+          link: 'https://www.podcast2.com',
+          podcast_show: 'Podcast 2',
+          show_title: 'Podcast 2 Title '  
+      }
+    ],
+    dig_deeper: '<p><a href=\"https://www.booksource,com" target=\"_blank\" rel=\"noopener\">A book source</a>',
+    how_to_help: '<p>If you have any information regarding this case please contact the <strong>police</strong>.</p>\n',
+    location: 'Prince George, British Columbia',
+    year: '1994',
+    videos: [
+      {
+        video_title: 'Video Title 1',
+        video: '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2kEp26hMHGk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>',
+        link: 'https://video1.com'
+      },
+      {
+        video_title: 'Video Title 2',
+        video: '<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/2kEp26hMHGk\" frameborder=\"0\" allow=\"accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture\" allowfullscreen></iframe>',
+        link: 'https://video2.com'
+      },
+    ]
+  },
+  tags: [ 12 ],
+  jetpack_featured_media_url: "https://wordpress.thehueandcry.com/featured-image.jpg",
+  categories_names: [
+      "Highway of Tears",
+      "Indigenous Women",
+      "Murdered"
+  ],
 }
 
-export const mockVideos = [
+export const postsMock = [
   {
-    title: 'A video of something',
-    link: "#",
-    featureImage: 'https://thehueandcry.com/wp-content/uploads/ramona-wilson-photo-1.jpg',
+    id: 2595,
+    slug: 'tamara-chipman',
+    title: {
+        rendered: 'The Disappearance of Tamara Chipman'
+    },
+    excerpt: {
+      rendered: '<p>15-year-old Tamara Chipman was last seen leaving a Christmas party in Prince Rupert.</p>\n',
+    },
+    categories: [ 10, 3 ],
+    categories_names: [
+      'Indigenous Women',
+      'Missing'
+    ],
+    tags: [ 12 ],
   },
   {
-    title: 'Another video of something',
-    link: "#",
-    featureImage: 'https://thehueandcry.com/wp-content/uploads/vanessa-guillen-image.jpg',
-  },
-  {
-    title: 'My last vide of something',
-    link: "#",
-    featureImage: 'https://i2.wp.com/thehueandcry.com/wp-content/uploads/amy-tuccaro-image.jpg',
-  },
-  {
-    title: 'My last vide of something',
-    link: "#",
-    featureImage: 'https://i2.wp.com/thehueandcry.com/wp-content/uploads/amy-tuccaro-image.jpg',
-  },
-]
-
-export const mockPodcasts = [
-  {
-    show: 'CBC Missing and Murdered',
-    title: 'A podcast show',
-    link: "#",
-  },
-  {
-    show: 'Crime Junkie',
-    title: 'Another A podcast show',
-    link: "#",
-  },
-  {
-    show: 'My favorite murder',
-    title: 'My last podcast show',
-    link: "#",
-  },
+    id: 4862,
+    slug: 'vanessa-guillen',
+    title: {
+        rendered: 'The Murder of Vanessa Guillen'
+    },
+    excerpt: {
+      rendered: '<p>Vanessa Guillen was murdered in the Army</p>\n',
+    },
+    categories: [ 8 ],
+    categories_names: [
+      'Military',
+      'Murdered'
+    ],
+    tags: [ 11 ],
+  }
 ]
