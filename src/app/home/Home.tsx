@@ -38,7 +38,7 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
       <LazyLoad height={250} once>
         <Grid container>
           <Grid item xs={12}>
-            <CtaBanner/>
+
           </Grid>
         </Grid>
       </LazyLoad>
