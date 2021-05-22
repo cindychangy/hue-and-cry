@@ -27,10 +27,10 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
   return (
     <Page>
       <Grid container spacing={4}>
-        <Grid item xs={12} lg={9}>
+        <Grid item xs={12} md={9}>
           <FeaturedPosts posts={featuredTop} />
         </Grid>
-        <Grid item xs={12} lg={3}>
+        <Grid item xs={12} md={3}>
           <Sidebar posts={sidebarPosts} />
         </Grid>
       </Grid>
