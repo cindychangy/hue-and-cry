@@ -1,7 +1,7 @@
 import React, { FC } from 'react'
 import { render, RenderOptions } from '@testing-library/react'
 import { ThemeProvider } from '@material-ui/core/styles';
-import theme  from '../theme/Theme';
+import theme  from '../theme/theme';
 
 const AllTheProviders: FC = ({ children }) => {
   return (
