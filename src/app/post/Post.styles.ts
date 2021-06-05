@@ -14,10 +14,8 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
       marginTop: 0,
     },
     '& h3': {
-      fontFamily: "'gilroy-extrabold', sans-serif",
-      letterSpacing: -0.3,
       fontSize: '1.375rem',
-      marginTop: 0,
+      marginTop: spacing(3),
     },
     '& figure': {
       textAlign: 'center',
