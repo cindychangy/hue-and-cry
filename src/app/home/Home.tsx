@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import LazyLoad from 'react-lazyload';
 
 import { Grid } from 'components/atoms';
 import { SectionHeading, } from 'components/molecules';
@@ -35,22 +34,18 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
         </Grid>
       </Grid>
 
-      <LazyLoad height={250} once>
-        <Grid container>
-          <Grid item xs={12}>
-            <CtaBanner/>
-          </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <CtaBanner/>
         </Grid>
-      </LazyLoad>
+      </Grid>
 
-      <LazyLoad height={450} once>
-        <Grid container>
-          <Grid item xs={12}>
-            <SectionHeading heading="More Stories" />
-            <PostGrid posts={featuredBottom} />
-          </Grid>
+      <Grid container>
+        <Grid item xs={12}>
+          <SectionHeading heading="More Stories" />
+          <PostGrid posts={featuredBottom} />
         </Grid>
-      </LazyLoad>
+      </Grid>
     </Page>
   )
 };
