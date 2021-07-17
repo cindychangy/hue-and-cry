@@ -38,7 +38,7 @@ export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
         </Box>
         <Box mb={4}/>
 
-        <Grid container spacing={6} className={classes.gridContainer}>
+        <Grid container spacing={3} className={classes.gridContainer}>
           {showRelatedPosts}
         </Grid>
       </Box>

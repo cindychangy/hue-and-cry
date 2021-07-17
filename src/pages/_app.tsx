@@ -3,9 +3,10 @@ import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
+import { StylesProvider } from "@material-ui/styles";
 import { ThemeProvider } from '@material-ui/core/styles';
 import CssBaseline from '@material-ui/core/CssBaseline';
-import theme from '../theme/theme';
+import theme  from '../theme/theme';
 import * as gtag from '../../lib/gtag';
 
 const App = ({ Component, pageProps }: AppProps) => {
@@ -60,8 +61,10 @@ const App = ({ Component, pageProps }: AppProps) => {
       </link>
     </Head>
     <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...pageProps} />
+      <StylesProvider injectFirst>
+        <CssBaseline />
+        <Component {...pageProps} />
+      </StylesProvider>
     </ThemeProvider>
   </>
   )

@@ -5,8 +5,11 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     height: spacing(24),
     width: '100%',
     marginBottom: '14px',
-    [breakpoints.down('md')]: {
+    [breakpoints.down('xs')]: {
       height: spacing(34),
+    },
+    [breakpoints.down('sm')]: {
+      height: spacing(30),
     },
   },
   title: {
@@ -23,7 +26,7 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
         boxShadow: 'none',
       },
     },
-    [breakpoints.down('md')]: {
+    [breakpoints.down('sm')]: {
       fontSize: '2.4rem',
     },
   },

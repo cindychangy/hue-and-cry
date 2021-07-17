@@ -36,8 +36,7 @@ export type Post = {
   date_gmt?: string;
   modified_gmt?: string;
   slug: string,
-  link: string,
-  tags: [];
+  tags: number[];
   content: Rendered;
   acf: Acf;
 }

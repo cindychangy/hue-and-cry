@@ -13,7 +13,7 @@ export const useStyles = makeStyles(({ spacing, palette }) => ({
     width: '100%',
   },
   articleTitle: {
-    fontFamily: 'gilroy-bold',
+    fontFamily: 'gilroy-extrabold',
     fontSize: '0.95rem',
     lineHeight: 1.2,
     marginTop: spacing(1),
