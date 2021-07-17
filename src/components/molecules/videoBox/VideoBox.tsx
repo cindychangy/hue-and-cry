@@ -15,7 +15,7 @@ export const  VideoBox = ({ link, video, title }: VideoBoxProps) => {
         dangerouslySetInnerHTML={{__html: video}}
       />
       <Typography className={classes.videoTitle}>
-        <Link href={link} className={classes.link}>
+        <Link href={link} className={classes.link} externalLink>
           {title}
         </Link>
       </Typography>
