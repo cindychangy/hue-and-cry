@@ -13,6 +13,7 @@ export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
       key={index}
       link={video.link}
       title={video.video_title}
+      video={video.video}
     />
   ));
 
