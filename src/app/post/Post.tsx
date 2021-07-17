@@ -57,7 +57,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
             />
           </LazyLoad>
           <LazyLoad height={400} once>
-            {!!post.acf.videos.length && (
+            {post.acf.videos.length && (
               <>
                 <Box mt={8}/>
                 <RelatedVideos videos={post.acf.videos} />
@@ -65,11 +65,13 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               </>
             )}
 
-            {!!post.acf.podcasts.length && (
-              <RelatedPodcasts podcasts={post.acf.podcasts} />
+            {post.acf.podcasts.length && (
+              <>
+                <RelatedPodcasts podcasts={post.acf.podcasts} />
+                <Divider />
+              </>
             )}
 
-            <Divider />
             <Comments 
               postSlug={post.slug} 
               postId={post.id} 
