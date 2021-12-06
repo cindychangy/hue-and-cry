@@ -17,7 +17,7 @@ export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroPro
     <Box className={classes.heroContainer}>
       <Box className={classes.blockImage} style={backgroundImage}>
         <Box className={classes.featureImage}>
-          <img src={featureImage}/>
+          <img src={featureImage} alt={title} />
         </Box>
       </Box>
       <Box className={classes.blockColor}>

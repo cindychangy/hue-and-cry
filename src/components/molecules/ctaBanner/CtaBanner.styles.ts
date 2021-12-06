@@ -9,7 +9,6 @@ export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
     flexDirection: 'column',
     justifyContent: 'center',
     padding: spacing(4),
-    margin: spacing(8, 0),
     [breakpoints.down('sm')]: {
       height: 'auto',
     },

@@ -1,3 +1,3 @@
 export type SectionHeadingProps = {
-  heading: string;
+  heading?: string;
 }
