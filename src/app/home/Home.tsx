@@ -5,7 +5,7 @@ import { SectionHeading, } from 'components/molecules';
 import { PostGrid, } from 'components/organisms';
 import { FeaturedPosts } from './featuredPosts/FeaturedPosts';
 import { Page } from 'components/templates';
-import { CtaBanner } from './ctaBanner/CtaBanner';
+import { CtaBanner } from 'components/molecules/ctaBanner/CtaBanner';
 import { Sidebar } from './sidebar/Sidebar';
 
 import { HomeProps } from './Home.types';
@@ -21,7 +21,7 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
       setFeaturedTop(posts.splice(0, 6));
       setFeaturedBottom(posts.splice(-8));
     }
-  }, []);
+  }, [posts]);
 
   return (
     <Page>
@@ -36,7 +36,7 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
 
       <Grid container>
         <Grid item xs={12}>
-          <CtaBanner/>
+          <CtaBanner showLink />
         </Grid>
       </Grid>
 
