@@ -1,12 +1,15 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 
-import { Box, Typography, SubHeading, Link } from 'components/atoms';
-import { useStyles } from './PostPreview.styles';
+import Typography from '@mui/material/Typography';
+import Box from '@mui/material/Box';
+import { Link } from 'components/atoms/link/Link';
+import { SubHeading } from 'components/atoms/subHeading/SubHeading';
 import { PostPreviewProps } from './PostPreview.types';
 
+import * as S from './PostPreview.styles';
+
 export const PostPreview = ({ image, category, title, excerpt, categoryLink, slug }: PostPreviewProps) => {
-  const classes = useStyles();
 
   const featureImage = {
     backgroundImage: `url('${image}')`,
@@ -19,7 +22,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
     <Box mb={1}>
       <Link href={`/${encodeURIComponent(slug)}`}>
         <LazyLoad height={200} once>
-          <Box className={classes.imageBox} style={featureImage}></Box>
+          <S.ImageBox style={featureImage}></S.ImageBox>
         </LazyLoad>
       </Link>
       <SubHeading 
@@ -27,18 +30,9 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
         link={categoryLink}
       />
       <Typography variant="h2">
-        <Link 
-          href={slug} 
-          className={classes.title}
-        >
-          {title}
-        </Link>
+        <S.Title href={slug}>{title}</S.Title>
       </Typography>
-      <Box 
-        className={classes.excerpt}
-        dangerouslySetInnerHTML={{__html: excerpt}}
-      >
-      </Box>
+      <S.Excerpt dangerouslySetInnerHTML={{__html: excerpt}}/>
     </Box>
   )
 }

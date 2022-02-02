@@ -1,23 +1,22 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Typography from '@mui/material/Typography';
 
-export const useStyles = makeStyles(({ spacing, palette }) => ({
-  footer: {
+export const Footer = styled(Typography)(({ theme }) => ({
+  color: 'rgba(255,255,255,0.8)',
+  background: theme.palette.common.black,
+  height: theme.spacing(7),
+  display: 'flex',
+  justifyContent: 'center',
+  alignItems: 'center',
+  fontFamily: 'gilroy-medium',
+  fontSize: '0.8rem',
+  marginTop: theme.spacing(3),
+
+  '& a': {
     color: 'rgba(255,255,255,0.8)',
-    background: palette.common.black,
-    height: spacing(7),
-    display: 'flex',
-    justifyContent: 'center',
-    alignItems: 'center',
-    fontFamily: 'gilroy-medium',
-    fontSize: '0.8rem',
-    marginTop: spacing(3),
 
-    '& a': {
-      color: 'rgba(255,255,255,0.8)',
-
-      '&:hover': {
-        color: palette.common.white,
-      }
+    '&:hover': {
+      color: theme.palette.common.white,
     }
-  },
+  }
 }));

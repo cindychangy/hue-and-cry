@@ -1,22 +1,20 @@
 import React from 'react';
 
-import { Box, Typography, Icons } from 'components/atoms';
+import Box from '@mui/material/Box';
 import { DisqusEmbed } from './disqusEmbed/DisqusEmbed';
-
+import ChatIcon from '@mui/icons-material/Chat';
 import { CommentsProps } from './Comments.types';
-import { useStyles } from './Comments.styles';
+
+import * as S from './Comments.styles';
 
 export const Comments = ({ postSlug, postId, postTitle}: CommentsProps) => {
-  const classes = useStyles();
 
   return (
     <Box maxWidth={800} m="auto">
-      <Box className={classes.commentsContainer} pt={3}>
-        <Typography variant="h4" className={classes.commentsTitle}> 
-          Comments
-        </Typography>
-        <Icons.Comment/>
-      </Box>
+      <S.CommentsContainer pt={3}>
+        <S.CommentsTitle variant="h4">Comments</S.CommentsTitle>
+        <ChatIcon/>
+      </S.CommentsContainer>
 
       <DisqusEmbed  
         postSlug={postSlug} 

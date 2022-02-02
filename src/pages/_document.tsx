@@ -1,7 +1,7 @@
 
 import React from 'react';
 import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { ServerStyleSheets } from '@material-ui/core/styles';
+import { ServerStyleSheets } from '@mui/styles';
 import { GA_TRACKING_ID } from '../../lib/gtag';
 
 const isProduction = process.env.NODE_ENV === 'production';

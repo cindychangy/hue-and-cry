@@ -1,28 +1,39 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Link } from 'components/atoms/link/Link';
 
-export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
-  metaContainer: {
-    paddingBottom: spacing(1),
-    [breakpoints.down('sm')]: {
-      display: 'none',
-    },
+export const MetaContainer = styled(Box)(({ theme }) => ({
+  paddingBottom: theme.spacing(1),
+  [theme.breakpoints.down('sm')]: {
+    display: 'none',
   },
-  metaTitle: {
-    marginBottom: spacing(1.2),
-  },
-  text: {
-    fontFamily: '"gilroy-regular", sans-serif',
-    fontSize: '0.9rem',
-    lineHeight: 1.2,
-    color: palette.common.black,
-  },
-  list: {
-    paddingLeft: 0,
-    listStyle: 'none',
-    marginTop: 0,
+}));
 
-    '& li': {
-      lineHeight: 1.4,
-    }
+export const MetaTitle = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(1.2),
+}));
+
+export const TypographyStyled = styled(Typography)(({ theme }) => ({
+  fontFamily: '"gilroy-regular", sans-serif',
+  fontSize: '0.9rem',
+  lineHeight: 1.2,
+  color: theme.palette.common.black,
+}));
+
+export const LinkStyled = styled(Link)(({ theme }) => ({
+  fontFamily: '"gilroy-regular", sans-serif',
+  fontSize: '0.9rem',
+  lineHeight: 1.2,
+  color: theme.palette.common.black,
+}));
+
+
+export const ListStyled = styled('ul')(() => ({
+  paddingLeft: 0,
+  listStyle: 'none',
+  marginTop: 0,
+  '& li': {
+    lineHeight: 1.4,
   }
 }));

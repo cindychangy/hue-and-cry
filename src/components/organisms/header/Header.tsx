@@ -1,10 +1,14 @@
 import React, { useState } from 'react';
 
-import { Box, Typography, IconButton, Icons, Link, Hidden } from 'components/atoms';
+import Hidden from '@mui/material/Hidden';
+import { Link } from 'components/atoms/link/Link';
 import { NavItem } from './navItem/NavItem';
-
-import { useStyles } from './Header.styles';
 import { AppRoute } from 'app/App.types';
+import TwitterIcon from '@mui/icons-material/Twitter';
+import MenuIcon from '@mui/icons-material/Menu';
+import CloseIcon from '@mui/icons-material/Close';
+
+import * as S from './Header.styles';
 
 const navItems = [
   { label: 'Missing', value: AppRoute.MISSING },
@@ -18,48 +22,47 @@ const navItems = [
 const twitterLink = 'https://twitter.com/thehueandcry';
 
 export const Header = () => {
-  const classes = useStyles();
 
   const [hideMenu, setHideMenu] = useState(true);
 
   return (  
-    <Box  maxWidth={1280} px={{ xs: 2, md: 4 }} className={classes.header}>
-      <Typography className={classes.logo}>
+    <S.Header maxWidth={1280} px={{ xs: 2, md: 4 }}>
+      <S.Logo>
         <Link href={AppRoute.HOME}>
           Hue and Cry
         </Link>
-      </Typography>
+      </S.Logo>
 
-      <Hidden smDown>
-        <Box className={classes.navIemsContainer}>
-          <Box className={classes.nav}>
+      {/* <Hidden smDown>
+        <S.NavItemsContainer>
+          <S.Nav>
             <NavItem navItems={navItems}/>
             <Link 
               href={twitterLink}
               rel={'noreferrer noopener'} 
               target="_blank"
             >
-              <Icons.Twitter/>
+              <TwitterIcon/>
             </Link>
-          </Box>
-        </Box>
-      </Hidden>
+          </S.Nav>
+        </S.NavItemsContainer>
+      </Hidden> */}
 
-    <Hidden mdUp>
-      <IconButton className={classes.mobileIcon} onClick={()=> setHideMenu(!hideMenu)}>
-        {hideMenu ? <Icons.Menu/> : <Icons.Close/>}
-      </IconButton>
-      <Box className={hideMenu ? classes.hide: classes.navMobile}>
+    {/* <Hidden lgUp>
+      <S.MobileIcon onClick={()=> setHideMenu(!hideMenu)}>
+        {hideMenu ? <MenuIcon/> : <CloseIcon/>}
+      </S.MobileIcon>
+      <S.NavMobile sx={{ display: hideMenu ? 'none' : 'block' }}>
         <NavItem navItems={navItems}/>
         <Link 
           href={twitterLink}
           rel={'noreferrer noopener'} 
           target="_blank"
         >
-          <Icons.Twitter/>
+          <TwitterIcon/>
         </Link>
-      </Box>
-    </Hidden>
-    </Box> 
+      </S.NavMobile>
+    </Hidden> */}
+    </S.Header> 
   )
 }

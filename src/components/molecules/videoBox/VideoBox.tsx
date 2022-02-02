@@ -1,11 +1,11 @@
 import React from 'react';
-import { Box, Typography, Link } from 'components/atoms';
+import Box from '@mui/material/Box';
 
-import { useStyles } from './VideoBox.styles';
 import { VideoBoxProps } from './VideoBox.types';
 
+import * as S from './VideoBox.styles';
+
 export const  VideoBox = ({ link, video, title }: VideoBoxProps) => {
-  const classes = useStyles();
 
   return (
     <Box maxWidth={320} mr={{ xs: 0, sm: 6 }}>
@@ -14,11 +14,11 @@ export const  VideoBox = ({ link, video, title }: VideoBoxProps) => {
         height={220}
         dangerouslySetInnerHTML={{__html: video}}
       />
-      <Typography className={classes.videoTitle}>
-        <Link href={link} className={classes.link} externalLink>
+      <S.VideoTitle>
+        <S.LinkStyled href={link} externalLink>
           {title}
-        </Link>
-      </Typography>
+        </S.LinkStyled>
+      </S.VideoTitle>
     </Box>
   )
 }

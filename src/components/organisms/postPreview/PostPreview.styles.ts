@@ -1,50 +1,54 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
+import { Link } from 'components/atoms/link/Link';
 
-export const useStyles = makeStyles(({ spacing, palette, breakpoints }) => ({
-  imageBox: {
-    height: spacing(24),
-    width: '100%',
-    marginBottom: '14px',
-    [breakpoints.down('xs')]: {
-      height: spacing(34),
-    },
-    [breakpoints.down('sm')]: {
-      height: spacing(30),
-    },
+export const ImageBox = styled(Box)(({ theme }) => ({
+  height: theme.spacing(24),
+  width: '100%',
+  marginBottom: '14px',
+  [theme.breakpoints.down('xs')]: {
+    height: theme.spacing(34),
   },
-  title: {
-    color: palette.common.black,
-    transition: '.2s, box-shadow .2s, -webkit-box-shadow .2s',
+  [theme.breakpoints.down('sm')]: {
+    height: theme.spacing(30),
+  },
+}));
+
+export const Title = styled(Link)(({ theme }) => ({
+  color: theme.palette.common.black,
+  transition: '.2s, box-shadow .2s, -webkit-box-shadow .2s',
+  textDecoration: 'none',
+  lineHeight: 1,
+  cursor: 'pointer',
+  '&:hover': {
+    boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
     textDecoration: 'none',
-    lineHeight: 1,
-    cursor: 'pointer',
-    '&:hover': {
-      boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
-      textDecoration: 'none',
-      opacity: 1,
-      [breakpoints.down('sm')]: {
-        boxShadow: 'none',
-      },
-    },
-    [breakpoints.down('sm')]: {
-      fontSize: '2.4rem',
+    opacity: 1,
+    [theme.breakpoints.down('sm')]: {
+      boxShadow: 'none',
     },
   },
-  excerpt: {
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '2.4rem',
+  },
+}));
+
+export const Excerpt = styled(Box)(({ theme }) => ({
+  display: '-webkit-box',
+  width: '100%',
+  overflow: 'hidden',
+  webkitLineClamp: 2,
+  webkitBoxOrient: 'vertical',
+  textOverflow: 'ellipsis',
+  margin: 0,
+  height: '62px',
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.1rem',
+    height: '68px',
+  },
+  'p': {
     fontSize: '0.96rem',
     color: '#505356',
     lineHeight: 1.6,
-    display: '-webkit-box',
-    width: '100%',
-    overflow: 'hidden',
-    '-webkit-line-clamp': 2,
-    '-webkit-box-orient': 'vertical',
-    'text-overflow': 'ellipsis',
-    margin: 0,
-    height: '62px',
-    [breakpoints.down('md')]: {
-      fontSize: '1.1rem',
-      height: '68px',
-    },
   }
 }));

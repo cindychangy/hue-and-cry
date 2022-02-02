@@ -1,8 +1,9 @@
 import React from 'react';
 
-import { Grid, Box } from 'components/atoms';
-import { SectionHeading } from 'components/molecules';
-import { PostGrid } from 'components/organisms';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
+import { PostGrid } from 'components/organisms/postGrid/PostGrid';
 import { Page } from 'components/templates';
 import { CtaBanner } from 'components/molecules/ctaBanner/CtaBanner';
 import { Post } from 'api/types';

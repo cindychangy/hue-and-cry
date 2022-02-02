@@ -1,8 +1,7 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Typography from '@mui/material/Typography';
 
-export const useStyles = makeStyles(( { spacing }) => ({
-  navItem: {
-    fontSize: '1.4rem',
-    marginRight: spacing(3),
-  },
+export const NavItem = styled(Typography)(({ theme }) => ({
+  fontSize: '1.4rem',
+  marginRight: theme.spacing(3),
 }));

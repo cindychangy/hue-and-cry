@@ -1,14 +1,15 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 
-import { Box, Typography, Link } from 'components/atoms';
+import Typography from '@mui/material/Typography';
 
 import { AppRoute } from 'app/App.types';
 import { CtaBannerProps } from './CtaBanner.types';
-import { useStyles } from './CtaBanner.styles';
+
+import * as S from './CtaBanner.styles';
+
 
 export const CtaBanner = ( { isHero, showLink }: CtaBannerProps) => {
-  const classes = useStyles();
 
   const featureImage = {
     backgroundImage: `url('https://wordpress.thehueandcry.com/wp-content/uploads/highway-of-tears-banner.jpg')`,
@@ -19,19 +20,19 @@ export const CtaBanner = ( { isHero, showLink }: CtaBannerProps) => {
 
   return (
     <LazyLoad height={250} once>
-      <Box className={classes.ctaContainer} style={featureImage} mt={isHero ? 4 : 8 } mb={8}>
-        <Box className={classes.ctaTextWrapper}>
-          <Typography variant="h2" className={classes.ctaHeading}>
+      <S.CtaContainer style={featureImage} mt={isHero ? 4 : 8 } mb={8}>
+        <S.CtaTextWrapper>
+          <S.CtaHeading variant="h2">
             Highway of Tears
-          </Typography>
-          <Typography className={classes.ctaText}>
+          </S.CtaHeading>
+          <S.CtaText>
             The Highway of Tears is an isolated 725-kilometer stretch of Highway 16 between Prince George and Prince Rupert in British Columbia, Canada. This highway has been the location of many unsolved murders and disappearances of Indigenous women beginning as early as the 1970s.
-          </Typography>
+          </S.CtaText>
           <Typography variant="h5">
-          {showLink && <Link href={AppRoute.HIGHWAY_OF_TEARS} className={classes.seeMore}>See all stories</Link>}
+          {showLink && <S.SeeMore href={AppRoute.HIGHWAY_OF_TEARS}>See all stories</S.SeeMore>}
           </Typography>
-        </Box>
-      </Box>
+        </S.CtaTextWrapper>
+      </S.CtaContainer>
     </LazyLoad>
   )
 };

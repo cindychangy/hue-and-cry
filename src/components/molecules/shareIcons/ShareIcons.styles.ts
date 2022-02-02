@@ -1,28 +1,24 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
 
-export const useStyles = makeStyles(({ spacing, palette }) => ({
-  shareContainer: {
-    display: 'flex',
-    alignContent: 'center',
-    paddingTop: spacing(1),
-  },
-  button: {
-    border: `1px solid ${palette.grey[300]}`,
-    marginRight: spacing(0.5),
-    opacity: 1,
-    height: spacing(6),
-    width: spacing(6),
-    color: palette.text.primary,
+export const ShareContainer = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  alignContent: 'center',
+  paddingTop: theme.spacing(1),
+}));
 
-    '&:hover': {
-      background: '#efefef',
-      border: `none`,
-    },
-    '& svg': {
-      fontSize: '1.1rem',
-    }
+export const IconButtonStyled = styled('a')(({ theme }) => ({
+  border: `1px solid ${theme.palette.grey[300]}`,
+  marginRight: theme.spacing(0.5),
+  opacity: 1,
+  height: theme.spacing(6),
+  width: theme.spacing(6),
+  color: theme.palette.text.primary,
+  '&:hover': {
+    background: '#efefef',
+    border: `none`,
   },
-  attachement: {
-    transform: 'rotate(-45deg)',
+  '& svg': {
+    fontSize: '1.1rem',
   }
 }));

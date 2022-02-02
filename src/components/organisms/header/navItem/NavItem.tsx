@@ -1,18 +1,18 @@
 import React from 'react';
 
-import { Typography, Link } from 'components/atoms';
-import { useStyles } from './NavItem.styles';
+import { Link } from 'components/atoms/link/Link';
 import { NavItemProps } from './NavItem.types';
 
+import * as S from './NavItem.styles';
+
 export const NavItem = ( { navItems }: NavItemProps) => {
-  const classes = useStyles();
 
   return (  
     <>
     {navItems.map(item => (
-      <Typography variant="h3" className={classes.navItem} key={item.label}>
+      <S.NavItem variant="h3" key={item.label}>
         <Link href={item.value}>{item.label}</Link>
-      </Typography>
+      </S.NavItem>
     ))}
     </>
   )

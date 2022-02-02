@@ -13,12 +13,17 @@ export const getStaticProps: GetStaticProps<HomeProps> = async () => {
     await getFeaturedPosts()
   ]);
 
+  // const posts = await getHomepagePosts();
+  // const sidebarPosts = await getFeaturedPosts();
+
+
   return {
     props: { posts, sidebarPosts },
   };
 };
 
 const Index = ({ posts, sidebarPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+
    return (
      <>
      <Head>

@@ -1,43 +1,42 @@
 import React from 'react';
 
-import { Box, Typography, Link, Icons } from 'components/atoms';
-import { ResourceHeading } from 'components/molecules';
+import Box from '@mui/material/Box';
+import VolumeUpIcon from '@mui/icons-material/VolumeUp';
+import { ResourceHeading } from 'components/molecules/resourceHeading/ResourceHeading';
 
-import { useStyles } from './RelatedPodcasts.styles';
 import { RelatedPodcastsProps } from './RelatedPodcasts.types';
+
+import * as S from './RelatedPodcasts.styles';
 
 export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
 
-  const classes = useStyles();
-
   const podcastList = podcasts.map((podcast, index)  => (
-    <Box key={index} className={classes.podcastConatiner}>
-      <Typography className={classes.showTitle}>
+    <S.PodcastConatiner key={index}>
+      <S.ShowTitle>
         {podcast.podcast_show}
-      </Typography>
-      <Link 
+      </S.ShowTitle>
+      <S.LinkStyled 
         href={podcast.link} 
-        className={classes.link} 
         color='inherit' 
         rel={'noreferrer noopener'} 
         target={'_blank'}
       >
         {podcast.show_title}
-      </Link>
-    </Box>
+      </S.LinkStyled>
+    </S.PodcastConatiner>
   ))
 
   return (
     <Box my={8}>
     <ResourceHeading
       heading="Podcasts about this case"
-      icon={<Icons.VolumeUp/>}
+      icon={<VolumeUpIcon/>}
     />
     <Box mt={3}/>
 
-    <Box className={classes.podcastWrapper}>
+    <S.PodcastWrapper>
       {podcastList}
-    </Box>
+    </S.PodcastWrapper>
     </Box>
   )
 }
