@@ -1,12 +1,13 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Divider from '@mui/material/Divider';
+import Typography from '@mui/material/Typography';
 
-export const useStyles = makeStyles(({ spacing, palette }) => ({
-  divider: {
-    background: palette.common.black,
-    height: '2px',
-    marginBottom: spacing(2),
-  },
-  heading: {
-    marginBottom: spacing(4),
-  }
+export const DividerStyled = styled(Divider)(({ theme }) => ({
+  background: theme.palette.common.black,
+  height: '2px',
+  marginBottom: theme.spacing(2),
+}));
+
+export const Heading = styled(Typography)(({ theme }) => ({
+  marginBottom: theme.spacing(4),
 }));

@@ -1,8 +1,11 @@
 import React from 'react';
 import LazyLoad from 'react-lazyload';
 
-import { Grid, Box, Divider } from 'components/atoms';
-import { Header, Footer } from 'components/organisms';
+import Box from '@mui/material/Box';
+import Grid from '@mui/material/Grid';
+import Divider from '@mui/material/Divider';
+import { Header } from 'components/organisms/header/Header';
+import { Footer } from 'components/organisms/footer/Footer';
 import { PostHero } from './postHero/PostHero';
 import { PostMeta } from './postMeta/PostMeta';
 import { CalloutBox } from './calloutBox/CalloutBox';
@@ -13,11 +16,11 @@ import { Comments } from './comments/Comments';
 import { Copyright } from './copyright/Copyright';
 
 import { PostProps } from './Post.types';
-import { useStyles } from './Post.styles';
 import { baseURL } from 'api/types';
 
+import * as S from './Post.styles';
+
 export const PostContainer = ({ post, relatedPosts }: PostProps) => {
-  const classes = useStyles();
 
   return (
     <>
@@ -40,11 +43,10 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               />
             </Grid>
             <Grid item xs={12} md={9}>
-              <Box 
-                className={classes.articleBody}
+              <S.ArticleBody 
                 dangerouslySetInnerHTML={{__html: post.content.rendered}}
               >
-              </Box>
+              </S.ArticleBody>
             </Grid>
           </Grid>
         </Box>

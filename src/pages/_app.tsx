@@ -2,10 +2,9 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-
-import { StylesProvider } from "@material-ui/styles";
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@mui/material/styles';
+import { StylesProvider } from '@mui/styles';
+import CssBaseline from '@mui/material/CssBaseline';
 import theme  from '../theme/theme';
 import * as gtag from '../../lib/gtag';
 
@@ -38,15 +37,19 @@ const App = ({ Component, pageProps }: AppProps) => {
       <link rel="apple-touch-icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
       <meta name="msapplication-TileImage" content="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
 
+      <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossOrigin="anonymous" />
+
       <link 
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"       
-        rel="stylesheet preload"
+        rel="stylesheet"
         as="font"
         crossOrigin="anonymous" 
       >
       </link>
       <link
-        rel="preload"
+        rel="stylesheet"
         href="/fonts/tiempos-regular-webfont.woff2"
         as="font"
         type="font/woff2" 

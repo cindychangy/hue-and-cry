@@ -1,8 +1,8 @@
 import React from 'react';
 
-import { Grid } from 'components/atoms';
-import { SectionHeading } from 'components/molecules';
-import { PostGrid } from 'components/organisms';
+import Grid from '@mui/material/Grid';
+import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
+import { PostGrid } from 'components/organisms/postGrid/PostGrid';
 import { Page } from 'components/templates';
 
 import { Category, Post } from 'api/types';

@@ -1,18 +1,19 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Typography from '@mui/material/Typography';
+import { Link } from 'components/atoms/link/Link';
 
-export const useStyles = makeStyles(( { spacing, palette }) => ({
-  videoTitle: {
-    fontSize: '1rem',
-    lineHeight: 1.6,
-    marginTop: spacing(2),
-  },
-  link: {
-    textDecoration: 'underline',
-    color: palette.common.black,
+export const VideoTitle = styled(Typography)(({ theme }) => ({
+  fontSize: '1rem',
+  lineHeight: 1.6,
+  marginTop: theme.spacing(2),
+}));
 
-    '&:hover': {
-      color: palette.grey[800],
-      textDecoration: 'none',
-    }
+export const LinkStyled = styled(Link)(({ theme }) => ({
+  textDecoration: 'underline',
+  color: theme.palette.common.black,
+
+  '&:hover': {
+    color: theme.palette.grey[800],
+    textDecoration: 'none',
   }
 }));

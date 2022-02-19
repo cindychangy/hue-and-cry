@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 
-import { Grid } from 'components/atoms';
-import { SectionHeading, } from 'components/molecules';
-import { PostGrid, } from 'components/organisms';
+import Grid from '@mui/material/Grid';
+import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
+import { PostGrid } from 'components/organisms/postGrid/PostGrid';
 import { FeaturedPosts } from './featuredPosts/FeaturedPosts';
 import { Page } from 'components/templates';
 import { CtaBanner } from 'components/molecules/ctaBanner/CtaBanner';
@@ -21,15 +21,15 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
       setFeaturedTop(posts.splice(0, 6));
       setFeaturedBottom(posts.splice(-8));
     }
-  }, [posts]);
+  }, []);
 
   return (
     <Page>
       <Grid container spacing={4}>
-        <Grid item xs={12} md={9}>
+        <Grid item xs={12} lg={9}>
           <FeaturedPosts posts={featuredTop} />
         </Grid>
-        <Grid item xs={12} md={3}>
+        <Grid item xs={12} lg={3}>
           <Sidebar posts={sidebarPosts} />
         </Grid>
       </Grid>

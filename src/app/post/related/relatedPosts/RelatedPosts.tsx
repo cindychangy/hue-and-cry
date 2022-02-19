@@ -1,18 +1,19 @@
 import React from 'react';
 
-import { Grid, Box, Typography, Link } from 'components/atoms';
-
-import { useStyles } from './RelatedPosts.styles';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
+import { Link } from 'components/atoms/link/Link';
+import Typography from '@mui/material/Typography';
 import { Post } from 'api/types';
 
+import * as S from './RelatedPosts.styles';
+
 export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
-  const classes = useStyles();
 
   const showRelatedPosts = posts.map(post => (
     <Grid item xs={6} sm={3} md={2} key={post.id}>
       <Link href={post.slug}>
-        <Box 
-          className={classes.imageBox} 
+        <S.ImageBox 
           style={{
             backgroundImage: `url('${post.jetpack_featured_media_url}')`,
             backgroundSize: 'cover',
@@ -20,28 +21,28 @@ export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
             backgroundPosition: 'center',
           }}
         >
-        </Box>
+        </S.ImageBox>
       </Link>
-      <Typography className={classes.articleTitle}>
+      <S.ArticleTitle>
         <Link href={post.slug} color="inherit">
           {post.title.rendered}
         </Link>
-      </Typography>
+      </S.ArticleTitle>
     </Grid>
   ));
 
   return (
-    <Box className={classes.relatedContainer}>
+    <S.RelatedContainer>
       <Box m="auto" py={6} px={{ xs: 2, md: 4 }}>
         <Box textAlign="center">
           <Typography variant="h4">Related Cases</Typography>
         </Box>
         <Box mb={4}/>
 
-        <Grid container spacing={3} className={classes.gridContainer}>
+        <S.GridContainer container spacing={3}>
           {showRelatedPosts}
-        </Grid>
+        </S.GridContainer>
       </Box>
-    </Box>
+    </S.RelatedContainer>
   )
 }

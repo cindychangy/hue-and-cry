@@ -1,43 +1,41 @@
 import React from 'react';
 
-import { Box, Typography, Link } from 'components/atoms';
-import { ShareIcons } from 'components/molecules';
-import { useStyles } from './PostMeta.styles';
+import Box from '@mui/material/Box';
+import { ShareIcons } from 'components/molecules/shareIcons/ShareIcons';
 import { PostMetaProps } from './PostMeta.types';
 
+import * as S from './PostMeta.styles';
 
 export const PostMeta = ({ categories, location, year, postLink, postTitle }: PostMetaProps) => {
-  const classes = useStyles();
 
   const categoryList = categories.map((category, index)  => (
       <li key={index}>
-      <Link 
-        className={classes.text} 
+      <S.LinkStyled 
         href={`${encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase())}`}
       >
         {category}
-      </Link>
+      </S.LinkStyled>
       </li>
   ));
 
   return (
-    <Box className={classes.metaContainer}>
+    <S.MetaContainer>
       <Box mb={3}>
-        <Typography variant="h5" color="primary" className={classes.metaTitle}>Category</Typography>
-          <ul className={classes.list}>{categoryList}</ul>
+        <S.MetaTitle variant="h5" color="primary">Category</S.MetaTitle>
+          <S.ListStyled>{categoryList}</S.ListStyled>
       </Box>
       <Box mb={3}>
-        <Typography variant="h5" color="primary" className={classes.metaTitle}>Location</Typography>
-        <Typography className={classes.text}>{location}</Typography>
+        <S.MetaTitle variant="h5" color="primary">Location</S.MetaTitle>
+        <S.TypographyStyled>{location}</S.TypographyStyled>
       </Box>
       <Box mb={3}>
-        <Typography variant="h5" color="primary" className={classes.metaTitle}>Year</Typography>
-        <Typography className={classes.text}>{year}</Typography>
+        <S.MetaTitle variant="h5" color="primary">Year</S.MetaTitle>
+        <S.TypographyStyled>{year}</S.TypographyStyled>
       </Box>
       <Box mb={3}>
-        <Typography variant="h5" color="primary" className={classes.metaTitle}>Share</Typography>
+        <S.MetaTitle variant="h5" color="primary">Share</S.MetaTitle>
         <ShareIcons postTitle={postTitle} postLink={postLink} />
       </Box>
-    </Box>
+    </S.MetaContainer>
   )
 }

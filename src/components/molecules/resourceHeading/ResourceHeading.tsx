@@ -1,18 +1,18 @@
 import React from 'react';
-import { Box, Typography } from 'components/atoms';
+import Typography from '@mui/material/Typography';
 
-import { useStyles } from './ResourceHeading.styles';
 import { ResourceHeadingProps } from './ResourceHeading.types';
 
+import * as S from './ResourceHeading.styles';
+
 export const ResourceHeading = ({ heading, icon }: ResourceHeadingProps) => {
-  const classes = useStyles();
 
   return (
-    <Box className={classes.container}>
+    <S.Container>
       <Typography variant="h4">{heading}</Typography>
-      <Box className={classes.icon}>
+      <S.IconContainer>
         {icon}
-      </Box>
-    </Box>
+      </S.IconContainer>
+    </S.Container>
   )
 }
