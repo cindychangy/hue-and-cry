@@ -3,25 +3,20 @@ import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
+import { StylesProvider } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
-import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme  from '../theme/theme';
 import * as gtag from '../../lib/gtag';
-import createEmotionCache from '../theme/createEmotionCache';
 
-interface MyAppProps extends AppProps {
-  emotionCache?: EmotionCache;
-}
-
-// Client-side cache, shared for the whole session of the user in the browser.
-const clientSideEmotionCache = createEmotionCache();
-
-const MyApp = (props: MyAppProps) => {
-  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
+const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   useEffect(() => {
+    // Remove the server-side injected CSS.
+    const jssStyles = document.querySelector('#jss-server-side');
+    jssStyles?.parentElement?.removeChild(jssStyles);
 
+    
     const handleRouteChange = (url: URL) => {
       gtag.pageview(url)
     }
@@ -32,7 +27,7 @@ const MyApp = (props: MyAppProps) => {
   }, [router.events]);
 
   return (
-    <CacheProvider value={emotionCache}>
+    <>
     <Head>
       <title>Hue and Cry | True Crime Blog</title>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
@@ -42,15 +37,19 @@ const MyApp = (props: MyAppProps) => {
       <link rel="apple-touch-icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
       <meta name="msapplication-TileImage" content="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
 
+      <link rel="preconnect"
+      href="https://fonts.gstatic.com"
+      crossOrigin="anonymous" />
+
       <link 
         href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"       
-        rel="stylesheet preload"
+        rel="stylesheet"
         as="font"
         crossOrigin="anonymous" 
       >
       </link>
       <link
-        rel="preload"
+        rel="stylesheet"
         href="/fonts/tiempos-regular-webfont.woff2"
         as="font"
         type="font/woff2" 
@@ -64,14 +63,14 @@ const MyApp = (props: MyAppProps) => {
       >
       </link>
     </Head>
-      <ThemeProvider theme={theme}>
-        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+    <ThemeProvider theme={theme}>
+      <StylesProvider injectFirst>
         <CssBaseline />
         <Component {...pageProps} />
-      </ThemeProvider>
-    </CacheProvider>
-  );
+      </StylesProvider>
+    </ThemeProvider>
+  </>
+  )
 }
 
-export default MyApp;
-
+export default App;
