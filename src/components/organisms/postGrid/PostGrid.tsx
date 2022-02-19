@@ -1,7 +1,7 @@
 import React from 'react';
 
-import { Grid } from 'components/atoms';
-import { PostPreview } from 'components/organisms';
+import Grid from '@mui/material/Grid';
+import { PostPreview } from 'components/organisms/postPreview/PostPreview';
 
 import { PostGridProps } from './PostGrid.types';
 

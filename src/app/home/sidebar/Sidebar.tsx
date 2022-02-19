@@ -1,14 +1,16 @@
 import React from 'react';
 
-import { Box, Typography, Link, SubHeading } from 'components/atoms';
-import { SectionHeading, } from 'components/molecules';
+import Box from '@mui/material/Box';
+import { Link } from 'components/atoms/link/Link';
+import { SubHeading } from 'components/atoms/subHeading/SubHeading';
+import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
 
 import { AppRoute } from 'app/App.types';
 import { SidebarProps } from './Sidebar.types';
-import { useStyles } from './Sidebar.styles';
+
+import * as S from './Sidebar.styles';
 
 export const Sidebar = ({ posts }: SidebarProps) => {
-  const classes = useStyles();
   
   const sidebarPosts = posts.map(post => (
     <Box my={3} key={post.id}>
@@ -16,28 +18,28 @@ export const Sidebar = ({ posts }: SidebarProps) => {
         heading={post.categories_names[0]}
         link={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`}
       />
-      <Typography className={classes.articleTitle}>
+      <S.ArticleTitle>
         <Link href={post.slug} color="inherit">
           {post.title.rendered}
         </Link>
-      </Typography>
+      </S.ArticleTitle>
     </Box>
   ));
 
   return (
-    <Box className={classes.sidebarWrapper}>
+    <S.SidebarWrapper>
       <SectionHeading heading="Featured Stories" />
       {sidebarPosts}
       <Link href={AppRoute.ABOUT}>
-        <Box className={classes.aboutBox}>
-          <Typography className={classes.aboutHeader}>
+        <S.AboutBox>
+          <S.AboutHeader>
             <span>What</span><span>happened</span><span>to her?</span>
-          </Typography>
-          <Typography className={classes.aboutText}>
+          </S.AboutHeader>
+          <S.AboutText>
             Learn more about the mission of Hue and Cry.
-          </Typography>
-        </Box>
+          </S.AboutText>
+        </S.AboutBox>
       </Link>
-    </Box>
+    </S.SidebarWrapper>
   )
 }

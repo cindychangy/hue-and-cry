@@ -1,31 +1,31 @@
 import React from 'react';
 
-import { Grid, Box, Typography } from 'components/atoms';
-import { useStyles } from './CalloutBox.styles';
+import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import { CalloutBoxProps } from './CallboutBox.types';
 
+import * as S from './CalloutBox.styles';
 
 export const CalloutBox = ({ helpInfo, sourcesInfo }: CalloutBoxProps) => {
-  const classes = useStyles();
 
   return (
-    <Grid container className={classes.ctaBox}> 
+    <S.CtaBox container> 
       <Grid item xs={12} md={6}>
-        <Box className={classes.helpInfo}>
-          <Typography variant="h4" className={classes.headline} gutterBottom>
+        <S.HelpInfo>
+          <S.Headline variant="h4" gutterBottom>
             Help this Case
-          </Typography>
+          </S.Headline>
           <Box dangerouslySetInnerHTML={{__html: helpInfo}} />
-        </Box>
+        </S.HelpInfo>
       </Grid>
       <Grid item xs={12} md={6}>
-        <Box className={classes.sourcesLinks}>
-          <Typography variant="h4" className={classes.headline} gutterBottom>
+        <S.SourcesLinks>
+          <S.Headline variant="h4" gutterBottom>
             Sources and Links
-          </Typography>
+          </S.Headline>
           <Box dangerouslySetInnerHTML={{__html: sourcesInfo}} />
-        </Box>
+        </S.SourcesLinks>
       </Grid>
-    </Grid>
+    </S.CtaBox>
   )
 }

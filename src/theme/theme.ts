@@ -1,9 +1,6 @@
-import { createMuiTheme }  from '@material-ui/core/styles'
-import createBreakpoints from '@material-ui/core/styles/createBreakpoints'
+import { createTheme } from '@mui/material';
 
-const breakpoints = createBreakpoints({})
-
-const theme = createMuiTheme({
+const theme = createTheme({ 
   palette: {
     common: {
       black: '#151A1F',
@@ -27,9 +24,9 @@ const theme = createMuiTheme({
       fontSize: '5.625rem',
       lineHeight: 0.9,
       textTransform: 'uppercase',
-      [breakpoints.down('sm')]: {
-        fontSize: '2.5rem',
-      },
+      // [theme.breakpoints.down('sm')]: {
+      //   fontSize: '2.5rem',
+      // },
     },
     h2: {
       fontFamily: '"Bebas Neue", sans-serif',
@@ -57,11 +54,13 @@ const theme = createMuiTheme({
     },
     body1: {
       fontSize: '1rem',
+      fontFamily: '"tiempos-regular", sans-serif',
     },
     body2: {
       fontSize: '1.12rem',
       lineHeight: 1.8,
     }
-  }
-})
+  },
+});
+
 export default theme;

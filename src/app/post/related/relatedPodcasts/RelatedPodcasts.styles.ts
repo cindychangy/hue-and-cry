@@ -1,30 +1,34 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
+import Typography from '@mui/material/Typography';
+import { Link } from 'components/atoms/link/Link';
 
-export const useStyles = makeStyles(({ typography, breakpoints, spacing }) => ({
-  podcastWrapper: {
-    width: '100%', 
-    display: 'flex',
-    flexWrap: 'wrap',
-    [breakpoints.down('sm')]: {
-      display: 'block',
-    },
+export const PodcastWrapper = styled(Box)(({ theme }) => ({
+  width: '100%', 
+  display: 'flex',
+  flexWrap: 'wrap',
+  [theme.breakpoints.down('sm')]: {
+    display: 'block',
   },
-  podcastConatiner: {
-    flexGrow: 1,
-    margin: spacing(0, 2, 2.5, 0),
-    [breakpoints.down('sm')]: {
-      marginBottom: spacing(3.5),
-    },
+}));
+
+export const PodcastConatiner = styled(Box)(({ theme }) => ({
+  flexGrow: 1,
+  margin: theme.spacing(0, 2, 2.5, 0),
+  [theme.breakpoints.down('sm')]: {
+    marginBottom: theme.spacing(3.5)
   },
-  showTitle: {
-    fontSize: '1.125rem',
-    fontWeight: typography.fontWeightBold,
-  },
-  link: {
-    fontSize: '1rem',
-    textDecoration: 'underline',
-    '&:hover': {
-      textDecoration: 'none',
-    }
+}));
+
+export const ShowTitle = styled(Typography)(() => ({
+  fontSize: '1.125rem',
+  fontWeight: 700,
+}));
+
+export const LinkStyled = styled(Link)(() => ({
+  fontSize: '1rem',
+  textDecoration: 'underline',
+  '&:hover': {
+    textDecoration: 'none',
   }
 }));

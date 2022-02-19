@@ -3,9 +3,8 @@ import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import { StylesProvider } from "@material-ui/styles";
-import { ThemeProvider } from '@material-ui/core/styles';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { ThemeProvider } from '@mui/material';
+import CssBaseline from '@mui/material/CssBaseline';
 import theme  from '../theme/theme';
 import * as gtag from '../../lib/gtag';
 
@@ -13,11 +12,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   const router = useRouter();
 
   useEffect(() => {
-    // Remove the server-side injected CSS.
-    const jssStyles = document.querySelector('#jss-server-side');
-    jssStyles?.parentElement?.removeChild(jssStyles);
 
-    
     const handleRouteChange = (url: URL) => {
       gtag.pageview(url)
     }
@@ -61,10 +56,8 @@ const App = ({ Component, pageProps }: AppProps) => {
       </link>
     </Head>
     <ThemeProvider theme={theme}>
-      <StylesProvider injectFirst>
-        <CssBaseline />
-        <Component {...pageProps} />
-      </StylesProvider>
+      <CssBaseline />
+      <Component {...pageProps} />
     </ThemeProvider>
   </>
   )

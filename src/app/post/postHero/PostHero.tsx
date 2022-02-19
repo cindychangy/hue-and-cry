@@ -1,12 +1,12 @@
 import React from 'react';
 
-import { Box, Typography, SubHeading } from 'components/atoms';
-import { useStyles } from './PostHero.styles';
+import { SubHeading } from 'components/atoms/subHeading/SubHeading';
 import { PostHeroProps } from './PostHero.types';
 
-export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroProps) => {
-  const classes = useStyles();
+import * as S from './PostHero.styles';
 
+export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroProps) => {
+  
   const backgroundImage = {
     backgroundImage: `url('${bgImage}')`,
     backgroundSize: 'cover',
@@ -14,22 +14,22 @@ export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroPro
   };
 
   return (
-    <Box className={classes.heroContainer}>
-      <Box className={classes.blockImage} style={backgroundImage}>
-        <Box className={classes.featureImage}>
+    <S.HeroContainer>
+      <S.BlockImage style={backgroundImage}>
+        <S.FeatureImage>
           <img src={featureImage} alt={title} />
-        </Box>
-      </Box>
-      <Box className={classes.blockColor}>
-        <Box className={classes.blockText}>
+        </S.FeatureImage>
+      </S.BlockImage>
+      <S.BlockColor>
+        <S.BlockText>
           <SubHeading 
             heading={category} 
             link={`${encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase())}`} 
             heroHeading
             />
-          <Typography variant="h1" className={classes.postTitle}>{title}</Typography>
-        </Box>
-      </Box>
-    </Box>
+          <S.PostTitle variant="h1">{title}</S.PostTitle>
+        </S.BlockText>
+      </S.BlockColor>
+    </S.HeroContainer>
   )
 }

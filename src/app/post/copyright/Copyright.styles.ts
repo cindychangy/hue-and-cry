@@ -1,13 +1,11 @@
-import { makeStyles } from '@material-ui/core/styles';
+import { styled } from '@mui/system';
+import Box from '@mui/material/Box';
 
-export const useStyles = makeStyles(( { palette }) => ({
-  copyright: {
-    fontSize: '0.8rem',
-    fontFamily: 'gilroy-regular',
-
-    '& a': {
-      color: palette.common.black,
-      textDecoration: 'none',
-    }
-  },
+export const Copyright = styled(Box)(({ theme }) => ({
+  fontSize: '0.8rem',
+  fontFamily: 'gilroy-regular',
+  '& a': {
+    color: theme.palette.common.black,
+    textDecoration: 'none',
+  }
 }));

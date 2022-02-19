@@ -1,25 +1,20 @@
 import React from 'react';
-import classNames from 'classnames';
-
-import { Typography, Link } from 'components/atoms';
-
-import { useStyles } from './SubHeading.styles';
 import { SubHeadingProps } from './SubHeading.types';
 
+import * as S from './SubHeading.styles';
+
 export const SubHeading = ({ heading, link, heroHeading }: SubHeadingProps) => {
-  const classes = useStyles();
 
   return (
-    <Typography 
+    <S.SubHeading
       variant="h5" 
-      className={classNames(classes.subHeading, heroHeading && classes.subHeadingHero)}
+      sx={{ fontSize: heroHeading ? '0.9375rem' : '0.89rem'}}
     >
-      <Link 
+      <S.CategoryName 
         href={`/${encodeURIComponent(link)}`}
-        className={classes.categoryName}
       >
         {heading}
-      </Link>
-    </Typography>
+      </S.CategoryName>
+    </S.SubHeading>
   )
 }

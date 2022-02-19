@@ -1,16 +1,16 @@
 import React from 'react';
-import { Box, Typography, Divider } from 'components/atoms';
+import Box from '@mui/material/Box';
 
-import { useStyles } from './SectionHeading.styles';
 import { SectionHeadingProps } from './SectionHeading.types';
 
+import * as S from './SectionHeading.styles';
+
 export const SectionHeading = ({ heading }: SectionHeadingProps) => {
-  const classes = useStyles();
 
   return (
     <Box>
-      <Divider className={classes.divider} />
-      {heading && <Typography variant="h3" className={classes.heading}>{heading}</Typography>}
+      <S.DividerStyled/>
+      {heading && <S.Heading variant="h3">{heading}</S.Heading>}
     </Box>
   )
 }
