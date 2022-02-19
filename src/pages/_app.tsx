@@ -3,7 +3,6 @@ import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
 import { ThemeProvider } from '@mui/material/styles';
-import { StylesProvider } from '@mui/styles';
 import CssBaseline from '@mui/material/CssBaseline';
 import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme  from '../theme/theme';
@@ -66,11 +65,9 @@ const MyApp = (props: MyAppProps) => {
       </link>
     </Head>
       <ThemeProvider theme={theme}>
-        <StylesProvider injectFirst>
-          {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
-          <CssBaseline />
-          <Component {...pageProps} />
-        </StylesProvider>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
       </ThemeProvider>
     </CacheProvider>
   );
