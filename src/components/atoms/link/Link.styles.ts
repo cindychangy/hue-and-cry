@@ -6,6 +6,6 @@ export const LinkStyled = styled(Link)(() => ({
   color: 'inherit',
   '&:hover': {
     textDecoration: 'none',
-    opacity: '0.7',
+    opacity: '0.6',
   }
 }));

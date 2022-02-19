@@ -2,13 +2,22 @@ import React, { useEffect } from 'react';
 import { useRouter } from 'next/router'
 import { AppProps } from 'next/app';
 import Head from 'next/head';
-
-import { ThemeProvider } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import CssBaseline from '@mui/material/CssBaseline';
+import { CacheProvider, EmotionCache } from '@emotion/react';
 import theme  from '../theme/theme';
 import * as gtag from '../../lib/gtag';
+import createEmotionCache from '../theme/createEmotionCache';
 
-const App = ({ Component, pageProps }: AppProps) => {
+interface MyAppProps extends AppProps {
+  emotionCache?: EmotionCache;
+}
+
+// Client-side cache, shared for the whole session of the user in the browser.
+const clientSideEmotionCache = createEmotionCache();
+
+const MyApp = (props: MyAppProps) => {
+  const { Component, emotionCache = clientSideEmotionCache, pageProps } = props;
   const router = useRouter();
 
   useEffect(() => {
@@ -23,7 +32,7 @@ const App = ({ Component, pageProps }: AppProps) => {
   }, [router.events]);
 
   return (
-    <>
+    <CacheProvider value={emotionCache}>
     <Head>
       <title>Hue and Cry | True Crime Blog</title>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
@@ -55,12 +64,14 @@ const App = ({ Component, pageProps }: AppProps) => {
       >
       </link>
     </Head>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <Component {...pageProps} />
-    </ThemeProvider>
-  </>
-  )
+      <ThemeProvider theme={theme}>
+        {/* CssBaseline kickstart an elegant, consistent, and simple baseline to build upon. */}
+        <CssBaseline />
+        <Component {...pageProps} />
+      </ThemeProvider>
+    </CacheProvider>
+  );
 }
 
-export default App;
+export default MyApp;
+
