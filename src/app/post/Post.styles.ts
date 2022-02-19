@@ -6,6 +6,7 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
   top: theme.spacing(-0.6),
   '& p': {
     lineHeight: 1.8,
+    fontSize: '1.12rem',
     '&:first-child': {
       marginTop: 0,
     },

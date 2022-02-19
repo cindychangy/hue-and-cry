@@ -13,12 +13,17 @@ export const IconButtonStyled = styled('a')(({ theme }) => ({
   opacity: 1,
   height: theme.spacing(6),
   width: theme.spacing(6),
+  borderRadius: '50%',
+  display: 'flex',
+  alignContent: 'center',
+  justifyContent: 'center',
   color: theme.palette.text.primary,
   '&:hover': {
     background: '#efefef',
     border: `none`,
   },
   '& svg': {
-    fontSize: '1.1rem',
+    fontSize: '1.2rem',
+    alignSelf: 'center',
   }
 }));

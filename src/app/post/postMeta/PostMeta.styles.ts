@@ -30,6 +30,8 @@ export const LinkStyled = styled(Link)(({ theme }) => ({
 
 
 export const ListStyled = styled('ul')(() => ({
+  fontFamily: '"gilroy-regular", sans-serif',
+  fontSize: '0.9rem',
   paddingLeft: 0,
   listStyle: 'none',
   marginTop: 0,

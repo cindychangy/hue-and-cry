@@ -44,7 +44,7 @@ export const Nav = styled(Box)(({ theme }) => ({
 }));
 
 export const NavMobile = styled(Box)(({ theme }) => ({
-  background: '#fafafa',
+  background: theme.palette.common.white,
   flexBasis: '100%',
   paddingTop: theme.spacing(5),
   borderTop: '1px solid #d7dcde',
@@ -59,6 +59,9 @@ export const MobileIcon = styled(IconButton)(({ theme }) => ({
   display: 'none',
   '&.MuiIconButton-root': {
     color: theme.palette.common.black,
+    width: theme.spacing(6.5),
+    height: theme.spacing(6.5),
+    top: '-2px',
   },
   '& svg': {
     fontSize: '2rem',

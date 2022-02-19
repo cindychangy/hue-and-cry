@@ -17,7 +17,7 @@ export const  ShareIcons = ({ postTitle, postLink}: ShareIconProps) => {
         rel={'noreferrer noopener'} 
         target={'_blank'}
       >
-
+        <FacebookIcon/>
       </S.IconButtonStyled>
 
       <S.IconButtonStyled 

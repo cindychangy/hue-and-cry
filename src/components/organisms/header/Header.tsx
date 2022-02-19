@@ -33,7 +33,7 @@ export const Header = () => {
         </Link>
       </S.Logo>
 
-      {/* <Hidden smDown>
+      <Hidden smDown>
         <S.NavItemsContainer>
           <S.Nav>
             <NavItem navItems={navItems}/>
@@ -46,9 +46,9 @@ export const Header = () => {
             </Link>
           </S.Nav>
         </S.NavItemsContainer>
-      </Hidden> */}
+      </Hidden>
 
-    {/* <Hidden lgUp>
+    <Hidden lgUp>
       <S.MobileIcon onClick={()=> setHideMenu(!hideMenu)}>
         {hideMenu ? <MenuIcon/> : <CloseIcon/>}
       </S.MobileIcon>
@@ -62,7 +62,7 @@ export const Header = () => {
           <TwitterIcon/>
         </Link>
       </S.NavMobile>
-    </Hidden> */}
+    </Hidden>
     </S.Header> 
   )
 }

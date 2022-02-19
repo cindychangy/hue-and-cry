@@ -1,7 +1,6 @@
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
-import { Link } from 'components/atoms/link/Link';
 
 export const CtaContainer = styled(Box)(({ theme }) => ({
   height: theme.spacing(32),
@@ -33,10 +32,13 @@ export const CtaText = styled(Typography)(() => ({
   fontSize: '1rem',
 }));
 
-export const SeeMore = styled(Link)(({ theme }) => ({
+export const SeeMore = styled('a')(({ theme }) => ({
   display: 'block',
   marginTop: theme.spacing(2),
   color: theme.palette.common.white,
   textDecoration: 'underline',
   fontSize: '1rem',
+  '&:hover': {
+    opacity: '0.8'
+  }
 }));

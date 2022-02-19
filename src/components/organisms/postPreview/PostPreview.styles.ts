@@ -1,6 +1,5 @@
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
-import { Link } from 'components/atoms/link/Link';
 
 export const ImageBox = styled(Box)(({ theme }) => ({
   height: theme.spacing(24),
@@ -14,7 +13,7 @@ export const ImageBox = styled(Box)(({ theme }) => ({
   },
 }));
 
-export const Title = styled(Link)(({ theme }) => ({
+export const Title = styled('a')(({ theme }) => ({
   color: theme.palette.common.black,
   transition: '.2s, box-shadow .2s, -webkit-box-shadow .2s',
   textDecoration: 'none',

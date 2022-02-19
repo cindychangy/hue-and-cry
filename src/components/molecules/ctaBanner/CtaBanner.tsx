@@ -29,7 +29,7 @@ export const CtaBanner = ( { isHero, showLink }: CtaBannerProps) => {
             The Highway of Tears is an isolated 725-kilometer stretch of Highway 16 between Prince George and Prince Rupert in British Columbia, Canada. This highway has been the location of many unsolved murders and disappearances of Indigenous women beginning as early as the 1970s.
           </S.CtaText>
           <Typography variant="h5">
-          {showLink && <S.SeeMore href={AppRoute.HIGHWAY_OF_TEARS}>See all stories</S.SeeMore>}
+          {showLink && <S.SeeMore href={AppRoute.HIGHWAY_OF_TEARS} children="See all stories"/>}
           </Typography>
         </S.CtaTextWrapper>
       </S.CtaContainer>
