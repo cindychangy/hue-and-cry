@@ -8,7 +8,7 @@ export const Footer = () => {
   return (
     <Box>
       <S.Footer>
-        &copy; 2021 &nbsp;<a href="mailto:hello@thehueandcry.com">Hue and Cry</a> &nbsp; | &nbsp; True Crime Blog 
+        &copy; 2022 &nbsp;<a href="mailto:hello@thehueandcry.com">Hue and Cry</a> &nbsp; | &nbsp; True Crime Blog 
       </S.Footer>
     </Box>
   )
