@@ -1,21 +1,9 @@
 import React from 'react'
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
-
 import { HighwayOfTearsHome } from '../../app/highwayOfTears/HighwayOfTears';
-import { getCategory } from 'api/actions/categories/categoriesActions';
 import { baseURL, metaImage } from 'api/types';
 
-export const getStaticProps: GetStaticProps = async () => {
-
-  const posts = await getCategory(10);
-
-  return {
-    props: { posts },
-  };
-};
-
-const HighwayOfTearsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const HighwayOfTearsPage = () => {
 
   return (
     <>
@@ -33,7 +21,7 @@ const HighwayOfTearsPage = ({ posts }: InferGetStaticPropsType<typeof getStaticP
         <meta name="twitter:creator" content="@thehueandcry" />
         <meta name="twitter:site" content="@thehueandcry" />
       </Head>
-      <HighwayOfTearsHome posts={posts} />
+      <HighwayOfTearsHome/>
     </>
   )
 }
