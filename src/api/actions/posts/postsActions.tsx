@@ -6,7 +6,7 @@ export const getPosts = async(postNumber: number) => {
 }
 
 export const getSinglePost = async(slug: string) => {
-  const res = await fetch(`${apiURL}/wp/v2/posts?slug=${slug}`);
+  const res = await fetch(`${apiURL}/wp/v2/posts?slug=${slug}&acf_format=standard`);
   return res.json();
 }
 
