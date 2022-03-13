@@ -24,6 +24,29 @@ export const ParagraphStyled = styled(Typography)(({ theme }) => ({
   marginBottom: theme.spacing(2),
 }));
 
+export const SubTextStyled = styled(Box)(({ theme }) => ({
+  display: 'flex',
+  'span': {
+    display: 'inline-block',
+    fontWeight: 900,
+    fontSize: '1.1rem',
+    lineHeight: 1,
+    marginTop: theme.spacing(2),
+    '& svg': {
+      position: 'relative',
+      top: theme.spacing(0.725),
+    }
+  },
+  [theme.breakpoints.down('lg')]: {
+    'span': {
+      lineHeight: 1.6,
+    },
+    'svg': {
+      display: 'none',
+    }
+  }
+}));
+
 export const BoxHeader = styled(Typography)(({ theme }) => ({
   fontSize: '1.2rem',
   marginBottom: theme.spacing(3),

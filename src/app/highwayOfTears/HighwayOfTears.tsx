@@ -6,6 +6,7 @@ import Timeline from '@mui/lab/Timeline';
 import TimelineConnector from '@mui/lab/TimelineConnector';
 import TimelineContent from '@mui/lab/TimelineContent';
 import TimelineDot from '@mui/lab/TimelineDot';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
 import { Page } from 'components/templates';
 import { timelineData } from './TimelineData';
@@ -30,7 +31,7 @@ export const HighwayOfTearsHome = () => {
             <S.TimelineName>{data.name}</S.TimelineName>
             <Typography>
               {data.blurb}
-              {!!data.link && <S.TimelineLink href={data.link}> Read full story</S.TimelineLink>}
+              {!!data.link && <><S.TimelineLink href={data.link}> Read full story</S.TimelineLink>.</>}
             </Typography>
           </Box>
           {data.photo && 
@@ -66,9 +67,9 @@ export const HighwayOfTearsHome = () => {
             <S.ParagraphStyled>
               Historically, Indigenous communities have been plagued by systematic racism and negligance from authorities, which is reflected in how many of these cases were handled. It is a widely believed that these cases will never be solved, but the families of the victims that were affected, and the victims themselves, deserve to have their stories heard and remembered.
             </S.ParagraphStyled>
-            <S.ParagraphStyled sx={{ fontWeight: 900 }}>
-              This timeline highlights the unsolved cases of The Highway of Tears.
-            </S.ParagraphStyled>
+            <S.SubTextStyled>
+             <span>This timeline highlights the unsolved cases of The Highway of Tears. <ArrowForwardIcon/></span>
+            </S.SubTextStyled>
           </S.BoxGray>
         </Grid>
         <Grid item xs={12} lg={8}>
