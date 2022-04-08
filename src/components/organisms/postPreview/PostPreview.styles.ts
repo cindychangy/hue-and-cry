@@ -33,14 +33,13 @@ export const Title = styled('a')(({ theme }) => ({
 }));
 
 export const Excerpt = styled(Box)(({ theme }) => ({
-  display: '-webkit-box',
   width: '100%',
+  height: theme.spacing(8),
   overflow: 'hidden',
-  webkitLineClamp: 2,
-  webkitBoxOrient: 'vertical',
-  textOverflow: 'ellipsis',
-  margin: 0,
-  height: '62px',
+  display: '-webkit-box',
+  '-webkit-box-orient': 'vertical',
+  '-webkit-line-clamp': '2',
+
   [theme.breakpoints.down('md')]: {
     fontSize: '1.1rem',
     height: '68px',

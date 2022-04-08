@@ -30,10 +30,6 @@ export const AboutHeader = styled(Typography)(({ theme }) => ({
   fontFamily: 'Bebas Neue',
   fontSize: '2.8rem',
   lineHeight: 0.9,
-  marginTop: theme.spacing(4),
-  [theme.breakpoints.down('lg')]: {
-    marginTop: 0,
-  },
   '& > span': {
     display: 'block',
     [theme.breakpoints.down('lg')]: {
