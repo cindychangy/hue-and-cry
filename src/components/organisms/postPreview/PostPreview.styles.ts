@@ -28,7 +28,7 @@ export const Title = styled('a')(({ theme }) => ({
     },
   },
   [theme.breakpoints.down('sm')]: {
-    fontSize: '2.4rem',
+    fontSize: '1.7rem',
   },
 }));
 
@@ -50,5 +50,8 @@ export const Excerpt = styled(Box)(({ theme }) => ({
     fontSize: '0.96rem',
     color: '#505356',
     lineHeight: 1.6,
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.1rem',
+    },
   }
 }));

@@ -55,8 +55,11 @@ export const AboutText = styled(Typography)(({ theme }) => ({
   },
 }));
 
-export const ArticleTitle = styled(Typography)(() => ({
+export const ArticleTitle = styled(Typography)(({ theme }) => ({
   fontSize: '1rem',
   lineHeight: 1.2,
+  [theme.breakpoints.down('md')]: {
+    fontSize: '1.2rem',
+  },
 }));
 
