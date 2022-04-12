@@ -17,7 +17,8 @@ export const ImageBox = styled(Box)(({ theme }) => ({
 }));
 
 export const ArticleTitle = styled(Box)(({ theme }) => ({
-  fontFamily: 'gilroy-extrabold',
+  fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
+  letterSpacing: 0.25,
   fontSize: '0.95rem',
   lineHeight: 1.2,
   marginTop: theme.spacing(1),

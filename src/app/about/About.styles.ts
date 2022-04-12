@@ -13,7 +13,7 @@ export const AboutHero = styled(Box)(({ theme }) => ({
 }));
 
 export const Title = styled(Typography)(() => ({
-  fontSize: '2rem',
+  fontSize: '1.7rem',
 }));
 
 export const TextStyled = styled(Typography)(({ theme }) => ({
@@ -24,11 +24,11 @@ export const TextStyled = styled(Typography)(({ theme }) => ({
 
 export const LinkStyled = styled(Link)(({ theme }) => ({
   color: theme.palette.common.black,
-  fontWeight: 700,
+  textDecoration: 'underline',
 }));
 
 export const Cite = styled(Typography)(({ theme }) => ({
   opacity: 0.5,
-  fontFamily: "'gilroy-medium', sans-serif",
+  fontFamily: "'Neue Haas Grotesk', sans-serif",
   marginTop: theme.spacing(1.5),
 }));

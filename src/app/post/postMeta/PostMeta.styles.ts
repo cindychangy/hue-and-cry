@@ -15,14 +15,14 @@ export const MetaTitle = styled(Typography)(({ theme }) => ({
 }));
 
 export const TypographyStyled = styled(Typography)(({ theme }) => ({
-  fontFamily: '"gilroy-regular", sans-serif',
+  fontFamily: '"Neue Haas Grotesk Regular", sans-serif',
   fontSize: '0.9rem',
   lineHeight: 1.2,
   color: theme.palette.common.black,
 }));
 
 export const LinkStyled = styled(Link)(({ theme }) => ({
-  fontFamily: '"gilroy-regular", sans-serif',
+  fontFamily: '"Neue Haas Grotesk Regular", sans-serif',
   fontSize: '0.9rem',
   lineHeight: 1.2,
   color: theme.palette.common.black,
@@ -30,7 +30,7 @@ export const LinkStyled = styled(Link)(({ theme }) => ({
 
 
 export const ListStyled = styled('ul')(() => ({
-  fontFamily: '"gilroy-regular", sans-serif',
+  fontFamily: '"Neue Haas Grotesk Regular", sans-serif',
   fontSize: '0.9rem',
   paddingLeft: 0,
   listStyle: 'none',

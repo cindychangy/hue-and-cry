@@ -13,11 +13,11 @@ export const HeroContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const PostTitle = styled(Typography)(({ theme }) => ({
-  [theme.breakpoints.down('md')]: {
-    fontSize: '4.6rem',
+  [theme.breakpoints.down('lg')]: {
+    fontSize: '3.3rem',
   },
   [theme.breakpoints.down('md')]: {
-    fontSize: '3.6rem',
+    fontSize: '2.5rem',
   },
 }));
 
@@ -71,7 +71,7 @@ export const BlockColor = styled(Box)(({ theme }) => ({
 }));
 
 export const BlockText = styled(Box)(({ theme }) => ({
-  width: '70%', 
+  width: '65%', 
   marginLeft: theme.spacing(30),
   paddingRight: theme.spacing(2.5),
   [theme.breakpoints.down('xl')]: {
