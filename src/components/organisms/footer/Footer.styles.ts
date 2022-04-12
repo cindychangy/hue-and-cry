@@ -8,7 +8,8 @@ export const Footer = styled(Typography)(({ theme }) => ({
   display: 'flex',
   justifyContent: 'center',
   alignItems: 'center',
-  fontFamily: 'gilroy-medium',
+  fontFamily: '"Neue Haas Grotesk", sans-serif',
+  letterSpacing: 0.3,
   fontSize: '0.8rem',
   marginTop: theme.spacing(3),
 

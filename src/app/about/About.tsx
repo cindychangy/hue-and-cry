@@ -35,7 +35,7 @@ export const About = () => {
           <Box mt={6}/>
 
           <S.TextStyled>
-            <strong>The mission</strong> is to bring awareness to cases of unsolved crimes against women and girls. Hue and Cry is a true crime blog-but you won't find stories of serial killers or any focus on the people that commit crimes here. The focus is on victims who have yet to see justice, those of unsolved crimes. Stories of both well-known and lesser-known cases, with a emphasis on crimes that are committed against women of color.
+            The mission is to bring awareness to cases of unsolved crimes against women and girls. Hue and Cry is a true crime blog-but you won't find stories of serial killers or any focus on the people that commit crimes here. The focus is on victims who have yet to see justice, those of unsolved crimes. Stories of both well-known and lesser-known cases, with a emphasis on crimes that are committed against women of color.
           </S.TextStyled>
 
           <S.TextStyled>

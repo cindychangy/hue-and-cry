@@ -6,14 +6,19 @@ import { Link } from 'components/atoms/link/Link';
 export const AboutHero = styled(Box)(({ theme }) => ({
   width: '100%',
   height: theme.spacing(40),
+  borderRadius: 0,
   marginBottom: theme.spacing(10),
   [theme.breakpoints.down('sm')]: {
     height: theme.spacing(25),
   }
 }));
 
-export const Title = styled(Typography)(() => ({
-  fontSize: '2rem',
+export const Title = styled(Typography)(({theme }) => ({
+  fontSize: '1.7rem',
+  lineHeight: 1.2,
+  [theme.breakpoints.down('sm')]: {
+    fontSize: '1.4rem',
+  },
 }));
 
 export const TextStyled = styled(Typography)(({ theme }) => ({
@@ -24,11 +29,11 @@ export const TextStyled = styled(Typography)(({ theme }) => ({
 
 export const LinkStyled = styled(Link)(({ theme }) => ({
   color: theme.palette.common.black,
-  fontWeight: 700,
+  textDecoration: 'underline',
 }));
 
 export const Cite = styled(Typography)(({ theme }) => ({
   opacity: 0.5,
-  fontFamily: "'gilroy-medium', sans-serif",
+  fontFamily: "'Neue Haas Grotesk', sans-serif",
   marginTop: theme.spacing(1.5),
 }));

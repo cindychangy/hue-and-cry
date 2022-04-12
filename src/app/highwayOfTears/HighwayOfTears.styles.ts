@@ -6,10 +6,13 @@ import TimelineOppositeContent from '@mui/lab/TimelineOppositeContent';
 import TimelineSeparator from '@mui/lab/TimelineSeparator';
 
 export const Title = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Bebas Neue',
+  fontFamily: 'Neue Haas Grotesk Bold',
   fontSize: '4.2rem',
   lineHeight: '4.2rem',
   marginBottom: theme.spacing(1),
+  [theme.breakpoints.down('md')]: {
+    fontSize: '2.7rem',
+  }
 }));
 
 export const BoxGray = styled(Box)(({ theme }) => ({
@@ -69,7 +72,7 @@ export const CaseMeta = styled(Box)(({ theme }) => ({
 }));
 
 export const TimelineYear = styled(TimelineOppositeContent)(({ theme }) => ({
-  fontFamily: "'tiempos-semibold', serif",
+  fontFamily: "'Neue Haas Grotesk Medium', serif",
   fontSize: '1.5rem',
   lineHeight: 1,
   width: theme.spacing(20),
@@ -81,14 +84,14 @@ export const TimelineYear = styled(TimelineOppositeContent)(({ theme }) => ({
 }));
 
 export const TimelineName = styled(Typography)(( { theme }) => ({
-  fontFamily: "'tiempos-semibold', serif",
+  fontFamily: "'Neue Haas Grotesk Medium', serif",
   fontSize: '1.5rem',
   marginBottom: theme.spacing(0.125),
-  marginTop: theme.spacing(-1),
+  marginTop: theme.spacing(-0.725),
 }));
 
 export const TimelineLocation = styled(Typography)(({ theme }) => ({
-  fontFamily: "'gilroy-medium', sans-serif",
+  fontFamily: "'Neue Haas Grotesk', sans-serif",
   fontSize: '1rem',
   color: '#959595',
   textAlign: 'right',
