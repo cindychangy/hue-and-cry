@@ -15,12 +15,12 @@ export const ImageBox = styled(Box)(({ theme }) => ({
 
 export const Title = styled('a')(({ theme }) => ({
   color: theme.palette.common.black,
-  transition: '.2s, box-shadow .2s, -webkit-box-shadow .2s',
+  transition: '.1s, box-shadow .1s, -webkit-box-shadow .1s',
   textDecoration: 'none',
   lineHeight: 1,
   cursor: 'pointer',
   '&:hover': {
-    boxShadow: 'inset 0 -3px #fff, inset 0 -6px 0 #000',
+    boxShadow: 'inset 0 -3px #fff, inset 0 -11px 0 #FFBA9C',
     textDecoration: 'none',
     opacity: 1,
     [theme.breakpoints.down('sm')]: {
