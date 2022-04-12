@@ -23,7 +23,7 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
     margin: theme.spacing(4, 0),
 
     '& figcaption': {
-      fontFamily: "'gilroy-medium', sans-serif",
+      fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
       fontSize: '0.9375rem',
       opacity: 0.6,
     },
@@ -34,7 +34,7 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
     }
   },
   '& blockquote': {
-    fontFamily: "'gilroy-medium', sans-serif",
+    fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
     borderTop: `1px solid ${theme.palette.primary.main}`,
     margin: theme.spacing(8, 4),
     [theme.breakpoints.down('sm')]: {
@@ -48,7 +48,10 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
         paddingTop: theme.spacing(2),
       },
       '& strong': {
-        fontFamily: "'tiempos-semibold', serif",
+        fontFamily: "'Neue Haas Grotesk Bold', serif",
+        fontSize: '1.5rem',
+        lineHeight: 0.8,
+        letterSpacing: 0.2,
       },
     },
   },

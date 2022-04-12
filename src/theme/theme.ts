@@ -20,37 +20,33 @@ const theme = createTheme({
   typography: {
     fontFamily: '"tiempos-regular", sans-serif',
     h1: {
-      fontFamily: '"Bebas Neue", sans-serif',
-      fontSize: '5.625rem',
-      lineHeight: 0.9,
-      textTransform: 'uppercase',
+      fontFamily: '"Neue Haas Grotesk Bold", sans-serif',
+      fontSize: '4.25rem',
+      lineHeight: 1.1,
       // [theme.breakpoints.down('sm')]: {
       //   fontSize: '2.5rem',
       // },
     },
     h2: {
-      fontFamily: '"Bebas Neue", sans-serif',
-      fontSize: '1.975rem',
-      textTransform: 'uppercase',
-      lineHeight: 0.95,
+      fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
+      fontSize: '1.375rem',
+      lineHeight: 1.1,
     },
     h3: {
-      fontFamily: '"Bebas Neue", sans-serif',
+      fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
       fontSize: '1.313rem',
-      textTransform: 'uppercase',
       lineHeight: 1,
     },
     h4: {
-      fontFamily: "'gilroy-extrabold', sans-serif",
+      fontFamily: "'Neue Haas Grotesk Bold', sans-serif",
       fontSize: '1.2rem',
       lineHeight: 1,
       fontWeight: 500,
     },
     h5: {
-      fontFamily: "'gilroy-medium', sans-serif",
-      fontSize: '0.89rem',
+      fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
+      fontSize: '0.9rem',
       lineHeight: 1,
-      letterSpacing: 0.5,
     },
     body1: {
       fontSize: '1rem',

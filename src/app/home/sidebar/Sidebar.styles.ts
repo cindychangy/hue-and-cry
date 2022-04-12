@@ -27,9 +27,9 @@ export const AboutBox = styled(Box)(({ theme }) => ({
 }));
 
 export const AboutHeader = styled(Typography)(({ theme }) => ({
-  fontFamily: 'Bebas Neue',
-  fontSize: '2.8rem',
-  lineHeight: 0.9,
+  fontFamily: 'Neue Haas Grotesk Bold',
+  fontSize: '2rem',
+  lineHeight: 1,
   '& > span': {
     display: 'block',
     [theme.breakpoints.down('lg')]: {
@@ -46,7 +46,7 @@ export const AboutHeader = styled(Typography)(({ theme }) => ({
 
 export const AboutText = styled(Typography)(({ theme }) => ({
   fontSize: '1rem',
-  fontFamily: '"gilroy-regular", sans-serif',
+  fontFamily: '"Neue Haas Grotesk", sans-serif',
   fontWeight: 400,
   lineHeight: 1.3,
   marginTop: theme.spacing(2),
@@ -56,7 +56,7 @@ export const AboutText = styled(Typography)(({ theme }) => ({
 }));
 
 export const ArticleTitle = styled(Typography)(() => ({
-  fontSize: '1.05rem',
-  letterSpacing: '-0.2px',
+  fontSize: '1rem',
+  lineHeight: 1.2,
 }));
 
