@@ -185,8 +185,9 @@ export const timelineData = [
   {
     year: '2018',
     location: "Smithers",
-    name: 'Jessica Patrick (Balczer)',
+    name: 'Jessica Patrick Balczer',
     blurb: "Jessica was 18 years old when she dropped off her daughter with her grandmother for the night to head to a party at a motel on Highway 16. Twelve days later, family members found her body at a large pull-out on Hudson Bay Mountain Road.",
+    link: 'https://thehueandcry.com/jessica-patrick-balczer',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/Jessica-Patrick-photo.jpeg',
   },
   {
