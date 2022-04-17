@@ -5,8 +5,7 @@ import { Link } from 'components/atoms/link/Link';
 export const SubHeading = styled(Typography)(({ theme }) => ({
   color: theme.palette.primary.main,
   marginBottom: theme.spacing(1.2),
-  textTransform: 'uppercase', 
-  letterSpacing: '1px',
+  textTransform: 'uppercase',
 }));
 
 export const CategoryName = styled(Link)(() => ({
