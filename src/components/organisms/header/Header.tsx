@@ -5,6 +5,7 @@ import { Link } from 'components/atoms/link/Link';
 import { NavItem } from './navItem/NavItem';
 import { AppRoute } from 'app/App.types';
 import TwitterIcon from '@mui/icons-material/Twitter';
+import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 
@@ -19,7 +20,8 @@ const navItems = [
   { label: 'About', value: AppRoute.ABOUT },
 ]
 
-const twitterLink = 'https://twitter.com/thehueandcry';
+const TWITTERLINK = 'https://twitter.com/thehueandcry';
+const INSTAGRAMLINK = 'https://www.instagram.com/hueandcryblog/';
 
 export const Header = () => {
 
@@ -37,13 +39,22 @@ export const Header = () => {
         <S.NavItemsContainer>
           <S.Nav>
             <NavItem navItems={navItems}/>
-            <Link 
-              href={twitterLink}
-              rel={'noreferrer noopener'} 
-              target="_blank"
-            >
-              <TwitterIcon/>
-            </Link>
+            <S.IconContainer>
+              <Link 
+                href={TWITTERLINK}
+                rel={'noreferrer noopener'} 
+                externalLink
+              >
+                <TwitterIcon/>
+              </Link>
+              <Link 
+                href={INSTAGRAMLINK}
+                rel={'noreferrer noopener'} 
+                externalLink
+              >
+                <InstagramIcon/>
+              </Link>
+            </S.IconContainer>
           </S.Nav>
         </S.NavItemsContainer>
       </Hidden>
@@ -54,13 +65,22 @@ export const Header = () => {
       </S.MobileIcon>
       <S.NavMobile sx={{ display: hideMenu ? 'none' : 'block' }}>
         <NavItem navItems={navItems}/>
-        <Link 
-          href={twitterLink}
-          rel={'noreferrer noopener'} 
-          target="_blank"
-        >
-          <TwitterIcon/>
-        </Link>
+        <S.IconContainer>
+          <Link 
+            href={TWITTERLINK}
+            rel={'noreferrer noopener'} 
+            externalLink
+          >
+            <TwitterIcon/>
+          </Link>
+          <Link 
+            href={INSTAGRAMLINK}
+            rel={'noreferrer noopener'} 
+            externalLink
+          >
+            <InstagramIcon/>
+          </Link>
+        </S.IconContainer>
       </S.NavMobile>
     </Hidden>
     </S.Header> 
