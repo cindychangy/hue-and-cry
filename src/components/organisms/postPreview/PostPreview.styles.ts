@@ -23,9 +23,6 @@ export const Title = styled('a')(({ theme }) => ({
     boxShadow: 'inset 0 -3px #fff, inset 0 -11px 0 #FFBA9C',
     textDecoration: 'none',
     opacity: 1,
-    [theme.breakpoints.down('sm')]: {
-      boxShadow: 'none',
-    },
   },
   [theme.breakpoints.down('sm')]: {
     fontSize: '1.7rem',
@@ -39,9 +36,6 @@ export const Excerpt = styled(Box)(({ theme }) => ({
   display: '-webkit-box',
   '-webkit-box-orient': 'vertical',
   '-webkit-line-clamp': '2',
-  // fontFamily: 'Neue Haas Grotesk',
-  // fontSize: 1.3,
-  // letterSpacing: 0.3,
   [theme.breakpoints.down('md')]: {
     fontSize: '1.1rem',
     height: '68px',
