@@ -1,5 +1,5 @@
 import React from 'react';
-import LazyLoad from 'react-lazyload';
+// import LazyLoad from 'react-lazyload';
 
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
@@ -52,13 +52,17 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
         </Box>
 
         <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
-          <LazyLoad height={250} once>
+          {/* <LazyLoad height={250} once>
             <CalloutBox
               helpInfo={post.acf.how_to_help}
               sourcesInfo={post.acf.dig_deeper}
             />
-          </LazyLoad>
-          <LazyLoad height={400} once>
+          </LazyLoad> */}
+            <CalloutBox
+              helpInfo={post.acf.how_to_help}
+              sourcesInfo={post.acf.dig_deeper}
+            />
+          {/* <LazyLoad height={400} once>
             {post.acf.videos.length && (
               <>
                 <Box mt={8}/>
@@ -79,12 +83,33 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               postId={post.id} 
               postTitle={post.title} 
             />
-          </LazyLoad>
+          </LazyLoad> */}
+          {post.acf.videos.length && (
+              <>
+                <Box mt={8}/>
+                <RelatedVideos videos={post.acf.videos} />
+                <Divider />
+              </>
+            )}
+
+            {post.acf.podcasts.length && (
+              <>
+                <RelatedPodcasts podcasts={post.acf.podcasts} />
+                <Divider />
+              </>
+            )}
+
+            <Comments 
+              postSlug={post.slug} 
+              postId={post.id} 
+              postTitle={post.title} 
+            />
         </Box>
         
-        <LazyLoad height={330} once>
+        {/* <LazyLoad height={330} once>
           <RelatedPosts posts={relatedPosts} />
-        </LazyLoad>
+        </LazyLoad> */}
+        <RelatedPosts posts={relatedPosts} />
 
         <Box maxWidth={700} m="auto" pb={1} px={2}>
           <Copyright sources={post.acf.copyright_sources} />
