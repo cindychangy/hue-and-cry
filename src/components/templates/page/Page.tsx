@@ -11,7 +11,7 @@ export const Page: React.FC = ({ children }) => {
   return (
     <S.BoxStyled>
       <Header/>
-      <Box maxWidth={1280} m="auto" mb={6} mt={{ xs: 2, md: 6 }} px={{ xs: 2, md: 4 }}>
+      <Box maxWidth={1280} m="auto" px={{ xs: 2, md: 4 }}>
         {children}
       </Box>
       <Footer />
