@@ -2,10 +2,10 @@ import { styled } from '@mui/system';
 import Typography from '@mui/material/Typography';
 
 export const Footer = styled(Typography)(({ theme }) => ({
-  background: '#1d1d1b',
+  background: '#252525',
   fontFamily: '"Neue Haas Grotesk", sans-serif',
   color: theme.palette.common.white,
-  padding: theme.spacing(8, 0, 4, 0),
+  padding: theme.spacing(5, 0),
   marginTop: theme.spacing(14),
   [theme.breakpoints.down('lg')]: {
     paddingTop: theme.spacing(4),
