@@ -3,7 +3,7 @@ export const timelineData = [
     year: '1969',
     location: 'Williams Lake',
     name: 'Gloria Moody',
-    blurb: 'A 27-year-old mother of two on a family trip goes out one night with her brother only to disappear behind him on their way home.',
+    blurb: 'A 27-year-old mother of two goes out one night with her brother only to disappear behind him on their way home.',
     link: 'https://thehueandcry.com/gloria-moody',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/gloria-moody.jpeg',
   },
