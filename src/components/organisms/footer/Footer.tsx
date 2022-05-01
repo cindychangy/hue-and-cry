@@ -17,7 +17,7 @@ export const Footer = () => {
           <Grid item xs={12} lg={6}>
             <S.FooterLogo><Link href="/">Hue and Cry</Link></S.FooterLogo>
             <S.Copyright>
-            © 2022 Hue and Cry. All Rights Reserved. &nbsp;<a href="mailto:hello@thehueandcry.com" style={{ color: '#a5a5a5' }}>Contact Us.</a>
+            © 2022 Hue and Cry. True Crime Blog. All Rights Reserved.
             </S.Copyright>
           </Grid>
           <Grid item xs={12} lg={6}>

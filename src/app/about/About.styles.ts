@@ -25,6 +25,9 @@ export const TextStyled = styled(Typography)(({ theme }) => ({
   fontSize: '1.125rem',
   marginBottom: theme.spacing(4),
   lineHeight: 1.8,
+  'a': {
+    fontWeight: 'bolder',
+  }
 }));
 
 export const LinkStyled = styled(Link)(({ theme }) => ({
