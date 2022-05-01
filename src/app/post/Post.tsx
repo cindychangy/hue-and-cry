@@ -111,7 +111,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
         </LazyLoad> */}
         <RelatedPosts posts={relatedPosts} />
 
-        <Box maxWidth={700} m="auto" pb={1} px={2}>
+        <Box maxWidth={700} m="auto" px={2}>
           <Copyright sources={post.acf.copyright_sources} />
         </Box>
       <Footer/>

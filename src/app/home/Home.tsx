@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 import Grid from '@mui/material/Grid';
+import Box from '@mui/material/Box';
 import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
 import { PostGrid } from 'components/organisms/postGrid/PostGrid';
 import { FeaturedPosts } from './featuredPosts/FeaturedPosts';
@@ -44,6 +45,7 @@ export const Home = ({ posts, sidebarPosts }: HomeProps) => {
         <Grid item xs={12}>
           <SectionHeading heading="More Stories" />
           <PostGrid posts={featuredBottom} />
+          <Box mb={4}/>
         </Grid>
       </Grid>
     </Page>

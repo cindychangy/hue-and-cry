@@ -6,7 +6,7 @@ export const Footer = styled(Typography)(({ theme }) => ({
   fontFamily: '"Neue Haas Grotesk", sans-serif',
   color: theme.palette.common.white,
   padding: theme.spacing(5, 0),
-  marginTop: theme.spacing(14),
+  marginTop: theme.spacing(8),
   [theme.breakpoints.down('lg')]: {
     paddingTop: theme.spacing(4),
     marginTop: theme.spacing(6),
@@ -29,9 +29,10 @@ export const Footer = styled(Typography)(({ theme }) => ({
   }
 }));
 
-export const FooterLogo = styled(Typography)(() => ({
+export const FooterLogo = styled(Typography)(({ theme }) => ({
   fontFamily: '"Bebas Neue", sans-serif',
   fontSize: 36,
+  color: theme.palette.common.white,
 }));
 
 export const Copyright = styled(Typography)(({ theme }) => ({
