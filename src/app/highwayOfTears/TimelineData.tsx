@@ -26,7 +26,7 @@ export const timelineData = [
     year: '1971',
     location: "Gitsegukla",
     name: 'Jean Virginia Sampare',
-    blurb: 'Jean was last seen by her cousin on the railroad overpass on Highway 16 who left her momentarily to retrieve an item from his house.',
+    blurb: 'Jean was last seen hanging out with her cousin on the railroad overpass on Highway 16.',
     link: 'https://thehueandcry.com/jean-virginia-sampare',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/Jean_Virginia_Sampare.png',
   },
