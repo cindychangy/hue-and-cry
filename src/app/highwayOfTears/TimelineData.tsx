@@ -3,7 +3,7 @@ export const timelineData = [
     year: '1969',
     location: 'Williams Lake',
     name: 'Gloria Moody',
-    blurb: 'A 27-year-old mother of two goes out one night with her brother only to disappear behind him on their way home.',
+    blurb: 'Gloria went out one night with her brother only to disappear behind him on their way home.',
     link: 'https://thehueandcry.com/gloria-moody',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/gloria-moody.jpeg',
   },
@@ -33,7 +33,8 @@ export const timelineData = [
     year: '1974',
     location: "Thornhill",
     name: 'Monica Ignas',
-    blurb: 'Monica was last seen as she was heading home from school alone. Her body was found months later in a gravel pit in a densely forested area. She had been strangled to death.',
+    blurb: 'Monica was only 14 years old and was last seen walking home on Highway 16 in the direction of her house.',
+    link: 'https://thehueandcry.com/monica-ignas',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/monica-ignas.png',
   },
   {
