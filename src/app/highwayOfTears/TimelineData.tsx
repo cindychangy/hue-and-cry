@@ -11,7 +11,8 @@ export const timelineData = [
     year: '1970',
     location: "Hudson's Hope",
     name: 'Micheline Pare',
-    blurb: "Micheline was 18 years old when she went missing along Highway 16. She was hitchhiking and two women had given her a ride and dropped her off. Her body was found at Hudson's Hope, she had been beaten to death.",
+    blurb: "Micheline was 18 years old when she went missing along Highway 16.",
+    link: 'https://thehueandcry.com/micheline-pare',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/micheline-pare.png',
   },
   {
@@ -25,7 +26,7 @@ export const timelineData = [
     year: '1971',
     location: "Gitsegukla",
     name: 'Jean Virginia Sampare',
-    blurb: 'Jean was last seen by her cousin on the railroad overpass on Highway 16.',
+    blurb: 'Jean was last seen by her cousin on the railroad overpass on Highway 16. Her cousin had left her momentarily to retrieve an item from his house. When he came back to the area, Jean was gone. She was never seen again.',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/Jean_Virginia_Sampare.png',
   },
   {
