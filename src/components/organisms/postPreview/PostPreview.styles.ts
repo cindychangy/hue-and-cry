@@ -1,6 +1,13 @@
 import { styled } from '@mui/system';
 import Box from '@mui/material/Box';
 
+export const FeatureContainer = styled(Box)(({ theme }) => ({
+  marginBottom: theme.spacing(1),
+  '& > a:hover': {
+    opacity: 1,
+  }
+}));
+
 export const ImageBox = styled(Box)(({ theme }) => ({
   height: theme.spacing(24),
   width: '100%',

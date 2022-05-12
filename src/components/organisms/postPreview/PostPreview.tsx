@@ -19,7 +19,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
   }
 
   return (
-    <Box mb={1}>
+    <S.FeatureContainer>
       <Link href={`/${encodeURIComponent(slug)}`}>
         <LazyLoad height={200} once>
           <S.ImageBox style={featureImage}></S.ImageBox>
@@ -33,6 +33,6 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
         <S.Title href={slug}>{title}</S.Title>
       </Typography>
       <S.Excerpt dangerouslySetInnerHTML={{__html: excerpt}}/>
-    </Box>
+    </S.FeatureContainer>
   )
 }
