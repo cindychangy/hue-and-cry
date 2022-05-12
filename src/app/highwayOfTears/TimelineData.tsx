@@ -161,8 +161,8 @@ export const timelineData = [
   {
     year: '2013',
     location: 'Tachie',
-    name: 'Immaculate "Mackie" Mary Basil',
-    blurb: 'Mackie was the mother of a five year old son when she went to a house party and never came back',
+    name: 'Immaculate "Mackie" Basil',
+    blurb: 'Mackie was last seen at a party in a cabin with two men before she went missing.',
     link: 'https://thehueandcry.com/immaculate-basil',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/Immaculate_Basil.jpeg',
   },
