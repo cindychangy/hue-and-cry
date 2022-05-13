@@ -13,7 +13,7 @@ export const  ShareIcons = ({ postTitle, postLink}: ShareIconProps) => {
     <S.ShareContainer>
       <S.IconButtonStyled 
         aria-label='share'
-        href={`${process.env.NEXT_PUBLIC_FACEBOOK_SHARE}/${postLink}`}
+        href={`${process.env.NEXT_PUBLIC_FACEBOOK_SHARE}${postLink}`}
         rel={'noreferrer noopener'} 
         target={'_blank'}
       >
@@ -22,7 +22,7 @@ export const  ShareIcons = ({ postTitle, postLink}: ShareIconProps) => {
 
       <S.IconButtonStyled 
         aria-label="share"
-        href={`${process.env.NEXT_PUBLIC_TWITTER_SHARE}/${postLink}`}
+        href={`${process.env.NEXT_PUBLIC_TWITTER_SHARE}${postLink}`}
         rel={'noreferrer noopener'} 
         target={'_blank'}
       >
