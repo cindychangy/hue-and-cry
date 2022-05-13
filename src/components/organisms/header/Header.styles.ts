@@ -20,11 +20,11 @@ export const Header = styled(Box)(({ theme }) => ({
 
 export const Logo = styled(Typography)(() => ({
   fontFamily: 'Bebas Neue',
-  fontSize: '3rem',
+  fontSize: 48,
   letterSpacing: -0.9,
   '& a:hover': {
     textDecoration: 'none',
-    opacity: 0.8,
+    opacity: 0.7,
   }
 }));
 
@@ -47,11 +47,11 @@ export const NavMobile = styled(Box)(({ theme }) => ({
   background: theme.palette.common.white,
   flexBasis: '100%',
   paddingTop: theme.spacing(5),
-  borderTop: '1px solid #d7dcde',
+  borderTop: `1px solid ${theme.palette.grey[300]}`,
   height: '100vh',
   '& h3': {
-    fontSize: '1.85rem',
-    marginBottom: '1.5rem',
+    fontSize: 30,
+    marginBottom: 24,
   }
 }));
 
@@ -61,15 +61,15 @@ export const MobileIcon = styled(IconButton)(({ theme }) => ({
     color: theme.palette.common.black,
     width: theme.spacing(6.5),
     height: theme.spacing(6.5),
-    top: '-2px',
+    top: -2,
   },
   '& svg': {
-    fontSize: '2rem',
+    fontSize: 32,
   },
   [theme.breakpoints.down('lg')]: {
     display: 'block',
     position: 'relative',
-    top: '-4px',
+    top: -4,
   },
 }));
 

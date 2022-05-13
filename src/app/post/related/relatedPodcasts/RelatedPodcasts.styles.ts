@@ -21,12 +21,11 @@ export const PodcastConatiner = styled(Box)(({ theme }) => ({
 }));
 
 export const ShowTitle = styled(Typography)(() => ({
-  fontSize: '1.125rem',
+  fontSize: 18,
   fontWeight: 700,
 }));
 
 export const LinkStyled = styled(Link)(() => ({
-  fontSize: '1rem',
   textDecoration: 'underline',
   '&:hover': {
     textDecoration: 'none',

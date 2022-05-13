@@ -27,7 +27,7 @@ export const Headline = styled(Typography)(({ theme }) => ({
 }));
 
 export const HelpInfo = styled(Box)(({ theme }) => ({
-  fontSize: '1.1rem',
+  fontSize: 17,
   paddingRight: theme.spacing(4),
   [theme.breakpoints.down('xs')]: {
     paddingRight: 0,
@@ -35,7 +35,6 @@ export const HelpInfo = styled(Box)(({ theme }) => ({
 }));
 
 export const SourcesLinks = styled(Box)(({ theme }) => ({
-  fontSize: '1rem',
   marginTop: 0,
   [theme.breakpoints.down('xs')]: {
     marginTop: theme.spacing(2.5),

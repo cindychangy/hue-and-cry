@@ -24,12 +24,8 @@ export const CtaTextWrapper = styled(Box)(({ theme }) => ({
 }));
 
 export const CtaHeading = styled(Typography)(({ theme }) => ({
-  fontSize: '3rem',
+  fontSize: 48,
   marginBottom: theme.spacing(3),
-}));
-
-export const CtaText = styled(Typography)(() => ({
-  fontSize: '1rem',
 }));
 
 export const SeeMore = styled('a')(({ theme }) => ({
@@ -37,8 +33,5 @@ export const SeeMore = styled('a')(({ theme }) => ({
   marginTop: theme.spacing(2),
   color: theme.palette.common.white,
   textDecoration: 'underline',
-  fontSize: '1rem',
-  '&:hover': {
-    opacity: '0.8'
-  }
+  fontSize: 16,
 }));

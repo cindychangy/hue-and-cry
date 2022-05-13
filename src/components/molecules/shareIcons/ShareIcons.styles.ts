@@ -23,7 +23,7 @@ export const IconButtonStyled = styled('a')(({ theme }) => ({
     border: `none`,
   },
   '& svg': {
-    fontSize: '1.2rem',
+    fontSize: 19,
     alignSelf: 'center',
   }
 }));

@@ -14,17 +14,17 @@ export const AboutHero = styled(Box)(({ theme }) => ({
 }));
 
 export const Title = styled(Typography)(({theme }) => ({
-  fontSize: '1.7rem',
+  fontSize: 27,
   lineHeight: 1.2,
   [theme.breakpoints.down('sm')]: {
-    fontSize: '1.4rem',
+    fontSize: 22,
   },
 }));
 
 export const TextStyled = styled(Typography)(({ theme }) => ({
-  fontSize: '1.125rem',
-  marginBottom: theme.spacing(4),
+  fontSize: 18,
   lineHeight: 1.8,
+  marginBottom: theme.spacing(4),
   'a': {
     fontWeight: 'bolder',
   }

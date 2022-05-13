@@ -3,7 +3,7 @@ import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 
 export const SidebarWrapper = styled(Box)(({ theme }) => ({
-  paddingLeft: 4,
+  paddingLeft: theme.spacing(0.5),
   [theme.breakpoints.down('lg')]: {
     paddingLeft: 0,
   },
@@ -11,7 +11,7 @@ export const SidebarWrapper = styled(Box)(({ theme }) => ({
 
 export const AboutBox = styled(Box)(({ theme }) => ({
   textAlign: 'left',
-  background: '#EFF1F5',
+  background: theme.palette.grey[100],
   padding: theme.spacing(4),
   marginTop: theme.spacing(6),
   color: theme.palette.common.black,
@@ -21,14 +21,14 @@ export const AboutBox = styled(Box)(({ theme }) => ({
   [theme.breakpoints.down('sm')]: {
     display: 'none',
   },
-  '&:hover': {
-    background: '#E4E7EC',
-  },
+  '& a': {
+    fontWeight: 600,
+  }
 }));
 
 export const AboutHeader = styled(Typography)(({ theme }) => ({
   fontFamily: 'Neue Haas Grotesk Bold',
-  fontSize: '2rem',
+  fontSize: 32,
   lineHeight: 1,
   '& > span': {
     display: 'block',
@@ -45,21 +45,17 @@ export const AboutHeader = styled(Typography)(({ theme }) => ({
 }));
 
 export const AboutText = styled(Typography)(({ theme }) => ({
-  fontSize: '1rem',
+  fontSize: 17,
   fontFamily: '"Neue Haas Grotesk", sans-serif',
-  fontWeight: 400,
-  lineHeight: 1.3,
   marginTop: theme.spacing(2),
   [theme.breakpoints.down('md')]: {
-    fontSize: '1.2rem',
+    fontSize: 19,
   },
 }));
 
 export const ArticleTitle = styled(Typography)(({ theme }) => ({
-  fontSize: '1rem',
-  lineHeight: 1.2,
   [theme.breakpoints.down('md')]: {
-    fontSize: '1.2rem',
+    fontSize: 18,
   },
 }));
 

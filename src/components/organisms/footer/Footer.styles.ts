@@ -2,7 +2,7 @@ import { styled } from '@mui/system';
 import Typography from '@mui/material/Typography';
 
 export const Footer = styled(Typography)(({ theme }) => ({
-  background: '#252525',
+  background: theme.palette.common.black,
   fontFamily: '"Neue Haas Grotesk", sans-serif',
   color: theme.palette.common.white,
   padding: theme.spacing(5, 0),
@@ -16,7 +16,6 @@ export const Footer = styled(Typography)(({ theme }) => ({
     [theme.breakpoints.down('lg')]: {
       display: 'block',
     },
-
     '&:hover': {
       color: theme.palette.common.white,
     }
@@ -36,7 +35,7 @@ export const FooterLogo = styled(Typography)(({ theme }) => ({
 }));
 
 export const Copyright = styled(Typography)(({ theme }) => ({
-  color: '#a5a5a5',
+  color: theme.palette.grey[400],
   fontFamily: '"Neue Haas Grotesk", sans-serif',
   fontSize: 13,
   letterSpacing: '0.5px',

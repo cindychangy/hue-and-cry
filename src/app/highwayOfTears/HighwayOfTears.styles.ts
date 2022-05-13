@@ -7,19 +7,18 @@ import TimelineSeparator from '@mui/lab/TimelineSeparator';
 
 export const Title = styled(Typography)(({ theme }) => ({
   fontFamily: 'Neue Haas Grotesk Bold',
-  fontSize: '4.2rem',
-  lineHeight: '4.2rem',
+  fontSize: 67,
+  lineHeight: 1,
   marginBottom: theme.spacing(1),
   [theme.breakpoints.down('md')]: {
-    fontSize: '2.7rem',
+    fontSize: 43,
   }
 }));
 
 export const BoxGray = styled(Box)(({ theme }) => ({
-  background: '#F1F1F1',
+  background: theme.palette.grey[100],
   padding: theme.spacing(5),
-  marginRight: theme.spacing(2),
-  marginBottom: theme.spacing(2),
+  margin: theme.spacing(0, 2, 2, 0),
   width: '100%',
 }));
 
@@ -32,7 +31,7 @@ export const SubTextStyled = styled(Box)(({ theme }) => ({
   'span': {
     display: 'inline-block',
     fontWeight: 900,
-    fontSize: '1.1rem',
+    fontSize: 18,
     lineHeight: 1,
     marginTop: theme.spacing(2),
     '& svg': {
@@ -51,7 +50,7 @@ export const SubTextStyled = styled(Box)(({ theme }) => ({
 }));
 
 export const BoxHeader = styled(Typography)(({ theme }) => ({
-  fontSize: '1.2rem',
+  fontSize: 19,
   marginBottom: theme.spacing(3),
 }));
 
@@ -73,7 +72,7 @@ export const CaseMeta = styled(Box)(({ theme }) => ({
 
 export const TimelineYear = styled(TimelineOppositeContent)(({ theme }) => ({
   fontFamily: "'Neue Haas Grotesk Medium', serif",
-  fontSize: '1.5rem',
+  fontSize: 24,
   lineHeight: 1,
   width: theme.spacing(20),
   [theme.breakpoints.down('md')]: {
@@ -85,15 +84,13 @@ export const TimelineYear = styled(TimelineOppositeContent)(({ theme }) => ({
 
 export const TimelineName = styled(Typography)(( { theme }) => ({
   fontFamily: "'Neue Haas Grotesk Medium', serif",
-  fontSize: '1.5rem',
-  marginBottom: theme.spacing(0.125),
-  marginTop: theme.spacing(-0.725),
+  fontSize: 24,
+  margin: theme.spacing(-0.725, 0, 0.125, 0),
 }));
 
 export const TimelineLocation = styled(Typography)(({ theme }) => ({
   fontFamily: "'Neue Haas Grotesk', sans-serif",
-  fontSize: '1rem',
-  color: '#959595',
+  color: theme.palette.grey[500],
   textAlign: 'right',
   marginRight: theme.spacing(2),
   [theme.breakpoints.down('md')]: {
@@ -121,7 +118,7 @@ export const TimelineCase = styled(TimelineItem)(({ theme }) => ({
   [theme.breakpoints.down('md')]: {
     display: 'block',
     paddingBottom: theme.spacing(2),
-    borderBottom: '1px solid #E7E7E7',
+    borderBottom: `1px solid ${theme.palette.grey[300]}`,
   }
 }));
 
@@ -137,8 +134,8 @@ export const ImageContainer = styled(Box)(({ theme }) => ({
   marginLeft: theme.spacing(1),
   flexShrink: '0',
   alignSelf: 'center',
-  height: '90px',
-  width: '90px',
+  height: theme.spacing(11.25),
+  width: theme.spacing(11.25),
   borderRadius: '50%',
   overflow: 'hidden',
   [theme.breakpoints.down('md')]: {

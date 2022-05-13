@@ -8,7 +8,7 @@ export const CommentsContainer = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   margin: theme.spacing(4, 0),
   '& > svg': {
-    fontSize: '2rem',
+    fontSize: 32,
     position: 'relative',
     top: theme.spacing(-1),
     transform: 'scaleX(-1)',
@@ -16,7 +16,7 @@ export const CommentsContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const CommentsTitle = styled(Typography)(({ theme }) => ({
-  fontSize: '2.2rem',
+  fontSize: 32,
   textAlign: 'center',
   marginRight: theme.spacing(1),
 }));

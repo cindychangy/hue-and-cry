@@ -12,6 +12,6 @@ export const IconContainer = styled(Box)(({ theme }) => ({
   position: 'relative',
   top: theme.spacing(-0.4),
   '& svg': {
-    fontSize: '1.7rem',
+    fontSize: 27,
   }
 }));

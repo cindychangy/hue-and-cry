@@ -1,6 +1,4 @@
 import React from 'react';
-// import LazyLoad from 'react-lazyload';
-
 import Box from '@mui/material/Box';
 import Grid from '@mui/material/Grid';
 import Divider from '@mui/material/Divider';
@@ -51,38 +49,10 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
         </Box>
 
         <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
-          {/* <LazyLoad height={250} once>
             <CalloutBox
               helpInfo={post.acf.how_to_help}
               sourcesInfo={post.acf.dig_deeper}
             />
-          </LazyLoad> */}
-            <CalloutBox
-              helpInfo={post.acf.how_to_help}
-              sourcesInfo={post.acf.dig_deeper}
-            />
-          {/* <LazyLoad height={400} once>
-            {post.acf.videos.length && (
-              <>
-                <Box mt={8}/>
-                <RelatedVideos videos={post.acf.videos} />
-                <Divider />
-              </>
-            )}
-
-            {post.acf.podcasts.length && (
-              <>
-                <RelatedPodcasts podcasts={post.acf.podcasts} />
-                <Divider />
-              </>
-            )}
-
-            <Comments 
-              postSlug={post.slug} 
-              postId={post.id} 
-              postTitle={post.title} 
-            />
-          </LazyLoad> */}
           {post.acf.videos.length && (
               <>
                 <Box mt={8}/>
@@ -104,10 +74,6 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               postTitle={post.title} 
             />
         </Box>
-        
-        {/* <LazyLoad height={330} once>
-          <RelatedPosts posts={relatedPosts} />
-        </LazyLoad> */}
         <RelatedPosts posts={relatedPosts} />
 
         <Box maxWidth={700} m="auto" px={2}>

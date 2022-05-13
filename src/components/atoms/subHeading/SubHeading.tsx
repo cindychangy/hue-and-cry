@@ -7,8 +7,8 @@ export const SubHeading = ({ heading, link, heroHeading }: SubHeadingProps) => {
 
   return (
     <S.SubHeading
-      variant="h5" 
-      sx={{ fontSize: heroHeading ? '0.875rem' : '0.7rem' }}
+      variant="caption" 
+      sx={{ fontSize: heroHeading ? '14px' : '11px' }}
     >
       <S.CategoryName 
         href={`/${encodeURIComponent(link)}`}

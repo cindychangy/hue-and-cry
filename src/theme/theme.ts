@@ -21,37 +21,32 @@ const theme = createTheme({
     fontFamily: '"tiempos-regular", sans-serif',
     h1: {
       fontFamily: '"Neue Haas Grotesk Bold", sans-serif',
-      fontSize: '4.25rem',
+      fontSize: 68,
       lineHeight: 1.1,
     },
     h2: {
       fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
-      fontSize: '1.375rem',
-      lineHeight: 1.1,
+      fontSize: 48,
+      lineHeight: 1,
     },
     h3: {
       fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
-      fontSize: '1.313rem',
-      lineHeight: 1,
+      fontSize: 22,
+      lineHeight: 1.1,
     },
     h4: {
       fontFamily: "'Neue Haas Grotesk Bold', sans-serif",
-      fontSize: '1.2rem',
-      lineHeight: 1,
-      fontWeight: 500,
-    },
-    h5: {
-      fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
-      fontSize: '0.9rem',
+      fontSize: 19,
       lineHeight: 1,
     },
     body1: {
-      fontSize: '1rem',
+      fontSize: 16,
       fontFamily: '"tiempos-regular", sans-serif',
     },
-    body2: {
-      fontSize: '1.12rem',
-      lineHeight: 1.8,
+    caption: {
+      fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
+      fontSize: 14,
+      lineHeight: 1,
     }
   },
 });

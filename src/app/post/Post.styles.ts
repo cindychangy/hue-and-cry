@@ -5,8 +5,8 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
   position: 'relative',
   top: theme.spacing(-0.6),
   '& p': {
+    fontSize: 18,
     lineHeight: 1.8,
-    fontSize: '1.12rem',
     '&:first-child': {
       marginTop: 0,
     },
@@ -21,13 +21,11 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
   '& figure': {
     textAlign: 'center',
     margin: theme.spacing(4, 0),
-
     '& figcaption': {
       fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
-      fontSize: '0.9375rem',
-      opacity: 0.6,
+      fontSize: 15,
+      color: theme.palette.grey[500],
     },
-
     '& img': {
       maxWidth: '100%',
       height: 'auto',
@@ -41,23 +39,18 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
       margin: theme.spacing(4, 0, 6, 0),
     },
     '& p': {
-      fontSize: '1.3rem',
       paddingTop: theme.spacing(4),
-      [theme.breakpoints.down('sm')]: {
-        fontSize: '1.2rem',
-        paddingTop: theme.spacing(2),
-      },
       '& strong': {
         fontFamily: "'Neue Haas Grotesk Bold', serif",
-        fontSize: '1.5rem',
-        lineHeight: 0.8,
+        fontSize: 24,
+        lineHeight: 1.2,
         letterSpacing: 0.2,
       },
     },
   },
   '& cite': {
     fontSize: '1.0625rem',
-    opacity: 0.6,
+    color: theme.palette.grey[500],
   },
   '& a': {
     color: theme.palette.common.black,

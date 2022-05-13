@@ -30,16 +30,14 @@ export const Sidebar = ({ posts }: SidebarProps) => {
     <S.SidebarWrapper>
       <SectionHeading heading="Featured Stories" />
       {sidebarPosts}
-      <Link href={AppRoute.ABOUT}>
         <S.AboutBox>
           <S.AboutHeader>
             <span>What</span><span>happened</span><span>to her?</span>
           </S.AboutHeader>
           <S.AboutText>
-            Learn more about the mission of Hue and Cry.
+          <Link href={AppRoute.ABOUT}>Learn more</Link> about the mission of Hue and Cry.
           </S.AboutText>
         </S.AboutBox>
-      </Link>
     </S.SidebarWrapper>
   )
 }

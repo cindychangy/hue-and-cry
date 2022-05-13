@@ -14,10 +14,10 @@ export const HeroContainer = styled(Box)(({ theme }) => ({
 
 export const PostTitle = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down('lg')]: {
-    fontSize: '3.3rem',
+    fontSize: 53,
   },
   [theme.breakpoints.down('md')]: {
-    fontSize: '2.5rem',
+    fontSize: 40,
   },
 }));
 
@@ -58,7 +58,7 @@ export const BlockColor = styled(Box)(({ theme }) => ({
   justifyContent: 'center',
   flexDirection: 'column',
   position: 'absolute',
-  background: '#151A1F',
+  background: theme.palette.common.black,
   color: theme.palette.common.white,
   height: theme.spacing(82),
   width: '60%',

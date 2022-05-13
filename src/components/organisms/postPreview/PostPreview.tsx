@@ -28,7 +28,7 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
         heading={category}
         link={categoryLink}
       />
-      <Typography variant="h2">
+      <Typography variant="h3">
         <S.Title href={slug}>{title}</S.Title>
       </Typography>
       <S.Excerpt dangerouslySetInnerHTML={{__html: excerpt}}/>
