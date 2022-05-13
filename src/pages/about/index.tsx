@@ -9,12 +9,12 @@ const AboutPage = () => {
     <>
       <Head>
         <title>About | Hue and Cry</title>
-        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}/about`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="About Hue and Cry" />
         <meta property="og:description" content="Hue and Cry is a true crime blog focusing on crimes against women and girls who have yet to see justice. We focus on crimes that are committed against women of color." />
-        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/about`} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`} />
         <meta property="og:site_name" content="Hue and Cry" />
         <meta property="og:image" content={process.env.NEXT_PUBLIC_META_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />

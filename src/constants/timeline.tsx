@@ -1,4 +1,4 @@
-export const timelineData = [
+export const TIMELINE_DATA = [
   {
     year: '1969',
     location: 'Williams Lake',

@@ -9,13 +9,13 @@ import TimelineDot from '@mui/lab/TimelineDot';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeading';
 import { Page } from 'components/templates';
-import { timelineData } from './TimelineData';
+import { TIMELINE_DATA } from 'constants/timeline';
 
 import * as S from './HighwayOfTears.styles';
 
 export const HighwayOfTearsHome = () => {
 
-  const timelineList = timelineData.map((data) => (
+  const timelineList = TIMELINE_DATA.map((data) => (
     <S.TimelineCase key={data.name}>
       <S.CaseMeta>
         <S.TimelineYear>{data.year}</S.TimelineYear>

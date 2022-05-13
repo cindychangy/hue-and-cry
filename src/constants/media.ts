@@ -1,0 +1,7 @@
+export const HERO_ABOUT = {
+  backgroundImage: `url(${process.env.NEXT_PUBLIC_MEDIA_URL}/thumbprint-banner.jpg)`,
+  backgroundSize: 'cover',
+  backgroundRepeat: 'no-repeat',
+  backgroundPosition: 'center',
+};
+

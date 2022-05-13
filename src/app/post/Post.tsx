@@ -38,7 +38,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
                 location={post.acf.location}
                 year={post.acf.year}
                 postTitle={post.title.rendered}
-                postLink={`${process.env.NEXT_PUBLIC_BASE_URL}/${post.slug}`}
+                postLink={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
               />
             </Grid>
             <Grid item xs={12} md={9}>

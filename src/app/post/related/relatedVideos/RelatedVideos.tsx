@@ -10,7 +10,7 @@ import { RelatedVideosProps } from './RelatedVideos.types';
 
 export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
 
-  const videoList = videos.map((video, index) => (
+  const VIDEO_LIST = videos.map((video, index) => (
     <VideoBox 
       key={index}
       link={video.link}
@@ -27,7 +27,7 @@ export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
       />
       <LazyLoad height={220} once>
         <Box mb={8} display={{ xs: 'block', md: 'flex'}}>
-          {videoList}
+          {VIDEO_LIST}
         </Box>
       </LazyLoad>
     </>

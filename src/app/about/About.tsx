@@ -3,22 +3,16 @@ import React from 'react';
 import Box from '@mui/material/Box';
 import { Header } from 'components/organisms/header/Header';
 import { Footer } from 'components/organisms/footer/Footer';
+import { HERO_ABOUT } from 'constants/media';
 
 import * as S from './About.styles';
 
 export const About = () => {
 
-  const backgroundImage = {
-    backgroundImage: 'url("https://wordpress.thehueandcry.com/wp-content/uploads/thumbprint-banner.jpg")',
-    backgroundSize: 'cover',
-    backgroundRepeat: 'no-repeat',
-    backgroundPosition: 'center',
-  };
-
   return (
     <>
     <Header/>
-      <S.AboutHero style={backgroundImage}/>
+      <S.AboutHero style={HERO_ABOUT}/>
       <Box maxWidth={900} m="auto" mb={14} px={2}>
         <S.Title variant="h1">Hue and Cry</S.Title>
         <Box mt={2}>

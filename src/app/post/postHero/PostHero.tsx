@@ -7,7 +7,7 @@ import * as S from './PostHero.styles';
 
 export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroProps) => {
   
-  const backgroundImage = {
+  const HERO_POST = {
     backgroundImage: `url('${bgImage}')`,
     backgroundSize: 'cover',
     backgroundRepeat: 'no-repeat'
@@ -15,7 +15,7 @@ export const PostHero = ({ category, title, bgImage, featureImage }: PostHeroPro
 
   return (
     <S.HeroContainer>
-      <S.BlockImage style={backgroundImage}>
+      <S.BlockImage style={HERO_POST}>
         <S.FeatureImage>
           <img src={featureImage} alt={title} />
         </S.FeatureImage>

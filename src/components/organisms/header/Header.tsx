@@ -8,7 +8,8 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
 import { AppRoute } from 'app/App.types';
-import { NAVITEMS, TWITTERLINK, INSTAGRAMLINK } from 'api/data';
+import { NAV_ITEMS } from 'constants/navigation';
+import { TWITTER_LINK, INSTAGRAM_LINK } from 'constants/social';
 
 import * as S from './Header.styles';
 
@@ -27,17 +28,17 @@ export const Header = () => {
       <Hidden smDown>
         <S.NavItemsContainer>
           <S.Nav>
-            <NavItem navItems={NAVITEMS}/>
+            <NavItem navItems={NAV_ITEMS}/>
             <S.IconContainer>
               <Link 
-                href={TWITTERLINK}
+                href={TWITTER_LINK}
                 rel={'noreferrer noopener'} 
                 externalLink
               >
                 <TwitterIcon/>
               </Link>
               <Link 
-                href={INSTAGRAMLINK}
+                href={INSTAGRAM_LINK}
                 rel={'noreferrer noopener'} 
                 externalLink
               >
@@ -53,17 +54,17 @@ export const Header = () => {
         {hideMenu ? <MenuIcon/> : <CloseIcon/>}
       </S.MobileIcon>
       <S.NavMobile sx={{ display: hideMenu ? 'none' : 'block' }}>
-        <NavItem navItems={NAVITEMS}/>
+        <NavItem navItems={NAV_ITEMS}/>
         <S.IconContainer>
           <Link 
-            href={TWITTERLINK}
+            href={TWITTER_LINK}
             rel={'noreferrer noopener'} 
             externalLink
           >
             <TwitterIcon/>
           </Link>
           <Link 
-            href={INSTAGRAMLINK}
+            href={INSTAGRAM_LINK}
             rel={'noreferrer noopener'} 
             externalLink
           >

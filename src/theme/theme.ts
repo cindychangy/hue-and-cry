@@ -23,9 +23,6 @@ const theme = createTheme({
       fontFamily: '"Neue Haas Grotesk Bold", sans-serif',
       fontSize: '4.25rem',
       lineHeight: 1.1,
-      // [theme.breakpoints.down('sm')]: {
-      //   fontSize: '2.5rem',
-      // },
     },
     h2: {
       fontFamily: '"Neue Haas Grotesk Medium", sans-serif',

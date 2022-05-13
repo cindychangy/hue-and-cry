@@ -37,12 +37,12 @@ const PostPage = ({ post, relatedPosts }: PostContainerProps) =>  {
     <>
     <Head>
       <title>{post[0].title.rendered}</title>
-      <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}/${post[0].slug}`} />
+      <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post[0].slug}`} />
       <meta property="og:locale" content="en_US" />
       <meta property="og:type" content="article" />
       <meta property="og:title" content={post[0].title.rendered} />
       <meta property="og:description" content={excerpt} />
-      <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/${post[0].slug}`} />
+      <meta property="og:url" content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post[0].slug}`} />
       <meta property="og:site_name" content="Hue and Cry" />
       <meta property="article:published_time" content={post[0].date_gmt} />
       <meta property="article:modified_time" content={post[0].modified_gmt}  />

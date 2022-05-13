@@ -2,7 +2,6 @@ import React from 'react';
 import LazyLoad from 'react-lazyload';
 
 import Typography from '@mui/material/Typography';
-import Box from '@mui/material/Box';
 import { Link } from 'components/atoms/link/Link';
 import { SubHeading } from 'components/atoms/subHeading/SubHeading';
 import { PostPreviewProps } from './PostPreview.types';

@@ -5,17 +5,16 @@ import { CommentsProps } from '../Comments.types';
 
 export const DisqusEmbed = ({ postSlug, postTitle, postId }: CommentsProps) => {
 
-  const disqusShortname = 'the-hue-and-cry';
-  const disqusConfig = {
-    url: `https://thehueandcry.com/${postSlug}`,
+  const DISQUS_CONFIG = {
+    url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${postSlug}`,
     identifier: postId.toString(),
     title: postTitle.rendered,
   }
 
   return (
     <DiscussionEmbed
-      shortname={disqusShortname}
-      config={disqusConfig}
+      shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+      config={DISQUS_CONFIG}
     />
   )
 };

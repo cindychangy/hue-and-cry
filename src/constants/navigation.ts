@@ -1,6 +1,6 @@
 import { AppRoute } from 'app/App.types';
 
-export const NAVITEMS = [
+export const NAV_ITEMS = [
   { label: 'Missing', value: AppRoute.MISSING },
   { label: 'Highway of Tears', value: AppRoute.HIGHWAY_OF_TEARS },
   { label: 'Murdered', value: AppRoute.MURDERED },
@@ -8,6 +8,3 @@ export const NAVITEMS = [
   { label: 'Military', value: AppRoute.MILITARY },
   { label: 'About', value: AppRoute.ABOUT },
 ];
-
-export const TWITTERLINK = 'https://twitter.com/thehueandcry';
-export const INSTAGRAMLINK = 'https://www.instagram.com/hueandcryblog/';

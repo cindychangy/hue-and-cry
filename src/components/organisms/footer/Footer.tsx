@@ -5,7 +5,8 @@ import Grid from '@mui/material/Grid';
 import { Link } from 'components/atoms/link/Link';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
-import { NAVITEMS, TWITTERLINK, INSTAGRAMLINK } from 'api/data';
+import { NAV_ITEMS } from 'constants/navigation';
+import { TWITTER_LINK, INSTAGRAM_LINK } from 'constants/social';
 import * as S from './Footer.styles';
 
 export const Footer = () => {
@@ -22,20 +23,20 @@ export const Footer = () => {
           </Grid>
           <Grid item xs={12} lg={6}>
             <Box mt={1} display={{ xs: 'block', lg: 'flex'}} justifyContent="flex-end">
-              {NAVITEMS.map(item => (
+              {NAV_ITEMS.map(item => (
                 <Link key={item.label} href={item.value}>{item.label}</Link>
               ))}
             </Box>
             <Box mt={1} display={{ xs: 'block', lg: 'flex'}} justifyContent="flex-end">
               <Link 
-                href={TWITTERLINK}
+                href={TWITTER_LINK}
                 rel={'noreferrer noopener'} 
                 externalLink
               >
                 <TwitterIcon/>
               </Link>
               <Link 
-                href={INSTAGRAMLINK}
+                href={INSTAGRAM_LINK}
                 rel={'noreferrer noopener'} 
                 externalLink
               >
