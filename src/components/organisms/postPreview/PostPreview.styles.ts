@@ -27,7 +27,7 @@ export const Title = styled('a')(({ theme }) => ({
   lineHeight: 1,
   cursor: 'pointer',
   '&:hover': {
-    boxShadow: 'inset 0 -3px #fff, inset 0 -11px 0 #FFBA9C',
+    boxShadow: 'rgb(255 255 255) 0px -3px inset, rgb(255 168 99) 0px -11px 0px inset',
     textDecoration: 'none',
     opacity: 1,
   },
