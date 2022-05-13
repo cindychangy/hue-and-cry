@@ -76,7 +76,7 @@ export const MobileIcon = styled(IconButton)(({ theme }) => ({
 export const IconContainer = styled(Box)(({ theme }) => ({
   '& svg': {
     marginTop: 8,
-    '&:first-child': {
+    '&:first-of-type': {
       marginRight: theme.spacing(1),
       [theme.breakpoints.down('sm')]: {
         marginRight: theme.spacing(2),

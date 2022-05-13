@@ -7,7 +7,7 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
   '& p': {
     fontSize: 18,
     lineHeight: 1.8,
-    '&:first-child': {
+    '&:first-of-type': {
       marginTop: 0,
     },
   },
