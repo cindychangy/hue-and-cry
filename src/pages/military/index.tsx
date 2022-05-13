@@ -4,7 +4,6 @@ import Head from 'next/head';
 
 import { Military } from 'app/military/Military';
 import { getCategory } from 'api/actions/categories/categoriesActions';
-import { baseURL, metaImage } from 'api/types';
 
 export const getStaticProps: GetStaticProps = async () => {
 
@@ -21,14 +20,14 @@ const MilitaryPage = ({ posts }: InferGetStaticPropsType<typeof getStaticProps>)
     <>
       <Head>
         <title>Military | Hue and Cry</title>
-        <link rel="canonical" href={`${baseURL}/military`} />
+        <link rel="canonical" href={`${process.env.NEXT_PUBLIC_BASE_URL}/military`} />
         <meta property="og:locale" content="en_US" />
         <meta property="og:type" content="article" />
         <meta property="og:title" content="Military" />
         <meta property="og:description" content="Cases of suspicious deaths and dissapearances of women serving in the military." />
-        <meta property="og:url" content={`${baseURL}/military`} />
+        <meta property="og:url" content={`${process.env.NEXT_PUBLIC_BASE_URL}/military`} />
         <meta property="og:site_name" content="Hue and Cry" />
-        <meta property="og:image" content={metaImage} />
+        <meta property="og:image" content={process.env.NEXT_PUBLIC_META_IMAGE} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@thehueandcry" />
         <meta name="twitter:site" content="@thehueandcry" />

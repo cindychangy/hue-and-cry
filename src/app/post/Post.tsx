@@ -16,7 +16,6 @@ import { Comments } from './comments/Comments';
 import { Copyright } from './copyright/Copyright';
 
 import { PostProps } from './Post.types';
-import { baseURL } from 'api/types';
 
 import * as S from './Post.styles';
 
@@ -39,7 +38,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
                 location={post.acf.location}
                 year={post.acf.year}
                 postTitle={post.title.rendered}
-                postLink={`${baseURL}/${post.slug}`}
+                postLink={`${process.env.NEXT_PUBLIC_BASE_URL}/${post.slug}`}
               />
             </Grid>
             <Grid item xs={12} md={9}>
