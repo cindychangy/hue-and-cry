@@ -11,7 +11,7 @@ export const getStaticProps: GetStaticProps = async () => {
   const { data } = await client.query({
     query: gql`
       query getCategoryPosts {
-        posts(where: {categoryId: 8}) {
+        posts(where: {categoryId: 8},  first: 100) {
           nodes {
             postId
             title
