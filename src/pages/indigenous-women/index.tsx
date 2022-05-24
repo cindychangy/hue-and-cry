@@ -13,6 +13,7 @@ export const getStaticProps: GetStaticProps = async () => {
       query getCategoryPosts {
         posts(where: {categoryId: 2}) {
           nodes {
+            title
             postId
             slug
             featuredImage {

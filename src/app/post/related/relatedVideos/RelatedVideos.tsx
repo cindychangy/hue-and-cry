@@ -10,7 +10,7 @@ import { RelatedVideosProps } from './RelatedVideos.types';
 
 export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
 
-  const VIDEO_LIST = videos.map((video, index) => (
+  const VIDEO_LIST = videos && videos.map((video, index) => (
     <VideoBox 
       key={index}
       link={video.link}

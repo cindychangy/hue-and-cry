@@ -13,7 +13,7 @@ import * as S from './Sidebar.styles';
 export const Sidebar = ({ posts }: SidebarProps) => {
   
   const sidebarPosts = posts.map(post => (
-    <Box my={3} key={post.postId}>
+    <Box my={3} key={post.slug}>
       <SubHeading
         heading={post.categories.nodes[0].name}
         link={post.categories.nodes[0].slug}

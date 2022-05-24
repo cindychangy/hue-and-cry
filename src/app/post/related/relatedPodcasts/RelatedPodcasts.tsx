@@ -10,7 +10,7 @@ import * as S from './RelatedPodcasts.styles';
 
 export const RelatedPodcasts = ({ podcasts }: RelatedPodcastsProps) => {
 
-  const podcastList = podcasts.map((podcast, index)  => (
+  const podcastList = podcasts && podcasts.map((podcast, index)  => (
     <S.PodcastConatiner key={index}>
       <S.ShowTitle>
         {podcast.podcastShow}

@@ -8,7 +8,7 @@ export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
 
   const featuredPostList = posts.map(post => (
 
-    <Grid item xs={12} sm={6} md={4} key={post.postId}>
+    <Grid item xs={12} sm={6} md={4} key={post.slug}>
       <PostPreview
         image={post.featuredImage.node.sourceUrl} 
         title={post.title} 

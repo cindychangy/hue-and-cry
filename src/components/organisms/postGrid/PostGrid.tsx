@@ -8,7 +8,7 @@ import { PostGridProps } from './PostGrid.types';
 export const PostGrid = ({ posts }: PostGridProps ) => {
 
   const PostList = posts.map(post => (
-    <Grid item xs={12} sm={6} md={4} lg={3} key={post.postId}>
+    <Grid item xs={12} sm={6} md={4} lg={3} key={post.slug}>
       <PostPreview
         image={post.featuredImage.node.sourceUrl} 
         category={post.categories && post.categories.nodes[0].name} 

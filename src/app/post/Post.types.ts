@@ -1,11 +1,11 @@
-import { Post } from 'api/types';
+import { Post, RelatedPost } from 'api/types';
 
 export type PostContainerProps = {
   post: Post;
-  relatedPosts: Post[];
+  relatedPosts: RelatedPost[];
 }
 
 export type PostProps = {
   post: Post;
-  relatedPosts: Post[];
+  relatedPosts: RelatedPost[];
 }

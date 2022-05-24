@@ -19,9 +19,6 @@ import * as S from './Post.styles';
 
 export const PostContainer = ({ post, relatedPosts }: PostProps) => {
 
-
-  console.log(post.podcasts);
-
   return (
     <>
       <Header/>
@@ -56,7 +53,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               helpInfo={post.ctaHowToHelp.howToHelp}
               sourcesInfo={post.ctaDigDeeper.digDeeper}
             />
-          {post.videos && (
+          {!!post?.videos?.videos && (
               <>
                 <Box mt={8}/>
                 <RelatedVideos videos={post.videos.videos} />
@@ -64,7 +61,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               </>
             )}
 
-            {post.podcasts && (
+            {!!post?.podcasts?.podcasts && (
               <>
                 <RelatedPodcasts podcasts={post.podcasts.podcasts} />
                 <Divider />
@@ -77,7 +74,7 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
               postTitle={post.title} 
             />
         </Box>
-        {/* <RelatedPosts posts={relatedPosts} /> */}
+        <RelatedPosts posts={relatedPosts} />
 
         <Box maxWidth={700} m="auto" px={2}>
           <Copyright sources={post.postAssets.copyrightSources} />
