@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
             digDeeper
           }
           ctaHowToHelp {
-            fieldGroupName
+            howToHelp
           }
           featuredImage {
             node {
