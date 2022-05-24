@@ -11,11 +11,7 @@ export const PostMeta = ({ categories, location, year, postLink, postTitle }: Po
 
   const categoryList = categories.map((category, index)  => (
       <li key={index}>
-      <Link 
-        href={`${encodeURIComponent(category.replace(/\s+/g, '-').toLowerCase())}`}
-      >
-        {category}
-      </Link>
+        <Link href={category.slug}>{category.name}</Link>
       </li>
   ));
 

@@ -8,7 +8,7 @@ export const DisqusEmbed = ({ postSlug, postTitle, postId }: CommentsProps) => {
   const DISQUS_CONFIG = {
     url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${postSlug}`,
     identifier: postId.toString(),
-    title: postTitle.rendered,
+    title: postTitle,
   }
 
   return (

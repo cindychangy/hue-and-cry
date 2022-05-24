@@ -1,7 +1,7 @@
 import { Post } from 'api/types';
 
 export type PostContainerProps = {
-  post: Post[];
+  post: Post;
   relatedPosts: Post[];
 }
 

@@ -8,15 +8,15 @@ import { PostGridProps } from './PostGrid.types';
 export const PostGrid = ({ posts }: PostGridProps ) => {
 
   const PostList = posts.map(post => (
-    <Grid item xs={12} sm={6} md={4} lg={3} key={post.id}>
+    <Grid item xs={12} sm={6} md={4} lg={3} key={post.postId}>
       <PostPreview
-        image={post.jetpack_featured_media_url} 
-        category={post.categories_names[0]} 
-        title={post.title.rendered} 
-        excerpt={post.excerpt.rendered}  
-        categoryLink={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`} 
+        image={post.featuredImage.node.sourceUrl} 
+        category={post.categories && post.categories.nodes[0].name} 
+        title={post.title} 
+        excerpt={post.excerpt}  
+        categorySlug={post.categories && post.categories.nodes[0].slug}
         slug={post.slug}
-        id={post.id}
+        id={post.postId}
       />
     </Grid>
   ));

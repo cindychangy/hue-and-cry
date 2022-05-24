@@ -8,7 +8,7 @@ import { PostPreviewProps } from './PostPreview.types';
 
 import * as S from './PostPreview.styles';
 
-export const PostPreview = ({ image, category, title, excerpt, categoryLink, slug }: PostPreviewProps) => {
+export const PostPreview = ({ image, category, title, excerpt, categorySlug, slug }: PostPreviewProps) => {
 
   const featureImage = {
     backgroundImage: `url('${image}')`,
@@ -24,10 +24,12 @@ export const PostPreview = ({ image, category, title, excerpt, categoryLink, slu
           <S.ImageBox style={featureImage}></S.ImageBox>
         </LazyLoad>
       </Link>
-      <SubHeading 
-        heading={category}
-        link={categoryLink}
-      />
+      {category &&
+        <SubHeading 
+          heading={category}
+          link={categorySlug}
+        />
+      }
       <Typography variant="h3">
         <S.Title href={slug}>{title}</S.Title>
       </Typography>

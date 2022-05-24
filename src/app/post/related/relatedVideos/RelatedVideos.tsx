@@ -14,7 +14,7 @@ export const RelatedVideos = ({ videos }: RelatedVideosProps) => {
     <VideoBox 
       key={index}
       link={video.link}
-      title={video.video_title}
+      title={video.videoTitle}
       video={video.video}
     />
   ));

@@ -1,28 +1,57 @@
 import React from 'react';
-import { GetStaticProps, InferGetStaticPropsType } from 'next';
+import { InferGetStaticPropsType } from 'next';
+import { gql } from '@apollo/client';
+import client from '../../apollo-client';
 import Head from 'next/head';
-
 import { Home }  from 'app/home/Home';
-import { getHomepagePosts, getFeaturedPosts } from 'api/actions/posts/postsActions';
-import { HomeProps } from 'app/home/Home.types';
+import { Post } from 'api/types'
 
-export const getStaticProps: GetStaticProps<HomeProps> = async () => {
+export async function getStaticProps() {
+  const { data } = await client.query({
+    query: gql`
+      query getPosts {
+        posts(first: 100) {
+          nodes {
+            excerpt
+            slug
+            title
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            categories(first: 1) {
+              nodes {
+                name
+                slug
+              }
+            }
+            id
+            tags {
+              nodes {
+                name
+              }
+            }
+          }
+        }
+      }
+  `,
+  });
 
-  const [posts, sidebarPosts] = await Promise.all([
-    await getHomepagePosts(),
-    await getFeaturedPosts()
-  ]);
+  const posts = data.posts.nodes;
 
-  // const posts = await getHomepagePosts();
-  // const sidebarPosts = await getFeaturedPosts();
-
+  const featured = posts.filter((post: Post) => post.tags.nodes[0] && post.tags.nodes[0].name === 'homepage');
+  const sidebar = posts.filter((post: Post) => post.tags.nodes[0] && post.tags.nodes[0].name === 'featured')
 
   return {
-    props: { posts, sidebarPosts },
-  };
-};
+    props: {
+      featuredPosts: featured,
+      sidebarPosts: sidebar,
+    },
+ };
+}
 
-const Index = ({ posts, sidebarPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
+const Index = ({ featuredPosts, sidebarPosts }: InferGetStaticPropsType<typeof getStaticProps>) => {
 
    return (
      <>
@@ -38,7 +67,7 @@ const Index = ({ posts, sidebarPosts }: InferGetStaticPropsType<typeof getStatic
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:site" content="@thehue_andcry" />
      </Head>
-     <Home posts={posts} sidebarPosts={sidebarPosts} />
+     <Home featuredPosts={featuredPosts} sidebarPosts={sidebarPosts} />
      </>
    )
 }

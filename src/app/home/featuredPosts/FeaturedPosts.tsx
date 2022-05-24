@@ -8,15 +8,15 @@ export const FeaturedPosts = ({ posts }: { posts: Post[] }) => {
 
   const featuredPostList = posts.map(post => (
 
-    <Grid item xs={12} sm={6} md={4} key={post.id}>
+    <Grid item xs={12} sm={6} md={4} key={post.postId}>
       <PostPreview
-        image={post.jetpack_featured_media_url} 
-        title={post.title.rendered} 
-        excerpt={post.excerpt.rendered}
-        category={post.categories_names[0]} 
-        categoryLink={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`} 
+        image={post.featuredImage.node.sourceUrl} 
+        title={post.title} 
+        excerpt={post.excerpt}
+        category={post.categories.nodes[0].name} 
+        categorySlug={post.categories.nodes[0].slug}
         slug={post.slug}
-        id={post.id}
+        id={post.postId}
       />
     </Grid>
   ));
