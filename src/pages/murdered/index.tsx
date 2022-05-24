@@ -1,16 +1,36 @@
 import React from 'react'
 import { GetStaticProps, InferGetStaticPropsType } from 'next';
 import Head from 'next/head';
+import { gql } from '@apollo/client';
+import client from '../../../apollo-client';
 
 import { Murdered } from 'app/murdered/Murdered';
-import { getCategory } from 'api/actions/categories/categoriesActions';
 
 export const getStaticProps: GetStaticProps = async () => {
+  
+  const { data } = await client.query({
+    query: gql`
+      query getCategoryPosts {
+        posts(where: {categoryId: 2}) {
+          nodes {
+            postId
+            title
+            slug
+            featuredImage {
+              node {
+                sourceUrl
+              }
+            }
+            excerpt
+          }
+        }
+      }
+  `,
+  });
 
-  const posts = await getCategory(3);
 
   return {
-    props: { posts },
+    props: { posts: data.posts.nodes },
   };
 };
 

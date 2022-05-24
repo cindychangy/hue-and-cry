@@ -13,14 +13,14 @@ import * as S from './Sidebar.styles';
 export const Sidebar = ({ posts }: SidebarProps) => {
   
   const sidebarPosts = posts.map(post => (
-    <Box my={3} key={post.id}>
+    <Box my={3} key={post.slug}>
       <SubHeading
-        heading={post.categories_names[0]}
-        link={`${encodeURIComponent(post.categories_names[0].replace(/\s+/g, '-').toLowerCase())}`}
+        heading={post.categories.nodes[0].name}
+        link={post.categories.nodes[0].slug}
       />
       <S.ArticleTitle>
         <Link href={post.slug} color="inherit">
-          {post.title.rendered}
+          {post.title}
         </Link>
       </S.ArticleTitle>
     </Box>

@@ -5,7 +5,7 @@ import { SectionHeading } from 'components/molecules/sectionHeading/SectionHeadi
 import { PostGrid } from 'components/organisms/postGrid/PostGrid';
 import { Page } from 'components/templates';
 
-import { Category, Post } from 'api/types';
+import { CategoryName, Post } from 'api/types';
 
 export const Military = ({ posts }: { posts: Post[] }) => {
 
@@ -13,7 +13,7 @@ export const Military = ({ posts }: { posts: Post[] }) => {
     <Page>
       <Grid container>
         <Grid item xs={12}>
-          <SectionHeading heading={Category.MILITARY} />
+          <SectionHeading heading={CategoryName.MILITARY} />
           <PostGrid posts={posts} />
         </Grid>
       </Grid>

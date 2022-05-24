@@ -4,11 +4,11 @@ import Grid from '@mui/material/Grid';
 import Box from '@mui/material/Box';
 import { Link } from 'components/atoms/link/Link';
 import Typography from '@mui/material/Typography';
-import { Post } from 'api/types';
+import { RelatedPost } from 'api/types';
 
 import * as S from './RelatedPosts.styles';
 
-export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
+export const RelatedPosts = ({ posts }: { posts: RelatedPost[] }) => {
 
   const showRelatedPosts = posts.map(post => (
     <Grid item xs={6} sm={3} md={2} key={post.id}>

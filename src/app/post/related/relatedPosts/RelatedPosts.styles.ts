@@ -12,7 +12,7 @@ export const RelatedContainer = styled(Box)(({ theme }) => ({
 }));
 
 export const ImageBox = styled(Box)(({ theme }) => ({
-  height: theme.spacing(15),
+  height: theme.spacing(20),
   width: '100%',
 }));
 

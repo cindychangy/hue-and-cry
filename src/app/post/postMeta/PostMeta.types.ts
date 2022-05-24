@@ -1,6 +1,10 @@
-
 export type PostMetaProps = {
-  categories: string[];
+  categories: [
+    {
+      name: string,
+      slug: string,
+    }
+  ]
   location: string;
   year: string;
   postLink: string;

@@ -23,25 +23,25 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
     <>
       <Header/>
         <PostHero
-          category={post.categories_names[0]}
-          title={post.title.rendered}
-          bgImage={post.acf.background_image}
-          featureImage={post.jetpack_featured_media_url}
+          category={post.categories.nodes[0].name}
+          title={post.title}
+          bgImage={post.postAssets.backgroundImage.sourceUrl}
+          featureImage={post.featuredImage.node.sourceUrl}
         />
         <Box maxWidth={1000} m="auto" pt={4} px={{ xs: 2, md: 4 }}>
           <Grid container>
             <Grid item xs={12} md={3}>
               <PostMeta
-                categories={post.categories_names}
-                location={post.acf.location}
-                year={post.acf.year}
-                postTitle={post.title.rendered}
+                categories={post.categories.nodes}
+                location={post.storyFacts.location}
+                year={post.storyFacts.year}
+                postTitle={post.title}
                 postLink={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
               />
             </Grid>
             <Grid item xs={12} md={9}>
               <S.ArticleBody 
-                dangerouslySetInnerHTML={{__html: post.content.rendered}}
+                dangerouslySetInnerHTML={{__html: post.content}}
               >
               </S.ArticleBody>
             </Grid>
@@ -50,34 +50,34 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
 
         <Box maxWidth={1280} m="auto" my={6} px={{ xs: 2, md: 4 }}>
             <CalloutBox
-              helpInfo={post.acf.how_to_help}
-              sourcesInfo={post.acf.dig_deeper}
+              helpInfo={post.ctaHowToHelp.howToHelp}
+              sourcesInfo={post.ctaDigDeeper.digDeeper}
             />
-          {post.acf.videos.length && (
+          {!!post?.videos?.videos && (
               <>
                 <Box mt={8}/>
-                <RelatedVideos videos={post.acf.videos} />
+                <RelatedVideos videos={post.videos.videos} />
                 <Divider />
               </>
             )}
 
-            {post.acf.podcasts.length && (
+            {!!post?.podcasts?.podcasts && (
               <>
-                <RelatedPodcasts podcasts={post.acf.podcasts} />
+                <RelatedPodcasts podcasts={post.podcasts.podcasts} />
                 <Divider />
               </>
             )}
 
             <Comments 
               postSlug={post.slug} 
-              postId={post.id} 
+              postId={post.postId} 
               postTitle={post.title} 
             />
         </Box>
         <RelatedPosts posts={relatedPosts} />
 
         <Box maxWidth={700} m="auto" px={2}>
-          <Copyright sources={post.acf.copyright_sources} />
+          <Copyright sources={post.postAssets.copyrightSources} />
         </Box>
       <Footer/>
     </>

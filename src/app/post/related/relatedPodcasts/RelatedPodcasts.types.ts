@@ -1,5 +1,9 @@
-import { Podcast } from 'api/types';
-
 export type RelatedPodcastsProps = {
-  podcasts: Podcast[];
+  podcasts: [
+    {
+      link: string;
+      podcastShow: string;
+      showTitle: string;
+    }
+  ]
 }
