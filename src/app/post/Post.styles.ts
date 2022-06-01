@@ -48,6 +48,11 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
       },
     },
   },
+  '& figcaption a': {
+    boxShadow: 'none',
+    textDecoration: 'underline',
+    color: theme.palette.grey[500],
+  },
   '& cite': {
     fontSize: '1.0625rem',
     color: theme.palette.grey[500],
