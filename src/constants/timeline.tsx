@@ -170,7 +170,8 @@ export const TIMELINE_DATA = [
     year: '2014',
     location: "Prince George",
     name: 'Anita Florence Thorne',
-    blurb: 'Anita was 49 years old and her car was found at the Willow River rest area next to Highway 16. Her purse and all her belongings were found inside of the car but Anita has not been seen since.',
+    blurb: "Anita was last seen at a gas station, her car was found the next day near Highway 16.",
+    link: 'https://thehueandcry.com/anita-florence-thorne',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/anita-t.jpg',
   },
   {
