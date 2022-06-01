@@ -28,8 +28,8 @@ export const PostContainer = ({ post, relatedPosts }: PostProps) => {
           bgImage={post.postAssets.backgroundImage.sourceUrl}
           featureImage={post.featuredImage.node.sourceUrl}
         />
-        <Box maxWidth={1000} m="auto" pt={4} px={{ xs: 2, md: 4 }}>
-          <Grid container>
+        <Box maxWidth={1100} m="auto" pt={4} px={{ xs: 2, md: 4 }}>
+          <Grid container spacing={2}>
             <Grid item xs={12} md={3}>
               <PostMeta
                 categories={post.categories.nodes}
