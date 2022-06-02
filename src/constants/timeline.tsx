@@ -198,9 +198,10 @@ export const TIMELINE_DATA = [
   },
   {
     year: '2018',
-    location: "Hazelton",
+    location: "New Hazelton",
     name: 'Cynthia Martin',
-    blurb: "Cynthia was 50 years old when she was last seen leaving her mother's house after 9pm. Her abandoned car was found days later off the shoulder of a road with all of her belongings inside. She has not been seen since.",
+    blurb: "Cynthia was last seen leaving her mother's house one evening. She was never seen or heard from again.",
+    link: 'https://thehueandcry.com/cynthia-martin',
     photo: 'https://wordpress.thehueandcry.com/wp-content/uploads/cynthia-martin.png',
   },
 ];
