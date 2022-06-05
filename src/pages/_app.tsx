@@ -32,10 +32,13 @@ const App = ({ Component, pageProps }: AppProps) => {
       <title>Hue and Cry | True Crime Blog</title>
       <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
       <meta name="google-site-verification" content="yIN8gBn7vykoYb98wQQu9PAzJi9_1JAi5rcwDYS4kB4" />
-      <link rel="icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=32%2C29&#038;ssl=1" sizes="32x32" />
-      <link rel="icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" sizes="192x192" />
-      <link rel="apple-touch-icon" href="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
-      <meta name="msapplication-TileImage" content="https://i1.wp.com/wordpress.thehueandcry.com/wp-content/uploads/handcry-favicon.png?fit=82%2C74&#038;ssl=1" />
+      <link rel="apple-touch-icon" sizes="180x180" href={`${process.env.NEXT_PUBLIC_MEDIA_URL}/apple-touch-icon.png`} />
+      <link rel="icon" type="image/png" sizes="32x32" href={`${process.env.NEXT_PUBLIC_MEDIA_URL}/favicon-32x32.png`} />
+      <link rel="icon" type="image/png" sizes="16x16" href={`${process.env.NEXT_PUBLIC_MEDIA_URL}/favicon-16x16.png`} />
+      <link rel="mask-icon" href={`${process.env.NEXT_PUBLIC_MEDIA_URL}/safari-pinned-tab.svg`} color="#5bbad5" />
+      <meta name="msapplication-TileColor" content="#da532c" />
+      <meta name="theme-color" content="#ffffff" />
+      <meta name="msapplication-TileImage" content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/mstile-150x150-1.png`} />
 
       <link rel="preconnect"
       href="https://fonts.gstatic.com"
