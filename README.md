@@ -1,6 +1,6 @@
-## Hue and Cry Blog
+## Hue and Cry
 
-Headless Wordpress site with a frontend build with NEXT JS, deployed on Vercel.
+True crime blog built with a Wordpress backend and NEXTJS, React frontend. Deployed on Vercel.
 
 To install:
 
