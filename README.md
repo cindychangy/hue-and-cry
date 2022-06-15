@@ -1,8 +1,14 @@
 ## Hue and Cry Blog
 
-Frontend build consists of React, NextJS and Typescript, backend is built off Wordpress API.
+Headless Wordpress site with a frontend build with NEXT JS, deployed on Vercel.
 
 To install:
+
+```bash
+npm install
+```
+
+To run locally:
 
 ```bash
 npm run dev
