@@ -125,7 +125,7 @@ const PostPage = ({ post, relatedPosts }: PostContainerProps) => {
         <meta property="article:published_time" content={post.date_gmt} />
         <meta property="article:modified_time" content={post.modified_gmt} />
         <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
-        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:creator" content="@thehueandcry" />
         <meta name="twitter:site" content="@thehueandcry" />
       </Head>
