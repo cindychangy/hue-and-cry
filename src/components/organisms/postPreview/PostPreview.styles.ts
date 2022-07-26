@@ -5,7 +5,7 @@ export const FeatureContainer = styled(Box)(({ theme }) => ({
   marginBottom: theme.spacing(1),
   '& > a:hover': {
     opacity: 1,
-  }
+  },
 }));
 
 export const ImageBox = styled(Box)(({ theme }) => ({
@@ -27,7 +27,8 @@ export const Title = styled('a')(({ theme }) => ({
   lineHeight: 1,
   cursor: 'pointer',
   '&:hover': {
-    boxShadow: 'rgb(255 255 255) 0px -3px inset, rgb(255 172 108) 0px -11px 0px inset',
+    boxShadow:
+      'rgb(255 255 255) 0px -3px inset, rgb(255 172 108) 0px -11px 0px inset',
     textDecoration: 'none',
     opacity: 1,
   },
@@ -44,11 +45,11 @@ export const Excerpt = styled(Box)(({ theme }) => ({
   '-webkit-box-orient': 'vertical',
   '-webkit-line-clamp': '2',
   [theme.breakpoints.down('md')]: {
-    height: theme.spacing(9),
+    height: theme.spacing(8.25),
   },
-  'p': {
+  p: {
     fontSize: 16,
     lineHeight: 1.6,
     color: theme.palette.grey[700],
-  }
+  },
 }));
