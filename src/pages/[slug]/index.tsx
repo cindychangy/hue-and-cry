@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { GetStaticProps, GetStaticPaths } from 'next';
 import Head from 'next/head';
 import { gql } from '@apollo/client';
@@ -19,19 +19,19 @@ export const getStaticPaths: GetStaticPaths<{ slug: string }> = async () => {
           }
         }
       }
-  `,
+    `,
   });
 
   const slugs = data.posts.nodes.map((post: Post) => post.slug);
-  const paths = await slugs.map((slug: string) => ({ params: { slug }}));
+  const paths = await slugs.map((slug: string) => ({ params: { slug } }));
 
   return {
     paths,
     fallback: false,
-  }
+  };
 };
 
-export const getStaticProps: GetStaticProps = async ( { params }) => {
+export const getStaticProps: GetStaticProps = async ({ params }) => {
   const { data } = await client.query({
     query: gql`
       query singlePost {
@@ -102,31 +102,36 @@ export const getStaticProps: GetStaticProps = async ( { params }) => {
   };
 };
 
-const PostPage = ({ post, relatedPosts }: PostContainerProps) =>  {
-
-  const excerpt = post.excerpt.replace(/(<([^>]+)>)/ig, '');
+const PostPage = ({ post, relatedPosts }: PostContainerProps) => {
+  const excerpt = post.excerpt.replace(/(<([^>]+)>)/gi, '');
 
   return (
     <>
-    <Head>
-      <title>{post.title}</title>
-      <link rel="canonical" href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`} />
-      <meta property="og:locale" content="en_US" />
-      <meta property="og:type" content="article" />
-      <meta property="og:title" content={post.title} />
-      <meta property="og:description" content={excerpt} />
-      <meta property="og:url" content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`} />
-      <meta property="og:site_name" content="Hue and Cry" />
-      <meta property="article:published_time" content={post.date_gmt} />
-      <meta property="article:modified_time" content={post.modified_gmt}  />
-      <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
-      <meta name="twitter:card" content="summary_large_image" />
-      <meta name="twitter:creator" content="@thehueandcry" />
-      <meta name="twitter:site" content="@thehueandcry" />
-    </Head>
-    <PostContainer post={post} relatedPosts={relatedPosts} /> 
+      <Head>
+        <title>{post.title}</title>
+        <link
+          rel="canonical"
+          href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+        />
+        <meta property="og:locale" content="en_US" />
+        <meta property="og:type" content="article" />
+        <meta property="og:title" content={post.title} />
+        <meta property="og:description" content={excerpt} />
+        <meta
+          property="og:url"
+          content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+        />
+        <meta property="og:site_name" content="Hue and Cry" />
+        <meta property="article:published_time" content={post.date_gmt} />
+        <meta property="article:modified_time" content={post.modified_gmt} />
+        <meta property="og:image" content={post.featuredImage.node.sourceUrl} />
+        <meta name="twitter:card" content="summary" />
+        <meta name="twitter:creator" content="@thehueandcry" />
+        <meta name="twitter:site" content="@thehueandcry" />
+      </Head>
+      <PostContainer post={post} relatedPosts={relatedPosts} />
     </>
-  )
+  );
 };
 
 export default PostPage;
