@@ -1,6 +1,6 @@
 import { createTheme } from '@mui/material';
 
-const theme = createTheme({ 
+const theme = createTheme({
   palette: {
     common: {
       black: '#151A1F',
@@ -11,10 +11,10 @@ const theme = createTheme({
       light: '#FBF1E9',
     },
     secondary: {
-      main: '#F0F0F0'
+      main: '#F0F0F0',
     },
     text: {
-      primary: '#333'
+      primary: '#333',
     },
   },
   typography: {
@@ -22,7 +22,7 @@ const theme = createTheme({
     h1: {
       fontFamily: '"Neue Haas Grotesk Bold", sans-serif',
       fontSize: 68,
-      lineHeight: 1.1,
+      lineHeight: 1,
     },
     h2: {
       fontFamily: '"Neue Haas Grotesk Medium", sans-serif',
@@ -47,7 +47,7 @@ const theme = createTheme({
       fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
       fontSize: 14,
       lineHeight: 1,
-    }
+    },
   },
 });
 
