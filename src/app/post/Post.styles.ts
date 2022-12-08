@@ -57,14 +57,21 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
     fontSize: '1rem',
     color: theme.palette.grey[500],
     fontStyle: 'normal',
+    textDecoration: 'none',
+
+    '& a': {
+      textDecoration: 'none',
+      color: theme.palette.grey[500],
+    },
   },
   '& a': {
-    color: theme.palette.grey[500],
-    textDecoration: 'none',
+    color: theme.palette.common.black,
+    textDecoration: 'underline',
     paddingBottom: theme.spacing(0.3),
   },
   '& a:hover': {
     transition: '.1s, box-shadow .1s, -webkit-box-shadow .1s',
     boxShadow: 'none',
+    textDecoration: 'none',
   },
 }));
