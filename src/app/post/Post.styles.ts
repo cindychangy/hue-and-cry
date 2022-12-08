@@ -29,7 +29,7 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
     '& img': {
       maxWidth: '100%',
       height: 'auto',
-    }
+    },
   },
   '& blockquote': {
     fontFamily: "'Neue Haas Grotesk Regular', sans-serif",
@@ -50,21 +50,21 @@ export const ArticleBody = styled(Box)(({ theme }) => ({
   },
   '& figcaption a': {
     boxShadow: 'none',
-    textDecoration: 'underline',
+    textDecoration: 'none',
     color: theme.palette.grey[500],
   },
   '& cite': {
-    fontSize: '1.0625rem',
+    fontSize: '1rem',
     color: theme.palette.grey[500],
+    fontStyle: 'normal',
   },
   '& a': {
-    color: theme.palette.common.black,
+    color: theme.palette.grey[500],
     textDecoration: 'none',
-    boxShadow: `inset 0 -3px ${theme.palette.common.white}, inset 0 -5px 0 ${theme.palette.common.black}`,
     paddingBottom: theme.spacing(0.3),
   },
   '& a:hover': {
     transition: '.1s, box-shadow .1s, -webkit-box-shadow .1s',
     boxShadow: 'none',
-  }
+  },
 }));
