@@ -1,37 +1,47 @@
-
 import React from 'react';
-import Document, { Html, Head, Main, NextScript, DocumentContext } from 'next/document';
-import { ServerStyleSheets } from '@mui/styles';
+import Document, { Html, Head, Main, NextScript } from 'next/document';
+import createEmotionServer from '@emotion/server/create-instance';
+import createEmotionCache from '../theme/createEmotionCache';
+// import { ServerStyleSheets } from '@mui/styles';
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-class MyDocument extends Document {
-  static async getInitialProps(ctx: DocumentContext) {
-    // Material UI - render app and page and get the context of the page with collected side effects.
-    const sheets = new ServerStyleSheets();
-    const originalRenderPage = ctx.renderPage;
-
-    ctx.renderPage = () =>
-      originalRenderPage({
-        enhanceApp: App => props => sheets.collect(<App {...props} />),
-      });
-
-    const initialProps = await Document.getInitialProps(ctx);
-
-    return {
-      ...initialProps,
-      styles: [...React.Children.toArray(initialProps.styles), sheets.getStyleElement()],
-    };
-  }
-
+export default class MyDocument extends Document {
   render() {
     return (
       <Html>
         <Head>
+          <link
+            rel="preconnect"
+            href="https://fonts.gstatic.com"
+            crossOrigin="anonymous"
+          />
+
+          <link
+            href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+            rel="stylesheet"
+            as="font"
+            crossOrigin="anonymous"
+          ></link>
+          <link
+            rel="stylesheet"
+            href="/fonts/tiempos-regular-webfont.woff2"
+            as="font"
+            type="font/woff2"
+            crossOrigin="anonymous"
+          />
+          <link
+            as="style"
+            rel="stylesheet"
+            href="styles.css"
+            crossOrigin="anonymous"
+          ></link>
           {/* enable analytics script only for production */}
           {isProduction && (
             <>
-              <script async src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
+              <script
+                async
+                src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_TRACKING_ID}`}
               />
               <script
                 // eslint-disable-next-line react/no-danger
@@ -58,4 +68,32 @@ class MyDocument extends Document {
   }
 }
 
-export default MyDocument;
+MyDocument.getInitialProps = async (ctx) => {
+  const originalRenderPage = ctx.renderPage;
+  const cache = createEmotionCache();
+  const { extractCriticalToChunks } = createEmotionServer(cache);
+
+  ctx.renderPage = () =>
+    originalRenderPage({
+      enhanceApp: (App: any) =>
+        function EnhanceApp(props) {
+          return <App emotionCache={cache} {...props} />;
+        },
+    });
+
+  const initialProps = await Document.getInitialProps(ctx);
+  const emotionStyles = extractCriticalToChunks(initialProps.html);
+  const emotionStyleTags = emotionStyles.styles.map((style) => (
+    <style
+      data-emotion={`${style.key} ${style.ids.join(' ')}`}
+      key={style.key}
+      // eslint-disable-next-line react/no-danger
+      dangerouslySetInnerHTML={{ __html: style.css }}
+    />
+  ));
+
+  return {
+    ...initialProps,
+    emotionStyleTags,
+  };
+};

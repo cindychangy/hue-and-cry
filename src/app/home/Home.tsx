@@ -13,41 +13,41 @@ import { HomeProps } from './Home.types';
 import { Post } from 'api/types';
 
 export const Home = ({ featuredPosts, sidebarPosts }: HomeProps) => {
-
   const [featuredTop, setFeaturedTop] = useState([] as Post[]);
   const [featuredBottom, setFeaturedBottom] = useState([] as Post[]);
 
   useEffect(() => {
-    if(featuredPosts) {
+    if (featuredPosts) {
       setFeaturedTop(featuredPosts.splice(0, 6));
       setFeaturedBottom(featuredPosts.splice(-8));
     }
   }, []);
 
   return (
-    <Page>
-      <Grid container spacing={4}>
-        <Grid item xs={12} lg={9}>
-          <FeaturedPosts posts={featuredTop} />
-        </Grid>
-        <Grid item xs={12} lg={3}>
-          <Sidebar posts={sidebarPosts} />
-        </Grid>
-      </Grid>
+    // <Page>
+    //   <Grid container spacing={4}>
+    //     <Grid item xs={12} lg={9}>
+    //       <FeaturedPosts posts={featuredTop} />
+    //     </Grid>
+    //     <Grid item xs={12} lg={3}>
+    //       <Sidebar posts={sidebarPosts} />
+    //     </Grid>
+    //   </Grid>
 
-      <Grid container>
-        <Grid item xs={12}>
-          <CtaBanner showLink />
-        </Grid>
-      </Grid>
+    //   <Grid container>
+    //     <Grid item xs={12}>
+    //       <CtaBanner showLink />
+    //     </Grid>
+    //   </Grid>
 
-      <Grid container>
-        <Grid item xs={12}>
-          <SectionHeading heading="More Stories" />
-          <PostGrid posts={featuredBottom} />
-          <Box mb={4}/>
-        </Grid>
-      </Grid>
-    </Page>
-  )
+    //   <Grid container>
+    //     <Grid item xs={12}>
+    //       <SectionHeading heading="More Stories" />
+    //       <PostGrid posts={featuredBottom} />
+    //       <Box mb={4}/>
+    //     </Grid>
+    //   </Grid>
+    // </Page>
+    <h1>hi</h1>
+  );
 };

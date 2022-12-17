@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 import Link from '@mui/material/Link';
 
 export const LinkStyled = styled(Link)(() => ({
@@ -7,5 +7,5 @@ export const LinkStyled = styled(Link)(() => ({
   '&:hover': {
     textDecoration: 'none',
     opacity: '0.6',
-  }
+  },
 }));
