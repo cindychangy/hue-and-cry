@@ -20,7 +20,7 @@ export const Header = styled(Box)(({ theme }) => ({
 
 export const Logo = styled(Typography)(() => ({
   fontFamily: 'Bebas Neue',
-  fontSize: 32,
+  fontSize: 48,
   letterSpacing: -0.9,
   '& a:hover': {
     textDecoration: 'none',
