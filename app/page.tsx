@@ -1,7 +1,6 @@
 'use client';
 //declare a client component, i.e. to run in the browser.
 import React from 'react';
-import { Button, Grid, Stack } from '@mui/material';
 export default function Home() {
   return (
     // <Grid
