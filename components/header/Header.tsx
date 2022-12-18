@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 
 import Hidden from '@mui/material/Hidden';
-import { Link } from 'components/atoms/link/Link';
+import { Link } from '../link/Link';
 import { NavItem } from './navItem/NavItem';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import MenuIcon from '@mui/icons-material/Menu';
 import CloseIcon from '@mui/icons-material/Close';
-import { AppRoute } from 'app/App.types';
-import { NAV_ITEMS } from 'constants/navigation';
-import { TWITTER_LINK, INSTAGRAM_LINK } from 'constants/social';
+import { AppRoute } from '../../src/types/app.types';
+import { NAV_ITEMS } from '../../src/constants/navigation';
+import { TWITTER_LINK, INSTAGRAM_LINK } from '../../src/constants/social';
 
 import * as S from './Header.styles';
 

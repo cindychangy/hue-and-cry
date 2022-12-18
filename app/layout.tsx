@@ -1,10 +1,12 @@
 'use client';
 
 import React from 'react';
-import { ThemeProvider, CssBaseline } from '@mui/material';
+import { CssBaseline } from '@mui/material';
+import { ThemeProvider } from '@mui/material/styles';
 import { CacheProvider } from '@emotion/react';
 import theme from './theme/theme';
 import createEmotionCache from './theme/createEmotionCache';
+import { Header } from '../components/header/Header';
 
 const isProduction = process.env.NODE_ENV === 'production';
 const cache = createEmotionCache();
@@ -119,6 +121,7 @@ export default function RootLayout({
         )}
       </head>
       <body>
+        <Header />
         <CacheProvider value={cache}>
           <ThemeProvider theme={theme}>
             <CssBaseline />

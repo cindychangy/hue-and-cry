@@ -1,4 +1,4 @@
-import { styled } from '@mui/system';
+import { styled } from '@mui/material/styles';
 import Box from '@mui/material/Box';
 import Typography from '@mui/material/Typography';
 import IconButton from '@mui/material/IconButton';
@@ -25,7 +25,7 @@ export const Logo = styled(Typography)(() => ({
   '& a:hover': {
     textDecoration: 'none',
     opacity: 0.7,
-  }
+  },
 }));
 
 export const NavItemsContainer = styled(Box)(({ theme }) => ({
@@ -52,7 +52,7 @@ export const NavMobile = styled(Box)(({ theme }) => ({
   '& h3': {
     fontSize: 30,
     marginBottom: 24,
-  }
+  },
 }));
 
 export const MobileIcon = styled(IconButton)(({ theme }) => ({
@@ -87,4 +87,3 @@ export const IconContainer = styled(Box)(({ theme }) => ({
     },
   },
 }));
-
