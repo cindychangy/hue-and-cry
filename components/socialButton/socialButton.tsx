@@ -1,12 +1,24 @@
 import React from 'react'
-import styled from 'styled-components'
-import { css } from 'styled-components'
+import styled, { css } from 'styled-components'
 
 const Button = styled.div`
 	${({ theme }) => css`
-		width: 60px;
-		height: 60px;
-		background: ${theme.colors.persianGreen};
+		border: 1px solid #e0e0e0;
+		margin-right: 4px;
+		opacity: 1;
+		height: 48px;
+		width: 48px;
+		border-radius: 50%;
+		display: flex;
+		align-content: center;
+		justify-content: center;
+		cursor: pointer;
+		color: ${theme.colors.grayDark};
+		background: ${theme.colors.white};
+
+		&:hover {
+			background: ${theme.colors.grayLight};
+		}
 	`};
 `
 
