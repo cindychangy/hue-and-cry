@@ -1,6 +1,7 @@
 'use client';
-//declare a client component, i.e. to run in the browser.
 import React from 'react';
+
+import Link from 'next/link';
 export default function Home() {
   return (
     // <Grid
@@ -17,6 +18,6 @@ export default function Home() {
     //     <Button variant="outlined">Outlined</Button>
     //   </Stack>
     // </Grid>
-    <h1>dsada</h1>
+    <Link href="/dashboard">Dashboard</Link>
   );
 }
