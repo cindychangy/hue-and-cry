@@ -12,13 +12,13 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-		"*.js": [
-			"eslint --fix"
-		],
-		"*.{html,js}": [
-			"prettier --write"
-		]
-	},
+    "*.js": [
+      "eslint --fix"
+    ],
+    "*.{html,js}": [
+      "prettier --write"
+    ]
+  },
   "husky": {
     "hooks": {
       "pre-commit": "npm run pre-commit-types && lint-staged"
@@ -30,12 +30,14 @@
     "eslint-config-next": "13.0.7",
     "next": "13.0.7",
     "react": "18.2.0",
-    "react-dom": "18.2.0"
+    "react-dom": "18.2.0",
+    "styled-components": "^5.3.6"
   },
   "devDependencies": {
     "@types/node": "^18.11.17",
     "@types/react": "^18.0.26",
     "@types/react-dom": "^17.0.11",
+    "@types/styled-components": "^5.1.26",
     "eslint-config-prettier": "^8.5.0",
     "husky": "^4.3.8",
     "lint-staged": "^13.1.0",
