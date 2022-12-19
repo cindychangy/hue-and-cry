@@ -1,65 +1,24 @@
 {
-  "name": "hue-and-cry-blog",
+  "name": "nextjs",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build && next export -o build",
+    "build": "next build",
     "start": "next start",
-    "prod": "next export",
-    "lint": "eslint './src/**/*.{ts,tsx}' && echo 'lint success'",
-    "lint:fix": "eslint --fix './src/**/*.{ts,tsx}' && echo 'lint success'",
-    "pre-commit-types": "tsc -p tsconfig.json",
-    "pre-commit-lint": "eslint --fix"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run pre-commit-types && lint-staged"
-    }
-  },
-  "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "npm run pre-commit-lint --",
-      "git add"
-    ],
-    "src/**/*.{json}": [
-      "prettier --write",
-      "git add"
-    ]
-  },
-  "babel": {
-    "presets": [
-      "next/babel"
-    ]
-  },
-  "eslintConfig": {
-    "extends": "react-app"
+    "lint": "next lint"
   },
   "dependencies": {
-    "@apollo/client": "^3.7.2",
-    "disqus-react": "^1.0.11",
-    "eslint-config-next": "^13.0.7",
-    "graphql": "^16.5.0",
-    "next": "^13.0.7",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0",
-    "typescript": "^4.5.5"
+    "@next/font": "13.0.7",
+    "eslint": "8.29.0",
+    "eslint-config-next": "13.0.7",
+    "next": "13.0.7",
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.12.10",
-    "@types/gtag.js": "^0.0.4",
-    "@types/node": "^14.14.21",
-    "@types/react": "^17.0.38",
-    "@types/react-dom": "^17.0.11",
-    "eslint": "^7.17.0",
-    "eslint-config-prettier": "^7.2.0",
-    "eslint-config-react-app": "^6.0.0",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "husky": "^4.3.8",
-    "jest": "^26.6.3",
-    "lint-staged": "^10.5.3",
-    "prettier": "^2.2.1"
+    "@types/node": "^18.11.17",
+    "@types/react": "^18.0.26",
+    "typescript": "^4.9.4"
   }
 }
