@@ -1,12 +1,12 @@
 'use client'
 import React from 'react'
 import Link from 'next/link'
-import Header from '../components/header/header'
+import { SiteHeader } from '../components/header/header'
 
 export default function Home() {
 	return (
 		<>
-			<Header />
+			<SiteHeader />
 			<Link href='/dashboard'>Dashboard</Link>
 		</>
 	)

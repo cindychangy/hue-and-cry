@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
 
 const Button = styled.div`
@@ -22,6 +22,6 @@ const Button = styled.div`
 	`};
 `
 
-export const SocialButton = ({ children }) => {
+export const SocialButton = ({ children }: { children: ReactNode }) => {
 	return <Button>{children}</Button>
 }
