@@ -72,7 +72,6 @@ export default function RootLayout({
 					href='https://fonts.gstatic.com'
 					crossOrigin='anonymous'
 				/>
-
 				<link
 					href='https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap'
 					rel='stylesheet'
@@ -80,18 +79,31 @@ export default function RootLayout({
 					crossOrigin='anonymous'
 				></link>
 				<link
+					href='https://fonts.googleapis.com/css2?family=Merriweather&display=swap'
+					rel='stylesheet'
+					as='font'
+					crossOrigin='anonymous'
+				></link>
+				<link
+					href='https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap'
+					rel='stylesheet'
+					as='font'
+					crossOrigin='anonymous'
+				></link>
+				{/* <link
 					rel='stylesheet'
 					href='/fonts/tiempos-regular-webfont.woff2'
 					as='font'
 					type='font/woff2'
 					crossOrigin='anonymous'
-				/>
-				<link
-					as='style'
+				/> */}
+				{/* <link
 					rel='stylesheet'
-					href='styles.css'
+					href='/fonts/NeueHaasDisplay-Medium.woff2'
+					as='font'
+					type='font/woff2'
 					crossOrigin='anonymous'
-				></link>
+				/> */}
 				{/* enable analytics script only for production */}
 				{isProduction && (
 					<>
