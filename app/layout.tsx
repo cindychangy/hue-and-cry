@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from './theme'
+import Theme from './theme'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -116,7 +116,7 @@ export default function RootLayout({
 				)}
 			</head>
 			<body>
-				<ThemeProvider theme={theme}>{children}</ThemeProvider>
+				<ThemeProvider theme={Theme}>{children}</ThemeProvider>
 			</body>
 		</html>
 	)
