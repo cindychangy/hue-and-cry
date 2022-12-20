@@ -1,13 +1,13 @@
 'use client'
 import React from 'react'
-import Link from 'next/link'
 import { SiteHeader } from '../components/header/header'
+import { PageContainer } from '../components/pageContainer/pageContainer'
 
 export default function Home() {
 	return (
 		<>
 			<SiteHeader />
-			<Link href='/dashboard'>Dashboard</Link>
+			<PageContainer>dsadsadas</PageContainer>
 		</>
 	)
 }
