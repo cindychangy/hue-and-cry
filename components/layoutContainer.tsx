@@ -4,10 +4,10 @@ import { breakpoint } from '../src/constants/theme'
 
 const Container = styled.div`
 	max-width: 1200px;
-	padding: 16px;
+	padding: 20px;
 	margin: auto;
-	@media ${breakpoint.sm} {
-		padding: 24px;
+	@media ${breakpoint.md} {
+		max-width: 100%;
 	}
 `
 

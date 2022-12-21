@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
 		align-items: center;
 		justify-content: space-between;
 		display: flex;
-		margin-bottom: 40px;
+		margin-bottom: 60px;
 
 		@media ${breakpoint.md} {
 			display: none;
@@ -61,7 +61,6 @@ const Icons = styled.div`
 	${({ theme }) => css`
 		display: flex;
 		justify-content: center;
-		padding-top: 8px;
 
 		a {
 			display: inline-block;
@@ -70,7 +69,7 @@ const Icons = styled.div`
 			svg {
 				width: 19px;
 				height: 19px;
-				margin: 1px 0 0 10px;
+				margin-left: 6px;
 			}
 		}
 	`};
@@ -108,7 +107,7 @@ export const SiteHeader = () => {
 					target="_blank"
 					rel="noreferrer noopener"
 				>
-					<Twitter size="25" />
+					<Twitter size="25" style={{ marginTop: '-8px' }} />
 				</a>
 				<a
 					href="https://twitter.com/thehueandcry"

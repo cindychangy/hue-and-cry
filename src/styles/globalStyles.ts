@@ -34,20 +34,40 @@ const GlobalStyle = createGlobalStyle`
 		font-display: swap;
 	}
 
-	* {
+	*, *::before, *::after {
 		box-sizing: border-box;
-		padding: 0;
+	}
+
+	* {
 		margin: 0;
 	}
 
-	html,
-	body {
-		max-width: 100vw;
-		overflow-x: hidden;
+	html, body {
+		height: 100%;
 	}
+
+	body {
+		line-height: 1.5;
+		-webkit-font-smoothing: antialiased;
+	}
+
+	img, picture, video, canvas, svg {
+		display: block;
+		max-width: 100%;
+	}
+
 	a {
-		color: inherit;
-		text-decoration: none;
+		transition: color .2s ease-in-out;
+	}
+
+	p, h1, h2, h3, h4, h5, h6 {
+		overflow-wrap: break-word;
+	}
+
+	h2 {
+		font-size: 30px;
+		line-height: 1.2;
+		font-family: "Tiempos Semibold", serif;
 	}
 
 	h3 {
@@ -55,6 +75,14 @@ const GlobalStyle = createGlobalStyle`
 		line-height: 1.2;
 		font-family: "Tiempos Semibold", serif;
 		color: #000;
+	}
+
+	h5 {
+		font-size: 10px;
+		color: #FF8600;
+		text-transform: uppercase;
+		letter-spacing: 3px;
+		font-family: 'Gilroy', sans-serif;
 	}
 
 	p {

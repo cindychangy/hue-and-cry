@@ -22,14 +22,7 @@ const PostImage = styled.div`
 `
 
 const PostSubHeading = styled.h5`
-	${({ theme }) => css`
-		font-size: 10px;
-		color: ${theme.colors.orange};
-		text-transform: uppercase;
-		letter-spacing: 3px;
-		font-family: 'Gilroy', sans-serif;
-		margin-bottom: 8px;
-	`};
+	margin-bottom: 8px;
 `
 const PostTitle = styled.h3`
 	@media ${breakpoint.md} {
