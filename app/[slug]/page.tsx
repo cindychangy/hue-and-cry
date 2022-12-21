@@ -3,6 +3,7 @@ import React from 'react'
 import { LayoutContainer } from '../../components/layoutContainer'
 import { PostHeader } from '../../components/postHeader'
 import { ShadowElevation } from '../../components/shadowElevation'
+import { PostCta } from '../../components/postCta'
 
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
@@ -252,6 +253,7 @@ export default function PostPage() {
 						attorney Lindsey Knapp to help them look into the case.
 					</p>
 				</PostBody>
+				<PostCta>dsada</PostCta>
 			</LayoutContainer>
 		</>
 	)

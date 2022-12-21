@@ -87,7 +87,9 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	h4 {
-
+		font-size: 2rem;
+		color: #FF8600;
+		font-family: 'Gilroy Bold', sans-serif;
 	}
 
 	h5 {
