@@ -106,6 +106,14 @@ const GlobalStyle = createGlobalStyle`
 		font-size: 1.8rem;
 		font-family: "Tiempos Text", serif;
 	}
+
+	small {
+		font-size: 1.3rem;
+		line-height: 1.5;
+		font-family: 'GT America', sans-serif;
+		color: #8d9598;
+		display: inline-block;
+	}
 	`
 
 export default GlobalStyle

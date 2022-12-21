@@ -1,5 +1,5 @@
 import React from 'react'
-import { DiscussionEmbed } from 'disqus-react'
+// import { DiscussionEmbed } from 'disqus-react'
 import styled, { css } from 'styled-components'
 import { ChatRightFill } from '@styled-icons/bootstrap'
 

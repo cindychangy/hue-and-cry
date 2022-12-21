@@ -14,22 +14,6 @@ const HeaderContainer = styled.div`
 		display: none;
 	}
 `
-
-// const HeaderContainer = styled.div<{ post?: boolean }>`
-// 	width: 100%;
-// 	background: #fff;
-// 	box-shadow: ${(props) =>
-// 		props.post ? '0px 4px 5px rgba(0, 0, 0, 0.05)' : 'none'};
-// 	align-items: center;
-// 	justify-content: space-between;
-// 	display: flex;
-// 	margin-bottom: 40px;
-
-// 	@media ${breakpoint.md} {
-// 		display: none;
-// 	}
-// `
-
 const Logo = styled.h3`
 	${({ theme }) => css`
 		font-family: 'Bebas Neue';
@@ -44,7 +28,6 @@ const Logo = styled.h3`
   	}
 	`};
 `
-
 const Navigation = styled.div`
 	${({ theme }) => css`
 		ul {
@@ -68,7 +51,6 @@ const Navigation = styled.div`
 		}
 	`};
 `
-
 const Icons = styled.div`
 	${({ theme }) => css`
 		display: flex;
@@ -119,7 +101,7 @@ export const SiteHeader = () => {
 					target="_blank"
 					rel="noreferrer noopener"
 				>
-					<Twitter size="25" style={{ marginTop: '-8px' }} />
+					<Twitter size="27" style={{ marginTop: '-12px' }} />
 				</a>
 				<a
 					href="https://twitter.com/thehueandcry"

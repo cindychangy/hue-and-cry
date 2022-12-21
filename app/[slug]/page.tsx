@@ -2,10 +2,10 @@
 import React from 'react'
 import { LayoutContainer } from '../../src/components/layoutContainer'
 import { PostHeader } from '../../src/components/postHeader'
-import { ShadowElevation } from '../../src/components/shadowElevation'
 import { PostCta } from '../../src/components/postCta'
 import { AssetTitle } from '../../src/components/assetTitle'
 import { Comments } from '../../src/components/comments'
+import { RelatedPosts } from '../../src/components/relatedPosts'
 
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
@@ -90,18 +90,21 @@ const PostBody = styled.div`
 		}
 	`};
 `
-
 const Divider = styled.div`
 	background: #dfdfdf;
 	margin: 40px 0;
 	height: 1px;
 	width: 100%;
 `
-
+const Copyright = styled.div`
+	margin: auto;
+	padding-top: 40px;
+	max-width: 800px;
+	width: 100%;
+`
 export default function PostPage() {
 	return (
 		<>
-			<ShadowElevation />
 			<LayoutContainer>
 				<PostHeader />
 				<PostBody>
@@ -268,6 +271,17 @@ export default function PostPage() {
 				<AssetTitle title="Podcasts about this case" type="audio" />
 				<Divider />
 				<Comments postSlug="dasda" postTitle="dada" postId={324} />
+			</LayoutContainer>
+			<RelatedPosts />
+			<LayoutContainer>
+				<Copyright>
+					<small>
+						All images and videos used for this story are not the property of
+						The Hue and Cry. They are property of their original
+						owners/publications. Photos are from ABC News, FOX News Baltimore
+						and The Vanished.
+					</small>
+				</Copyright>
 			</LayoutContainer>
 		</>
 	)
