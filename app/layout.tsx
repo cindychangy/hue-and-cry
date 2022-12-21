@@ -4,9 +4,9 @@ import React from 'react'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../src/styles/Theme'
 import GlobalStyles from '../src/styles/globalStyles'
-import { SiteHeader } from '../components/header'
-import { SiteFooter } from '../components/footer'
-import { LayoutContainer } from '../components/layoutContainer'
+import { SiteHeader } from '../src/components/header'
+import { SiteFooter } from '../src/components/footer'
+import { LayoutContainer } from '../src/components/layoutContainer'
 
 const isProduction = process.env.NODE_ENV === 'production'
 

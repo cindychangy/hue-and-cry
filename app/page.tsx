@@ -1,7 +1,7 @@
 'use client'
 import React from 'react'
-import { PostPreview } from '../components/postPreview'
-import { LayoutContainer } from '../components/layoutContainer'
+import { PostPreview } from '../src/components/postPreview'
+import { LayoutContainer } from '../src/components/layoutContainer'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../src/constants/theme'
 

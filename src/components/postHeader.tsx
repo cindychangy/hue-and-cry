@@ -1,6 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
-import { breakpoint } from '../src/constants/theme'
+import { breakpoint } from '../constants/theme'
 
 const PostHeaderContainer = styled.div`
 	width: 100%;

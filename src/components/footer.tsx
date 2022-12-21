@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
-import { breakpoint } from '../src/constants/theme'
+import { breakpoint } from '../constants/theme'
 
 const FooterContainer = styled.div`
 	${({ theme }) => css`

@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled, { css } from 'styled-components'
-import { breakpoint } from '../src/constants/theme'
+import { breakpoint } from '../constants/theme'
 
 const CtaContainer = styled.div`
 	${({ theme }) => css`

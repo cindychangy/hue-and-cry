@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
-import { breakpoint } from '../src/constants/theme'
+import { breakpoint } from '../constants/theme'
 
 const HeaderContainer = styled.div`
 	width: 100%;

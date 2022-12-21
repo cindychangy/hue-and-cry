@@ -1,9 +1,10 @@
 'use client'
 import React from 'react'
-import { LayoutContainer } from '../../components/layoutContainer'
-import { PostHeader } from '../../components/postHeader'
-import { ShadowElevation } from '../../components/shadowElevation'
-import { PostCta } from '../../components/postCta'
+import { LayoutContainer } from '../../src/components/layoutContainer'
+import { PostHeader } from '../../src/components/postHeader'
+import { ShadowElevation } from '../../src/components/shadowElevation'
+import { PostCta } from '../../src/components/postCta'
+import { AssetTitle } from '../../src/components/assetTitle'
 
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
@@ -254,6 +255,8 @@ export default function PostPage() {
 					</p>
 				</PostBody>
 				<PostCta>dsada</PostCta>
+				<AssetTitle title="Videos about this case" type="video" />
+				<AssetTitle title="Podcasts about this case" type="audio" />
 			</LayoutContainer>
 		</>
 	)

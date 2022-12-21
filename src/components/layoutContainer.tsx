@@ -1,6 +1,6 @@
 import React, { ReactNode } from 'react'
 import styled from 'styled-components'
-import { breakpoint } from '../src/constants/theme'
+import { breakpoint } from '../constants/theme'
 
 const Container = styled.div`
 	max-width: 1200px;
