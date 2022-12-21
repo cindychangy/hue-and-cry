@@ -63,8 +63,8 @@ export const PostHeader = () => {
 				<PostCategory>Military</PostCategory>
 				<h1>The Death of PFC Denisha Montgomery</h1>
 				<PostDateLocation>
-					<MetaTitle>Location:</MetaTitle> Wiesbaden, Germany &nbsp; | &nbsp;
-					<MetaTitle></MetaTitle>Year: 2022
+					<MetaTitle>Location:</MetaTitle> Wiesbaden, Germany &nbsp;| &nbsp;
+					<MetaTitle>Year:</MetaTitle> 2022
 				</PostDateLocation>
 			</PostMetaContainer>
 		</PostHeaderContainer>

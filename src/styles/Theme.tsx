@@ -8,10 +8,10 @@ export const theme = {
 		orangeLight: '#FBF1E9',
 	},
 	fonts: {
-		primary: '"Tiempos", sans-serif',
-		primaryBold: '"Tiempos Bold", sans-serif',
-		secondary: '"Gilroy", sans-serif',
-		secondarySemibold: '"Gilroy Semibold", sans-serif',
-		secondaryBold: '"Gilroy Bold", sans-serif',
+		primary: '"Tiempos Text", serif',
+		primaryBold: '"Tiempos Text Semibold", serif',
+		secondary: '"GT America", sans-serif',
+		secondaryBold: '"GT America Bold", sans-serif',
+		tertiary: '"Gilroy Bold", sans-serif',
 	},
 }

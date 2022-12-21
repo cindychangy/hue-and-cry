@@ -53,7 +53,7 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-right: 20px;
-				font-family: ${theme.fonts.secondarySemibold};
+				font-family: ${theme.fonts.tertiary};
 				font-size: 1.7rem;
 
 				a {

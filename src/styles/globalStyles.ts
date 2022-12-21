@@ -5,31 +5,31 @@ import { breakpoint } from '../../src/constants/theme'
 const GlobalStyle = createGlobalStyle`
 	${reset}
 	@font-face {
-		font-family: 'Gilroy';
+		font-family: 'GT America';
 		font-style: normal;
 		font-weight: 400;
-		src: url('/fonts/gilroy-regular.woff2') format('woff2'),
-			url('../fonts/gilroy-regular.woff') format('woff');
+		src: url('/fonts/gt-america-regular.woff2') format('woff2'),
+			url('../fonts/gt-america-regular.woff') format('woff');
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Gilroy Semibold';
-		font-style: normal;
-		font-weight: 500;
-		src: url('/fonts/gilroy-semibold.woff2') format('woff2'),
-			url('../fonts/gilroy-semibold.woff') format('woff');
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Gilroy Bold';
+		font-family: 'GT America Bold';
 		font-style: normal;
 		font-weight: 600;
+		src: url('/fonts/gt-america-bold.woff2') format('woff2'),
+			url('../fonts/gt-america-bold.woff') format('woff');
+		font-display: swap;
+	}
+		@font-face {
+		font-family: 'Gilroy Bold';
+		font-style: normal;
+		font-weight: 500;
 		src: url('/fonts/gilroy-bold.woff2') format('woff2'),
 			url('../fonts/gilroy-bold.woff') format('woff');
 		font-display: swap;
 	}
 	@font-face {
-		font-family: 'Tiempos';
+		font-family: 'Tiempos Text';
 		font-style: normal;
 		font-weight: 500;
 		src: url('/fonts/tiempos-regular-webfont.woff2') format('woff2'),
@@ -38,7 +38,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	@font-face {
-		font-family: 'Tiempos Semibold';
+		font-family: 'Tiempos Text Semibold';
 		font-style: normal;
 		font-weight: 500;
 		src: url('/fonts/tiempos-semibold-webfont.woff2') format('woff2'),
@@ -63,7 +63,7 @@ const GlobalStyle = createGlobalStyle`
 	}
 
 	h1 {
-		font-family: "Tiempos Semibold", serif;
+		font-family: "Tiempos Text Semibold", serif;
 		font-weight: 700;
 		font-size: 4.6rem;
 		line-height: 1.1;
@@ -76,13 +76,13 @@ const GlobalStyle = createGlobalStyle`
 	h2 {
 		font-size: 3rem;
 		line-height: 1.2;
-		font-family: "Tiempos Semibold", serif;
+		font-family: "Tiempos Text Semibold", serif;
 	}
 
 	h3 {
 		font-size: 2.2rem;
 		line-height: 1.2;
-		font-family: "Tiempos Semibold", serif;
+		font-family: "Tiempos Text Semibold", serif;
 		color: #000;
 	}
 
@@ -92,16 +92,17 @@ const GlobalStyle = createGlobalStyle`
 
 	h5 {
 		font-size: 1.1rem;
+		font-weight: 600;
 		line-height: 1;
 		color: #FF8600;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		font-family: 'Gilroy Semibold', sans-serif;
+		font-family: 'GT America', sans-serif;
 	}
 
 	p {
 		font-size: 1.8rem;
-		font-family: "Tiempos", serif;
+		font-family: "Tiempos Text", serif;
 	}
 	`
 

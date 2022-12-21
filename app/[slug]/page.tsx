@@ -13,7 +13,7 @@ const PostBody = styled.div`
 		max-width: 640px;
 		margin: 85px auto;
 		border-top: 1px solid ${theme.colors.orange};
-		padding-top: 50px;
+		padding-top: 40px;
 
 		@media ${breakpoint.md} {
 			max-width: 100%;
@@ -25,6 +25,65 @@ const PostBody = styled.div`
 		p {
 			font-size: 1.8rem;
 			line-height: 1.8;
+			margin-top: 25px;
+		}
+
+		a {
+			transition: color 0.2s ease-in-out;
+			font-weight: 600;
+			color: ${theme.colors.black};
+
+			&:hover {
+				color: ${theme.colors.orange};
+			}
+		}
+
+		blockquote {
+			border-left: 1px solid ${theme.colors.orange};
+			padding-left: 40px;
+			margin: 45px 0;
+
+			strong {
+				font-weight: 800;
+				font-size: 1.9rem;
+				line-height: 1.4;
+			}
+
+			cite {
+				font-family: ${theme.fonts.secondary};
+				font-size: 1.5rem;
+				color: ${theme.colors.gray};
+			}
+
+			a {
+				color: ${theme.colors.gray};
+				font-weight: 500;
+				text-decoration: none;
+			}
+		}
+
+		img {
+			margin-top: 25px;
+		}
+
+		h3 {
+			strong {
+				font-size: 2rem;
+				font-weight: 600;
+				font-family: ${theme.fonts.primary};
+			}
+		}
+
+		figcaption {
+			color: ${theme.colors.gray};
+			font-family: ${theme.fonts.secondary};
+			font-size: 1.45rem;
+			text-align: center;
+
+			a {
+				color: ${theme.colors.gray};
+				text-decoration: none;
+			}
 		}
 	`};
 `
@@ -36,6 +95,22 @@ export default function PostPage() {
 			<LayoutContainer>
 				<PostHeader />
 				<PostBody>
+					<p>
+						Born in Elizabethtown, Kentucky, Denisha Montgomery was a
+						27-year-old mother raising her three young sons in Hodgenville. She
+						had always been interested in forensics and in January 2021, she
+						enlisted in the army, following other family members. She was also
+						determined to create a better life for her husband Joshua Smith and
+						their three sons.
+					</p>
+					<img src="https://i0.wp.com/wordpress.thehueandcry.com/wp-content/uploads/dm-photo.jpeg?w=455&ssl=1" />
+					<figcaption>
+						Denisha Montgomery (
+						<a href="http://k105.com" rel="nofollow">
+							k105.com
+						</a>
+						)
+					</figcaption>
 					<p>
 						Denisha was deployed to Germany in 2022 for a 9-month rotation with
 						the 139th Military Police Company at Fort Stewart. In May of the
@@ -119,10 +194,10 @@ export default function PostPage() {
 					<p>
 						Twenty-one days after the attack on August 21, 2022, Denisha
 						Montgomery was found unresponsive at Lucius Clay Barracks and
-						pronounced dead at the scene. The Army contacted Denisha’s family
-						shortly after her death during preliminary findings and before
-						autopsy results, to inform them that Denisha had most likely taken
-						her own life and died of suicide.
+						pronounced dead at the scene. <a href="">The Army</a> contacted
+						Denisha’s family shortly after her death during preliminary findings
+						and before autopsy results, to inform them that Denisha had most
+						likely taken her own life and died of suicide.
 					</p>
 
 					<blockquote className="wp-block-quote">
@@ -164,6 +239,14 @@ export default function PostPage() {
 						chasing the assailants away.
 					</p>
 
+					<p>
+						The family has now taken matters into their own hands and hired
+						attorney Lindsey Knapp to help them look into the case.
+					</p>
+
+					<h3>
+						<strong>Update– February 3, 2022</strong>
+					</h3>
 					<p>
 						The family has now taken matters into their own hands and hired
 						attorney Lindsey Knapp to help them look into the case.

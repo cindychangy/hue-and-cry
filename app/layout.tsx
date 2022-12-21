@@ -2,7 +2,7 @@
 
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from '../src/styles/theme'
+import { theme } from '../src/styles/Theme'
 import GlobalStyles from '../src/styles/globalStyles'
 import { SiteHeader } from '../components/header'
 import { SiteFooter } from '../components/footer'
