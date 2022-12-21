@@ -35,7 +35,8 @@ const Container = styled.div`
 const Logo = styled.h3`
 	${({ theme }) => css`
 		font-family: 'Bebas Neue';
-		font-size: 30px;
+		font-size: 3rem;
+		line-height: 1.2;
 		color: ${theme.colors.white};
 		font-weight: 400;
 		margin: 0;
@@ -49,8 +50,8 @@ const Logo = styled.h3`
 
 const Copyright = styled.p`
 	${({ theme }) => css`
-		font-size: 13px;
-		font-family: 'Gilroy', sans-serif;
+		font-size: 1.3rem;
+		font-family: ${theme.fonts.secondary};
 		color: ${theme.colors.white};
 		opacity: 0.6;
 	`};
@@ -60,12 +61,13 @@ const Navigation = styled.div`
 	${({ theme }) => css`
 		ul {
 			list-style: none;
+			align-items: center;
 
 			li {
 				display: inline-block;
 				margin-left: 18px;
-				font-size: 15px;
-				font-family: 'Gilroy', sans-serif;
+				font-size: 1.5rem;
+				font-family: ${theme.fonts.secondary};
 				a {
 					text-decoration: none;
 					color: ${theme.colors.white};
@@ -92,7 +94,7 @@ const Icons = styled.div`
 			svg {
 				width: 16px;
 				height: 16px;
-				margin-left: 12px;
+				margin-left: 8px;
 			}
 		}
 	`};

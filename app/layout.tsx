@@ -2,8 +2,11 @@
 
 import React from 'react'
 import { ThemeProvider } from 'styled-components'
-import { theme } from './Theme'
+import { theme } from '../src/styles/theme'
 import GlobalStyles from '../src/styles/globalStyles'
+import { SiteHeader } from '../components/header'
+import { SiteFooter } from '../components/footer'
+import { LayoutContainer } from '../components/layoutContainer'
 
 const isProduction = process.env.NODE_ENV === 'production'
 
@@ -79,33 +82,6 @@ export default function RootLayout({
 					as="font"
 					crossOrigin="anonymous"
 				></link>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Merriweather&display=swap"
-					rel="stylesheet"
-					as="font"
-					crossOrigin="anonymous"
-				></link>
-				<link
-					href="https://fonts.googleapis.com/css2?family=Urbanist:wght@600&display=swap"
-					rel="stylesheet"
-					as="font"
-					crossOrigin="anonymous"
-				></link>
-				{/* <link
-					rel='stylesheet'
-					href='/fonts/tiempos-regular-webfont.woff2'
-					as='font'
-					type='font/woff2'
-					crossOrigin='anonymous'
-				/> */}
-				{/* <link
-					rel='stylesheet'
-					href='/fonts/NeueHaasDisplay-Medium.woff2'
-					as='font'
-					type='font/woff2'
-					crossOrigin='anonymous'
-				/> */}
-				{/* enable analytics script only for production */}
 				{isProduction && (
 					<>
 						<script
@@ -131,7 +107,11 @@ export default function RootLayout({
 			<body>
 				<ThemeProvider theme={theme}>
 					<GlobalStyles />
+					<LayoutContainer>
+						<SiteHeader />
+					</LayoutContainer>
 					{children}
+					<SiteFooter />
 				</ThemeProvider>
 			</body>
 		</html>

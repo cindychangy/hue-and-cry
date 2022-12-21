@@ -4,24 +4,36 @@ import { Twitter } from '@styled-icons/bootstrap'
 import { breakpoint } from '../src/constants/theme'
 
 const HeaderContainer = styled.div`
-	${({ theme }) => css`
-		width: 100%;
-		background: ${theme.colors.white};
-		align-items: center;
-		justify-content: space-between;
-		display: flex;
-		margin-bottom: 60px;
+	width: 100%;
+	background: #fff;
+	align-items: center;
+	justify-content: space-between;
+	display: flex;
 
-		@media ${breakpoint.md} {
-			display: none;
-		}
-	`};
+	@media ${breakpoint.md} {
+		display: none;
+	}
 `
+
+// const HeaderContainer = styled.div<{ post?: boolean }>`
+// 	width: 100%;
+// 	background: #fff;
+// 	box-shadow: ${(props) =>
+// 		props.post ? '0px 4px 5px rgba(0, 0, 0, 0.05)' : 'none'};
+// 	align-items: center;
+// 	justify-content: space-between;
+// 	display: flex;
+// 	margin-bottom: 40px;
+
+// 	@media ${breakpoint.md} {
+// 		display: none;
+// 	}
+// `
 
 const Logo = styled.h3`
 	${({ theme }) => css`
 		font-family: 'Bebas Neue';
-		font-size: 44px;
+		font-size: 4.4rem;
 		color: ${theme.colors.grayDark};
 		font-weight: 400;
 		margin: 0;
@@ -41,15 +53,15 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-right: 20px;
-				font-family: 'Gilroy Semibold', sans-serif;
-				font-size: 17px;
+				font-family: ${theme.fonts.secondarySemibold};
+				font-size: 1.7rem;
 
 				a {
 					text-decoration: none;
-					color: ${theme.colors.grayDark};
+					color: ${theme.colors.black};
 
 					&:hover {
-						color: ${theme.colors.gray};
+						color: ${theme.colors.orange};
 					}
 				}
 			}
@@ -69,7 +81,7 @@ const Icons = styled.div`
 			svg {
 				width: 19px;
 				height: 19px;
-				margin-left: 6px;
+				margin-left: 7px;
 			}
 		}
 	`};
@@ -82,22 +94,22 @@ export const SiteHeader = () => {
 			<Navigation>
 				<ul>
 					<li>
-						<a href="">Missing</a>
+						<a href="/missing">Missing</a>
 					</li>
 					<li>
-						<a href="">Highway of Tears</a>
+						<a href="/highway-of-tears">Highway of Tears</a>
 					</li>
 					<li>
-						<a href="">Murdered</a>
+						<a href="/murdered">Murdered</a>
 					</li>
 					<li>
-						<a href="">Indigenous Women</a>
+						<a href="/indigenous-women">Indigenous Women</a>
 					</li>
 					<li>
-						<a href="">Military</a>
+						<a href="/military">Military</a>
 					</li>
 					<li>
-						<a href="">About</a>
+						<a href="/about">About</a>
 					</li>
 				</ul>
 			</Navigation>

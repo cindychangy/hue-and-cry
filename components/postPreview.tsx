@@ -22,7 +22,7 @@ const PostImage = styled.div`
 `
 
 const PostSubHeading = styled.h5`
-	margin-bottom: 8px;
+	margin: 10px 0 5px 0;
 `
 const PostTitle = styled.h3`
 	@media ${breakpoint.md} {
@@ -35,8 +35,8 @@ const PostMeta = styled.div`
 		margin-top: 10px;
 		span {
 			color: ${theme.colors.gray};
-			font-size: 12px;
-			font-family: 'Gilroy', sans-serif;
+			font-size: 1.2rem;
+			font-family: ${theme.fonts.secondary};
 		}
 		svg {
 			color: #cacaca;
@@ -46,10 +46,10 @@ const PostMeta = styled.div`
 const PostExcerpt = styled.p`
 	${({ theme }) => css`
 		color: ${theme.colors.gray};
-		font-family: 'Gilroy', sans-serif;
-		font-size: 15px;
-		line-height: 1.4;
-		margin-top: 10px;
+		font-family: ${theme.fonts.secondary};
+		font-size: 1.5rem;
+		line-height: 1.5;
+		margin-top: 5px;
 		@media ${breakpoint.md} {
 			display: flex;
 		}

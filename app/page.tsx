@@ -1,28 +1,24 @@
 'use client'
 import React from 'react'
-import { SiteHeader } from '../components/header'
-import { SiteFooter } from '../components/footer'
 import { PostPreview } from '../components/postPreview'
 import { LayoutContainer } from '../components/layoutContainer'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../src/constants/theme'
 
 const SectionHighwayOfTears = styled.div`
-	${({ theme }) => css`
-		width: 100%;
-		height: 600px;
-		background: ${theme.colors.grayDark};
+	width: 100%;
+	height: 600px;
+	background: #323232;
 
-		@media ${breakpoint.md} {
-			display: none;
-		}
-	`};
+	@media ${breakpoint.md} {
+		display: none;
+	}
 `
 
 const SectionAbout = styled.div`
 	${({ theme }) => css`
 		display: flex;
-		align-items: center;
+		align-content: center;
 		justify-content: space-between;
 		padding: 40px 0;
 
@@ -61,8 +57,9 @@ const AboutText = styled.div`
 		}
 
 		p {
-			font-size: 15px;
-			font-family: 'Gilroy', sans-serif;
+			font-size: 1.5rem;
+			line-height: 1.5;
+			font-family: ${theme.fonts.secondary};
 			color: ${theme.colors.gray};
 			padding-bottom: 10px;
 		}
@@ -71,8 +68,8 @@ const AboutText = styled.div`
 const AboutLink = styled.a`
 	${({ theme }) => css`
 		color: ${theme.colors.orange};
-		font-size: 16px;
-		font-family: 'Gilroy', sans-serif;
+		font-size: 1.6rem;
+		font-family: ${theme.fonts.secondary};
 		text-decoration: none;
 		font-weight: 600;
 	`};
@@ -82,7 +79,6 @@ export default function Home() {
 	return (
 		<>
 			<LayoutContainer>
-				<SiteHeader />
 				<PostPreview />
 			</LayoutContainer>
 			<SectionHighwayOfTears>dadad</SectionHighwayOfTears>
@@ -106,7 +102,6 @@ export default function Home() {
 					</AboutText>
 				</SectionAbout>
 			</LayoutContainer>
-			<SiteFooter />
 		</>
 	)
 }
