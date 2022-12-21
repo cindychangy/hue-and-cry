@@ -1,13 +1,15 @@
 'use client'
 import React from 'react'
-import { SiteHeader } from '../components/header/header'
-import { LayoutContainer } from '../components/layoutContainer/layoutContainer'
+import { SiteHeader } from '../components/header'
+import { PostPreview } from '../components/postPreview'
+import { LayoutContainer } from '../components/layoutContainer'
 
 export default function Home() {
 	return (
 		<>
 			<LayoutContainer>
 				<SiteHeader />
+				<PostPreview />
 			</LayoutContainer>
 		</>
 	)

@@ -1,7 +1,7 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
-import { breakpoint } from '../../src/constants/theme'
+import { breakpoint } from '../src/constants/theme'
 
 const HeaderContainer = styled.div`
 	${({ theme }) => css`
@@ -9,10 +9,11 @@ const HeaderContainer = styled.div`
 		background: ${theme.colors.white};
 		align-items: center;
 		justify-content: space-between;
-		display: none;
+		display: flex;
+		margin-bottom: 40px;
 
 		@media ${breakpoint.md} {
-			display: flex;
+			display: none;
 		}
 	`};
 `
@@ -40,7 +41,8 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-right: 20px;
-				font-family: 'Urbanist';
+				font-family: 'Gilroy Semibold', sans-serif;
+				font-size: 17px;
 
 				a {
 					text-decoration: none;
