@@ -5,6 +5,7 @@ import { PostHeader } from '../../src/components/postHeader'
 import { ShadowElevation } from '../../src/components/shadowElevation'
 import { PostCta } from '../../src/components/postCta'
 import { AssetTitle } from '../../src/components/assetTitle'
+import { Comments } from '../../src/components/comments'
 
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
@@ -88,6 +89,13 @@ const PostBody = styled.div`
 			}
 		}
 	`};
+`
+
+const Divider = styled.div`
+	background: #dfdfdf;
+	margin: 40px 0;
+	height: 1px;
+	width: 100%;
 `
 
 export default function PostPage() {
@@ -256,7 +264,10 @@ export default function PostPage() {
 				</PostBody>
 				<PostCta>dsada</PostCta>
 				<AssetTitle title="Videos about this case" type="video" />
+				<Divider />
 				<AssetTitle title="Podcasts about this case" type="audio" />
+				<Divider />
+				<Comments postSlug="dasda" postTitle="dada" postId={324} />
 			</LayoutContainer>
 		</>
 	)
