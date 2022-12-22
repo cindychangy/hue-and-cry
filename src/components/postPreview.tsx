@@ -45,25 +45,56 @@ const PostMeta = styled.div`
 `
 const PostExcerpt = styled.p`
 	${({ theme }) => css`
-		color: ${theme.colors.gray};
-		font-family: ${theme.fonts.secondary};
-		font-size: 1.5rem;
-		line-height: 1.5;
-		margin-top: 5px;
-		@media ${breakpoint.md} {
-			display: flex;
+		p {
+			color: ${theme.colors.gray};
+			font-family: ${theme.fonts.secondary};
+			font-size: 1.5rem;
+			line-height: 1.5;
+			margin-top: 5px;
+			@media ${breakpoint.md} {
+				display: flex;
+			}
 		}
 	`};
 `
 
-export const PostPreview = () => {
+interface PostPreviewProps {
+	image: string
+	category?: string
+	title: string
+	excerpt: string
+	slug: string
+	categorySlug: string
+}
+
+export const PostPreview = ({
+	image,
+	category,
+	title,
+	excerpt,
+	categorySlug,
+	slug,
+}: PostPreviewProps) => {
+	const featureImage = {
+		backgroundImage: `url('${image}')`,
+		backgroundSize: 'cover',
+		backgroundRepeat: 'no-repeat',
+		backgroundPosition: 'center',
+	}
+
 	return (
 		<PostContainer>
-			<Link href="">
-				<PostImage />
+			<Link href={`/${encodeURIComponent(slug)}`}>
+				<PostImage style={featureImage} />
 			</Link>
-			<PostSubHeading>Military</PostSubHeading>
-			<PostTitle>The Death of PFC Denisha Montgomery</PostTitle>
+			{category && (
+				<PostSubHeading>
+					<a href={categorySlug}>{category}</a>
+				</PostSubHeading>
+			)}
+			<PostTitle>
+				<a href={slug}>{title}</a>
+			</PostTitle>
 			<div>
 				<PostMeta>
 					<span>January 8,2022</span>
@@ -71,10 +102,7 @@ export const PostPreview = () => {
 					<ChatRightFill size="12" />
 				</PostMeta>
 			</div>
-			<PostExcerpt>
-				Ashley Loring HeavyRunner mysteriously vanished from the Blackfeet
-				Reservation. Her sister has been searching for her ever since.
-			</PostExcerpt>
+			<PostExcerpt dangerouslySetInnerHTML={{ __html: excerpt }} />
 		</PostContainer>
 	)
 }

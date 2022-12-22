@@ -1,5 +1,5 @@
 'use client'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import styled, { css } from 'styled-components'
 import { PostPreview } from '../src/components/postPreview'
 import { LayoutContainer } from '../src/components/layoutContainer'
@@ -75,23 +75,41 @@ const AboutLink = styled.a`
 		font-weight: 600;
 	`};
 `
-
 interface PageContainerProps {
 	posts: Post[]
 }
 
 export default function PageContainer({ posts }: PageContainerProps) {
+	const [featuredTop, setFeaturedTop] = useState([] as Post[])
+	const [featuredBottom, setFeaturedBottom] = useState([] as Post[])
+
+	useEffect(() => {
+		if (posts) {
+			setFeaturedTop(posts.splice(0, 6))
+			setFeaturedBottom(posts.splice(-8))
+		}
+	}, [])
+
+	const featuredPostsTop = featuredTop.map((post) => (
+		<PostPreview
+			image={post.featuredImage.node.sourceUrl}
+			title={post.title}
+			excerpt={post.excerpt}
+			category={post.categories.nodes[0].name}
+			categorySlug={post.categories.nodes[0].slug}
+			slug={post.slug}
+			key={post.postId}
+		/>
+	))
+
 	return (
 		<>
-			<LayoutContainer>
-				<PostPreview />
-			</LayoutContainer>
+			<LayoutContainer>{featuredPostsTop}</LayoutContainer>
 			<SectionHighwayOfTears>dadsa</SectionHighwayOfTears>
 			<LayoutContainer>
 				<SectionAbout>
 					<AboutIntro>
 						<h5>About Hue and Cry</h5>
-						<p>{posts[0].title}</p>
 						<h2 style={{ marginTop: '10px' }}>
 							Bringing awareness to cases of unsolved crimes against women and
 							girls.

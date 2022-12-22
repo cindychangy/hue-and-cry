@@ -79,7 +79,8 @@ const GlobalStyle = createGlobalStyle`
 		font-family: "Tiempos Text Semibold", serif;
 	}
 
-	h3 {
+	h3,
+	h3 a {
 		font-size: 2.2rem;
 		line-height: 1.2;
 		font-family: "Tiempos Text Semibold", serif;
@@ -92,7 +93,8 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Gilroy Bold', sans-serif;
 	}
 
-	h5 {
+	h5, 
+	h5 a  {
 		font-size: 1.1rem;
 		font-weight: 600;
 		line-height: 1;
@@ -105,6 +107,15 @@ const GlobalStyle = createGlobalStyle`
 	p {
 		font-size: 1.8rem;
 		font-family: "Tiempos Text", serif;
+	}
+
+	h3 a,
+	h5 a {
+		text-decoration: none;
+
+		&:hover {
+			color: #000;
+		}
 	}
 
 	small {
