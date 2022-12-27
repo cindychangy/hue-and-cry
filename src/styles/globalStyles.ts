@@ -60,6 +60,9 @@ const GlobalStyle = createGlobalStyle`
 
 	a {
 		transition: color .2s ease-in-out;
+		color: inherit;
+		cursor: pointer;
+		display: inline-block;
 	}
 
 	h1 {

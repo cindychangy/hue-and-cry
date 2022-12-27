@@ -1,11 +1,12 @@
 'use client'
 import React from 'react'
 import { LayoutContainer } from '../../src/components/layoutContainer'
-import { PostHeader } from '../../src/components/postHeader'
-import { PostCta } from '../../src/components/postCta'
+import { PostHeader } from '../../src/app/post/components/postHeader'
+import { PostCta } from '../../src/app/post/components/postCta'
 import { AssetTitle } from '../../src/components/assetTitle'
 import { Comments } from '../../src/components/comments'
-import { RelatedPosts } from '../../src/components/relatedPosts'
+import { RelatedPosts } from '../../src/app/post/components/relatedPosts'
+import { Post } from '../../src/api/types/post'
 
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
@@ -102,12 +103,13 @@ const Copyright = styled.div`
 	max-width: 800px;
 	width: 100%;
 `
-export default function PostPage() {
+export default function PostPageContainer({ post }: Post) {
 	return (
 		<>
 			<LayoutContainer>
 				<PostHeader />
 				<PostBody>
+					{post}
 					<p>
 						Born in Elizabethtown, Kentucky, Denisha Montgomery was a
 						27-year-old mother raising her three young sons in Hodgenville. She

@@ -1,4 +1,5 @@
 import React from 'react'
+import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
 import { breakpoint } from '../constants/theme'
@@ -114,22 +115,22 @@ export const SiteFooter = () => {
 					<Navigation>
 						<ul>
 							<li>
-								<a href="">Missing</a>
+								<Link href="">Missing</Link>
 							</li>
 							<li>
-								<a href="">Highway of Tears</a>
+								<Link href="">Highway of Tears</Link>
 							</li>
 							<li>
-								<a href="">Murdered</a>
+								<Link href="">Murdered</Link>
 							</li>
 							<li>
-								<a href="">Indigenous Women</a>
+								<Link href="">Indigenous Women</Link>
 							</li>
 							<li>
-								<a href="">Military</a>
+								<Link href="">Military</Link>
 							</li>
 							<li>
-								<a href="">About</a>
+								<Link href="">About</Link>
 							</li>
 						</ul>
 					</Navigation>

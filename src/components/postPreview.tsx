@@ -1,7 +1,8 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../constants/theme'
-import Link from 'next/link'
 import { ChatRightFill } from '@styled-icons/bootstrap'
 
 const PostContainer = styled.div`
@@ -16,9 +17,16 @@ const PostContainer = styled.div`
 
 const PostImage = styled.div`
 	height: 200px;
-	width: 350px;
+	max-width: 350px;
+	width: 100%;
 	background: #cecece;
 	margin-bottom: 15px;
+	position: relative;
+
+	@media ${breakpoint.md} {
+		height: 250px;
+		max-width: 100%;
+	}
 `
 
 const PostSubHeading = styled.h5`
@@ -43,7 +51,7 @@ const PostMeta = styled.div`
 		}
 	`};
 `
-const PostExcerpt = styled.p`
+const PostExcerpt = styled.div`
 	${({ theme }) => css`
 		p {
 			color: ${theme.colors.gray};
@@ -57,7 +65,6 @@ const PostExcerpt = styled.p`
 		}
 	`};
 `
-
 interface PostPreviewProps {
 	image: string
 	category?: string
@@ -75,25 +82,20 @@ export const PostPreview = ({
 	categorySlug,
 	slug,
 }: PostPreviewProps) => {
-	const featureImage = {
-		backgroundImage: `url('${image}')`,
-		backgroundSize: 'cover',
-		backgroundRepeat: 'no-repeat',
-		backgroundPosition: 'center',
-	}
-
 	return (
 		<PostContainer>
 			<Link href={`/${encodeURIComponent(slug)}`}>
-				<PostImage style={featureImage} />
+				<PostImage>
+					<Image alt={title} src={image} style={{ objectFit: 'cover' }} fill />
+				</PostImage>
 			</Link>
 			{category && (
 				<PostSubHeading>
-					<a href={categorySlug}>{category}</a>
+					<Link href={categorySlug}>{category}</Link>
 				</PostSubHeading>
 			)}
 			<PostTitle>
-				<a href={slug}>{title}</a>
+				<Link href={slug}>{title}</Link>
 			</PostTitle>
 			<div>
 				<PostMeta>

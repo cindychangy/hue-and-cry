@@ -1,11 +1,17 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
+import { breakpoint } from '../constants/theme'
 import { PlayCircleFill, VolumeDownFill } from '@styled-icons/bootstrap'
 
 const Container = styled.div`
-	margin-top: 50px;
+	margin-top: 20px;
+	margin-bottom: 30px;
 	display: flex;
 	align-items: center;
+
+	@media ${breakpoint.md} {
+		margin-bottom: 10px;
+	}
 `
 
 const Title = styled.h4`

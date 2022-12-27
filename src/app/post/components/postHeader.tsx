@@ -1,21 +1,25 @@
 import React from 'react'
+import Link from 'next/link'
+import Image from 'next/image'
 import styled, { css } from 'styled-components'
-import { breakpoint } from '../constants/theme'
+import { breakpoint } from '../../../constants/theme'
 
 const PostHeaderContainer = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
+	margin-top: 40px;
 
 	@media ${breakpoint.md} {
 		flex-direction: column;
+		margin-top: 20px;
 	}
 `
 
 const PostImageContainer = styled.div`
 	width: 45%;
 	height: 484px;
-	background: #cecece;
+	position: relative;
 
 	@media ${breakpoint.md} {
 		width: 100%;
@@ -32,16 +36,19 @@ const PostMetaContainer = styled.div`
 	}
 `
 const PostCategory = styled.h5`
-	font-size: 1.25rem;
-	letter-spacing: 5px;
-	margin-bottom: 5px;
+	a {
+		display: inline-block;
+		font-size: 1.125rem;
+		letter-spacing: 5px;
+		margin-bottom: 10px;
+	}
 `
 const PostDateLocation = styled.div`
 	${({ theme }) => css`
 		font-size: 1.5rem;
 		color: ${theme.colors.gray};
 		font-family: ${theme.fonts.secondary};
-		margin-top: 35px;
+		margin-top: 30px;
 
 		@media ${breakpoint.md} {
 			margin-top: 20px;
@@ -55,16 +62,36 @@ const MetaTitle = styled.span`
 	`};
 `
 
-export const PostHeader = () => {
+interface PostHeaderProps {
+	image: string
+	category: string
+	categorySlug: string
+	title: string
+	year: string
+	location: string
+}
+
+export const PostHeader = ({
+	image,
+	category,
+	categorySlug,
+	title,
+	year,
+	location,
+}: PostHeaderProps) => {
 	return (
 		<PostHeaderContainer>
-			<PostImageContainer />
+			<PostImageContainer>
+				<Image alt={title} src={image} style={{ objectFit: 'contain' }} fill />
+			</PostImageContainer>
 			<PostMetaContainer>
-				<PostCategory>Military</PostCategory>
-				<h1>The Death of PFC Denisha Montgomery</h1>
+				<PostCategory>
+					<Link href={categorySlug}>{category}</Link>
+				</PostCategory>
+				<h1>{title}</h1>
 				<PostDateLocation>
-					<MetaTitle>Location:</MetaTitle> Wiesbaden, Germany &nbsp;| &nbsp;
-					<MetaTitle>Year:</MetaTitle> 2022
+					<MetaTitle>Location:</MetaTitle> {location} &nbsp;| &nbsp;
+					<MetaTitle>Year:</MetaTitle> {year}
 				</PostDateLocation>
 			</PostMetaContainer>
 		</PostHeaderContainer>

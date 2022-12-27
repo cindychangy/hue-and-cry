@@ -1,15 +1,16 @@
-'use client'
-import React, { useEffect, useState } from 'react'
+import React from 'react'
 import styled, { css } from 'styled-components'
-import { PostPreview } from '../src/components/postPreview'
-import { LayoutContainer } from '../src/components/layoutContainer'
-import { breakpoint } from '../src/constants/theme'
-import { Post } from '../src/api/types/post'
+import { LayoutContainer } from '../../../src/components/layoutContainer'
+import { PostGrid } from '../../components/postGrid'
+import { breakpoint } from '../../../src/constants/theme'
+import { Post } from '../../../src/api/types/post'
+import PageTemplate from '../../../src/components/pageTemplate'
 
 const SectionHighwayOfTears = styled.div`
 	width: 100%;
 	height: 600px;
 	background: #323232;
+	margin-bottom: 50px;
 
 	@media ${breakpoint.md} {
 		display: none;
@@ -21,7 +22,7 @@ const SectionAbout = styled.div`
 		display: flex;
 		align-content: center;
 		justify-content: space-between;
-		padding: 40px 0;
+		padding: 160px 0 40px 0;
 
 		&::before {
 			content: '';
@@ -75,38 +76,41 @@ const AboutLink = styled.a`
 		font-weight: 600;
 	`};
 `
-interface PageContainerProps {
-	posts: Post[]
+
+const GridContainer = styled.div`
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 25px;
+	grid-row-gap: 45px;
+
+	@media ${breakpoint.md} {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media ${breakpoint.sm} {
+		grid-template-columns: 1fr;
+	}
+`
+
+interface HomeProps {
+	featuredTop: Post[]
+	featuredBottom: Post[]
 }
 
-export default function PageContainer({ posts }: PageContainerProps) {
-	const [featuredTop, setFeaturedTop] = useState([] as Post[])
-	const [featuredBottom, setFeaturedBottom] = useState([] as Post[])
-
-	useEffect(() => {
-		if (posts) {
-			setFeaturedTop(posts.splice(0, 6))
-			setFeaturedBottom(posts.splice(-8))
-		}
-	}, [])
-
-	const featuredPostsTop = featuredTop.map((post) => (
-		<PostPreview
-			image={post.featuredImage.node.sourceUrl}
-			title={post.title}
-			excerpt={post.excerpt}
-			category={post.categories.nodes[0].name}
-			categorySlug={post.categories.nodes[0].slug}
-			slug={post.slug}
-			key={post.postId}
-		/>
-	))
-
+const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 	return (
-		<>
-			<LayoutContainer>{featuredPostsTop}</LayoutContainer>
+		<PageTemplate>
+			<LayoutContainer>
+				<GridContainer>
+					<PostGrid posts={featuredTop} />
+				</GridContainer>
+			</LayoutContainer>
 			<SectionHighwayOfTears>dadsa</SectionHighwayOfTears>
 			<LayoutContainer>
+				<GridContainer>
+					<PostGrid posts={featuredBottom} />
+				</GridContainer>
 				<SectionAbout>
 					<AboutIntro>
 						<h5>About Hue and Cry</h5>
@@ -126,6 +130,8 @@ export default function PageContainer({ posts }: PageContainerProps) {
 					</AboutText>
 				</SectionAbout>
 			</LayoutContainer>
-		</>
+		</PageTemplate>
 	)
 }
+
+export default Home
