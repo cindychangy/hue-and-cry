@@ -35,17 +35,18 @@ const Container = styled.div`
 
 const Logo = styled.h3`
 	${({ theme }) => css`
-		font-family: 'Bebas Neue';
-		font-size: 3rem;
-		line-height: 1.2;
-		color: ${theme.colors.white};
-		font-weight: 400;
-		margin: 0;
-  		
-		&:hover {
-			textDecoration: 'none',
-			opacity: 0.7,
-  	}
+		a {
+			font-family: 'Bebas Neue';
+			font-size: 3rem;
+			line-height: 1.2;
+			color: ${theme.colors.white};
+			font-weight: 400;
+			margin: 0;
+
+			&:hover {
+				color: #616569;
+			}
+		}
 	`};
 `
 
@@ -86,11 +87,15 @@ const Icons = styled.div`
 	${({ theme }) => css`
 		display: flex;
 		justify-content: flex-end;
-		margin-top: 12px;
+		margin-top: 10px;
 
 		a {
 			display: inline-block;
 			color: ${theme.colors.white};
+
+			&:hover {
+				color: #616569;
+			}
 
 			svg {
 				width: 16px;
@@ -106,7 +111,9 @@ export const SiteFooter = () => {
 		<FooterContainer>
 			<Container>
 				<div>
-					<Logo>Hue and Cry</Logo>
+					<Logo>
+						<Link href="/">Hue and Cry</Link>
+					</Logo>
 					<Copyright>
 						© 2022 Hue and Cry. True Crime Blog. All Rights Reserved.
 					</Copyright>
@@ -140,7 +147,7 @@ export const SiteFooter = () => {
 							target="_blank"
 							rel="noreferrer noopener"
 						>
-							<Twitter size="24" style={{ marginTop: '-12px' }} />
+							<Twitter size="24" style={{ marginTop: '-10px' }} />
 						</a>
 						<a
 							href="https://twitter.com/thehueandcry"

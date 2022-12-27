@@ -68,6 +68,10 @@ const Icons = styled.div`
 			display: inline-block;
 			color: ${theme.colors.black};
 
+			&:hover {
+				color: ${theme.colors.orange};
+			}
+
 			svg {
 				width: 19px;
 				height: 19px;
