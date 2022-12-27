@@ -33,6 +33,16 @@ const PostSubHeading = styled.h5`
 	margin: 10px 0 5px 0;
 `
 const PostTitle = styled.h3`
+	a {
+		display: inline;
+		transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+			-webkit-box-shadow 0.1s ease 0s;
+
+		&:hover {
+			box-shadow: rgb(255 255 255) 0px -3px inset,
+				rgb(255 172 108) 0px -11px 0px inset;
+		}
+	}
 	@media ${breakpoint.md} {
 		display: flex;
 	}

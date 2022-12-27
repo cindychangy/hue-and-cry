@@ -19,16 +19,21 @@ const HeaderContainer = styled.div`
 `
 const Logo = styled.h3`
 	${({ theme }) => css`
-		font-family: 'Bebas Neue';
-		font-size: 4.4rem;
-		color: ${theme.colors.grayDark};
-		font-weight: 400;
-		margin: 0;
-  		
-		&:hover {
-			textDecoration: 'none',
-			opacity: 0.7,
-  	}
+		a {
+			font-family: 'Bebas Neue';
+			font-size: 4.4rem;
+			color: ${theme.colors.grayDark};
+			font-weight: 400;
+			margin: 0;
+			display: inline;
+			transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+				-webkit-box-shadow 0.1s ease 0s;
+
+			&:hover {
+				box-shadow: rgb(255 255 255) 0px -8px inset,
+					rgb(255 172 108) 0px -23px 0px inset;
+			}
+		}
 	`};
 `
 const Navigation = styled.div`
@@ -75,7 +80,9 @@ const Icons = styled.div`
 export const SiteHeader = () => {
 	return (
 		<HeaderContainer>
-			<Logo>Hue and Cry</Logo>
+			<Logo>
+				<Link href="/">Hue and Cry</Link>
+			</Logo>
 			<Navigation>
 				<ul>
 					<li>

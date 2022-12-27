@@ -74,6 +74,10 @@ const AboutLink = styled.a`
 		font-family: ${theme.fonts.secondary};
 		text-decoration: none;
 		font-weight: 600;
+
+		&:hover {
+			color: ${theme.colors.black};
+		}
 	`};
 `
 

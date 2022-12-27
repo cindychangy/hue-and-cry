@@ -25,10 +25,17 @@ const VideoTitle = styled.a`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
 		font-family: ${theme.fonts.primary};
-		font-size: 1.6rem;
-		line-height: 1.3;
+		font-size: 1.4rem;
+		transition: all 0.2s ease 0s, box-shadow 0.2s ease 0s,
+			-webkit-box-shadow 0.2s ease 0s;
+		box-shadow: rgb(0 0 0) 0px -1px inset, rgb(0 0 0) 0px -1px 0px inset;
 		text-decoration: none;
-		margin-top: 10px;
+		display: inline;
+
+		&:hover {
+			box-shadow: rgb(255 255 255) 0px -1px inset,
+				rgb(255 255 255) 0px -1px 0px inset;
+		}
 	`};
 `
 

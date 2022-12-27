@@ -9,12 +9,23 @@ const CtaContainer = styled.div`
 		padding: 40px;
 		margin-bottom: 60px;
 
-		a {
-			color: ${theme.colors.black};
-			font-size: 1.6rem;
-
-			&:hover {
+		p {
+			margin-bottom: 10px;
+			line-height 1.4;
+			
+			a {
+				font-size: 1.6rem;
+				transition: all 0.2s ease 0s, box-shadow 0.2s ease 0s,
+					-webkit-box-shadow 0.2s ease 0s;
+				box-shadow: rgb(0 0 0) 0px -1px inset, rgb(0 0 0) 0px -1px 0px inset;
 				text-decoration: none;
+				color: ${theme.colors.black};
+				display: inline;
+
+				&:hover {
+					box-shadow: rgb(251 241 233) 0px -1px inset,
+						rgb(251 241 233) 0px -1px 0px inset;
+				}
 			}
 		}
 
