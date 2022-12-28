@@ -1,5 +1,4 @@
 import React from 'react'
-import Script from 'next/script'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
@@ -7,8 +6,6 @@ import { theme } from '../../src/styles/Theme'
 import GlobalStyles from '../../src/styles/globalStyles'
 
 const App = ({ Component, pageProps }: AppProps) => {
-	const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-
 	return (
 		<>
 			<Head>
@@ -49,18 +46,22 @@ const App = ({ Component, pageProps }: AppProps) => {
 					name="msapplication-TileImage"
 					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/mstile-150x150-1.png`}
 				/>
-				<Script
-					src={`https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`}
-					strategy="afterInteractive"
+				<script
+					id="tagmanager-main"
+					async
+					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
+				></script>
+				<script
+					id="tagmanager-setup"
+					dangerouslySetInnerHTML={{
+						__html: `
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
+          `,
+					}}
 				/>
-				<Script id="google-analytics" strategy="afterInteractive">
-					{`
-						window.dataLayer = window.dataLayer || [];
-						function gtag(){window.dataLayer.push(arguments);}
-						gtag('js', new Date());
-						gtag('config', '${GA_MEASUREMENT_ID}');
-					`}
-				</Script>
 			</Head>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
