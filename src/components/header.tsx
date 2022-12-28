@@ -44,7 +44,7 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-right: 20px;
-				font-family: ${theme.fonts.tertiary};
+				font-family: ${theme.fonts.tertiaryBold};
 				font-size: 1.7rem;
 
 				a {

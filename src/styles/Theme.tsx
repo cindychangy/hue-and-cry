@@ -12,6 +12,7 @@ export const theme = {
 		primaryBold: '"Tiempos Text Semibold", serif',
 		secondary: '"GT America", sans-serif',
 		secondaryBold: '"GT America Bold", sans-serif',
-		tertiary: '"Gilroy Bold", sans-serif',
+		tertiary: '"Gilroy", sans-serif',
+		tertiaryBold: '"Gilroy Bold", sans-serif',
 	},
 }

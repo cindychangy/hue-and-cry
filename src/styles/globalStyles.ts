@@ -20,14 +20,24 @@ const GlobalStyle = createGlobalStyle`
 			url('../fonts/gt-america-bold.woff') format('woff');
 		font-display: swap;
 	}
-		@font-face {
-		font-family: 'Gilroy Bold';
+
+	@font-face {
+		font-family: 'Gilroy';
 		font-style: normal;
 		font-weight: 500;
+		src: url('/fonts/gilroy-regular.woff2') format('woff2'),
+			url('../fonts/gilroy-regular.woff') format('woff');
+		font-display: swap;
+	}
+	@font-face {
+		font-family: 'Gilroy Bold';
+		font-style: normal;
+		font-weight: 600;
 		src: url('/fonts/gilroy-bold.woff2') format('woff2'),
 			url('../fonts/gilroy-bold.woff') format('woff');
 		font-display: swap;
 	}
+	
 	@font-face {
 		font-family: 'Tiempos Text';
 		font-style: normal;
