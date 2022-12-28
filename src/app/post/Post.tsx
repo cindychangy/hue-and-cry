@@ -69,6 +69,10 @@ const PostBody = styled.div`
 				font-family: ${theme.fonts.secondary};
 				font-size: 1.5rem;
 				color: ${theme.colors.gray};
+
+				a {
+					box-shadow: none;
+				}
 			}
 
 			a {

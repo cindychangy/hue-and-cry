@@ -5,7 +5,7 @@ import { PostGrid } from '../components/postGrid'
 import { LayoutContainer } from 'components/layoutContainer'
 import { ShadowElevation } from './shadowElevation'
 
-import styled, { css } from 'styled-components'
+import styled from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
 
 const PostGridContainer = styled.div`

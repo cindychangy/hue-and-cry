@@ -111,6 +111,7 @@ export const SiteHeader = () => {
 					{NAV_ITEMS.map((item: NavItemProps) => (
 						<>
 							<li
+								key={item.label}
 								className={`${
 									currentRoute === item.value && 'active-nav-item'
 								}`}

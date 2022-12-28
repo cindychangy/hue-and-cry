@@ -1,25 +1,12 @@
-import React, { useEffect } from 'react'
-import { useRouter } from 'next/router'
+import React from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
 import { theme } from '../../src/styles/Theme'
 import GlobalStyles from '../../src/styles/globalStyles'
-import * as gtag from '../../lib/gtag'
+import { GoogleAnalytics } from 'nextjs-google-analytics'
 
 const App = ({ Component, pageProps }: AppProps) => {
-	const router = useRouter()
-
-	useEffect(() => {
-		const handleRouteChange = (url: URL) => {
-			gtag.pageview(url)
-		}
-		router.events.on('routeChangeComplete', handleRouteChange)
-		return () => {
-			router.events.off('routeChangeComplete', handleRouteChange)
-		}
-	}, [router.events])
-
 	return (
 		<>
 			<Head>
@@ -63,6 +50,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 			</Head>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
+				<GoogleAnalytics trackPageViews />
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</>
