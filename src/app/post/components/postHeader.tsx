@@ -8,11 +8,9 @@ const PostHeaderContainer = styled.div`
 	width: 100%;
 	display: flex;
 	align-items: center;
-	margin-top: 40px;
 
 	@media ${breakpoint.md} {
 		flex-direction: column;
-		margin-top: 20px;
 	}
 `
 
@@ -23,6 +21,7 @@ const PostImageContainer = styled.div`
 
 	@media ${breakpoint.md} {
 		width: 100%;
+		height: 400px;
 	}
 `
 

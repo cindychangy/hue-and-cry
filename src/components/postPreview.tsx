@@ -22,6 +22,7 @@ const PostImage = styled.div`
 	background: #cecece;
 	margin-bottom: 15px;
 	position: relative;
+	overflow: hidden;
 
 	@media ${breakpoint.md} {
 		height: 250px;

@@ -63,7 +63,7 @@ const MissingPage = ({
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
 			</Head>
-			<CategoryLanding posts={posts} title="Missing" />
+			<CategoryLanding posts={posts} />
 		</>
 	)
 }

@@ -10,9 +10,8 @@ export const theme = {
 	fonts: {
 		primary: '"Tiempos Text", serif',
 		primaryBold: '"Tiempos Text Semibold", serif',
-		secondary: '"GT America", sans-serif',
-		secondaryBold: '"GT America Bold", sans-serif',
-		tertiary: '"Gilroy", sans-serif',
-		tertiaryBold: '"Gilroy Bold", sans-serif',
+		secondary: '"Graphik", sans-serif',
+		secondaryMedium: '"Graphik Medium", sans-serif',
+		secondarySemibold: '"Graphik Semibold", sans-serif',
 	},
 }

@@ -119,21 +119,20 @@ const StoryMeta = styled.div`
 	}
 }
 `
-
 const StoryDate = styled.p`
 	${({ theme }) => css`
-		font-size: 2.4rem;
+		font-size: 2.2rem;
 		line-height: 1.5;
-		font-family: ${theme.fonts.tertiaryBold};
+		font-family: ${theme.fonts.secondarySemibold};
 	`};
 }
 `
 const StoryLocation = styled.p`
 	${({ theme }) => css`
-		font-size: 1.6rem;
+		font-size: 1.5rem;
 		line-height: 1;
-		font-family: ${theme.fonts.tertiary};
-		color: #9e9e9e;
+		font-family: ${theme.fonts.secondary};
+		color: #8a8c8f;
 
 		@media ${breakpoint.md} {
 			margin-bottom: 10px;
@@ -145,7 +144,8 @@ const StoryTitle = styled.p`
 	${({ theme }) => css`
 		font-size: 2.4rem;
 		line-height: 1;
-		font-family: ${theme.fonts.tertiaryBold};
+		letter-spacing: -1px;
+		font-family: ${theme.fonts.secondarySemibold};
 	`};
 }
 `
@@ -207,7 +207,7 @@ const PageTitle = styled.h1`
 	${({ theme }) => css`
 		font-size: 6.5rem;
 		letter-spacing: -3px;
-		font-family: ${theme.fonts.secondaryBold};
+		font-family: ${theme.fonts.secondarySemibold};
 	`};
 `
 const DescriptionBox = styled.div`

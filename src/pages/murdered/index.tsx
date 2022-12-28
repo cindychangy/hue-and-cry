@@ -63,7 +63,7 @@ const MurderedPage = ({
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
 			</Head>
-			<CategoryLanding posts={posts} title="Murdered" />
+			<CategoryLanding posts={posts} />
 		</>
 	)
 }

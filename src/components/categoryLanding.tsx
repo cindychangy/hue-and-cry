@@ -3,18 +3,10 @@ import PageTemplate from '../../src/components/pageTemplate'
 import { Post } from '../../src/api/types/post'
 import { PostGrid } from '../components/postGrid'
 import { LayoutContainer } from 'components/layoutContainer'
+import { ShadowElevation } from './shadowElevation'
 
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
-
-const CategoryHeader = styled.div`
-	background: #efefef;
-	height: 300px;
-	width: 100%;
-  display flex;
-  justify-content: center;
-  align-items: center;
-`
 
 const PostGridContainer = styled.div`
 	display: grid;
@@ -22,8 +14,10 @@ const PostGridContainer = styled.div`
 	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 25px;
 	grid-row-gap: 45px;
+	margin-top: 30px;
 
 	@media ${breakpoint.md} {
+		margin-top: 10px;
 		grid-template-columns: repeat(2, 1fr);
 	}
 
@@ -31,18 +25,10 @@ const PostGridContainer = styled.div`
 		grid-template-columns: 1fr;
 	}
 `
-
-interface CategoryLandingProps {
-	posts: Post[]
-	title: string
-}
-
-export const CategoryLanding = ({ posts, title }: CategoryLandingProps) => {
+export const CategoryLanding = ({ posts }: { posts: Post[] }) => {
 	return (
 		<PageTemplate>
-			<CategoryHeader>
-				<h1>{title}</h1>
-			</CategoryHeader>
+			<ShadowElevation />
 			<LayoutContainer>
 				<PostGridContainer>
 					<PostGrid posts={posts} isArchivePage />

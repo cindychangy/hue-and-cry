@@ -66,7 +66,7 @@ const IndigenousWomenPage = ({
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
 			</Head>
-			<CategoryLanding posts={posts} title="Indigenous Women" />
+			<CategoryLanding posts={posts} />
 		</>
 	)
 }

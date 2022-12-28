@@ -32,8 +32,9 @@ const Post = styled.div`
 
 const RelatedPostsTitle = styled.p`
 	${({ theme }) => css`
-		font-size: 1.8rem;
-		font-family: ${theme.fonts.tertiary};
+		font-size: 1.4rem;
+		text-transform: uppercase;
+		font-family: ${theme.fonts.secondarySemibold};
 		text-align: center;
 		margin: 40px 0 20px 0;
 	`};
@@ -53,10 +54,14 @@ const PostTitle = styled(Link)`
 	${({ theme }) => css`
 		font-size: 1.3rem;
 		line-height: 1.1;
-		font-family: ${theme.fonts.secondaryBold};
+		font-family: ${theme.fonts.secondaryMedium};
 		color: ${theme.colors.black};
 		text-decoration: none;
 		display: inline-block;
+
+		&:hover {
+			color: ${theme.colors.gray};
+		}
 	`};
 `
 

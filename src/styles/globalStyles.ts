@@ -5,40 +5,6 @@ import { breakpoint } from '../../src/constants/theme'
 const GlobalStyle = createGlobalStyle`
 	${reset}
 	@font-face {
-		font-family: 'GT America';
-		font-style: normal;
-		font-weight: 400;
-		src: url('/fonts/gt-america-regular.woff2') format('woff2'),
-			url('../fonts/gt-america-regular.woff') format('woff');
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'GT America Bold';
-		font-style: normal;
-		font-weight: 600;
-		src: url('/fonts/gt-america-bold.woff2') format('woff2'),
-			url('../fonts/gt-america-bold.woff') format('woff');
-		font-display: swap;
-	}
-
-	@font-face {
-		font-family: 'Gilroy';
-		font-style: normal;
-		font-weight: 500;
-		src: url('/fonts/gilroy-regular.woff2') format('woff2'),
-			url('../fonts/gilroy-regular.woff') format('woff');
-		font-display: swap;
-	}
-	@font-face {
-		font-family: 'Gilroy Bold';
-		font-style: normal;
-		font-weight: 600;
-		src: url('/fonts/gilroy-bold.woff2') format('woff2'),
-			url('../fonts/gilroy-bold.woff') format('woff');
-		font-display: swap;
-	}
-	
-	@font-face {
 		font-family: 'Tiempos Text';
 		font-style: normal;
 		font-weight: 500;
@@ -56,6 +22,33 @@ const GlobalStyle = createGlobalStyle`
 		font-display: swap;
 	}
 
+	@font-face {
+		font-family: 'Graphik';
+		font-style: normal;
+		font-weight: 500;
+		src: url('/fonts/graphik-regular.woff2') format('woff2'),
+			url('../fonts/graphik-regular.woff') format('woff');
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Graphik Medium';
+		font-style: normal;
+		font-weight: 600;
+		src: url('/fonts/graphik-medium.woff2') format('woff2'),
+			url('../fonts/graphik-medium.woff') format('woff');
+		font-display: swap;
+	}
+
+	@font-face {
+		font-family: 'Graphik Semibold';
+		font-style: normal;
+		font-weight: 700;
+		src: url('/fonts/graphik-semibold.woff2') format('woff2'),
+			url('../fonts/graphik-semibold.woff') format('woff');
+		font-display: swap;
+	}
+
 	html {
 		/* 62.5% of 16px browser = 10px */
 		font-size: 62.5%;
@@ -66,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Tiempos', serif;
     line-height: 1.7;
 		-webkit-font-smoothing: antialiased;
+		overflow-x: hidden;
 	}
 
 	a {
@@ -103,7 +97,7 @@ const GlobalStyle = createGlobalStyle`
 	h4 {
 		font-size: 2rem;
 		color: #FF8600;
-		font-family: 'Gilroy Bold', sans-serif;
+		font-family: 'Graphik Semibold', sans-serif;
 	}
 
 	h5, 
@@ -114,7 +108,7 @@ const GlobalStyle = createGlobalStyle`
 		color: #FF8600;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		font-family: 'GT America', sans-serif;
+		font-family: 'Graphik Medium', sans-serif;
 	}
 
 	p {
@@ -134,9 +128,13 @@ const GlobalStyle = createGlobalStyle`
 	small {
 		font-size: 1.3rem;
 		line-height: 1.5;
-		font-family: 'GT America', sans-serif;
-		color: #8d9598;
+		font-family: 'Graphik', sans-serif;
+		color: #6a7174;
 		display: inline-block;
+	}
+
+	.active-nav-item {
+		border-bottom: 3px solid #FF8600;
 	}
 	`
 

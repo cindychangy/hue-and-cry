@@ -18,13 +18,13 @@ const PostBody = styled.div`
 	${({ theme }) => css`
 		width: 100%;
 		max-width: 640px;
-		margin: 85px auto;
+		margin: 65px auto;
 		border-top: 1px solid ${theme.colors.orange};
 		padding-top: 40px;
 
 		@media ${breakpoint.md} {
 			max-width: 100%;
-			margin: 45px auto;
+			margin: 40px auto;
 			border-top: none;
 			padding-top: 0;
 		}
@@ -103,6 +103,8 @@ const PostBody = styled.div`
 			a {
 				color: ${theme.colors.gray};
 				text-decoration: none;
+				box-shadow: none;
+				font-weight: 400;
 			}
 		}
 	`};

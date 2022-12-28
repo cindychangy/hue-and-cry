@@ -1,7 +1,9 @@
 import React from 'react'
+import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
+import { NAV_ITEMS } from '../../src/constants/navigation'
 import { breakpoint } from '../constants/theme'
 
 const HeaderContainer = styled.div`
@@ -31,7 +33,7 @@ const Logo = styled.h3`
 
 			&:hover {
 				box-shadow: rgb(255 255 255) 0px -8px inset,
-					rgb(255 172 108) 0px -23px 0px inset;
+					rgb(255 161 88) 0px -23px 0px inset;
 			}
 		}
 	`};
@@ -44,8 +46,8 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-right: 20px;
-				font-family: ${theme.fonts.tertiaryBold};
-				font-size: 1.7rem;
+				font-family: ${theme.fonts.secondaryMedium};
+				font-size: 1.6rem;
 
 				a {
 					text-decoration: none;
@@ -82,6 +84,23 @@ const Icons = styled.div`
 `
 
 export const SiteHeader = () => {
+	const router = useRouter()
+	const currentRoute = router.pathname
+
+	// 	<Link href="/some-path"
+	//      className={currentRoute === "/some-path"
+	//        ? "active-class-name"
+	//        : "non-active-class-name"}>
+	//          Some Link
+	// </Link>
+
+	//  style={{ currentRoute === '/missing' ? background: 'green' : '' }}
+
+	interface NavItemProps {
+		label: string
+		value: string
+	}
+
 	return (
 		<HeaderContainer>
 			<Logo>
@@ -89,24 +108,17 @@ export const SiteHeader = () => {
 			</Logo>
 			<Navigation>
 				<ul>
-					<li>
-						<Link href="/missing">Missing</Link>
-					</li>
-					<li>
-						<Link href="/highway-of-tears">Highway of Tears</Link>
-					</li>
-					<li>
-						<Link href="/murdered">Murdered</Link>
-					</li>
-					<li>
-						<Link href="/indigenous-women">Indigenous Women</Link>
-					</li>
-					<li>
-						<Link href="/military">Military</Link>
-					</li>
-					<li>
-						<Link href="/about">About</Link>
-					</li>
+					{NAV_ITEMS.map((item: NavItemProps) => (
+						<>
+							<li
+								className={`${
+									currentRoute === item.value && 'active-nav-item'
+								}`}
+							>
+								<Link href={item.value}>{item.label}</Link>
+							</li>
+						</>
+					))}
 				</ul>
 			</Navigation>
 			<Icons>
