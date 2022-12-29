@@ -59,8 +59,11 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Tiempos', serif;
     line-height: 1.7;
 		-webkit-font-smoothing: antialiased;
-		overflow-x: hidden;
 	}
+
+	html,body {
+    overflow-x: hidden;
+	}	
 
 	a {
 		transition: color .2s ease-in-out;

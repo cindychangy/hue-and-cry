@@ -42,7 +42,7 @@ export async function getStaticProps() {
 		(post: Post) => post.tags.nodes[0] && post.tags.nodes[0].name === 'homepage'
 	)
 
-	const featuredTop = homepagePosts.splice(0, 6)
+	const featuredTop = homepagePosts.splice(0, 8)
 	const featuredBottom = homepagePosts.splice(-8)
 
 	return {
