@@ -41,6 +41,10 @@ const PostTitle = styled.h3`
 			box-shadow: rgb(255 255 255) 0px -3px inset,
 				rgb(255 172 108) 0px -11px 0px inset;
 		}
+
+		@media ${breakpoint.md} {
+			font-size: 2.2rem;
+		}
 	}
 `
 const PostMeta = styled.div`

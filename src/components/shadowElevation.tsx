@@ -7,7 +7,6 @@ const Elevation = styled.div`
 	height: 5px;
 	margin-bottom: 20px;
 `
-
 export const ShadowElevation = () => {
 	return <Elevation />
 }

@@ -91,7 +91,7 @@ const GlobalStyle = createGlobalStyle`
 
 	h3,
 	h3 a {
-		font-size: 2.2rem;
+		font-size: 1.9rem;
 		line-height: 1.2;
 		font-family: "Tiempos Text Semibold", serif;
 		color: #000;

@@ -16,11 +16,9 @@ const VideoContainer = styled.div`
 		grid-row-gap: 10px;
 	}
 `
-
 const Video = styled.div`
 	max-width: 100%;
 `
-
 const VideoTitle = styled.a`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
@@ -39,7 +37,6 @@ const VideoTitle = styled.a`
 		}
 	`};
 `
-
 interface RelatedVideosProps {
 	videos: [
 		{

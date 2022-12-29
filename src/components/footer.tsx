@@ -21,7 +21,6 @@ const FooterContainer = styled.div`
 		}
 	`};
 `
-
 const Container = styled.div`
 	${({ theme }) => css`
 		width: 1200px;
@@ -36,7 +35,6 @@ const Container = styled.div`
 		}
 	`};
 `
-
 const Logo = styled.h3`
 	${({ theme }) => css`
 		a {
@@ -53,7 +51,6 @@ const Logo = styled.h3`
 		}
 	`};
 `
-
 const Copyright = styled.p`
 	${({ theme }) => css`
 		font-size: 1.3rem;
@@ -62,7 +59,6 @@ const Copyright = styled.p`
 		opacity: 0.6;
 	`};
 `
-
 const Navigation = styled.div`
 	${({ theme }) => css`
 		ul {
@@ -76,7 +72,7 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-left: 18px;
-				font-size: 1.5rem;
+				font-size: 1.4rem;
 				font-family: ${theme.fonts.secondary};
 
 				a {
@@ -97,7 +93,6 @@ const Navigation = styled.div`
 		}
 	`};
 `
-
 const Icons = styled.div`
 	${({ theme }) => css`
 		display: flex;

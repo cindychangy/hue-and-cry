@@ -38,7 +38,6 @@ const PostImage = styled.div`
 		object-position: 100% 30%;
 	}
 `
-
 const PostTitle = styled(Link)`
 	${({ theme }) => css`
 		font-size: 1.3rem;

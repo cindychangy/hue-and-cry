@@ -16,7 +16,6 @@ const SectionHighwayOfTears = styled.div`
 		display: none;
 	}
 `
-
 const SectionAbout = styled.div`
 	${({ theme }) => css`
 		display: flex;
@@ -41,7 +40,6 @@ const SectionAbout = styled.div`
 		}
 	`};
 `
-
 const AboutIntro = styled.div`
 	width: 36%;
 
@@ -80,7 +78,6 @@ const AboutLink = styled.a`
 		}
 	`};
 `
-
 const GridContainer = styled.div`
 	display: grid;
 	grid-template-columns: repeat(4, 1fr);
@@ -96,7 +93,6 @@ const GridContainer = styled.div`
 		grid-template-columns: 1fr;
 	}
 `
-
 interface HomeProps {
 	featuredTop: Post[]
 	featuredBottom: Post[]

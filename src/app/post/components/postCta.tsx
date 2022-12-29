@@ -34,7 +34,6 @@ const CtaContainer = styled.div`
 		}
 	`};
 `
-
 const HelpInfo = styled.div`
 	${({ theme }) => css`
 		width: 50%;
@@ -55,7 +54,6 @@ const HelpInfo = styled.div`
 		}
 	`};
 `
-
 const Sources = styled.div`
 	width: 50%;
 	padding-right: 50px;
@@ -65,7 +63,6 @@ const Sources = styled.div`
 		padding-right: 0;
 	}
 `
-
 interface PostCtaProps {
 	helpInfo: string
 	sourcesInfo: string

@@ -13,7 +13,6 @@ const PostHeaderContainer = styled.div`
 		flex-direction: column;
 	}
 `
-
 const PostImageContainer = styled.div`
 	width: 45%;
 	height: 484px;
@@ -37,7 +36,6 @@ const PostImageContainer = styled.div`
 		}
 	}
 `
-
 const PostMetaContainer = styled.div`
 	width: 55%;
 	margin: 0 0 0 60px;
@@ -67,13 +65,11 @@ const PostDateLocation = styled.div`
 		}
 	`};
 `
-
 const MetaTitle = styled.span`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
 	`};
 `
-
 interface PostHeaderProps {
 	image: string
 	category: string

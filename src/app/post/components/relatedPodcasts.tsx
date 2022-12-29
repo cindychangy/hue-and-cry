@@ -11,7 +11,6 @@ const PodcastContainer = styled.div`
 		flex-direction: column;
 	}
 `
-
 const Podcast = styled.div`
 	flex-grow: 1;
 
@@ -19,7 +18,6 @@ const Podcast = styled.div`
 		margin-top: 20px;
 	}
 `
-
 const PodcastTitle = styled.a`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
@@ -30,7 +28,6 @@ const PodcastTitle = styled.a`
 		text-decoration: none;
 	`};
 `
-
 const PodcastEpisode = styled(Link)`
 	${({ theme }) => css`
 		font-size: 1.6rem;
@@ -48,7 +45,6 @@ const PodcastEpisode = styled(Link)`
 		}
 	`};
 `
-
 interface RelatedPodcastsProps {
 	podcasts: [
 		{

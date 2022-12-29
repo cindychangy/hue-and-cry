@@ -13,13 +13,11 @@ const Container = styled.div`
 		margin-bottom: 10px;
 	}
 `
-
 const Title = styled.h4`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
 	`};
 `
-
 interface AssetTitleProps {
 	title: string
 	type: 'video' | 'audio'
