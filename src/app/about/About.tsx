@@ -15,7 +15,28 @@ const AboutHeader = styled.div`
 		height: 200px;
 	}
 `
-
+const AboutTitle = styled.h3`
+	${({ theme }) => css`
+		font-family: ${theme.fonts.secondarySemibold};
+		font-size: 3rem;
+		line-height: 1.5;
+		letter-spacing: -1px;
+	`};
+`
+const AboutDefinition = styled.h3`
+	${({ theme }) => css`
+		font-family: ${theme.fonts.secondaryMedium};
+		line-height: 1.5;
+	`};
+`
+const AboutCite = styled.cite`
+	${({ theme }) => css`
+		font-size: 1.4rem;
+		font-family: ${theme.fonts.secondary};
+		color: ${theme.colors.gray};
+		margin-top: 15px;
+	`};
+`
 const AboutContainer = styled.div`
 	${({ theme }) => css`
 		width: 100%;
@@ -25,10 +46,21 @@ const AboutContainer = styled.div`
 
 		@media ${breakpoint.md} {
 			max-width: 100%;
+			padding-top: 40px;
 		}
 
-		a:hover {
-			color: ${theme.colors.orange};
+		a {
+			transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+				-webkit-box-shadow 0.2s ease 0s;
+			box-shadow: ${theme.colors.black} 0px -1px inset,
+				${theme.colors.black} 0px -1px 0px inset;
+			text-decoration: none;
+			line-height: 1.2;
+
+			&:hover {
+				box-shadow: ${theme.colors.orange} 0px -1px inset,
+					${theme.colors.black} 0px -1px 0px inset;
+			}
 		}
 	`};
 `
@@ -40,19 +72,19 @@ export const About = () => {
 			<AboutHeader style={HERO_ABOUT} />
 			<LayoutContainer>
 				<AboutContainer>
-					<h3>Hue and Cry</h3>
+					<AboutTitle>Hue and Cry</AboutTitle>
 					<div>
-						<h3>
+						<AboutDefinition>
 							a \ The pursuit of a suspect or a written proclamation for the
 							capture of a suspect.
-						</h3>
+						</AboutDefinition>
 
-						<h3>
+						<AboutDefinition>
 							b \ A loud outcry formerly used in the pursuit of one who is
 							suspected of a crime.
-						</h3>
+						</AboutDefinition>
 
-						<cite>Merriam Webster dictionary</cite>
+						<AboutCite>Merriam Webster dictionary</AboutCite>
 						<br />
 						<br />
 						<br />

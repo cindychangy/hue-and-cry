@@ -21,7 +21,20 @@ const PostImageContainer = styled.div`
 
 	@media ${breakpoint.md} {
 		width: 100%;
-		height: 400px;
+		height: 550px;
+	}
+
+	@media ${breakpoint.sm} {
+		width: 100%;
+		height: 384px;
+	}
+
+	img {
+		object-fit: contain;
+
+		@media ${breakpoint.md} {
+			object-fit: cover;
+		}
 	}
 `
 
@@ -81,7 +94,7 @@ export const PostHeader = ({
 	return (
 		<PostHeaderContainer>
 			<PostImageContainer>
-				<Image alt={title} src={image} style={{ objectFit: 'contain' }} fill />
+				<Image alt={title} src={image} fill />
 			</PostImageContainer>
 			<PostMetaContainer>
 				<PostCategory>

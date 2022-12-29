@@ -36,17 +36,16 @@ const PostBody = styled.div`
 		}
 
 		a {
-			font-weight: 600;
+			box-shadow: inset 0 0 0 rgb(0 0 0 / 0%), 0 1px 0 ${theme.colors.black};
 			transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
-				-webkit-box-shadow 0.1s ease 0s;
-			box-shadow: rgb(255 255 255) 0px -9px inset,
-				rgb(0 0 0) 0px -11px 0px inset;
+				-webkit-box-shadow 0.2s ease 0s;
 			text-decoration: none;
+			display: inline;
 			color: ${theme.colors.black};
 
 			&:hover {
-				box-shadow: rgb(255 255 255) 0px -9px inset,
-					rgb(255 255 255) 0px -11px 0px inset;
+				box-shadow: inset 0 0 0 ${theme.colors.black},
+					0 1px 0 ${theme.colors.orange};
 			}
 		}
 
@@ -56,13 +55,7 @@ const PostBody = styled.div`
 			margin: 60px 0;
 
 			@media ${breakpoint.md} {
-				margin: 30px 0;
-			}
-
-			strong {
-				font-weight: 800;
-				font-size: 1.9rem;
-				line-height: 1.4;
+				margin: 45px 0;
 			}
 
 			cite {
@@ -83,7 +76,7 @@ const PostBody = styled.div`
 		}
 
 		img {
-			margin-top: 25px;
+			margin-top: 40px;
 		}
 
 		h3 {
@@ -96,6 +89,11 @@ const PostBody = styled.div`
 
 		figure.aligncenter {
 			text-align: center;
+
+			img {
+				max-width: 100%;
+				height: auto;
+			}
 		}
 
 		figcaption {
@@ -103,6 +101,7 @@ const PostBody = styled.div`
 			font-family: ${theme.fonts.secondary};
 			font-size: 1.45rem;
 			text-align: center;
+			margin-bottom: 40px;
 
 			a {
 				color: ${theme.colors.gray};

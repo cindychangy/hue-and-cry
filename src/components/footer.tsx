@@ -9,7 +9,7 @@ const FooterContainer = styled.div`
 		width: 100%;
 		background: ${theme.colors.black};
 		color: ${theme.colors.white};
-		margin-top: 60px;
+		margin-top: 35px;
 		display: flex;
 		justify-content: space-between;
 		align-content: center;
@@ -17,6 +17,7 @@ const FooterContainer = styled.div`
 
 		@media ${breakpoint.md} {
 			flex-direction: column;
+			padding: 40px 10px;
 		}
 	`};
 `
@@ -90,6 +91,7 @@ const Navigation = styled.div`
 				@media ${breakpoint.md} {
 					display: block;
 					margin-left: 0;
+					font-size: 1.3rem;
 				}
 			}
 		}

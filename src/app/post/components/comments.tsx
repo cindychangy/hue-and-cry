@@ -15,6 +15,7 @@ const CommentContainer = styled.div`
 
 		@media ${breakpoint.md} {
 			max-width: 100%;
+			margin: 25px;
 		}
 	`};
 `
@@ -25,6 +26,10 @@ const CommentTitle = styled.h4`
 		text-align: center;
 		margin-bottom: 40px;
 		margin-top: 20px;
+
+		@media ${breakpoint.md} {
+			font-size: 2rem;
+		}
 	`};
 `
 

@@ -6,30 +6,15 @@ import { breakpoint } from '../../../constants/theme'
 import { RelatedPost } from '../../../../src/api/types/post'
 
 const PostsContainer = styled.div`
-	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	max-width: 650px;
-	margin-left: auto;
-	margin-right: auto;
-
-	@media ${breakpoint.md} {
-		grid-template-columns: repeat(1, 1fr);
-		grid-row-gap: 10px;
-		max-width: 100%;
-	}
-
-	@media ${breakpoint.sm} {
-		grid-template-columns: 1fr;
-		max-width: 100%;
-	}
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
 `
-
 const Post = styled.div`
 	max-width: 140px;
 	padding: 0 10px;
 	position: relative;
 `
-
 const RelatedPostsTitle = styled.p`
 	${({ theme }) => css`
 		font-size: 1.4rem;
@@ -39,7 +24,6 @@ const RelatedPostsTitle = styled.p`
 		margin: 40px 0 20px 0;
 	`};
 `
-
 const PostImage = styled.div`
 	height: 80px;
 	width: 140px;
@@ -47,6 +31,11 @@ const PostImage = styled.div`
 
 	@media ${breakpoint.md} {
 		max-width: 100%;
+	}
+
+	img {
+		object-fit: cover;
+		object-position: 100% 30%;
 	}
 `
 
@@ -77,7 +66,6 @@ export const RelatedPosts = ({ posts }: { posts: RelatedPost[] }) => {
 								<Image
 									alt={post.title.rendered}
 									src={post.jetpack_featured_media_url}
-									style={{ objectFit: 'cover' }}
 									fill
 								/>
 							</PostImage>

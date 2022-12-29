@@ -23,8 +23,7 @@ const CtaContainer = styled.div`
 				display: inline;
 
 				&:hover {
-					box-shadow: rgb(251 241 233) 0px -1px inset,
-						rgb(251 241 233) 0px -1px 0px inset;
+				box-shadow: ${theme.colors.orange} 0px -1px inset, ${theme.colors.black} 0px -1px 0px inset;
 				}
 			}
 		}
