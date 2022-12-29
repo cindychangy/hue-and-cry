@@ -1,4 +1,6 @@
 import React from 'react'
+import Image from 'next/image'
+import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { LayoutContainer } from '../../../src/components/layoutContainer'
 import { PostGrid } from '../../components/postGrid'
@@ -8,14 +10,118 @@ import PageTemplate from '../../../src/components/pageTemplate'
 
 const SectionHighwayOfTears = styled.div`
 	width: 100%;
-	height: 600px;
-	background: #323232;
-	margin-bottom: 50px;
+	height: 500px;
+	margin: 80px 0;
+	display: flex;
 
 	@media ${breakpoint.md} {
-		display: none;
+		flex-direction: column;
+		height: auto;
+		margin: 40px 0;
 	}
 `
+const PhotoSection = styled.div`
+	${({ theme }) => css`
+		width: 65%;
+		background: pink;
+		padding: 0 50px 100px 50px;
+		display: flex;
+		align-items: flex-start;
+		justify-content: flex-end;
+		flex-direction: column;
+		box-sizing: border-box;
+		color: ${theme.colors.white};
+
+		@media ${breakpoint.md} {
+			width: 100%;
+			padding: 40px;
+		}
+
+		h2 {
+			font-size: 5rem;
+		}
+
+		h4 {
+			background: ${theme.colors.orange};
+			color: ${theme.colors.white};
+			font-family: ${theme.fonts.secondaryMedium};
+			font-size: 1.3rem;
+			padding: 0 8px;
+		}
+
+		p {
+			font-size: 1.4rem;
+			line-height: 1.4;
+			font-family: ${theme.fonts.secondary};
+			max-width: 400px;
+			margin-top: 20px;
+		}
+	`};
+`
+const StoriesSection = styled.div`
+	${({ theme }) => css`
+		width: 35%;
+		background: #1a1a1a;
+		color: ${theme.colors.white};
+		font-family: ${theme.fonts.secondaryMedium};
+		padding: 10px 40px;
+		box-sizing: border-box;
+
+		h6 {
+			color: ${theme.colors.grayBlue};
+			margin-top: 40px;
+			font-size: 1.5rem;
+			border-bottom: 1px solid #4a5362;
+
+			@media ${breakpoint.md} {
+				margin-top: 0;
+			}
+		}
+
+		@media ${breakpoint.md} {
+			width: 100%;
+			padding: 30px 40px 40px;
+		}
+	`};
+`
+const StoryContainer = styled.div`
+	display: flex;
+	margin-top: 20px;
+`
+const StoryImage = styled.div`
+	width: 170px;
+	height: 90px;
+	position: relative;
+
+	img {
+		object-fit: cover;
+	}
+`
+
+const StoryTitle = styled.div`
+	${({ theme }) => css`
+		width: 100%;
+		margin-left: 20px;
+
+		p {
+			font-family: ${theme.fonts.secondary};
+			line-height: 1;
+			font-size: 1.5rem;
+			color: ${theme.colors.grayBlue};
+		}
+
+		a {
+			font-family: ${theme.fonts.primaryBold};
+			text-decoration: none;
+			line-height: 1.3;
+
+			&:hover {
+				color: ${theme.colors.grayBlue};
+			}
+		}
+	`};
+`
+
 const SectionAbout = styled.div`
 	${({ theme }) => css`
 		display: flex;
@@ -37,6 +143,26 @@ const SectionAbout = styled.div`
 			flex-direction: column;
 			justify-content: flex-start;
 			padding: 0;
+		}
+	`};
+`
+const SeeAll = styled.div`
+	${({ theme }) => css`
+		margin-top: 20px;
+		text-align: right;
+
+		@media ${breakpoint.md} {
+			text-align: left;
+			margin-top: 20px;
+		}
+
+		a {
+			color: ${theme.colors.orange};
+			text-decoration: none;
+
+			&:hover {
+				color: ${theme.colors.grayBlue};
+			}
 		}
 	`};
 `
@@ -98,6 +224,13 @@ interface HomeProps {
 	featuredBottom: Post[]
 }
 
+const CTA_IMAGE = {
+	backgroundImage: `url('${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-of-tears-cta.jpg')`,
+	backgroundSize: 'cover',
+	backgroundRepeat: 'no-repeat',
+	backgroundPosition: 'center',
+}
+
 const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 	return (
 		<PageTemplate>
@@ -105,9 +238,65 @@ const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 				<GridContainer>
 					<PostGrid posts={featuredTop} />
 				</GridContainer>
-			</LayoutContainer>
-			<SectionHighwayOfTears>dadsa</SectionHighwayOfTears>
-			<LayoutContainer>
+				<SectionHighwayOfTears>
+					<PhotoSection style={CTA_IMAGE}>
+						<h4>Series</h4>
+						<h2>Highway of Tears</h2>
+						<p>
+							An isolated 725-kilometer stretch of Highway 16 in British
+							Columbia, Canada. It has been the location of many unsolved
+							murders and disappearances of Indigenous women beginning as early
+							as 1969.
+						</p>
+					</PhotoSection>
+					<StoriesSection>
+						<h6>Stories from this series</h6>
+						<StoryContainer>
+							<StoryImage>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/gloria-moody.jpg')`}
+									alt="Gloria Moody"
+									fill
+								/>
+							</StoryImage>
+							<StoryTitle>
+								<p>1969</p>
+								<Link href="/gloria-moody">The murder of Gloria Moody</Link>
+							</StoryTitle>
+						</StoryContainer>
+						<StoryContainer>
+							<StoryImage>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/ramona-wilson-photo-1.jpg')`}
+									alt="Ramona Wilson"
+									fill
+								/>
+							</StoryImage>
+							<StoryTitle>
+								<p>1994</p>
+								<Link href="/ramona-wilson">The Murder of Ramona Wilson</Link>
+							</StoryTitle>
+						</StoryContainer>
+						<StoryContainer>
+							<StoryImage>
+								<Image
+									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/jessica-patrick-balczer.jpg')`}
+									alt="Jessica Patrick Balczer"
+									fill
+								/>
+							</StoryImage>
+							<StoryTitle>
+								<p>2018</p>
+								<Link href="/jessica-patrick-balczer">
+									The Murder of Jessica Patrick Balczer
+								</Link>
+							</StoryTitle>
+						</StoryContainer>
+						<SeeAll>
+							<Link href="/highway-of-tears">See all stories</Link>
+						</SeeAll>
+					</StoriesSection>
+				</SectionHighwayOfTears>
 				<GridContainer>
 					<PostGrid posts={featuredBottom} />
 				</GridContainer>
