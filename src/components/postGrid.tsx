@@ -17,6 +17,7 @@ export const PostGrid = ({ posts, isArchivePage }: PostGridProps) => {
 			categorySlug={isArchivePage ? '' : post.categories.nodes[0].slug}
 			slug={post.slug}
 			key={post.slug}
+			commentCount={post.commentCount}
 		/>
 	))
 

@@ -225,7 +225,7 @@ interface HomeProps {
 }
 
 const CTA_IMAGE = {
-	backgroundImage: `url('${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-of-tears-cta.jpg')`,
+	backgroundImage: `url('${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-16-photo.jpg')`,
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',

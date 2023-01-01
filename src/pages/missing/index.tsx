@@ -15,6 +15,7 @@ export const getStaticProps: GetStaticProps = async () => {
 						postId
 						title
 						slug
+						commentCount
 						featuredImage {
 							node {
 								sourceUrl

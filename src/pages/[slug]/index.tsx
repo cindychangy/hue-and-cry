@@ -92,7 +92,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
               slug
             }
           }
-          postId
+          postId       
         }
       }
   `,

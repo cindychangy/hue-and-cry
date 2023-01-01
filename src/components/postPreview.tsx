@@ -88,6 +88,12 @@ const PostExcerpt = styled.div`
 		}
 	`};
 `
+const CommentCount = styled.span`
+	${({ theme }) => css`
+		color: ${theme.colors.black} !important;
+		margin-left: 3px;
+	`};
+`
 interface PostPreviewProps {
 	image: string
 	category?: string
@@ -95,6 +101,7 @@ interface PostPreviewProps {
 	excerpt: string
 	slug: string
 	categorySlug: string
+	commentCount: number
 }
 
 export const PostPreview = ({
@@ -104,6 +111,7 @@ export const PostPreview = ({
 	excerpt,
 	categorySlug,
 	slug,
+	commentCount,
 }: PostPreviewProps) => {
 	return (
 		<PostContainer>
@@ -123,8 +131,11 @@ export const PostPreview = ({
 			<div>
 				<PostMeta>
 					<span>January 8,2022</span>
-					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-					<ChatRightFill size="12" />
+					<span>
+						<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+						<ChatRightFill size="12" />{' '}
+						<CommentCount>{commentCount}</CommentCount>
+					</span>
 				</PostMeta>
 			</div>
 			<PostExcerpt dangerouslySetInnerHTML={{ __html: excerpt }} />

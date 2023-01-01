@@ -27,6 +27,7 @@ export async function getStaticProps() {
 							}
 						}
 						id
+						commentCount
 						tags {
 							nodes {
 								name
@@ -44,6 +45,8 @@ export async function getStaticProps() {
 
 	const featuredTop = homepagePosts.splice(0, 8)
 	const featuredBottom = homepagePosts.splice(-8)
+
+	console.log(data.posts.nodes)
 
 	return {
 		props: {

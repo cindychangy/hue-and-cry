@@ -20,6 +20,7 @@ export type Post = {
 	title: string
 	excerpt: string
 	sourceUrl: string
+	commentCount: number
 	featuredImage: {
 		node: {
 			sourceUrl: string
