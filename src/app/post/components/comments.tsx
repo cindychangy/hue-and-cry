@@ -16,6 +16,8 @@ const CommentContainer = styled.div`
 		@media ${breakpoint.md} {
 			max-width: 100%;
 			margin: 25px;
+			padding: 0;
+			background: transparent;
 		}
 	`};
 `

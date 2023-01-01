@@ -111,6 +111,12 @@ const PostBody = styled.div`
 			}
 		}
 	`};
+
+	iframe {
+		@media ${breakpoint.md} {
+			width: 100%;
+		}
+	}
 `
 const Divider = styled.div`
 	background: #dfdfdf;

@@ -5,6 +5,7 @@ import { CommentCount } from 'disqus-react'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../constants/theme'
 import { ChatRightFill } from '@styled-icons/bootstrap'
+import { format, parseISO } from 'date-fns'
 
 const PostContainer = styled.div`
 	width: 100%;
@@ -89,7 +90,6 @@ const PostExcerpt = styled.div`
 		}
 	`};
 `
-
 interface PostPreviewProps {
 	image: string
 	category?: string
@@ -99,6 +99,7 @@ interface PostPreviewProps {
 	categorySlug: string
 	commentCount: number
 	id: number
+	date: string
 }
 
 export const PostPreview = ({
@@ -109,7 +110,10 @@ export const PostPreview = ({
 	categorySlug,
 	slug,
 	id,
+	date,
 }: PostPreviewProps) => {
+	const dateFormatted = format(parseISO(date), 'MMMM, yyyy')
+
 	return (
 		<PostContainer>
 			<Link href={`/${encodeURIComponent(slug)}`}>
@@ -127,7 +131,7 @@ export const PostPreview = ({
 			</PostTitle>
 			<div>
 				<PostMeta>
-					<span>January 8,2022 </span>
+					<span>{dateFormatted}</span>
 					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
 					<ChatRightFill size="12" />
 					<CommentCount

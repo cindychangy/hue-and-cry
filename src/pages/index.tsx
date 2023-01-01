@@ -16,6 +16,7 @@ export async function getStaticProps() {
 						slug
 						title
 						postId
+						date
 						featuredImage {
 							node {
 								sourceUrl
@@ -28,7 +29,6 @@ export async function getStaticProps() {
 							}
 						}
 						id
-						commentCount
 						tags {
 							nodes {
 								name

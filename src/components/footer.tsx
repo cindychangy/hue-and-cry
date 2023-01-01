@@ -14,7 +14,6 @@ const FooterContainer = styled.div`
 		justify-content: space-between;
 		align-content: center;
 		padding: 40px 0;
-		word-break: break-word;
 
 		@media ${breakpoint.md} {
 			flex-direction: column;
@@ -116,7 +115,7 @@ const Icons = styled.div`
 				margin-left: 8px;
 
 				@media ${breakpoint.md} {
-					margin-left: 16px;
+					margin-left: 12px;
 				}
 			}
 
@@ -141,9 +140,7 @@ export const SiteFooter = () => {
 					<Logo>
 						<Link href="/">Hue and Cry</Link>
 					</Logo>
-					<Copyright>
-						© 2022 Hue and Cry. True Crime Blog. All Rights Reserved.
-					</Copyright>
+					<Copyright>© 2022 Hue and Cry. All Rights Reserved.</Copyright>
 				</div>
 				<div>
 					<Navigation>

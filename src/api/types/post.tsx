@@ -17,6 +17,7 @@ export type Category = {
 
 export type Post = {
 	postId: number
+	date: string
 	title: string
 	excerpt: string
 	sourceUrl: string

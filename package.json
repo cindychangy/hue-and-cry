@@ -17,6 +17,7 @@
 		"@apollo/client": "^3.7.3",
 		"@next/font": "13.0.7",
 		"@styled-icons/bootstrap": "^10.46.0",
+		"date-fns": "^2.29.3",
 		"disqus-react": "^1.1.5",
 		"next": "13.0.7",
 		"react": "18.2.0",

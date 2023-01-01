@@ -138,6 +138,7 @@ const GlobalStyle = createGlobalStyle`
 
 	.active-nav-item {
 		border-bottom: 3px solid #FF8600;
+		width: fit-content;
 	}
 
 	span.disqus-comment-count {
