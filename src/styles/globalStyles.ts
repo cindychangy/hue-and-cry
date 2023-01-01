@@ -144,6 +144,33 @@ const GlobalStyle = createGlobalStyle`
 		margin-left: 5px;
 		color: #000;
 	}
+
+	.show-mobile-nav {
+		@media ${breakpoint.lg} {
+			display: block !important;
+		}
+	}
+
+	.mobile-nav {
+		@media ${breakpoint.lg} {
+			background: #fff;
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			z-index: 1;
+			height: 100vh;
+			padding: 60px;
+		}
+	}
+			li {
+				@media ${breakpoint.lg} {
+					display: block !important;
+					font-size: 2.2rem !important;
+					line-height: 2;
+				}
+			}
+	}
 	`
 
 export default GlobalStyle

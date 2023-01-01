@@ -10,7 +10,6 @@ const Container = styled.div`
 		max-width: 100%;
 	}
 `
-
 export const LayoutContainer = ({ children }: { children: ReactNode }) => {
 	return <Container>{children}</Container>
 }
