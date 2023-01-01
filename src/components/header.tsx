@@ -36,10 +36,7 @@ const MobileNav = styled.div`
 			border: 0;
 			cursor: pointer;
 			transition: color 0.5s ease 0s;
-
-			&:hover {
-				color: ${theme.colors.orange};
-			}
+			color: ${theme.colors.black};
 		}
 	`};
 `

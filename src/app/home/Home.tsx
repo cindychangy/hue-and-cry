@@ -135,7 +135,11 @@ const SectionAbout = styled.div`
 			height: 150px;
 
 			@media ${breakpoint.md} {
-				display: none;
+				border-top: 1px solid ${theme.colors.orange};
+				border-left: none;
+				height: 1px;
+				padding-top: 50px;
+				margin-top: 50px;
 			}
 		}
 

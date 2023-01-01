@@ -162,14 +162,13 @@ const GlobalStyle = createGlobalStyle`
 			height: 100vh;
 			padding: 60px;
 		}
-	}
-			li {
-				@media ${breakpoint.lg} {
-					display: block !important;
-					font-size: 2.2rem !important;
-					line-height: 2;
-				}
+		li {
+			@media ${breakpoint.lg} {
+				display: block !important;
+				font-size: 2.2rem !important;
+				line-height: 2;
 			}
+		}
 	}
 	`
 

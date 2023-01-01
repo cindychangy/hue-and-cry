@@ -14,6 +14,7 @@ const FooterContainer = styled.div`
 		justify-content: space-between;
 		align-content: center;
 		padding: 40px 0;
+		word-break: break-word;
 
 		@media ${breakpoint.md} {
 			flex-direction: column;
@@ -72,7 +73,7 @@ const Navigation = styled.div`
 			li {
 				display: inline-block;
 				margin-left: 18px;
-				font-size: 1.4rem;
+				font-size: 1.4rem !important;
 				font-family: ${theme.fonts.secondary};
 
 				a {
@@ -113,11 +114,20 @@ const Icons = styled.div`
 
 			&:not(:first-child) {
 				margin-left: 8px;
+
+				@media ${breakpoint.md} {
+					margin-left: 16px;
+				}
 			}
 
 			svg {
 				width: 16px;
 				height: 16px;
+
+				@media ${breakpoint.md} {
+					width: 18px;
+					height: 18px;
+				}
 			}
 		}
 	`};
