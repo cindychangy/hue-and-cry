@@ -15,6 +15,7 @@ export async function getStaticProps() {
 						excerpt
 						slug
 						title
+						postId
 						featuredImage {
 							node {
 								sourceUrl
@@ -45,8 +46,6 @@ export async function getStaticProps() {
 
 	const featuredTop = homepagePosts.splice(0, 8)
 	const featuredBottom = homepagePosts.splice(-8)
-
-	console.log(data.posts.nodes)
 
 	return {
 		props: {

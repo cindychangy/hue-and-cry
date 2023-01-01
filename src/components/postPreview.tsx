@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
+import { CommentCount } from 'disqus-react'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../constants/theme'
 import { ChatRightFill } from '@styled-icons/bootstrap'
@@ -88,12 +89,7 @@ const PostExcerpt = styled.div`
 		}
 	`};
 `
-const CommentCount = styled.span`
-	${({ theme }) => css`
-		color: ${theme.colors.black} !important;
-		margin-left: 3px;
-	`};
-`
+
 interface PostPreviewProps {
 	image: string
 	category?: string
@@ -102,6 +98,7 @@ interface PostPreviewProps {
 	slug: string
 	categorySlug: string
 	commentCount: number
+	id: number
 }
 
 export const PostPreview = ({
@@ -111,7 +108,7 @@ export const PostPreview = ({
 	excerpt,
 	categorySlug,
 	slug,
-	commentCount,
+	id,
 }: PostPreviewProps) => {
 	return (
 		<PostContainer>
@@ -130,12 +127,17 @@ export const PostPreview = ({
 			</PostTitle>
 			<div>
 				<PostMeta>
-					<span>January 8,2022</span>
-					<span>
-						<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-						<ChatRightFill size="12" />{' '}
-						<CommentCount>{commentCount}</CommentCount>
-					</span>
+					<span>January 8,2022 </span>
+					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
+					<ChatRightFill size="12" />
+					<CommentCount
+						shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+						config={{
+							url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${slug}`,
+							identifier: id.toString(),
+							title: title,
+						}}
+					/>
 				</PostMeta>
 			</div>
 			<PostExcerpt dangerouslySetInnerHTML={{ __html: excerpt }} />

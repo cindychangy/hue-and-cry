@@ -18,6 +18,7 @@ export const PostGrid = ({ posts, isArchivePage }: PostGridProps) => {
 			slug={post.slug}
 			key={post.slug}
 			commentCount={post.commentCount}
+			id={post.postId}
 		/>
 	))
 

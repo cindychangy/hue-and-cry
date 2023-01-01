@@ -139,6 +139,11 @@ const GlobalStyle = createGlobalStyle`
 	.active-nav-item {
 		border-bottom: 3px solid #FF8600;
 	}
+
+	span.disqus-comment-count {
+		margin-left: 5px;
+		color: #000;
+	}
 	`
 
 export default GlobalStyle
