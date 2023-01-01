@@ -71,10 +71,6 @@ const PostExcerpt = styled.div`
 		-webkit-box-orient: vertical;
 		-webkit-line-clamp: 2;
 
-		@media ${breakpoint.md} {
-			height: 55px;
-		}
-
 		p {
 			color: ${theme.colors.gray};
 			font-family: ${theme.fonts.secondary};
@@ -83,7 +79,7 @@ const PostExcerpt = styled.div`
 			margin-top: 5px;
 
 			@media ${breakpoint.md} {
-				display: flex;
+				display: block;
 				line-height: 1.65;
 				font-size: 1.6rem;
 			}

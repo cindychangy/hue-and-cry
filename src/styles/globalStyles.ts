@@ -143,7 +143,7 @@ const GlobalStyle = createGlobalStyle`
 
 	span.disqus-comment-count {
 		margin-left: 5px;
-		color: #000;
+		color: #000 !important;
 	}
 
 	.show-mobile-nav {

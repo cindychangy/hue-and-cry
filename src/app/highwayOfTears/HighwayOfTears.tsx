@@ -283,7 +283,7 @@ export const HighwayOfTearsHome = () => {
 								families of the victims that were affected, and the victims
 								themselves, deserve to have their stories heard and remembered.
 							</p>
-							<p>
+							<p style={{ fontWeight: 600 }}>
 								This timeline highlights the unsolved cases of The Highway of
 								Tears.
 							</p>

@@ -40,12 +40,13 @@ const PostImage = styled.div`
 `
 const PostTitle = styled(Link)`
 	${({ theme }) => css`
-		font-size: 1.3rem;
+		font-size: 1.2rem;
 		line-height: 1.1;
 		font-family: ${theme.fonts.secondaryMedium};
 		color: ${theme.colors.black};
 		text-decoration: none;
 		display: inline-block;
+		margin-bottom: 20px;
 
 		&:hover {
 			color: ${theme.colors.gray};
