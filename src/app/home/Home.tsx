@@ -127,7 +127,7 @@ const SectionAbout = styled.div`
 		display: flex;
 		align-content: center;
 		justify-content: space-between;
-		padding: 160px 0 40px 0;
+		padding: 120px 0 40px 0;
 
 		&::before {
 			content: '';

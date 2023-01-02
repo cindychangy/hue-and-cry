@@ -3,6 +3,7 @@ import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
 import { breakpoint } from '../constants/theme'
+import { NAV_ITEMS } from '../../src/constants/navigation'
 
 const FooterContainer = styled.div`
 	${({ theme }) => css`
@@ -145,24 +146,11 @@ export const SiteFooter = () => {
 				<div>
 					<Navigation>
 						<ul>
-							<li>
-								<Link href="">Missing</Link>
-							</li>
-							<li>
-								<Link href="">Highway of Tears</Link>
-							</li>
-							<li>
-								<Link href="">Murdered</Link>
-							</li>
-							<li>
-								<Link href="">Indigenous Women</Link>
-							</li>
-							<li>
-								<Link href="">Military</Link>
-							</li>
-							<li>
-								<Link href="">About</Link>
-							</li>
+							{NAV_ITEMS.map((item) => (
+								<li key={item.label}>
+									<Link href={item.value}>{item.label}</Link>
+								</li>
+							))}
 						</ul>
 					</Navigation>
 					<Icons>

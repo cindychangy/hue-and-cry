@@ -141,10 +141,6 @@ export const SiteHeader = () => {
 	const router = useRouter()
 	const currentRoute = router.pathname
 	const [mobileNav, setMobileNav] = useState(false)
-	interface NavItemProps {
-		label: string
-		value: string
-	}
 
 	return (
 		<LayoutContainer>
@@ -159,7 +155,7 @@ export const SiteHeader = () => {
 				</MobileNav>
 				<Navigation className={`${mobileNav && 'show-mobile-nav'}`}>
 					<ul className={`${mobileNav && 'mobile-nav'}`}>
-						{NAV_ITEMS.map((item: NavItemProps) => (
+						{NAV_ITEMS.map((item) => (
 							<li
 								key={item.label}
 								className={`${
