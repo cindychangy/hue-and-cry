@@ -160,16 +160,14 @@ export const SiteHeader = () => {
 				<Navigation className={`${mobileNav && 'show-mobile-nav'}`}>
 					<ul className={`${mobileNav && 'mobile-nav'}`}>
 						{NAV_ITEMS.map((item: NavItemProps) => (
-							<>
-								<li
-									key={item.label}
-									className={`${
-										currentRoute === item.value && 'active-nav-item'
-									}`}
-								>
-									<Link href={item.value}>{item.label}</Link>
-								</li>
-							</>
+							<li
+								key={item.label}
+								className={`${
+									currentRoute === item.value && 'active-nav-item'
+								}`}
+							>
+								<Link href={item.value}>{item.label}</Link>
+							</li>
 						))}
 						{mobileNav && (
 							<MobileSocial>

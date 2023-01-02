@@ -31,8 +31,17 @@ const PostBody = styled.div`
 
 		p {
 			font-size: 1.8rem;
-			line-height: 1.8;
-			margin-top: 25px;
+			line-height: 1.7;
+			margin-top: 20px;
+
+			@media ${breakpoint.md} {
+				font-size: 1.6rem;
+				line-height: 1.6;
+			}
+
+			strong {
+				font-weight: 600;
+			}
 		}
 
 		a {
