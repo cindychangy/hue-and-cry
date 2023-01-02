@@ -35,8 +35,8 @@ const PostBody = styled.div`
 			margin-top: 20px;
 
 			@media ${breakpoint.md} {
-				font-size: 1.6rem;
-				line-height: 1.6;
+				font-size: 1.7rem;
+				line-height: 1.7;
 			}
 
 			strong {
@@ -65,6 +65,7 @@ const PostBody = styled.div`
 
 			@media ${breakpoint.md} {
 				margin: 45px 0;
+				padding-left: 30px;
 			}
 
 			cite {

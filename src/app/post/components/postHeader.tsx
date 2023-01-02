@@ -42,7 +42,7 @@ const PostMetaContainer = styled.div`
 
 	@media ${breakpoint.md} {
 		width: 100%;
-		margin: 20px 0 0 0;
+		margin: 30px 0 0 0;
 	}
 `
 const PostCategory = styled.h5`

@@ -19,6 +19,7 @@ class MyDocument extends Document {
 					></link>
 				</Head>
 				<body>
+					<script>0</script>
 					<Main />
 					<NextScript />
 				</body>
