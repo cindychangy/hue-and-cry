@@ -161,7 +161,7 @@ const GlobalStyle = createGlobalStyle`
 			right: 0;
 			z-index: 1;
 			height: 100vh;
-			padding: 60px;
+			padding: 40px;
 		}
 		li {
 			@media ${breakpoint.lg} {

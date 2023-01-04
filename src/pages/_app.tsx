@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { AppProps } from 'next/app'
 import Head from 'next/head'
 import { ThemeProvider } from 'styled-components'
@@ -6,10 +6,20 @@ import { theme } from '../../src/styles/Theme'
 import GlobalStyles from '../../src/styles/globalStyles'
 
 const App = ({ Component, pageProps }: AppProps) => {
+	// const router = useRouter()
+	// useEffect(() => {
+	// 	const handleRouteChange = (url) => {
+	// 		gtag.pageview(url)
+	// 	}
+	// 	router.events.on('routeChangeComplete', handleRouteChange)
+	// 	return () => {
+	// 		router.events.off('routeChangeComplete', handleRouteChange)
+	// 	}
+	// }, [router.events])
+
 	return (
 		<>
 			<Head>
-				<title>Hue and Cry | True Crime Blog</title>
 				<meta
 					name="viewport"
 					content="minimum-scale=1, initial-scale=1, width=device-width"
@@ -46,7 +56,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 					name="msapplication-TileImage"
 					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/mstile-150x150-1.png`}
 				/>
-				<script
+				{/* <script
 					id="tagmanager-main"
 					async
 					src={`https://www.googletagmanager.com/gtag/js?id=${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}`}
@@ -61,7 +71,7 @@ const App = ({ Component, pageProps }: AppProps) => {
             gtag('config', '${process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID}');
           `,
 					}}
-				/>
+				/> */}
 			</Head>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />

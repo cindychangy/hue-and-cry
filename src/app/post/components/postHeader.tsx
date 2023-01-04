@@ -18,14 +18,12 @@ const PostImageContainer = styled.div`
 	height: 484px;
 	position: relative;
 
-	@media ${breakpoint.md} {
-		width: 100%;
-		height: 550px;
+	@media ${breakpoint.lg} {
+		height: 400px;
 	}
 
-	@media ${breakpoint.sm} {
+	@media ${breakpoint.md} {
 		width: 100%;
-		height: 384px;
 	}
 
 	img {
@@ -38,7 +36,7 @@ const PostImageContainer = styled.div`
 `
 const PostMetaContainer = styled.div`
 	width: 55%;
-	margin: 0 0 0 60px;
+	margin-left: 60px;
 
 	@media ${breakpoint.md} {
 		width: 100%;

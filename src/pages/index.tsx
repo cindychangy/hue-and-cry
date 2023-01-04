@@ -62,6 +62,7 @@ const Index = ({
 	return (
 		<>
 			<Head>
+				<title>Hue and Cry | True Crime Blog</title>
 				<meta
 					name="description"
 					content="A true crime blog focusing on crimes against women and girls who have yet to see justice."
@@ -77,7 +78,7 @@ const Index = ({
 				<meta property="og:url" content="https://thehueandcry.com/" />
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:site" content="@thehue_andcry" />
+				<meta name="twitter:site" content="@thehueandcry" />
 			</Head>
 			<Home featuredTop={featuredTop} featuredBottom={featuredBottom} />
 		</>

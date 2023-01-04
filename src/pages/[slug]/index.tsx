@@ -1,5 +1,5 @@
 import React from 'react'
-import { GetStaticProps, GetStaticPaths } from 'next'
+import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from 'next'
 import Head from 'next/head'
 import { gql } from '@apollo/client'
 import client from '../../../apollo-client'
@@ -106,35 +106,7 @@ export const getStaticProps: GetStaticProps = async ({ params }) => {
 }
 
 const Post = ({ post, relatedPosts }: PostPageProps) => {
-	const excerpt = post.excerpt.replace(/(<([^>]+)>)/gi, '')
-
-	return (
-		<>
-			<Head>
-				<title>{post.title}</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-				/>
-				<meta property="og:locale" content="en_US" />
-				<meta property="og:type" content="article" />
-				<meta property="og:title" content={post.title} />
-				<meta property="og:description" content={excerpt} />
-				<meta
-					property="og:url"
-					content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-				/>
-				<meta property="og:site_name" content="Hue and Cry" />
-				<meta property="article:published_time" content={post.date_gmt} />
-				<meta property="article:modified_time" content={post.modified_gmt} />
-				<meta property="og:image" content={post.featuredImage.node.sourceUrl} />
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:creator" content="@thehueandcry" />
-				<meta name="twitter:site" content="@thehueandcry" />
-			</Head>
-			<PostPage post={post} relatedPosts={relatedPosts} />
-		</>
-	)
+	return <PostPage post={post} relatedPosts={relatedPosts} />
 }
 
 export default PostPage
