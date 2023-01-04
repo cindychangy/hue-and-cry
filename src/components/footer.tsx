@@ -141,7 +141,7 @@ export const SiteFooter = () => {
 					<Logo>
 						<Link href="/">Hue and Cry</Link>
 					</Logo>
-					<Copyright>© 2022 Hue and Cry. All Rights Reserved.</Copyright>
+					<Copyright>© 2023 Hue and Cry. All Rights Reserved.</Copyright>
 				</div>
 				<div>
 					<Navigation>

@@ -27,6 +27,7 @@ const AboutDefinition = styled.h3`
 	${({ theme }) => css`
 		font-family: ${theme.fonts.secondaryMedium};
 		line-height: 1.5;
+		margin-bottom: 10px;
 	`};
 `
 const AboutCite = styled.cite`
@@ -78,7 +79,6 @@ export const About = () => {
 							a \ The pursuit of a suspect or a written proclamation for the
 							capture of a suspect.
 						</AboutDefinition>
-
 						<AboutDefinition>
 							b \ A loud outcry formerly used in the pursuit of one who is
 							suspected of a crime.
