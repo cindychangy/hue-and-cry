@@ -130,13 +130,12 @@ const PostBody = styled.div`
 `
 const Divider = styled.div`
 	background: #dfdfdf;
-	margin: 40px 0;
+	margin-top: 20px;
 	height: 1px;
 	width: 100%;
 `
 const BackgroundWrapper = styled.div`
 	background: #f5f5f5;
-	margin-top: 100px;
 	padding: 40px 0;
 
 	@media ${breakpoint.md} {
@@ -165,7 +164,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 	return (
 		<>
 			<Head>
-				<title>{post.title} | Hue and Cry</title>
+				<title>{post.title}</title>
 				<link
 					rel="canonical"
 					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}

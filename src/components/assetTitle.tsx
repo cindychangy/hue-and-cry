@@ -4,12 +4,13 @@ import { breakpoint } from '../constants/theme'
 import { PlayCircleFill, VolumeDownFill } from '@styled-icons/bootstrap'
 
 const Container = styled.div`
-	margin-top: 20px;
+	margin-top: 40px;
 	margin-bottom: 20px;
 	display: flex;
 	align-items: center;
 
 	@media ${breakpoint.md} {
+		margin-top: 30px;
 		margin-bottom: 10px;
 	}
 `

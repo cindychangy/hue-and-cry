@@ -35,7 +35,7 @@ const PostImage = styled.div`
 
 	img {
 		object-fit: cover;
-		object-position: 100% 30%;
+		object-position: 100% 66%;
 	}
 `
 const PostTitle = styled(Link)`

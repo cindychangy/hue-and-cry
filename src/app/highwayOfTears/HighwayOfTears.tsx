@@ -261,7 +261,7 @@ export const HighwayOfTearsHome = () => {
 			<LayoutContainer>
 				<Container>
 					<PageLeft>
-						<PageTitle>Highway of Tears</PageTitle>
+						<PageTitle>The Highway of Tears</PageTitle>
 						<DescriptionBox>
 							<p style={{ fontSize: '1.9rem', lineHeight: 1.5 }}>
 								The Highway of Tears is an isolated 725-kilometer stretch of

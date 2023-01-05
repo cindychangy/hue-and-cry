@@ -7,6 +7,7 @@ const CtaContainer = styled.div`
 		display: flex;
 		background: ${theme.colors.orangeLight};
 		padding: 40px;
+		margin-bottom: 50px;
 
 		p {
 			margin-bottom: 10px;

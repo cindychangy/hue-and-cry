@@ -6,9 +6,11 @@ import { breakpoint } from '../../../../src/constants/theme'
 
 const PodcastContainer = styled.div`
 	display: flex;
+	margin-bottom: 40px;
 
 	@media ${breakpoint.md} {
 		flex-direction: column;
+		margin-bottom: 0;
 	}
 `
 const Podcast = styled.div`

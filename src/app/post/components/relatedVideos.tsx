@@ -9,6 +9,7 @@ const VideoContainer = styled.div`
 	grid-column-gap: 25px;
 	grid-row-gap: 45px;
 	margin-top: 15px;
+	margin-bottom: 30px;
 	padding-bottom: 10px;
 
 	@media ${breakpoint.md} {
