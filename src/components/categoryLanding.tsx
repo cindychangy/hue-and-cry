@@ -25,6 +25,7 @@ const PostGridContainer = styled.div`
 	@media ${breakpoint.sm} {
 		grid-template-columns: 1fr;
 		margin-bottom: 20px;
+		grid-row-gap: 30px;
 	}
 `
 export const CategoryLanding = ({ posts }: { posts: Post[] }) => {

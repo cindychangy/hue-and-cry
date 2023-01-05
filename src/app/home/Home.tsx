@@ -229,6 +229,7 @@ const GridContainer = styled.div`
 
 	@media ${breakpoint.sm} {
 		grid-template-columns: 1fr;
+		grid-row-gap: 30px;
 	}
 `
 interface HomeProps {

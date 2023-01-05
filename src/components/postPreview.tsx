@@ -19,7 +19,7 @@ const PostContainer = styled.div`
 
 		@media ${breakpoint.sm} {
 			border-bottom: 1px solid ${theme.colors.grayLight};
-			padding-bottom: 40px;
+			padding-bottom: 30px;
 		}
 	`};
 `

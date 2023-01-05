@@ -23,8 +23,7 @@ const Podcast = styled.div`
 const PodcastTitle = styled.a`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
-		font-family: ${theme.fonts.secondary};
-		font-weight: 600;
+		font-family: ${theme.fonts.secondarySemibold};
 		font-size: 1.4rem;
 		line-height: 1.3;
 		text-decoration: none;
