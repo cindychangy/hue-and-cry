@@ -8,13 +8,20 @@ import { ChatRightFill } from '@styled-icons/bootstrap'
 import { format, parseISO } from 'date-fns'
 
 const PostContainer = styled.div`
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-
-	@media ${breakpoint.md} {
+	${({ theme }) => css`
+		width: 100%;
 		display: flex;
-	}
+		flex-direction: column;
+
+		@media ${breakpoint.md} {
+			display: flex;
+		}
+
+		@media ${breakpoint.sm} {
+			border-bottom: 1px solid ${theme.colors.grayLight};
+			padding-bottom: 40px;
+		}
+	`};
 `
 const PostImage = styled.div`
 	height: 200px;
@@ -26,7 +33,7 @@ const PostImage = styled.div`
 	overflow: hidden;
 
 	@media ${breakpoint.md} {
-		height: 250px;
+		height: 280px;
 		max-width: 100%;
 	}
 `

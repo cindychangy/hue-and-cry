@@ -8,18 +8,20 @@ import { breakpoint } from '../constants/theme'
 import { List, X } from '@styled-icons/bootstrap'
 
 const HeaderContainer = styled.div`
-	max-width: 1200px;
-	margin: auto;
-	width: 100%;
-	background: #fff;
-	align-items: center;
-	justify-content: space-between;
-	display: flex;
-	padding: 20px;
+	${({ theme }) => css`
+		max-width: 1200px;
+		margin: auto;
+		width: 100%;
+		background: ${theme.colors.white};
+		align-items: center;
+		justify-content: space-between;
+		display: flex;
+		padding: 20px;
 
-	@media ${breakpoint.lg} {
-		padding: 20px 20px 10px;
-	}
+		@media ${breakpoint.lg} {
+			padding: 20px 20px 10px;
+		}
+	`};
 `
 const MobileNav = styled.div`
 	${({ theme }) => css`
@@ -87,8 +89,8 @@ const Navigation = styled.div`
 					line-height: 2.4;
 
 					@media ${breakpoint.lg} {
-						line-height: 1.3;
-						margin-top: 25px;
+						line-height: 1.2;
+						margin-top: 20px;
 						display: block;
 					}
 
@@ -154,11 +156,7 @@ export const SiteHeader = () => {
 			</Logo>
 			<MobileNav>
 				<button onClick={() => setMobileNav(!mobileNav)}>
-					{mobileNav ? (
-						<X size={38} style={{ marginTop: '-22px' }} />
-					) : (
-						<List size={30} />
-					)}
+					{mobileNav ? <X size={38} /> : <List size={30} />}
 				</button>
 			</MobileNav>
 			<Navigation className={`${mobileNav && 'show-mobile-nav'}`}>

@@ -47,7 +47,7 @@ const PostCategory = styled.h5`
 	a {
 		display: inline-block;
 		font-size: 1.125rem;
-		letter-spacing: 5px;
+		letter-spacing: 4px;
 		margin-bottom: 10px;
 	}
 `

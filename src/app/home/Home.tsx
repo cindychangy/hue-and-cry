@@ -14,7 +14,7 @@ const SectionHighwayOfTears = styled.div`
 	margin: 80px 0;
 	display: flex;
 
-	@media ${breakpoint.md} {
+	@media ${breakpoint.sm} {
 		flex-direction: column;
 		height: auto;
 		margin: 40px 0;
@@ -33,8 +33,12 @@ const PhotoSection = styled.div`
 		color: ${theme.colors.white};
 
 		@media ${breakpoint.md} {
-			width: 100%;
+			width: 50%;
 			padding: 40px;
+		}
+
+		@media ${breakpoint.sm} {
+			width: 100%;
 		}
 
 		h2 {
@@ -73,12 +77,16 @@ const StoriesSection = styled.div`
 			font-size: 1.5rem;
 			border-bottom: 1px solid #4a5362;
 
-			@media ${breakpoint.md} {
+			@media ${breakpoint.sm} {
 				margin-top: 0;
 			}
 		}
 
 		@media ${breakpoint.md} {
+			width: 50%;
+		}
+
+		@media ${breakpoint.sm} {
 			width: 100%;
 			padding: 30px 40px 40px;
 		}
