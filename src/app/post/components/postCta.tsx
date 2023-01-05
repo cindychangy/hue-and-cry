@@ -7,7 +7,6 @@ const CtaContainer = styled.div`
 		display: flex;
 		background: ${theme.colors.orangeLight};
 		padding: 40px;
-		margin-bottom: 60px;
 
 		p {
 			margin-bottom: 10px;
@@ -30,7 +29,6 @@ const CtaContainer = styled.div`
 
 		@media ${breakpoint.md} {
 			flex-direction: column;
-			margin-bottom: 40px;
 		}
 	`};
 `

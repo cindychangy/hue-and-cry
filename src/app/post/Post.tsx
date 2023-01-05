@@ -46,16 +46,15 @@ const PostBody = styled.div`
 		}
 
 		a {
-			box-shadow: inset 0 0 0 rgb(0 0 0 / 0%), 0 1px 0 ${theme.colors.black};
-			transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+			border-bottom: 1px solid ${theme.colors.black};
+			transition: all 0.4s ease 0s, box-shadow 0.4s ease 0s,
 				-webkit-box-shadow 0.2s ease 0s;
 			text-decoration: none;
 			display: inline;
 			color: ${theme.colors.black};
 
 			&:hover {
-				box-shadow: inset 0 0 0 ${theme.colors.black},
-					0 1px 0 ${theme.colors.orange};
+				border-bottom: 1px solid ${theme.colors.orange};
 			}
 		}
 

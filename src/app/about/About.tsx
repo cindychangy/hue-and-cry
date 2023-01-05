@@ -51,16 +51,14 @@ const AboutContainer = styled.div`
 		}
 
 		a {
-			transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+			border-bottom: 1px solid ${theme.colors.black};
+			transition: all 0.4s ease 0s, box-shadow 0.4s ease 0s,
 				-webkit-box-shadow 0.2s ease 0s;
-			box-shadow: ${theme.colors.black} 0px -1px inset,
-				${theme.colors.black} 0px -1px 0px inset;
 			text-decoration: none;
-			line-height: 1.2;
+			line-height: 1.1;
 
 			&:hover {
-				box-shadow: ${theme.colors.orange} 0px -1px inset,
-					${theme.colors.black} 0px -1px 0px inset;
+				border-bottom: 1px solid ${theme.colors.orange};
 			}
 		}
 	`};
