@@ -111,6 +111,7 @@ export const PostPreview = ({
 	title,
 	excerpt,
 	categorySlug,
+	commentCount,
 	slug,
 	id,
 	date,
@@ -137,14 +138,16 @@ export const PostPreview = ({
 					<span>{dateFormatted}</span>
 					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
 					<ChatRightFill size="12" />
-					<CommentCount
-						shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
-						config={{
-							url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${slug}`,
-							identifier: id.toString(),
-							title: title,
-						}}
-					/>
+					{commentCount > 0 && (
+						<CommentCount
+							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+							config={{
+								url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${slug}`,
+								identifier: id.toString(),
+								title: title,
+							}}
+						/>
+					)}
 				</PostMeta>
 			</div>
 			<PostExcerpt dangerouslySetInnerHTML={{ __html: excerpt }} />

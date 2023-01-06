@@ -317,16 +317,15 @@ const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 					<AboutIntro>
 						<h5>About Hue and Cry</h5>
 						<h2 style={{ marginTop: '10px' }}>
-							Bringing awareness to cases of unsolved crimes against girls and
-							women.
+							Bringing awareness to unsolved crimes against girls and women.
 						</h2>
 					</AboutIntro>
 					<AboutText>
 						<p>
 							Hue and Cry is a true crime blog with a focus on victims who have
-							yet to see justice, those of unsolved crimes. Stories of both
-							well-known and lesser-known cases, with a emphasis on crimes that
-							are committed against women of color.
+							yet to see justice, highlighting stories of both well-known and
+							lesser-known cases, with a emphasis on crimes that are committed
+							against women of color.
 						</p>
 						<AboutLink href="/about">Learn more</AboutLink>
 					</AboutText>

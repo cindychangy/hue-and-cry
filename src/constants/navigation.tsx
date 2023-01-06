@@ -8,3 +8,6 @@ export const NAV_ITEMS = [
 	{ label: 'Military', value: AppRoute.MILITARY },
 	{ label: 'About', value: AppRoute.ABOUT },
 ]
+
+export const TWITTER_LINK = 'https://twitter.com/thehueandcry'
+export const INSTAGRAM_LINK = 'https://www.instagram.com/hueandcryblog/'

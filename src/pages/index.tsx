@@ -29,6 +29,7 @@ export async function getStaticProps() {
 							}
 						}
 						id
+						commentCount
 						tags {
 							nodes {
 								name

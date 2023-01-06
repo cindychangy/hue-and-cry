@@ -3,7 +3,11 @@ import { useRouter } from 'next/router'
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
-import { NAV_ITEMS } from '../../src/constants/navigation'
+import {
+	NAV_ITEMS,
+	TWITTER_LINK,
+	INSTAGRAM_LINK,
+} from '../../src/constants/navigation'
 import { breakpoint } from '../constants/theme'
 import { List, X } from '@styled-icons/bootstrap'
 
@@ -176,7 +180,7 @@ export const SiteHeader = () => {
 							</li>
 							<li>
 								<Link
-									href="https://twitter.com/thehueandcry"
+									href={TWITTER_LINK}
 									target="_blank"
 									rel="noreferrer noopener"
 								>
@@ -185,7 +189,7 @@ export const SiteHeader = () => {
 							</li>
 							<li>
 								<Link
-									href="https://twitter.com/thehueandcry"
+									href={INSTAGRAM_LINK}
 									target="_blank"
 									rel="noreferrer noopener"
 								>
@@ -196,18 +200,10 @@ export const SiteHeader = () => {
 					)}
 				</ul>
 				<Icons>
-					<Link
-						href="https://twitter.com/thehueandcry"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
+					<Link href={TWITTER_LINK} target="_blank" rel="noreferrer noopener">
 						<Twitter size="27" style={{ marginTop: '6px' }} />
 					</Link>
-					<Link
-						href="https://twitter.com/thehueandcry"
-						target="_blank"
-						rel="noreferrer noopener"
-					>
+					<Link href={INSTAGRAM_LINK} target="_blank" rel="noreferrer noopener">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
 							width="16"

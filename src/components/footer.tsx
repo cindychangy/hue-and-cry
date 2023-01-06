@@ -3,7 +3,11 @@ import Link from 'next/link'
 import styled, { css } from 'styled-components'
 import { Twitter } from '@styled-icons/bootstrap'
 import { breakpoint } from '../constants/theme'
-import { NAV_ITEMS } from '../../src/constants/navigation'
+import {
+	NAV_ITEMS,
+	TWITTER_LINK,
+	INSTAGRAM_LINK,
+} from '../../src/constants/navigation'
 
 const FooterContainer = styled.div`
 	${({ theme }) => css`
@@ -134,6 +138,7 @@ const Icons = styled.div`
 `
 
 export const SiteFooter = () => {
+	const date = new Date().getFullYear()
 	return (
 		<FooterContainer>
 			<Container>
@@ -141,7 +146,7 @@ export const SiteFooter = () => {
 					<Logo>
 						<Link href="/">Hue and Cry</Link>
 					</Logo>
-					<Copyright>© 2023 Hue and Cry. All Rights Reserved.</Copyright>
+					<Copyright>© {date} Hue and Cry. All Rights Reserved.</Copyright>
 				</div>
 				<div>
 					<Navigation>
@@ -154,18 +159,10 @@ export const SiteFooter = () => {
 						</ul>
 					</Navigation>
 					<Icons>
-						<a
-							href="https://twitter.com/thehueandcry"
-							target="_blank"
-							rel="noreferrer noopener"
-						>
+						<a href={TWITTER_LINK} target="_blank" rel="noreferrer noopener">
 							<Twitter size="24" style={{ marginTop: '-10px' }} />
 						</a>
-						<a
-							href="https://twitter.com/thehueandcry"
-							target="_blank"
-							rel="noreferrer noopener"
-						>
+						<a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer noopener">
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16"
