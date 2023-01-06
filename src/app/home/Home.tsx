@@ -54,10 +54,10 @@ const PhotoSection = styled.div`
 		}
 
 		p {
-			font-size: 1.4rem;
+			font-size: 1.5rem;
 			line-height: 1.4;
 			font-family: ${theme.fonts.secondary};
-			max-width: 400px;
+			max-width: 440px;
 			margin-top: 20px;
 		}
 	`};

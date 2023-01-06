@@ -40,7 +40,7 @@ const PostImage = styled.div`
 	}
 `
 const PostSubHeading = styled.h5`
-	margin: 10px 0 5px 0;
+	margin: 5px 0 10px 0;
 `
 const PostTitle = styled.h3`
 	a {
