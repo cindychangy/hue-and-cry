@@ -115,7 +115,7 @@ const StoryMeta = styled.div`
 	width: 150px;
 
 	@media ${breakpoint.md} {
-		width: 100px;
+		width: 110px;
 	}
 }
 `

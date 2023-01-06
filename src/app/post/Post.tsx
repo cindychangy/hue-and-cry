@@ -156,9 +156,6 @@ interface PostPageProps {
 }
 
 const PostPage = ({ post, relatedPosts }: PostPageProps) => {
-	if (post.slug === 'maya-millete') {
-		return <h1>Post</h1>
-	}
 	const excerpt = post.excerpt.replace(/(<([^>]+)>)/gi, '')
 
 	return (
