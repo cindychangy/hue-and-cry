@@ -162,7 +162,12 @@ export const SiteFooter = () => {
 						<a href={TWITTER_LINK} target="_blank" rel="noreferrer noopener">
 							<Twitter size="24" style={{ marginTop: '-10px' }} />
 						</a>
-						<a href={INSTAGRAM_LINK} target="_blank" rel="noreferrer noopener">
+						<a
+							href={INSTAGRAM_LINK}
+							target="_blank"
+							rel="noreferrer noopener"
+							style={{ marginTop: '-1px' }}
+						>
 							<svg
 								xmlns="http://www.w3.org/2000/svg"
 								width="16"
