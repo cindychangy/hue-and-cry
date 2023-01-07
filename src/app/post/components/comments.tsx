@@ -24,7 +24,7 @@ const CommentContainer = styled.div`
 const CommentTitle = styled.h4`
 	${({ theme }) => css`
 		color: ${theme.colors.black};
-		font-size: 3rem;
+		font-size: 2.5rem;
 		text-align: center;
 		margin-bottom: 40px;
 		margin-top: 20px;
@@ -52,7 +52,7 @@ export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
 		<>
 			<CommentTitle>
 				Comments on this case
-				<ChatRightFill size="24" style={{ marginLeft: '10px' }} />
+				<ChatRightFill size="20" style={{ marginLeft: '10px' }} />
 			</CommentTitle>
 			<CommentContainer>
 				<DiscussionEmbed

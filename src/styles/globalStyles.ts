@@ -48,7 +48,7 @@ const GlobalStyle = createGlobalStyle`
 			url('../fonts/graphik-semibold.woff') format('woff');
 		font-display: swap;
 	}
-
+	
 	html {
 		/* 62.5% of 16px browser = 10px */
 		font-size: 62.5%;
@@ -170,6 +170,10 @@ const GlobalStyle = createGlobalStyle`
 				line-height: 2;
 			}
 		}
+	}
+
+	.nav-primary--refresh .comment-count {
+    font-size: 12px;
 	}
 	`
 

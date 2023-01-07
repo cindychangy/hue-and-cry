@@ -6,7 +6,7 @@ export const theme = {
 		grayLight: '#E0E0E0',
 		grayBlue: '#758193',
 		orange: '#FF8600',
-		orangeLight: '#FBF1E9',
+		orangeLight: '#FFF4E8',
 	},
 	fonts: {
 		primary: '"Tiempos Text", serif',

@@ -59,28 +59,41 @@ const PostBody = styled.div`
 		}
 
 		blockquote {
-			border-left: 1px solid ${theme.colors.orange};
-			padding-left: 40px;
-			margin: 60px 0;
+			margin: 40px 0;
+			position: relative;
 
 			@media ${breakpoint.md} {
-				margin: 45px 0;
-				padding-left: 30px;
+				margin: 40px 0;
+			}
+
+			&:before {
+				content: '';
+				background-image: url(https://wordpress.thehueandcry.com/wp-content/uploads/quote.svg);
+				background-size: 20px 50px;
+				background-repeat: no-repeat;
+				position: absolute;
+				top: -10px;
+				width: 20px;
+				height: 100%;
+				opacity: 0.3;
+			}
+
+			p {
+				margin-left: 40px;
+				line-height: 1.6;
 			}
 
 			cite {
 				font-family: ${theme.fonts.secondary};
-				font-size: 1.5rem;
 				color: ${theme.colors.gray};
-
-				a {
-					box-shadow: none;
-				}
+				font-size: 1.4rem;
+				margin: 5px 0 0 40px;
+				display: block;
 			}
 
 			a {
+				border-bottom: 1px solid ${theme.colors.gray};
 				color: ${theme.colors.gray};
-				font-weight: 500;
 				text-decoration: none;
 			}
 		}
@@ -91,9 +104,14 @@ const PostBody = styled.div`
 
 		h3 {
 			strong {
+				font-family: ${theme.fonts.primaryBold};
+				margin-top: 20px;
 				font-size: 2rem;
-				font-weight: 600;
-				font-family: ${theme.fonts.primary};
+				display: inline-block;
+
+				@media ${breakpoint.md} {
+					margin-top: 0;
+				}
 			}
 		}
 
@@ -115,9 +133,8 @@ const PostBody = styled.div`
 
 			a {
 				color: ${theme.colors.gray};
+				border-bottom: 1px solid ${theme.colors.gray};
 				text-decoration: none;
-				box-shadow: none;
-				font-weight: 400;
 			}
 		}
 	`};

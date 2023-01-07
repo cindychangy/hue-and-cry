@@ -317,7 +317,7 @@ const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 					<AboutIntro>
 						<h5>About Hue and Cry</h5>
 						<h2 style={{ marginTop: '10px' }}>
-							Bringing awareness to unsolved crimes against girls and women.
+							Bringing awareness to unsolved crimes against women and girls.
 						</h2>
 					</AboutIntro>
 					<AboutText>

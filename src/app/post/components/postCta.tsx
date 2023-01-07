@@ -9,6 +9,10 @@ const CtaContainer = styled.div`
 		padding: 40px;
 		margin-bottom: 50px;
 
+		h4 {
+			margin-bottom: 8px;
+		}
+
 		p {
 			margin-bottom: 10px;
 			line-height 1.4;

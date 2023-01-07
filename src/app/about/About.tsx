@@ -103,7 +103,7 @@ export const About = () => {
 							and lesser-known cases, with a emphasis on crimes that are
 							committed against women of color.
 						</p>
-
+						<br />
 						<p>
 							Links and sources are provided at the end of each article so you
 							can dig deeper and continue with your own search for the truth.
