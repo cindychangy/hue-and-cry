@@ -11,8 +11,8 @@ export const theme = {
 	fonts: {
 		primary: '"Tiempos Text", serif',
 		primaryBold: '"Tiempos Text Semibold", serif',
-		secondary: '"Graphik", sans-serif',
-		secondaryMedium: '"Graphik Medium", sans-serif',
-		secondarySemibold: '"Graphik Semibold", sans-serif',
+		secondary: '"Graphik", Helvetica, Arial, sans-serif',
+		secondaryMedium: '"Graphik Medium", Helvetica, Arial, sans-serif',
+		secondarySemibold: '"Graphik Semibold", Helvetica, Arial, sans-serif',
 	},
 }

@@ -15,19 +15,26 @@ const AboutHeader = styled.div`
 		height: 200px;
 	}
 `
-const AboutTitle = styled.h3`
-	${({ theme }) => css`
-		font-family: ${theme.fonts.secondarySemibold};
+const AboutTitle = styled.h1`
+	font-size: 4rem;
+	line-height: 1.5;
+	letter-spacing: -1px;
+
+	@media ${breakpoint.md} {
 		font-size: 3rem;
-		line-height: 1.5;
-		letter-spacing: -1px;
-	`};
+	}
 `
-const AboutDefinition = styled.h3`
+const AboutDefinition = styled.div`
 	${({ theme }) => css`
-		font-family: ${theme.fonts.secondaryMedium};
-		line-height: 1.5;
-		margin-bottom: 10px;
+		border-top: 1px solid ${theme.colors.grayLight};
+		margin-top: 10px;
+		padding-top: 20px;
+		display: inline-block;
+
+		p {
+			font-size: 2rem;
+			font-weight: 600;
+		}
 	`};
 `
 const AboutCite = styled.cite`
@@ -36,18 +43,18 @@ const AboutCite = styled.cite`
 		font-family: ${theme.fonts.secondary};
 		color: ${theme.colors.gray};
 		margin-top: 15px;
+		display: block;
 	`};
 `
 const AboutContainer = styled.div`
 	${({ theme }) => css`
 		width: 100%;
-		max-width: 900px;
+		max-width: 800px;
 		margin: auto;
-		padding: 80px 0 40px 0;
+		padding: 40px 0;
 
 		@media ${breakpoint.md} {
 			max-width: 100%;
-			padding-top: 40px;
 		}
 
 		a {
@@ -72,28 +79,29 @@ export const About = () => {
 			<LayoutContainer>
 				<AboutContainer>
 					<AboutTitle>Hue and Cry</AboutTitle>
+					<p>[Noun]</p>
 					<div>
 						<AboutDefinition>
-							a \ The pursuit of a suspect or a written proclamation for the
-							capture of a suspect.
+							<p>
+								a. The pursuit of a suspect or a written proclamation for the
+								capture of a suspect.
+							</p>
+							<p>
+								b. A loud outcry formerly used in the pursuit of one who is
+								suspected of a crime.
+							</p>
 						</AboutDefinition>
-						<AboutDefinition>
-							b \ A loud outcry formerly used in the pursuit of one who is
-							suspected of a crime.
-						</AboutDefinition>
-
 						<AboutCite>Merriam Webster dictionary</AboutCite>
-						<br />
 						<br />
 						<br />
 						<p>
 							The mission is to bring awareness to cases of unsolved crimes
 							against women and girls. Hue and Cry is a true crime blog-but you
-							won`&apos;`t find stories of serial killers or any focus on the
-							people that commit crimes here. The focus is on victims who have
-							yet to see justice, those of unsolved crimes. Stories of both
-							well-known and lesser-known cases, with a emphasis on crimes that
-							are committed against women of color.
+							won't find stories of serial killers or any focus on the people
+							that commit crimes here. The focus is on victims who have yet to
+							see justice, those of unsolved crimes. Stories of both well-known
+							and lesser-known cases, with a emphasis on crimes that are
+							committed against women of color.
 						</p>
 
 						<p>
@@ -107,8 +115,8 @@ export const About = () => {
 						<p>
 							I am not a professional writer or journalist. Just a true crime
 							obsessee who wanted to re-tell stories that I heard, read,
-							watched, and couldn`&apos;`t stop thinking about. All my knowledge
-							comes from articles, podcasts or shows cited at the bottom of each
+							watched, and couldn't stop thinking about. All my knowledge comes
+							from articles, podcasts or shows cited at the bottom of each
 							article.
 						</p>
 						<br />

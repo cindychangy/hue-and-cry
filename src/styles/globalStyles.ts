@@ -25,7 +25,7 @@ const GlobalStyle = createGlobalStyle`
 	@font-face {
 		font-family: 'Graphik';
 		font-style: normal;
-		font-weight: 500;
+		font-weight: 400;
 		src: url('/fonts/graphik-regular.woff2') format('woff2'),
 			url('../fonts/graphik-regular.woff') format('woff');
 		font-display: swap;
@@ -34,7 +34,7 @@ const GlobalStyle = createGlobalStyle`
 	@font-face {
 		font-family: 'Graphik Medium';
 		font-style: normal;
-		font-weight: 600;
+		font-weight: 500;
 		src: url('/fonts/graphik-medium.woff2') format('woff2'),
 			url('../fonts/graphik-medium.woff') format('woff');
 		font-display: swap;
@@ -43,7 +43,7 @@ const GlobalStyle = createGlobalStyle`
 	@font-face {
 		font-family: 'Graphik Semibold';
 		font-style: normal;
-		font-weight: 700;
+		font-weight: 600;
 		src: url('/fonts/graphik-semibold.woff2') format('woff2'),
 			url('../fonts/graphik-semibold.woff') format('woff');
 		font-display: swap;
@@ -100,7 +100,7 @@ const GlobalStyle = createGlobalStyle`
 	h4 {
 		font-size: 2rem;
 		color: #FF8600;
-		font-family: 'Graphik Semibold', sans-serif;
+		font-family: "Graphik Semibold", Helvetica, Arial, sans-serif;
 	}
 
 	h5, 
@@ -111,7 +111,7 @@ const GlobalStyle = createGlobalStyle`
 		color: #FF8600;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		font-family: 'Graphik Medium', sans-serif;
+		font-family: "Graphik", Helvetica, Arial, sans-serif;
 	}
 
 	p {

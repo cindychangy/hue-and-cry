@@ -46,7 +46,7 @@ const PostMetaContainer = styled.div`
 const PostCategory = styled.h5`
 	a {
 		display: inline-block;
-		font-size: 1.125rem;
+		font-size: 1.2rem;
 		letter-spacing: 4px;
 		margin-bottom: 10px;
 	}

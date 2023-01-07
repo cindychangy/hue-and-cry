@@ -42,7 +42,7 @@ const PostTitle = styled(Link)`
 	${({ theme }) => css`
 		font-size: 1.2rem;
 		line-height: 1.1;
-		font-family: ${theme.fonts.secondaryMedium};
+		font-family: ${theme.fonts.secondarySemibold};
 		color: ${theme.colors.black};
 		text-decoration: none;
 		display: inline-block;

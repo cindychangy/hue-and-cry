@@ -106,6 +106,7 @@ const Icons = styled.div`
 
 		@media ${breakpoint.md} {
 			justify-content: flex-start;
+			margin-top: 20px;
 		}
 
 		a {

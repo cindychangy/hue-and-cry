@@ -114,7 +114,7 @@ const StoryTitle = styled.div`
 		p {
 			font-family: ${theme.fonts.secondary};
 			line-height: 1;
-			font-size: 1.5rem;
+			font-size: 1.4rem;
 			color: ${theme.colors.grayBlue};
 		}
 
