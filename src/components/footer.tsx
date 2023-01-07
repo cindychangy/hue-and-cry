@@ -139,7 +139,6 @@ const Icons = styled.div`
 `
 
 export const SiteFooter = () => {
-	const date = new Date().getFullYear()
 	return (
 		<FooterContainer>
 			<Container>
@@ -147,7 +146,7 @@ export const SiteFooter = () => {
 					<Logo>
 						<Link href="/">Hue and Cry</Link>
 					</Logo>
-					<Copyright>© {date} Hue and Cry. All Rights Reserved.</Copyright>
+					<Copyright>© 2023 Hue and Cry. All Rights Reserved.</Copyright>
 				</div>
 				<div>
 					<Navigation>

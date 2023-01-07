@@ -33,7 +33,14 @@ const AboutDefinition = styled.div`
 
 		p {
 			font-size: 2rem;
+			line-height: 1.5;
 			font-weight: 600;
+
+			@media ${breakpoint.md} {
+				&:not(:last-child) {
+					margin-bottom: 15px;
+				}
+			}
 		}
 	`};
 `
@@ -42,8 +49,8 @@ const AboutCite = styled.cite`
 		font-size: 1.4rem;
 		font-family: ${theme.fonts.secondary};
 		color: ${theme.colors.gray};
-		margin-top: 15px;
 		display: block;
+		margin-top: 10px;
 	`};
 `
 const AboutContainer = styled.div`

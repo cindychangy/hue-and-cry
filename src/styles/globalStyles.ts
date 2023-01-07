@@ -59,6 +59,7 @@ const GlobalStyle = createGlobalStyle`
 		font-family: 'Tiempos Text', serif;
     line-height: 1.7;
 		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
 	}
 
 	html,body {
@@ -74,7 +75,6 @@ const GlobalStyle = createGlobalStyle`
 
 	h1 {
 		font-family: "Tiempos Text Semibold", serif;
-		font-weight: 700;
 		font-size: 4.6rem;
 		line-height: 1.1;
 
