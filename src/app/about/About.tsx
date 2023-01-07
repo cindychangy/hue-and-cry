@@ -33,13 +33,11 @@ const AboutDefinition = styled.div`
 
 		p {
 			font-size: 2rem;
-			line-height: 1.5;
+			line-height: 1.3;
 			font-weight: 600;
 
-			@media ${breakpoint.md} {
-				&:not(:last-child) {
-					margin-bottom: 15px;
-				}
+			&:not(:last-child) {
+				margin-bottom: 15px;
 			}
 		}
 	`};
@@ -51,6 +49,7 @@ const AboutCite = styled.cite`
 		color: ${theme.colors.gray};
 		display: block;
 		margin-top: 10px;
+		margin-bottom: 40px;
 	`};
 `
 const AboutContainer = styled.div`
@@ -99,8 +98,6 @@ export const About = () => {
 							</p>
 						</AboutDefinition>
 						<AboutCite>Merriam Webster dictionary</AboutCite>
-						<br />
-						<br />
 						<p>
 							The mission is to bring awareness to cases of unsolved crimes
 							against women and girls. Hue and Cry is a true crime blog-but you

@@ -34,6 +34,7 @@ const CtaContainer = styled.div`
 
 		@media ${breakpoint.md} {
 			flex-direction: column;
+			padding: 20px 30px;
 		}
 	`};
 `

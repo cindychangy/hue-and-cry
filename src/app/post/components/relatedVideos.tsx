@@ -14,7 +14,7 @@ const VideoContainer = styled.div`
 
 	@media ${breakpoint.md} {
 		grid-template-columns: 1fr;
-		grid-row-gap: 10px;
+		grid-row-gap: 25px;
 	}
 `
 const Video = styled.div`
