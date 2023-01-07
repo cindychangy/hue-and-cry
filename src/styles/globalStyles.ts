@@ -56,7 +56,7 @@ const GlobalStyle = createGlobalStyle`
 
 	body {
 		font-size: 1.6rem;
-		font-family: 'Tiempos', serif;
+		font-family: 'Tiempos Text', serif;
     line-height: 1.7;
 		-webkit-font-smoothing: antialiased;
 	}
@@ -106,12 +106,11 @@ const GlobalStyle = createGlobalStyle`
 	h5, 
 	h5 a  {
 		font-size: 1rem;
-		font-weight: 600;
 		line-height: 1;
 		color: #FF8600;
 		text-transform: uppercase;
 		letter-spacing: 3px;
-		font-family: "Graphik", Helvetica, Arial, sans-serif;
+		font-family: "Graphik Medium", Helvetica, Arial, sans-serif;
 	}
 
 	p {

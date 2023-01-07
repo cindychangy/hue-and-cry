@@ -257,7 +257,7 @@ const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 						<h2>Highway of Tears</h2>
 						<p>
 							An isolated 725-kilometer stretch of Highway 16 in British
-							Columbia, Canada. It has been the location of many unsolved
+							Columbia, Canada which has been the location of many unsolved
 							murders and disappearances of Indigenous women beginning as early
 							as 1969.
 						</p>

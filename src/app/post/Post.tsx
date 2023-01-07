@@ -82,10 +82,6 @@ const PostBody = styled.div`
 				margin-left: 40px;
 				line-height: 1.5;
 				font-size: 2rem;
-
-				@media ${breakpoint.md} {
-					font-size: 1.9rem;
-				}
 			}
 
 			cite {
