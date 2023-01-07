@@ -6,6 +6,8 @@ import { theme } from '../../src/styles/Theme'
 import GoogleAnalytics from 'components/googleAnalytics'
 import GlobalStyles from '../../src/styles/globalStyles'
 
+const isProduction = process.env.NODE_ENV === 'production'
+
 const App = ({ Component, pageProps }: AppProps) => {
 	return (
 		<>
@@ -49,7 +51,7 @@ const App = ({ Component, pageProps }: AppProps) => {
 			</Head>
 			<ThemeProvider theme={theme}>
 				<GlobalStyles />
-				<GoogleAnalytics />
+				{isProduction && <GoogleAnalytics />}
 				<Component {...pageProps} />
 			</ThemeProvider>
 		</>

@@ -143,7 +143,7 @@ export const PostPreview = ({
 				<PostMeta>
 					<span>{dateFormatted}</span>
 					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
-					<ChatRightFill size="12" />
+					<ChatRightFill size="11" style={{ marginTop: '3px' }} />
 					{commentCount > 0 && (
 						<CommentCount
 							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
