@@ -59,11 +59,11 @@ const PostBody = styled.div`
 		}
 
 		blockquote {
-			margin: 40px 0;
+			margin: 55px 0;
 			position: relative;
 
 			@media ${breakpoint.md} {
-				margin: 40px 0;
+				margin: 35px 0;
 			}
 
 			&:before {
@@ -80,7 +80,12 @@ const PostBody = styled.div`
 
 			p {
 				margin-left: 40px;
-				line-height: 1.6;
+				line-height: 1.5;
+				font-size: 2rem;
+
+				@media ${breakpoint.md} {
+					font-size: 1.9rem;
+				}
 			}
 
 			cite {

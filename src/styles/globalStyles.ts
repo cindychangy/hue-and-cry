@@ -105,7 +105,7 @@ const GlobalStyle = createGlobalStyle`
 
 	h5, 
 	h5 a  {
-		font-size: 1.1rem;
+		font-size: 1rem;
 		font-weight: 600;
 		line-height: 1;
 		color: #FF8600;

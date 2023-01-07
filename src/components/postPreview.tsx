@@ -38,6 +38,10 @@ const PostImage = styled.div`
 		height: 280px;
 		max-width: 100%;
 	}
+
+	img:hover {
+		filter: brightness(1.1);
+	}
 `
 const PostSubHeading = styled.h5`
 	margin: 5px 0 10px 0;
