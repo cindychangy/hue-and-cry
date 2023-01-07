@@ -1,6 +1,5 @@
 import React from 'react'
-import { GetStaticProps, GetStaticPaths, InferGetStaticPropsType } from 'next'
-import Head from 'next/head'
+import { GetStaticProps, GetStaticPaths } from 'next'
 import { gql } from '@apollo/client'
 import client from '../../../apollo-client'
 import { Post, RelatedPost } from '../../api/types/post'
