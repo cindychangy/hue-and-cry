@@ -15,7 +15,6 @@ const HeaderContainer = styled.div`
 	${({ theme }) => css`
 		max-width: 1200px;
 		margin: auto;
-		width: 100%;
 		background: ${theme.colors.white};
 		align-items: center;
 		justify-content: space-between;
@@ -42,7 +41,7 @@ const MobileNav = styled.div`
 
 		button {
 			position: relative;
-			top: -4px;
+			top: -10px;
 			background: transparent;
 			border: 0;
 			cursor: pointer;
@@ -66,6 +65,10 @@ const Logo = styled.h3`
 			&:hover {
 				box-shadow: rgb(255 255 255) 0px -8px inset,
 					rgb(255 161 88) 0px -23px 0px inset;
+			}
+
+			@media ${breakpoint.lg} {
+				font-size: 3.4rem;
 			}
 		}
 	`};

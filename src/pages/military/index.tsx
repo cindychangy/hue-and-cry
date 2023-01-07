@@ -65,7 +65,7 @@ const MilitaryPage = ({
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
 			</Head>
-			<CategoryLanding posts={posts} />
+			<CategoryLanding posts={posts} title="Military" />
 		</>
 	)
 }

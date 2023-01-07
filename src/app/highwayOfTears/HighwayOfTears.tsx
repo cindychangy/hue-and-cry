@@ -208,12 +208,20 @@ const PageTitle = styled.h1`
 		font-size: 6.5rem;
 		letter-spacing: -3px;
 		font-family: ${theme.fonts.secondarySemibold};
+
+		@media ${breakpoint.md} {
+			font-size: 4.5rem;
+		}
 	`};
 `
 const DescriptionBox = styled.div`
 	background: #f5f5f5;
 	padding: 40px;
 	margin-top: 20px;
+
+	@media ${breakpoint.md} {
+		padding: 20px;
+	}
 `
 
 export const HighwayOfTearsHome = () => {

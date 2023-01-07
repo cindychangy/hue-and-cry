@@ -4,8 +4,7 @@ import { Post } from '../../src/api/types/post'
 import { PostGrid } from '../components/postGrid'
 import { LayoutContainer } from 'components/layoutContainer'
 import { ShadowElevation } from './shadowElevation'
-
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
 
 const PostGridContainer = styled.div`
@@ -28,10 +27,41 @@ const PostGridContainer = styled.div`
 		grid-row-gap: 30px;
 	}
 `
-export const CategoryLanding = ({ posts }: { posts: Post[] }) => {
+
+const PageTitle = styled.div`
+	${({ theme }) => css`
+		width: 100%;
+		background: ${theme.colors.black};
+		padding: 30px 20px;
+		display: none;
+		margin-top: -10px;
+
+		h1 {
+			font-family: ${theme.fonts.secondary};
+			font-size: 1.5rem;
+			letter-spacing: 3px;
+			text-transform: uppercase;
+			color: ${theme.colors.white};
+		}
+
+		@media ${breakpoint.md} {
+			display: block;
+		}
+	`};
+`
+
+interface CategoryLandingProps {
+	title: string
+	posts: Post[]
+}
+
+export const CategoryLanding = ({ posts, title }: CategoryLandingProps) => {
 	return (
 		<PageTemplate>
 			<ShadowElevation />
+			<PageTitle>
+				<h1>{title}</h1>
+			</PageTitle>
 			<LayoutContainer>
 				<PostGridContainer>
 					<PostGrid posts={posts} isArchivePage />
