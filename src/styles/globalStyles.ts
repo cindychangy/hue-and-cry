@@ -165,7 +165,7 @@ const GlobalStyle = createGlobalStyle`
 		li {
 			@media ${breakpoint.lg} {
 				display: block !important;
-				font-size: 2.2rem !important;
+				font-size: 2rem !important;
 				line-height: 2;
 			}
 		}

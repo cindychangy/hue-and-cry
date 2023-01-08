@@ -32,7 +32,7 @@ const PageTitle = styled.div`
 	${({ theme }) => css`
 		width: 100%;
 		background: ${theme.colors.black};
-		padding: 30px 20px;
+		padding: 15px;
 		display: none;
 		margin-top: -10px;
 
@@ -42,6 +42,7 @@ const PageTitle = styled.div`
 			letter-spacing: 3px;
 			text-transform: uppercase;
 			color: ${theme.colors.white};
+			padding-left: 6px;
 		}
 
 		@media ${breakpoint.md} {
