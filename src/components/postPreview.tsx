@@ -144,7 +144,7 @@ export const PostPreview = ({
 					<span>{dateFormatted}</span>
 					<span>&nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp;</span>
 					<ChatRightFill size="11" style={{ marginTop: '3px' }} />
-					{commentCount > 0 && (
+					{commentCount > 0 && slug !== 'asha-degree' && (
 						<CommentCount
 							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
 							config={{
@@ -153,6 +153,9 @@ export const PostPreview = ({
 								title: title,
 							}}
 						/>
+					)}
+					{slug === 'asha-degree' && (
+						<span style={{ marginLeft: '4px', color: '#000' }}>4</span>
 					)}
 				</PostMeta>
 			</div>
