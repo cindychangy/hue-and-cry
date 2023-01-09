@@ -1,6 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { SiteHeader } from '../../../src/components/header'
+import { SiteFooter } from '../../../src/components/footer'
 import { ShadowElevation } from '../../../src/components/shadowElevation'
 import { LayoutContainer } from '../../../src/components/layoutContainer'
 import { TIMELINE_DATA } from '../../../src/constants/timeline'
@@ -304,6 +305,7 @@ export const HighwayOfTearsHome = () => {
 					</PageRight>
 				</Container>
 			</LayoutContainer>
+			<SiteFooter />
 		</>
 	)
 }
