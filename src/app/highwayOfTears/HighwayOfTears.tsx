@@ -10,6 +10,7 @@ import { breakpoint } from '../../../src/constants/theme'
 
 const Container = styled.div`
 	display: flex;
+	margin-top: 20px;
 
 	@media ${breakpoint.md} {
 		flex-direction: column;
