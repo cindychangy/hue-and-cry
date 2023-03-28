@@ -47,6 +47,11 @@ const PostSubHeading = styled.h5`
 	margin: 5px 0 10px 0;
 `
 const PostTitle = styled.h3`
+	min-height: 45px;
+
+	@media ${breakpoint.md} {
+		min-height: 0;
+	}
 	a {
 		display: inline;
 		transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
