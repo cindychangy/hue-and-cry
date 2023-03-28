@@ -241,8 +241,8 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 					<small>
 						All images and videos used for this story are not the property of
 						The Hue and Cry. They are property of their original
-						owners/publications. Photos are from ABC News, FOX News Baltimore
-						and The Vanished.
+						owners/publications. Photos are from&nbsp;
+						{post.postAssets.copyrightSources}.
 					</small>
 				</Copyright>
 			</LayoutContainer>
