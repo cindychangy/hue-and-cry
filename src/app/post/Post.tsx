@@ -199,6 +199,10 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
+				<meta
+					name="twitter:image"
+					content={post.featuredImage.node.sourceUrl}
+				/>
 			</Head>
 			<SiteHeader />
 			<ShadowElevation />

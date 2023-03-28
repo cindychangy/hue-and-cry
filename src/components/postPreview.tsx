@@ -122,7 +122,7 @@ export const PostPreview = ({
 	id,
 	date,
 }: PostPreviewProps) => {
-	const dateFormatted = format(parseISO(date), 'MMMM, yyyy')
+	const dateFormatted = format(parseISO(date), 'MMM d, yyyy')
 
 	return (
 		<PostContainer>
