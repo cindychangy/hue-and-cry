@@ -178,7 +178,7 @@ const SocialIcons = styled.div`
 		border: 1px solid #d4d4d4;
 		border-radius: 50%;
 		margin-bottom: 5px;
-		padding: 4px 9px;
+		padding: 4px 10px;
 		display: flex;
 		justify-content: center;
 		align-content: center;
@@ -257,7 +257,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 						</div>
 						<div>
 							<a
-								href={`${process.env.NEXT_PUBLIC_FACEBOOK_SHARE}${post.slug}`}
+								href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehueandcry.com%2F${post.slug}`}
 								rel={'noreferrer noopener'}
 								target={'_blank'}
 							>
@@ -275,7 +275,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 								rel={'noreferrer noopener'}
 								target={'_blank'}
 							>
-								<EnvelopeFill size="15" />
+								<EnvelopeFill size="16" />
 							</a>
 						</div>
 					</SocialIcons>
