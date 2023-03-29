@@ -1,5 +1,6 @@
 import React from 'react'
 import Head from 'next/head'
+import styled, { css } from 'styled-components'
 import { LayoutContainer } from '../../components/layoutContainer'
 import { PostHeader } from './components/postHeader'
 import { PostCta } from './components/postCta'
@@ -11,9 +12,8 @@ import { ShadowElevation } from '../../components/shadowElevation'
 import { Post, RelatedPost } from '../../api/types/post'
 import { RelatedVideos } from './components/relatedVideos'
 import { Comments } from './components/comments'
-
-import styled, { css } from 'styled-components'
 import { breakpoint } from '../../../src/constants/theme'
+import { Twitter, EnvelopeFill } from '@styled-icons/bootstrap'
 
 const PostBody = styled.div`
 	${({ theme }) => css`
@@ -168,6 +168,35 @@ const Copyright = styled.div`
 	width: 100%;
 	text-align: center;
 `
+
+const SocialIcons = styled.div`
+	position: absolute;
+	left: 200px;
+	top: 60px;
+
+	div {
+		border: 1px solid #d4d4d4;
+		border-radius: 50%;
+		margin-bottom: 5px;
+		padding: 4px 9px;
+		display: flex;
+		justify-content: center;
+		align-content: center;
+
+		&:hover {
+			background: #f7f7f7;
+		}
+
+		svg {
+			color: #6f6f6f;
+		}
+	}
+`
+
+const PostBodyContainer = styled.div`
+	position: relative;
+`
+
 interface PostPageProps {
 	post: Post
 	relatedPosts: RelatedPost[]
@@ -215,7 +244,43 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 					year={post.storyFacts.year}
 					title={post.title}
 				/>
-				<PostBody dangerouslySetInnerHTML={{ __html: post.content }}></PostBody>
+				<PostBodyContainer>
+					<SocialIcons>
+						<div>
+							<a
+								href={`${process.env.NEXT_PUBLIC_TWITTER_SHARE}${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+								rel={'noreferrer noopener'}
+								target={'_blank'}
+							>
+								<Twitter size="16" />
+							</a>
+						</div>
+						<div>
+							<a
+								href={`${process.env.NEXT_PUBLIC_FACEBOOK_SHARE}${post.slug}`}
+								rel={'noreferrer noopener'}
+								target={'_blank'}
+							>
+								<img
+									src="/images/facebook.svg"
+									width="16"
+									height="16"
+									style={{ position: 'relative', top: '4px' }}
+								/>
+							</a>
+						</div>
+						<div>
+							<a
+								href={`mailto:?subject=${post.title}&amp;body=${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+								rel={'noreferrer noopener'}
+								target={'_blank'}
+							>
+								<EnvelopeFill size="15" />
+							</a>
+						</div>
+					</SocialIcons>
+					<PostBody dangerouslySetInnerHTML={{ __html: post.content }} />
+				</PostBodyContainer>
 				<PostCta
 					helpInfo={post.ctaHowToHelp.howToHelp}
 					sourcesInfo={post.ctaDigDeeper.digDeeper}
