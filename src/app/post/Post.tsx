@@ -174,6 +174,17 @@ const SocialIcons = styled.div`
 	left: 200px;
 	top: 60px;
 
+	@media ${breakpoint.lg} {
+		left: 60px;
+	}
+
+	@media ${breakpoint.md} {
+		position: relative;
+		display: flex;
+		left: 0;
+		top: 20px;
+	}
+
 	div {
 		border: 1px solid #d4d4d4;
 		border-radius: 50%;
@@ -183,12 +194,33 @@ const SocialIcons = styled.div`
 		justify-content: center;
 		align-content: center;
 
+		@media ${breakpoint.md} {
+			margin-right: 5px;
+			padding: 2px 8px;
+		}
+
 		&:hover {
 			background: #f7f7f7;
 		}
 
 		svg {
 			color: #6f6f6f;
+			@media ${breakpoint.md} {
+				width: 14px;
+			}
+		}
+
+		img {
+			width: 16px;
+			height: 16px;
+			position: relative;
+			top: 4px;
+
+			@media ${breakpoint.md} {
+				width: 14px;
+				height: 14px;
+				top: 2px;
+			}
 		}
 	}
 `
@@ -261,12 +293,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 								rel={'noreferrer noopener'}
 								target={'_blank'}
 							>
-								<img
-									src="/images/facebook.svg"
-									width="16"
-									height="16"
-									style={{ position: 'relative', top: '4px' }}
-								/>
+								<img src="/images/facebook.svg" width="16" />
 							</a>
 						</div>
 						<div>
