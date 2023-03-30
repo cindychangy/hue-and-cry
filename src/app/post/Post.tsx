@@ -185,41 +185,41 @@ const SocialIcons = styled.div`
 		top: 20px;
 	}
 
-	div {
-		border: 1px solid #d4d4d4;
-		border-radius: 50%;
-		margin-bottom: 5px;
-		padding: 4px 10px;
-		display: flex;
-		justify-content: center;
-		align-content: center;
+	a {
+		display: block;
 
-		@media ${breakpoint.md} {
-			margin-right: 5px;
-			padding: 2px 8px;
-		}
+		div {
+			border: 1px solid #d4d4d4;
+			border-radius: 50%;
+			margin-bottom: 5px;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 35px;
+			height: 35px;
 
-		&:hover {
-			background: #f7f7f7;
-		}
-
-		svg {
-			color: #6f6f6f;
 			@media ${breakpoint.md} {
-				width: 14px;
+				margin-right: 5px;
 			}
-		}
 
-		img {
-			width: 16px;
-			height: 16px;
-			position: relative;
-			top: 4px;
+			&:hover {
+				background: #f7f7f7;
+			}
 
-			@media ${breakpoint.md} {
-				width: 14px;
-				height: 14px;
-				top: 2px;
+			svg {
+				color: #6f6f6f;
+				@media ${breakpoint.md} {
+					width: 14px;
+				}
+			}
+			img {
+				width: 16px;
+				height: 16px;
+
+				@media ${breakpoint.md} {
+					width: 14px;
+					height: 14px;
+				}
 			}
 		}
 	}
@@ -278,33 +278,35 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 				/>
 				<PostBodyContainer>
 					<SocialIcons>
-						<div>
-							<a
-								href={`${process.env.NEXT_PUBLIC_TWITTER_SHARE}${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-								rel={'noreferrer noopener'}
-								target={'_blank'}
-							>
+						<a
+							href={`${process.env.NEXT_PUBLIC_TWITTER_SHARE}${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+							rel={'noreferrer noopener'}
+							target={'_blank'}
+						>
+							<div>
 								<Twitter size="16" />
-							</a>
-						</div>
-						<div>
-							<a
-								href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehueandcry.com%2F${post.slug}`}
-								rel={'noreferrer noopener'}
-								target={'_blank'}
-							>
+							</div>
+						</a>
+
+						<a
+							href={`https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fthehueandcry.com%2F${post.slug}`}
+							rel={'noreferrer noopener'}
+							target={'_blank'}
+						>
+							<div>
 								<img src="/images/facebook.svg" width="16" />
-							</a>
-						</div>
-						<div>
-							<a
-								href={`mailto:?subject=${post.title}&amp;body=${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-								rel={'noreferrer noopener'}
-								target={'_blank'}
-							>
+							</div>
+						</a>
+
+						<a
+							href={`mailto:?subject=${post.title}&amp;body=${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+							rel={'noreferrer noopener'}
+							target={'_blank'}
+						>
+							<div>
 								<EnvelopeFill size="16" />
-							</a>
-						</div>
+							</div>
+						</a>
 					</SocialIcons>
 					<PostBody dangerouslySetInnerHTML={{ __html: post.content }} />
 				</PostBodyContainer>
