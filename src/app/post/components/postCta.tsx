@@ -19,15 +19,14 @@ const CtaContainer = styled.div`
 			
 			a {
 				font-size: 1.6rem;
-				transition: all 0.2s ease 0s, box-shadow 0.2s ease 0s,
-					-webkit-box-shadow 0.2s ease 0s;
-				box-shadow: rgb(0 0 0) 0px -1px inset, rgb(0 0 0) 0px -1px 0px inset;
-				text-decoration: none;
+				text-decoration: underline;
+				margin-bottom: 10px;
 				color: ${theme.colors.black};
-				display: inline;
+				display: inline-block;
 
 				&:hover {
-				box-shadow: ${theme.colors.orange} 0px -1px inset, ${theme.colors.black} 0px -1px 0px inset;
+				text-decoration: underline;
+				text-decoration-color: ${theme.colors.orange};
 				}
 			}
 		}
