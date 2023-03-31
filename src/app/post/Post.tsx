@@ -211,8 +211,9 @@ const SocialIcons = styled.div`
 
 			svg {
 				color: #6f6f6f;
+				width: 16px;
 				@media ${breakpoint.md} {
-					width: 20px;
+					width: 18px;
 				}
 			}
 			img {
@@ -287,7 +288,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 							target={'_blank'}
 						>
 							<div>
-								<Twitter size="16" />
+								<Twitter />
 							</div>
 						</a>
 
@@ -307,7 +308,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 							target={'_blank'}
 						>
 							<div>
-								<EnvelopeFill size="16" />
+								<EnvelopeFill />
 							</div>
 						</a>
 					</SocialIcons>
