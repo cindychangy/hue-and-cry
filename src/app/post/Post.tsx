@@ -59,7 +59,7 @@ const PostBody = styled.div`
 		}
 
 		blockquote {
-			margin: 55px 0;
+			margin: 40px 10px 40px 0;
 			position: relative;
 
 			@media ${breakpoint.md} {
@@ -79,9 +79,12 @@ const PostBody = styled.div`
 			}
 
 			p {
-				margin-left: 40px;
-				line-height: 1.5;
-				font-size: 2rem;
+				margin: 30px 30px 10px 35px;
+				line-height: 1.7;
+				font-size: 1.8rem;
+				@media ${breakpoint.md} {
+					font-size: 1.7rem;
+				}
 			}
 
 			cite {
@@ -209,7 +212,7 @@ const SocialIcons = styled.div`
 			svg {
 				color: #6f6f6f;
 				@media ${breakpoint.md} {
-					width: 14px;
+					width: 20px;
 				}
 			}
 			img {
@@ -217,8 +220,8 @@ const SocialIcons = styled.div`
 				height: 16px;
 
 				@media ${breakpoint.md} {
-					width: 14px;
-					height: 14px;
+					width: 20px;
+					height: 20px;
 				}
 			}
 		}
@@ -317,11 +320,11 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 				{!!post?.videos?.videos && (
 					<>
 						<RelatedVideos videos={post.videos.videos} />
-						<Divider />
 					</>
 				)}
 				{!!post?.podcasts?.podcasts && (
 					<>
+						<Divider />
 						<RelatedPodcasts podcasts={post.podcasts.podcasts} />
 					</>
 				)}
