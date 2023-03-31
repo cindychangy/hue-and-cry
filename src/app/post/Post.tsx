@@ -213,7 +213,7 @@ const SocialIcons = styled.div`
 				color: #6f6f6f;
 				width: 16px;
 				@media ${breakpoint.md} {
-					width: 18px;
+					width: 19px;
 				}
 			}
 			img {
@@ -221,8 +221,8 @@ const SocialIcons = styled.div`
 				height: 16px;
 
 				@media ${breakpoint.md} {
-					width: 20px;
-					height: 20px;
+					width: 19px;
+					height: 19px;
 				}
 			}
 		}
