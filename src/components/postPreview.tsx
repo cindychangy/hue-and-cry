@@ -39,6 +39,11 @@ const PostImage = styled.div`
 		max-width: 100%;
 	}
 
+	@media ${breakpoint.sm} {
+		height: 380px;
+		max-width: 100%;
+	}
+
 	img:hover {
 		filter: brightness(1.1);
 	}
