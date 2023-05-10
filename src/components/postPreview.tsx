@@ -40,7 +40,7 @@ const PostImage = styled.div`
 	}
 
 	@media ${breakpoint.sm} {
-		height: 380px;
+		height: 340px;
 		max-width: 100%;
 	}
 

@@ -51,6 +51,10 @@ const HelpInfo = styled.div`
 		p {
 			line-height: 1.5;
 
+			a {
+				font-size: 1.8rem;
+			}
+
 			strong {
 				font-family: ${theme.fonts.primaryBold};
 			}
