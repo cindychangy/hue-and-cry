@@ -1,9 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	reactStrictMode: true,
-	// experimental: {
-	// 	appDir: true,
-	// },
+	experimental: {
+		appDir: false,
+	},
 	images: {
 		domains: ['i0.wp.com', 'wordpress.thehueandcry.com'],
 	},
