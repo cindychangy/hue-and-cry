@@ -294,8 +294,9 @@ export const HighwayOfTearsHome = () => {
 								themselves, deserve to have their stories heard and remembered.
 							</p>
 							<p style={{ fontWeight: 600 }}>
-								This timeline highlights the unsolved cases of The Highway of
-								Tears.
+								Although the exact number of victims in unknown, this timeline
+								shows the reported cases of women who have fell victim along
+								Highway 16.
 							</p>
 						</DescriptionBox>
 					</PageLeft>

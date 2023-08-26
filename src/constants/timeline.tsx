@@ -38,6 +38,16 @@ export const TIMELINE_DATA = [
 			'https://wordpress.thehueandcry.com/wp-content/uploads/Jean_Virginia_Sampare.png',
 	},
 	{
+		year: '1973',
+		location: 'Clearwater',
+		name: 'Gale Weys',
+		blurb:
+			"Gale Weys was 19 years old when she was last seen trying to get a ride to her parent's house.",
+		link: '/gale-weys',
+		photo:
+			'https://wordpress.thehueandcry.com/wp-content/uploads/gale-weys-photo.jpg',
+	},
+	{
 		year: '1974',
 		location: 'Thornhill',
 		name: 'Monica Ignas',
