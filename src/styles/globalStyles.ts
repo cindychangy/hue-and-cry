@@ -1,8 +1,8 @@
-'use client';
+'use client'
 
-import { createGlobalStyle } from 'styled-components';
-import reset from 'styled-reset';
-import { breakpoint } from '../constants/theme';
+import { createGlobalStyle } from 'styled-components'
+import reset from 'styled-reset'
+import { breakpoint } from '../constants/theme'
 
 const GlobalStyle = createGlobalStyle`
 	${reset}
@@ -176,6 +176,6 @@ const GlobalStyle = createGlobalStyle`
 	.nav-primary--refresh .comment-count {
     font-size: 12px;
 	}
-	`;
+	`
 
-export default GlobalStyle;
+export default GlobalStyle

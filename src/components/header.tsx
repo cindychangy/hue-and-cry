@@ -181,7 +181,12 @@ export const SiteHeader = () => {
 									currentRoute === item.value && 'active-nav-item'
 								}`}
 							>
-								<Link href={item.value}>{item.label}</Link>
+								<Link
+									href={item.value}
+									onClick={() => setMobileNav(!mobileNav)}
+								>
+									{item.label}
+								</Link>
 							</li>
 						))}
 						{mobileNav && (
