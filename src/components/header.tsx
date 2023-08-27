@@ -31,24 +31,24 @@ const HeaderContainer = styled.div`
 const MobileNav = styled.div`
 	${({ theme }) => css`
 		display: none;
-	}
 
-		@media ${breakpoint.lg} {
-			display: block;
-			position: absolute;
-			top: 32px;
-			right: 12px;
-			z-index: 3;
-		}
+			@media ${breakpoint.lg} {
+				display: block;
+				position: absolute;
+				top: 32px;
+				right: 12px;
+				z-index: 3;
+			}
 
-		button {
-			position: relative;
-			top: -10px;
-			background: transparent;
-			border: 0;
-			cursor: pointer;
-			transition: color 0.5s ease 0s;
-			color: ${theme.colors.black};
+			button {
+				position: relative;
+				top: -10px;
+				background: transparent;
+				border: 0;
+				cursor: pointer;
+				transition: color 0.5s ease 0s;
+				color: ${theme.colors.black};
+			}
 		}
 	`};
 `
