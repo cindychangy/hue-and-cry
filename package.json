@@ -1,0 +1,41 @@
+{
+  "name": "hue-and-cry-blog",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint",
+    "check-format": "prettier --write .",
+    "check-types": "tsc -p tsconfig.json",
+    "check-lint": "eslint --fix",
+    "test-all": "npm run check-lint && npm run check-types && npm run build",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@apollo/client": "^3.8.1",
+    "@styled-icons/bootstrap": "^10.47.0",
+    "@types/google.analytics": "^0.0.42",
+    "@types/node": "20.5.6",
+    "@types/react": "18.2.21",
+    "@types/react-dom": "18.2.7",
+    "date-fns": "^2.30.0",
+    "disqus-react": "^1.1.5",
+    "eslint": "8.48.0",
+    "eslint-config-next": "13.4.19",
+    "graphql": "^16.8.0",
+    "next": "13.4.19",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "styled-components": "^6.0.7",
+    "styled-reset": "^4.5.1",
+    "typescript": "5.2.2"
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^6.4.1",
+    "eslint-config-prettier": "^9.0.0",
+    "husky": "^8.0.3",
+    "prettier": "3.0.2"
+  }
+}
