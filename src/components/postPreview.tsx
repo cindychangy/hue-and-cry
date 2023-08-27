@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
 import Image from 'next/image'
@@ -54,11 +56,14 @@ const PostTitle = styled.h3`
 	}
 	a {
 		display: inline;
-		transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
+		transition:
+			all 0.1s ease 0s,
+			box-shadow 0.1s ease 0s,
 			-webkit-box-shadow 0.1s ease 0s;
 
 		&:hover {
-			box-shadow: rgb(255 255 255) 0px -3px inset,
+			box-shadow:
+				rgb(255 255 255) 0px -3px inset,
 				rgb(255 172 108) 0px -11px 0px inset;
 		}
 
@@ -83,7 +88,7 @@ const PostMeta = styled.div`
 const PostExcerpt = styled.div`
 	${({ theme }) => css`
 		width: 100%;
-		height: 54px;
+		height: 53px;
 		overflow: hidden;
 		display: -webkit-box;
 		-webkit-box-orient: vertical;

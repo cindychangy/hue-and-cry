@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react'
 import { PostPreview } from './postPreview'
 import { Post } from '../api/types/post'
@@ -10,7 +12,7 @@ interface PostGridProps {
 export const PostGrid = ({ posts, isArchivePage }: PostGridProps) => {
 	const featuredPostList = posts.map((post) => (
 		<PostPreview
-			image={post.featuredImage.node.sourceUrl}
+			image={post?.featuredImage?.node.sourceUrl}
 			title={post.title}
 			excerpt={post.excerpt}
 			category={isArchivePage ? '' : post.categories.nodes[0].name}

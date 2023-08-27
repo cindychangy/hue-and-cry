@@ -1,11 +1,11 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { SiteHeader } from '../../components/header'
-import { SiteFooter } from '../../components/footer'
-import { HERO_ABOUT } from '../../../src/constants/media'
+import { HERO_ABOUT } from '../../constants/media'
 import styled, { css } from 'styled-components'
-import { breakpoint } from '../../../src/constants/theme'
-import { LayoutContainer } from '../../../src/components/layoutContainer'
+import { breakpoint } from '../../constants/theme'
+import { LayoutContainer } from '../../components/layoutContainer'
 
 const AboutHeader = styled.div`
 	width: 100%;
@@ -65,7 +65,9 @@ const AboutContainer = styled.div`
 
 		a {
 			border-bottom: 1px solid ${theme.colors.black};
-			transition: all 0.4s ease 0s, box-shadow 0.4s ease 0s,
+			transition:
+				all 0.4s ease 0s,
+				box-shadow 0.4s ease 0s,
 				-webkit-box-shadow 0.2s ease 0s;
 			text-decoration: none;
 			line-height: 1.1;
@@ -77,10 +79,35 @@ const AboutContainer = styled.div`
 	`};
 `
 
-export const About = () => {
+const About = () => {
 	return (
 		<>
-			<SiteHeader />
+			<head>
+				<title>About | Hue and Cry</title>
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`}
+				/>
+				<meta property="og:locale" content="en_US" />
+				<meta property="og:type" content="article" />
+				<meta property="og:title" content="About Hue and Cry" />
+				<meta
+					property="og:description"
+					content="Hue and Cry is a true crime blog focusing on crimes against women and girls who have yet to see justice. We focus on crimes that are committed against women of color."
+				/>
+				<meta
+					property="og:url"
+					content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`}
+				/>
+				<meta property="og:site_name" content="Hue and Cry" />
+				<meta
+					property="og:image"
+					content={process.env.NEXT_PUBLIC_META_IMAGE}
+				/>
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:creator" content="@thehueandcry" />
+				<meta name="twitter:site" content="@thehueandcry" />
+			</head>
 			<AboutHeader style={HERO_ABOUT} />
 			<LayoutContainer>
 				<AboutContainer>
@@ -138,7 +165,8 @@ export const About = () => {
 					</div>
 				</AboutContainer>
 			</LayoutContainer>
-			<SiteFooter />
 		</>
 	)
 }
+
+export default About

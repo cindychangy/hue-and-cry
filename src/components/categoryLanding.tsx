@@ -1,9 +1,9 @@
+'use client'
+
 import React from 'react'
-import PageTemplate from '../../src/components/pageTemplate'
 import { Post } from '../../src/api/types/post'
 import { PostGrid } from '../components/postGrid'
-import { LayoutContainer } from 'components/layoutContainer'
-import { ShadowElevation } from './shadowElevation'
+import { LayoutContainer } from '../components/layoutContainer'
 import styled, { css } from 'styled-components'
 import { breakpoint } from '../../src/constants/theme'
 
@@ -13,7 +13,6 @@ const PostGridContainer = styled.div`
 	grid-template-rows: repeat(2, 1fr);
 	grid-column-gap: 25px;
 	grid-row-gap: 45px;
-	margin-top: 30px;
 	margin-bottom: 60px;
 
 	@media ${breakpoint.md} {
@@ -58,16 +57,16 @@ interface CategoryLandingProps {
 
 export const CategoryLanding = ({ posts, title }: CategoryLandingProps) => {
 	return (
-		<PageTemplate>
-			<ShadowElevation />
+		<>			
 			<PageTitle>
 				<h1>{title}</h1>
 			</PageTitle>
+
 			<LayoutContainer>
 				<PostGridContainer>
 					<PostGrid posts={posts} isArchivePage />
 				</PostGridContainer>
 			</LayoutContainer>
-		</PageTemplate>
+		</>
 	)
 }

@@ -1,12 +1,9 @@
-import React from 'react'
-import { InferGetStaticPropsType } from 'next'
 import { gql } from '@apollo/client'
 import client from '../../apollo-client'
-import Head from 'next/head'
-import Home from 'app/home/Home'
 import { Post } from '../api/types/post'
+import Home from '../app/home/Home'
 
-export async function getStaticProps() {
+export default async function Homepage() {
 	const { data } = await client.query({
 		query: gql`
 			query getPosts {
@@ -48,21 +45,9 @@ export async function getStaticProps() {
 	const featuredTop = homepagePosts.splice(0, 8)
 	const featuredBottom = homepagePosts.splice(-8)
 
-	return {
-		props: {
-			featuredTop,
-			featuredBottom,
-		},
-	}
-}
-
-const Index = ({
-	featuredTop,
-	featuredBottom,
-}: InferGetStaticPropsType<typeof getStaticProps>) => {
 	return (
 		<>
-			<Head>
+			<head>
 				<title>Hue and Cry | True Crime Blog</title>
 				<meta
 					name="description"
@@ -80,10 +65,9 @@ const Index = ({
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@thehueandcry" />
-			</Head>
+			</head>
+
 			<Home featuredTop={featuredTop} featuredBottom={featuredBottom} />
 		</>
 	)
 }
-
-export default Index

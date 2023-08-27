@@ -1,12 +1,12 @@
-import React from 'react'
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 import styled, { css } from 'styled-components'
-import { LayoutContainer } from '../../../src/components/layoutContainer'
+import { LayoutContainer } from '../../components/layoutContainer'
 import { PostGrid } from '../../components/postGrid'
-import { breakpoint } from '../../../src/constants/theme'
-import { Post } from '../../../src/api/types/post'
-import PageTemplate from '../../../src/components/pageTemplate'
+import { breakpoint } from '../../constants/theme'
+import { Post } from '../../api/types/post'
 
 const SectionHighwayOfTears = styled.div`
 	width: 100%;
@@ -135,7 +135,7 @@ const SectionAbout = styled.div`
 		display: flex;
 		align-content: center;
 		justify-content: space-between;
-		padding: 120px 0 40px 0;
+		padding: 120px 0 80px 0;
 
 		&::before {
 			content: '';
@@ -246,92 +246,89 @@ const CTA_IMAGE = {
 
 const Home = ({ featuredTop, featuredBottom }: HomeProps) => {
 	return (
-		<PageTemplate>
-			<LayoutContainer>
-				<GridContainer>
-					<PostGrid posts={featuredTop} />
-				</GridContainer>
-				<SectionHighwayOfTears>
-					<PhotoSection style={CTA_IMAGE}>
-						<h4>Series</h4>
-						<h2>Highway of Tears</h2>
-						<p>
-							An isolated 725-kilometer stretch of Highway 16 in British
-							Columbia, Canada which has been the location of many unsolved
-							murders and disappearances of Indigenous women beginning as early
-							as 1969.
-						</p>
-					</PhotoSection>
-					<StoriesSection>
-						<h6>Stories from this series</h6>
-						<StoryContainer>
-							<StoryImage>
-								<Image
-									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/gloria-moody.jpg')`}
-									alt="Gloria Moody"
-									fill
-								/>
-							</StoryImage>
-							<StoryTitle>
-								<p>1969</p>
-								<Link href="/gloria-moody">The murder of Gloria Moody</Link>
-							</StoryTitle>
-						</StoryContainer>
-						<StoryContainer>
-							<StoryImage>
-								<Image
-									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/ramona-wilson-photo-1.jpg')`}
-									alt="Ramona Wilson"
-									fill
-								/>
-							</StoryImage>
-							<StoryTitle>
-								<p>1994</p>
-								<Link href="/ramona-wilson">The Murder of Ramona Wilson</Link>
-							</StoryTitle>
-						</StoryContainer>
-						<StoryContainer>
-							<StoryImage>
-								<Image
-									src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/jessica-patrick-balczer.jpg')`}
-									alt="Jessica Patrick Balczer"
-									fill
-								/>
-							</StoryImage>
-							<StoryTitle>
-								<p>2018</p>
-								<Link href="/jessica-patrick-balczer">
-									The Murder of Jessica Patrick Balczer
-								</Link>
-							</StoryTitle>
-						</StoryContainer>
-						<SeeAll>
-							<Link href="/highway-of-tears">See all stories</Link>
-						</SeeAll>
-					</StoriesSection>
-				</SectionHighwayOfTears>
-				<GridContainer>
-					<PostGrid posts={featuredBottom} />
-				</GridContainer>
-				<SectionAbout>
-					<AboutIntro>
-						<h5>About Hue and Cry</h5>
-						<h2 style={{ marginTop: '10px' }}>
-							Bringing awareness to unsolved crimes against women and girls.
-						</h2>
-					</AboutIntro>
-					<AboutText>
-						<p>
-							Hue and Cry is a true crime blog with a focus on victims who have
-							yet to see justice, highlighting stories of both well-known and
-							lesser-known cases, with a emphasis on crimes that are committed
-							against women of color.
-						</p>
-						<AboutLink href="/about">Learn more</AboutLink>
-					</AboutText>
-				</SectionAbout>
-			</LayoutContainer>
-		</PageTemplate>
+		<LayoutContainer>
+			<GridContainer>
+				<PostGrid posts={featuredTop} />
+			</GridContainer>
+			<SectionHighwayOfTears>
+				<PhotoSection style={CTA_IMAGE}>
+					<h4>Series</h4>
+					<h2>Highway of Tears</h2>
+					<p>
+						An isolated 725-kilometer stretch of Highway 16 in British Columbia,
+						Canada which has been the location of many unsolved murders and
+						disappearances of Indigenous women beginning as early as 1969.
+					</p>
+				</PhotoSection>
+				<StoriesSection>
+					<h6>Stories from this series</h6>
+					<StoryContainer>
+						<StoryImage>
+							<Image
+								src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/gloria-moody.jpg')`}
+								alt="Gloria Moody"
+								fill
+							/>
+						</StoryImage>
+						<StoryTitle>
+							<p>1969</p>
+							<Link href="/gloria-moody">The murder of Gloria Moody</Link>
+						</StoryTitle>
+					</StoryContainer>
+					<StoryContainer>
+						<StoryImage>
+							<Image
+								src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/ramona-wilson-photo-1.jpg')`}
+								alt="Ramona Wilson"
+								fill
+							/>
+						</StoryImage>
+						<StoryTitle>
+							<p>1994</p>
+							<Link href="/ramona-wilson">The Murder of Ramona Wilson</Link>
+						</StoryTitle>
+					</StoryContainer>
+					<StoryContainer>
+						<StoryImage>
+							<Image
+								src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/jessica-patrick-balczer.jpg')`}
+								alt="Jessica Patrick Balczer"
+								fill
+							/>
+						</StoryImage>
+						<StoryTitle>
+							<p>2018</p>
+							<Link href="/jessica-patrick-balczer">
+								The Murder of Jessica Patrick Balczer
+							</Link>
+						</StoryTitle>
+					</StoryContainer>
+					<SeeAll>
+						<Link href="/highway-of-tears">See all stories</Link>
+					</SeeAll>
+				</StoriesSection>
+			</SectionHighwayOfTears>
+			<GridContainer>
+				<PostGrid posts={featuredBottom} />
+			</GridContainer>
+			<SectionAbout>
+				<AboutIntro>
+					<h5>About Hue and Cry</h5>
+					<h2 style={{ marginTop: '10px' }}>
+						Bringing awareness to unsolved crimes against women and girls.
+					</h2>
+				</AboutIntro>
+				<AboutText>
+					<p>
+						Hue and Cry is a true crime blog with a focus on victims who have
+						yet to see justice, highlighting stories of both well-known and
+						lesser-known cases, with a emphasis on crimes that are committed
+						against women of color.
+					</p>
+					<AboutLink href="/about">Learn more</AboutLink>
+				</AboutText>
+			</SectionAbout>
+		</LayoutContainer>
 	)
 }
 

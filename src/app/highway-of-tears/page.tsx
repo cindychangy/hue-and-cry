@@ -1,13 +1,12 @@
+'use client'
+
 import React from 'react'
 import Link from 'next/link'
-import { SiteHeader } from '../../../src/components/header'
-import { SiteFooter } from '../../../src/components/footer'
-import { ShadowElevation } from '../../../src/components/shadowElevation'
-import { LayoutContainer } from '../../../src/components/layoutContainer'
-import { TIMELINE_DATA } from '../../../src/constants/timeline'
+import { LayoutContainer } from '../../components/layoutContainer'
+import { TIMELINE_DATA } from '../../constants/timeline'
 
 import styled, { css } from 'styled-components'
-import { breakpoint } from '../../../src/constants/theme'
+import { breakpoint } from '../../constants/theme'
 
 const Container = styled.div`
 	display: flex;
@@ -226,7 +225,7 @@ const DescriptionBox = styled.div`
 	}
 `
 
-export const HighwayOfTearsHome = () => {
+const HighwayOfTears = () => {
 	const timelineList = TIMELINE_DATA.map((data) => (
 		<TimelineItem key={data.name}>
 			<StoryMeta>
@@ -266,8 +265,32 @@ export const HighwayOfTearsHome = () => {
 
 	return (
 		<>
-			<SiteHeader />
-			<ShadowElevation />
+			<head>
+				<title>The Highway of Tears | Hue and Cry</title>
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`}
+				/>
+				<meta property="og:locale" content="en_US" />
+				<meta property="og:type" content="article" />
+				<meta property="og:title" content="The Highway of Tears" />
+				<meta
+					property="og:description"
+					content="The Highway of Tears is an isolated 725-kilometer stretch of Highway 16. It has been the location of many unsolved murders and disappearances of Indigenous women."
+				/>
+				<meta
+					property="og:url"
+					content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`}
+				/>
+				<meta property="og:site_name" content="Hue and Cry" />
+				<meta
+					property="og:image"
+					content="https://wordpress.thehueandcry.com/wp-content/uploads/highwayoftears.png"
+				/>
+				<meta name="twitter:card" content="summary_large_image" />
+				<meta name="twitter:creator" content="@thehueandcry" />
+				<meta name="twitter:site" content="@thehueandcry" />
+			</head>
 			<LayoutContainer>
 				<Container>
 					<PageLeft>
@@ -306,7 +329,8 @@ export const HighwayOfTearsHome = () => {
 					</PageRight>
 				</Container>
 			</LayoutContainer>
-			<SiteFooter />
 		</>
 	)
 }
+
+export default HighwayOfTears

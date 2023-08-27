@@ -1,16 +1,14 @@
-import React from 'react'
-import Head from 'next/head'
+'use client'
+
 import styled, { css } from 'styled-components'
 import { LayoutContainer } from '../../components/layoutContainer'
 import { PostHeader } from './components/postHeader'
 import { PostCta } from './components/postCta'
 import { RelatedPosts } from './components/relatedPosts'
 import { RelatedPodcasts } from './components/relatedPodcasts'
-import { SiteHeader } from '../../components/header'
-import { SiteFooter } from '../../components/footer'
-import { ShadowElevation } from '../../components/shadowElevation'
 import { Post, RelatedPost } from '../../api/types/post'
 import { RelatedVideos } from './components/relatedVideos'
+import { ShadowElevation } from '../../components/shadowElevation'
 import { Comments } from './components/comments'
 import { breakpoint } from '../../../src/constants/theme'
 import { Twitter, EnvelopeFill } from '@styled-icons/bootstrap'
@@ -47,7 +45,9 @@ const PostBody = styled.div`
 
 		a {
 			border-bottom: 1px solid ${theme.colors.black};
-			transition: all 0.4s ease 0s, box-shadow 0.4s ease 0s,
+			transition:
+				all 0.4s ease 0s,
+				box-shadow 0.4s ease 0s,
 				-webkit-box-shadow 0.2s ease 0s;
 			text-decoration: none;
 			display: inline;
@@ -243,7 +243,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 
 	return (
 		<>
-			<Head>
+			<head>
 				<title>{post.title}</title>
 				<link
 					rel="canonical"
@@ -268,8 +268,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 					name="twitter:image"
 					content={post.featuredImage.node.sourceUrl}
 				/>
-			</Head>
-			<SiteHeader />
+			</head>
 			<ShadowElevation />
 			<LayoutContainer>
 				<PostHeader
@@ -348,7 +347,6 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 					</small>
 				</Copyright>
 			</LayoutContainer>
-			<SiteFooter />
 		</>
 	)
 }

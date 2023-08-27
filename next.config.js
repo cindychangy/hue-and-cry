@@ -1,15 +1,15 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-	reactStrictMode: true,
+  reactStrictMode: true,
 	experimental: {
-		appDir: false,
+		appDir: true,
 	},
-	images: {
+  compiler: {
+    styledComponents: true,
+  },
+  images: {
 		domains: ['i0.wp.com', 'wordpress.thehueandcry.com'],
 	},
-	compiler: {
-		styledComponents: true,
-	},
-}
+};
 
 module.exports = nextConfig

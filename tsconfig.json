@@ -27,6 +27,6 @@
 		"src/**/*.tsx",
 		".next/types/**/*.ts",
 		"app/App.types.ts"
-	],
+, "src/app/highway-of-tears"	],
 	"exclude": ["node_modules"]
 }
