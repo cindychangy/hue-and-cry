@@ -3,7 +3,6 @@
 import React from 'react'
 import Link from 'next/link'
 import { LayoutContainer } from '../../components/layoutContainer'
-import { ShadowElevation } from '../../components/shadowElevation'
 import { TIMELINE_DATA } from '../../constants/timeline'
 
 import styled, { css } from 'styled-components'
@@ -292,7 +291,6 @@ const HighwayOfTears = () => {
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
 			</head>
-			<ShadowElevation />
 			<LayoutContainer>
 				<Container>
 					<PageLeft>

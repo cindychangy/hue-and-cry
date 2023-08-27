@@ -12,6 +12,7 @@ import {
 } from '../../src/constants/navigation'
 import { breakpoint } from '../constants/theme'
 import { List, X } from '@styled-icons/bootstrap'
+import { ShadowElevation } from './shadowElevation'
 
 const HeaderContainer = styled.div`
 	${({ theme }) => css`
