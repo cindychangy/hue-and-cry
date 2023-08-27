@@ -48,6 +48,15 @@ export const TIMELINE_DATA = [
 			'https://wordpress.thehueandcry.com/wp-content/uploads/gale-weys-photo.jpg',
 	},
 	{
+		year: '1973',
+		location: 'Kamloops',
+		name: 'Pamela Darlington',
+		blurb:
+			'Pamela was 19 years old when she went missing, she was last seen in a bar in Kamloops. Her body was found the next day in a park. She had been sexually assaulted and beaten to death.',
+		photo:
+			'https://wordpress.thehueandcry.com/wp-content/uploads/pamela-photo.jpg',
+	},
+	{
 		year: '1974',
 		location: 'Thornhill',
 		name: 'Monica Ignas',
@@ -56,6 +65,15 @@ export const TIMELINE_DATA = [
 		link: '/monica-ignas',
 		photo:
 			'https://wordpress.thehueandcry.com/wp-content/uploads/monica-ignas.png',
+	},
+	{
+		year: '1974',
+		location: 'Lac la Hache',
+		name: 'Colleen MacMillen',
+		blurb:
+			"Colleen was 16 years old when she disappeared hitchhiking to a friend's house. Her remains were found one month later. In 2012, with advancements in DNA technology the RCMP announced Bobby Jack Fowler as a suspect in her killing. ",
+		photo:
+			'https://wordpress.thehueandcry.com/wp-content/uploads/colleen-photo.jpg',
 	},
 	{
 		year: '1978',
@@ -242,7 +260,7 @@ export const TIMELINE_DATA = [
 		location: 'Terrace',
 		name: 'Chantelle Catherine Simpson',
 		blurb:
-			'Chantelle was 34 years old when she was reported missing after leaving her home on July 4th. Her abandoned car was found next to a gravel pit the next day. Days later her body was found in the Skeena River by a train conductor who was passing by.',
+			'Chantelle was 34 years old when she went missing after leaving her home on July 4th. Her abandoned car was found next to a gravel pit the next day. Days later her body was found in the Skeena River by a train conductor who was passing by.',
 		photo:
 			'https://wordpress.thehueandcry.com/wp-content/uploads/chantel-image.png',
 	},

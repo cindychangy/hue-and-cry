@@ -113,7 +113,7 @@ const TimelineConnector = styled.span`
 const StoryMeta = styled.div`
 	text-align: right;
 	padding-right: 15px;
-	width: 150px;
+	width: 155px;
 
 	@media ${breakpoint.md} {
 		width: 110px;
@@ -172,10 +172,11 @@ const TimelineStory = styled.div`
 	margin: 0;
 	font-size: 1.6rem;
 	flex: 1;
-	padding: 6px 16px;
+	padding: 3px 16px 60px 16px;
 
 	@media ${breakpoint.md} {
-		padding-left: 0;
+		padding: 3px 16px 15px 16px;
+
 	}
 }
 `
@@ -188,7 +189,7 @@ const StoryContainer = styled.div`
 }
 `
 const StoryImage = styled.div`
-	margin-left: 10px;
+	margin-left: 11px;
   flex-shrink: 0;
 	align-self: center;
 	height: 90px;
