@@ -102,7 +102,7 @@ const About = () => {
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta
 					property="og:image"
-					content={`${process.env.NEXT_PUBLIC_META_IMAGE}/thumbprint-banner.jpg`}
+					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/thumbprint-banner.jpg`}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />

@@ -64,7 +64,7 @@ export default async function Homepage() {
 				<meta property="og:url" content="https://thehueandcry.com/" />
 				<meta
 					property="og:image"
-					content="https://wordpress.thehueandcry.com/wp-content/uploads/thumbprint-banner.jpg"
+					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`}
 				/>
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta name="twitter:card" content="summary_large_image" />
