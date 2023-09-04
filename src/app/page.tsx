@@ -62,6 +62,10 @@ export default async function Homepage() {
 					content="A true crime blog focusing on crimes against women and girls who have yet to see justice."
 				/>
 				<meta property="og:url" content="https://thehueandcry.com/" />
+				<meta
+					property="og:image"
+					content="https://wordpress.thehueandcry.com/wp-content/uploads/thumbprint-banner.jpg"
+				/>
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:site" content="@thehueandcry" />

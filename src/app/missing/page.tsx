@@ -49,7 +49,7 @@ export default async function Missing() {
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta
 					property="og:image"
-					content={process.env.NEXT_PUBLIC_META_IMAGE}
+					content={`${process.env.NEXT_PUBLIC_META_IMAGE}/hueandcry.jpg`}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />

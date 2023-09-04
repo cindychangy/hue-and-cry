@@ -286,7 +286,7 @@ const HighwayOfTears = () => {
 				<meta property="og:site_name" content="Hue and Cry" />
 				<meta
 					property="og:image"
-					content="https://wordpress.thehueandcry.com/wp-content/uploads/highwayoftears.png"
+					content={`${process.env.NEXT_PUBLIC_META_IMAGE}/highwayoftears.png`}
 				/>
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
