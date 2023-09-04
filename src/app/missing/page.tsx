@@ -31,9 +31,9 @@ export default async function Missing() {
 		<>
 			<head>
 				<title>Missing | Hue and Cry</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`}
+				<meta
+					name="description"
+					content="Cases of women and girls who have gone missing."
 				/>
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:type" content="article" />
@@ -54,6 +54,10 @@ export default async function Missing() {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`}
+				/>
 			</head>
 			<CategoryLanding posts={posts} title="Missing" />
 		</>

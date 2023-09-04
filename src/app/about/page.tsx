@@ -84,9 +84,9 @@ const About = () => {
 		<>
 			<head>
 				<title>About | Hue and Cry</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`}
+				<meta
+					name="description"
+					content="Hue and Cry is a true crime blog focusing on crimes against women and girls who have yet to see justice. We focus on crimes that are committed against women of color."
 				/>
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:type" content="article" />
@@ -107,6 +107,10 @@ const About = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`}
+				/>
 			</head>
 			<AboutHeader style={HERO_ABOUT} />
 			<LayoutContainer>

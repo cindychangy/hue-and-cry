@@ -268,9 +268,9 @@ const HighwayOfTears = () => {
 		<>
 			<head>
 				<title>The Highway of Tears | Hue and Cry</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`}
+				<meta
+					name="description"
+					content="The Highway of Tears is an isolated 725-kilometer stretch of Highway 16. It has been the location of many unsolved murders and disappearances of Indigenous women."
 				/>
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:type" content="article" />
@@ -291,6 +291,10 @@ const HighwayOfTears = () => {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`}
+				/>
 			</head>
 			<LayoutContainer>
 				<Container>

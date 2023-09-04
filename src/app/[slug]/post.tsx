@@ -245,10 +245,7 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 		<>
 			<head>
 				<title>{post.title}</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-				/>
+				<meta name="description" content={excerpt} />
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:type" content="article" />
 				<meta property="og:title" content={post.title} />
@@ -267,6 +264,10 @@ const PostPage = ({ post, relatedPosts }: PostPageProps) => {
 				<meta
 					name="twitter:image"
 					content={post.featuredImage.node.sourceUrl}
+				/>
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
 				/>
 			</head>
 			<ShadowElevation />

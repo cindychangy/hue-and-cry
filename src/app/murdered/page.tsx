@@ -31,10 +31,7 @@ export default async function Murdered() {
 		<>
 			<head>
 				<title>Murdered | Hue and Cry</title>
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`}
-				/>
+				<meta name="description" content="Cases of murdered women and girls." />
 				<meta property="og:locale" content="en_US" />
 				<meta property="og:type" content="article" />
 				<meta property="og:title" content="Murdered" />
@@ -54,6 +51,10 @@ export default async function Murdered() {
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta name="twitter:creator" content="@thehueandcry" />
 				<meta name="twitter:site" content="@thehueandcry" />
+				<link
+					rel="canonical"
+					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`}
+				/>
 			</head>
 			<CategoryLanding posts={posts} title="Murdered" />
 		</>
