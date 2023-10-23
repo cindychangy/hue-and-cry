@@ -11,7 +11,7 @@ export type Category = {
 		{
 			name: string
 			slug: string
-		}
+		},
 	]
 }
 
@@ -35,7 +35,7 @@ export type Post = {
 		nodes: [
 			{
 				name: string
-			}
+			},
 		]
 	}
 	content: string
@@ -61,7 +61,7 @@ export type Post = {
 				link: string
 				video: string
 				videoTitle: string
-			}
+			},
 		]
 	}
 	podcasts?: {
@@ -70,7 +70,7 @@ export type Post = {
 				link: string
 				podcastShow: string
 				showTitle: string
-			}
+			},
 		]
 	}
 }

@@ -1,6 +1,27 @@
+import { Metadata } from 'next'
 import { gql } from '@apollo/client'
 import client from '../../../apollo-client'
-import { CategoryLanding } from '../../components/categoryLanding'
+import { CategoryLanding } from '../../components'
+
+export const metadata: Metadata = {
+	title: 'Murdered | Hue and Cry',
+	description: 'Cases of murdered women and girls.',
+	metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`),
+	alternates: {
+		canonical: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`,
+	},
+	openGraph: {
+		title: 'Murdered | Hue and Cry',
+		description: 'Cases of murdered women and girls.',
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`,
+		siteName: 'Hue and Cry',
+		images: [
+			{
+				url: `${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`,
+			},
+		],
+	},
+}
 
 export default async function Murdered() {
 	const { data } = await client.query({
@@ -29,33 +50,6 @@ export default async function Murdered() {
 
 	return (
 		<>
-			<head>
-				<title>Murdered | Hue and Cry</title>
-				<meta name="description" content="Cases of murdered women and girls." />
-				<meta property="og:locale" content="en_US" />
-				<meta property="og:type" content="article" />
-				<meta property="og:title" content="Murdered" />
-				<meta
-					property="og:description"
-					content="Cases of murdered women and girls."
-				/>
-				<meta
-					property="og:url"
-					content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`}
-				/>
-				<meta property="og:site_name" content="Hue and Cry" />
-				<meta
-					property="og:image"
-					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`}
-				/>
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:creator" content="@thehueandcry" />
-				<meta name="twitter:site" content="@thehueandcry" />
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/murdered`}
-				/>
-			</head>
 			<CategoryLanding posts={posts} title="Murdered" />
 		</>
 	)
