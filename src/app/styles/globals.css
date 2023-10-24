@@ -247,12 +247,8 @@ small {
 }
 
 .wp-block-image figure img {
-	width: 100%;
+	max-width: 100%;
 	height: auto;
-
-	@media (max-width: 600px) {
-		max-width: 100%;
-	}
 }
 
 .active-nav-item {
