@@ -226,7 +226,8 @@ small {
 	}
 }
 
-.wp-block-image img {
+.wp-block-image figure img {
+	max-width: 100%;
 	width: 100%;
 	height: auto;
 }

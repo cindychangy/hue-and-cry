@@ -43,7 +43,7 @@ export const SiteHeader = () => {
 			</div>
 			<div className={styles.navigation}>
 				<ul
-					className={classNames(
+					className={(
 						mobileMenuOpen && [styles.mobileNav, styles.showMobileNav]
 					)}
 				>
