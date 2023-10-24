@@ -33,7 +33,7 @@ export const PostPreview = ({
 
 	return (
 		<div className={styles.postContainer}>
-			<Link href={`/${encodeURIComponent(slug)}`} as="image">
+			<Link href={`/${encodeURIComponent(slug)}`}>
 				<div className={styles.postImage}>
 					<Image
 						alt={title}

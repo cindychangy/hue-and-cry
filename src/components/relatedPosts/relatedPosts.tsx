@@ -10,7 +10,7 @@ export const RelatedPosts = ({ posts }: { posts: RelatedPost[] }) => {
 			<div className={styles.postContainer}>
 				{posts.map((post) => (
 					<div className={styles.post} key={post.id}>
-						<Link href={post.slug} as="image">
+						<Link href={post.slug}>
 							<div className={styles.postImage}>
 								<Image
 									alt={post.title.rendered}
