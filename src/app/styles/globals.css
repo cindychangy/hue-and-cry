@@ -245,7 +245,11 @@ small {
 	display: block !important;
 }
 
-ul.mobile-nav.show-mobile-nav {
+.taco {
+	color: #000;
+}
+
+/* ul.mobile-nav.show-mobile-nav {
 	@media (max-width: 1200px) {
 		background: var(--color-white);
 		position: absolute;
@@ -256,7 +260,7 @@ ul.mobile-nav.show-mobile-nav {
 		height: 100vh;
 		padding: 4rem 2rem;
 	}
-}
+} */
 
 .mobile-nav li {
 	@media (max-width: 1200px) {
