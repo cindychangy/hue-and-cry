@@ -240,3 +240,33 @@ small {
 	border-bottom: 3px solid #ff8600;
 	width: fit-content;
 }
+
+.show-mobile-nav {
+	display: block !important;
+}
+
+.mobile-nav {
+	@media (max-width: 1200px) {
+		background: var(--color-white);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		height: 100vh;
+		padding: 4rem 2rem;
+	}
+}
+
+.mobile-nav li {
+	@media (max-width: 1200px) {
+		display: block !important;
+		font-size: 2rem !important;
+		line-height: 2.1;
+	}
+}
+
+.active-nav-item {
+	border-bottom: 3px solid #ff8600;
+	width: fit-content;
+}

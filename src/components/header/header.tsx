@@ -14,13 +14,12 @@ import styles from './header.module.css'
 export const SiteHeader = () => {
 	const currentRoute = usePathname()
 
-	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-	const [showHamburgerMenu, setShowHamburgerMenu] = useState(true)
+	const [mobileNavIcon, setMobileNavIcon] = useState(false)
 
-	const showMobileMenu =() => {
-		setMobileMenuOpen(!mobileMenuOpen)
-		setShowHamburgerMenu(!showHamburgerMenu)
-	}
+	const mobileNavClasses = classNames({
+		'mobile-nav': mobileNavIcon === true,
+		'show-mobile-nav': mobileNavIcon === true,
+	})
 
 	return (
 		<div className={styles.headerContainer}>
@@ -28,16 +27,8 @@ export const SiteHeader = () => {
 				Hue and Cry
 			</Link>
 			<div className={styles.mobileNavIcon}>
-				<button onClick={showMobileMenu}>
-					{showHamburgerMenu ? (
-						<Image
-							alt="Navigation menu"
-							src="/images/menu.svg"
-							width="30"
-							height="30"
-						/>
-
-					) : (
+				<button onClick={() => setMobileNavIcon(!mobileNavIcon)}>
+					{mobileNavIcon ? (
 						<Image
 							alt="Close menu"
 							src="/images/close.svg"
@@ -45,13 +36,18 @@ export const SiteHeader = () => {
 							height="36"
 							style={{ position: 'relative', top: '-3px', right: '-4px' }}
 						/>
+					) : (
+						<Image
+							alt="Navigation menu"
+							src="/images/menu.svg"
+							width="30"
+							height="30"
+						/>
 					)}
 				</button>
 			</div>
 			<div className={styles.navigation}>
-				<ul
-					className={classNames(mobileMenuOpen && [styles.mobileNav, styles.showMobileNav])}
-				>
+				<ul className={mobileNavClasses}>
 					{NAV_ITEMS.map((item) => (
 						<li
 							key={item.label}
@@ -59,13 +55,13 @@ export const SiteHeader = () => {
 						>
 							<Link
 								href={item.value}
-								onClick={showMobileMenu}
+								onClick={() => setMobileNavIcon(!mobileNavIcon)}
 							>
 								{item.label}
 							</Link>
 						</li>
 					))}
-					{mobileMenuOpen && (
+					{mobileNavIcon && (
 						<div className={styles.mobileSocial}>
 							<li>
 								<div className={styles.followLink}>Follow us:</div>
