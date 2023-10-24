@@ -15,7 +15,6 @@
 	}
 
 	@media (max-width: 600px) {
-		margin-block-start: 2rem;
 		height: 4rem;
 	}
 }
@@ -26,10 +25,14 @@
 	@media (max-width: 1200px) {
 		display: block;
 		position: absolute;
-		top: 32px;
-		right: 12px;
+		top: calc(6rem / 2);
+		right: 1.2rem;
 		z-index: 3;
 	} 
+
+	@media (max-width: 600px) {
+		top: calc(4rem / 1.8);
+	}
 }
 
 .mobileNavIcon button {
