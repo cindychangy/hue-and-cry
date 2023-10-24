@@ -31,7 +31,7 @@ video {
 	--color-black: #151a1f;
 	--color-gray-primary: #727272;
 	--color-gray-secondary: #758193;
-	--color-gray-tertiary: #d4d4d4;
+	--color-gray-tertiary: #dce0e2;
 	--color-orange-primary: #ff8600;
 	--color-orange-secondary: #fff4e8;
 	--color-background-gray: #c3c8ce;
@@ -228,10 +228,12 @@ small {
 }
 
 .disqus-comment-count {
-	font-size: 1.2rem;
+	font-size: 1.1rem;
 	padding-inline-start: 0.5rem;
 	font-family: var(--font-secondary);
 	color: var(--color-black);
+	position: relative;
+	top: -1px;
 }
 
 .wp-block-image figure {
@@ -272,4 +274,3 @@ small {
 	border-bottom: 3px solid #ff8600;
 	width: fit-content;
 }
-
