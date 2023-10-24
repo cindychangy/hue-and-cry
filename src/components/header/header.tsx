@@ -17,11 +17,6 @@ export const SiteHeader = () => {
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 	const [showHamburgerMenu, setShowHamburgerMenu] = useState(true)
 
-	const mobileMenuClasses = classNames({
-		'mobileNav': true,
-		'showMobileNav': mobileMenuOpen === true,
-	});
-
 	const showMobileMenu =() => {
 		setMobileMenuOpen(!mobileMenuOpen)
 		setShowHamburgerMenu(!showHamburgerMenu)
@@ -55,7 +50,7 @@ export const SiteHeader = () => {
 			</div>
 			<div className={styles.navigation}>
 				<ul
-					className={mobileMenuClasses}
+					className={classNames(mobileMenuOpen && [styles.mobileNav, styles.showMobileNav])}
 				>
 					{NAV_ITEMS.map((item) => (
 						<li
