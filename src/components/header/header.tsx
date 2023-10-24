@@ -22,6 +22,11 @@ export const SiteHeader = () => {
 		setShowHamburgerMenu(!showHamburgerMenu)
 	}
 
+	const mobileNavClasses = classNames({
+		'mobileNav': true,
+		'showMobileNav': mobileMenuOpen === true
+	});
+
 	return (
 		<div className={styles.headerContainer}>
 			<Link href="/" className={styles.logo}>
@@ -50,7 +55,7 @@ export const SiteHeader = () => {
 			</div>
 			<div className={styles.navigation}>
 				<ul
-					className={classNames([styles.mobileNav, mobileMenuOpen && styles.showMobileNav])}
+					className={mobileNavClasses}
 				>
 					{NAV_ITEMS.map((item) => (
 						<li
