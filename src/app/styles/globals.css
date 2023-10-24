@@ -245,17 +245,15 @@ small {
 	display: block !important;
 }
 
-.mobile-nav {
-	@media (max-width: 1200px) {
-		background: var(--color-white);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-		height: 100vh;
-		padding: 4rem 2rem;
-	}
+ul.mobile-nav.show-mobile-nav {
+	background: var(--color-white);
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	z-index: 1;
+	height: 100vh;
+	padding: 4rem 2rem;
 }
 
 .mobile-nav li {
@@ -270,3 +268,4 @@ small {
 	border-bottom: 3px solid #ff8600;
 	width: fit-content;
 }
+
