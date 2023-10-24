@@ -159,6 +159,7 @@
 
 .mobileNav {
 	@media (max-width: 1200px) {
+		display: none;
 		background: var(--color-white);
 		position: absolute;
 		top: 0;
