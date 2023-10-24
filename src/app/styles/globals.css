@@ -246,14 +246,16 @@ small {
 }
 
 ul.mobile-nav.show-mobile-nav {
-	background: var(--color-white);
-	position: absolute;
-	top: 0;
-	left: 0;
-	right: 0;
-	z-index: 1;
-	height: 100vh;
-	padding: 4rem 2rem;
+	@media (max-width: 1200px) {
+		background: var(--color-white);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		height: 100vh;
+		padding: 4rem 2rem;
+	}
 }
 
 .mobile-nav li {
