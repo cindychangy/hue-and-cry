@@ -50,7 +50,7 @@ export const SiteHeader = () => {
 			</div>
 			<div className={styles.navigation}>
 				<ul
-					className={classNames(mobileMenuOpen && [styles.mobileNav, styles.showMobileNav])}
+					className={classNames([styles.mobileNav, mobileMenuOpen && styles.showMobileNav])}
 				>
 					{NAV_ITEMS.map((item) => (
 						<li
