@@ -15,6 +15,17 @@ export const SiteHeader = () => {
 	const currentRoute = usePathname()
 
 	const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+	const [showHamburgerMenu, setShowHamburgerMenu] = useState(true)
+
+	const mobileMenuClasses = classNames({
+		'mobileNav': true,
+		'showMobileNav': mobileMenuOpen === true,
+	});
+
+	const showMobileMenu =() => {
+		setMobileMenuOpen(!mobileMenuOpen)
+		setShowHamburgerMenu(!showHamburgerMenu)
+	}
 
 	return (
 		<div className={styles.headerContainer}>
@@ -22,8 +33,16 @@ export const SiteHeader = () => {
 				Hue and Cry
 			</Link>
 			<div className={styles.mobileNavIcon}>
-				<button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
-					{mobileMenuOpen ? (
+				<button onClick={showMobileMenu}>
+					{showHamburgerMenu ? (
+						<Image
+							alt="Navigation menu"
+							src="/images/menu.svg"
+							width="30"
+							height="30"
+						/>
+
+					) : (
 						<Image
 							alt="Close menu"
 							src="/images/close.svg"
@@ -31,21 +50,12 @@ export const SiteHeader = () => {
 							height="36"
 							style={{ position: 'relative', top: '-3px', right: '-4px' }}
 						/>
-					) : (
-						<Image
-							alt="Navigation menu"
-							src="/images/menu.svg"
-							width="30"
-							height="30"
-						/>
 					)}
 				</button>
 			</div>
 			<div className={styles.navigation}>
 				<ul
-					className={(
-						mobileMenuOpen && [styles.mobileNav, styles.showMobileNav]
-					)}
+					className={mobileMenuClasses}
 				>
 					{NAV_ITEMS.map((item) => (
 						<li
@@ -54,7 +64,7 @@ export const SiteHeader = () => {
 						>
 							<Link
 								href={item.value}
-								onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+								onClick={showMobileMenu}
 							>
 								{item.label}
 							</Link>

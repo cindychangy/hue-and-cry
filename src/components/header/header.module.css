@@ -2,13 +2,21 @@
 	max-width: 120rem;
 	margin: auto;
 	background: var(--color-white);
-	align-items: center;
-	justify-content: space-between;
 	display: flex;
-	padding: 1rem 2rem;
+	align-items: center;
+	align-content: center;
+	justify-content: space-between;
+	height: 6rem;
+	margin-block-start: 2rem;
+	padding-inline: 2rem;
 
 	@media (max-width: 1200px) {
-		padding: 1rem 2rem 0 2rem;
+		margin-block-start: 1rem;
+	}
+
+	@media (max-width: 600px) {
+		margin-block-start: 2rem;
+		height: 4rem;
 	}
 }
 
@@ -21,7 +29,7 @@
 		top: 32px;
 		right: 12px;
 		z-index: 3;
-	}
+	} 
 }
 
 .mobileNavIcon button {
@@ -38,7 +46,7 @@
 	font-family: 'Bebas Neue', sans-serif;
 	text-decoration: none;
 	font-size: 4.4rem;
-	color: --var(color-gray-primary);
+	background: transparent;
 	font-weight: 400;
 	margin: 0;
 	display: inline;
@@ -123,31 +131,6 @@
 
 .icons a svg:hover {
 	fill: var(--color-orange-primary);
-}
-
-.showMobileNav {
-	display: block !important;
-}
-
-.mobileNav {
-	@media (max-width: 1200px) {
-		background: var(--color-white);
-		position: absolute;
-		top: 0;
-		left: 0;
-		right: 0;
-		z-index: 1;
-		height: 100vh;
-		padding: 4rem 2rem;
-	}
-}
-
-.mobileNav li {
-	@media (max-width: 1200px) {
-		display: block !important;
-		font-size: 2rem !important;
-		line-height: 2.1;
-	}
 }
 
 .mobileSocial {
