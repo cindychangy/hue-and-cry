@@ -11,6 +11,7 @@ import { PostHeader } from '../components/postHeader/postHeader'
 import { RelatedPodcasts } from '../components/relatedPodcasts/relatedPodcasts'
 import { RelatedPosts } from '../components/relatedPosts/relatedPosts'
 import { RelatedVideos } from '../components/relatedVideos/relatedVideos'
+import Scroll from '../components/scroll/scroll'
 import GoogleAnalytics from '../components/googleAnalytics/googleAnalytics'
 
 export {
@@ -28,4 +29,5 @@ export {
 	RelatedPosts,
 	RelatedVideos,
 	GoogleAnalytics,
+	Scroll,
 }

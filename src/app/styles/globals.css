@@ -262,7 +262,8 @@ small {
 	@media (max-width: 1200px) {
 		display: block !important;
 		font-size: 2rem !important;
-		line-height: 2.1;
+		line-height: 1.5;
+		margin-block-end: 1.5rem;
 	}
 }
 
