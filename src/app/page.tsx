@@ -90,8 +90,8 @@ export default async function Home() {
 				<div className={styles.storiesSection}>
 					<h6>Stories from this series</h6>
 					{HIGHWAY_STORIES.map((story) => (
-						<div  key={story.alt}>
-							<div className={styles.storyContainer}>
+						<>
+							<div className={styles.storyContainer} key={story.alt}>
 								<div className={styles.storyImage}>
 									<Image
 										src={`${process.env.NEXT_PUBLIC_MEDIA_URL}/${story.image})`}
@@ -105,7 +105,7 @@ export default async function Home() {
 									<Link href={story.href}>{story.title}</Link>
 								</div>
 							</div>
-						</div>
+						</>
 					))}
 					<div className={styles.seeAllLink}>
 						<Link href="/highway-of-tears">See all stories</Link>
