@@ -1,6 +1,27 @@
+import { Metadata } from 'next'
 import { gql } from '@apollo/client'
 import client from '../../../apollo-client'
-import { CategoryLanding } from '../../components/categoryLanding'
+import { CategoryLanding } from '../../components'
+
+export const metadata: Metadata = {
+	title: 'Missing | Hue and Cry',
+	description: 'Cases of women and girls who have gone missing.',
+	metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`),
+	alternates: {
+		canonical: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`,
+	},
+	openGraph: {
+		title: 'Missing | Hue and Cry',
+		description: 'Cases of women and girls who have gone missing.',
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`,
+		siteName: 'Hue and Cry',
+		images: [
+			{
+				url: `${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`,
+			},
+		],
+	},
+}
 
 export default async function Missing() {
 	const { data } = await client.query({
@@ -29,36 +50,6 @@ export default async function Missing() {
 
 	return (
 		<>
-			<head>
-				<title>Missing | Hue and Cry</title>
-				<meta
-					name="description"
-					content="Cases of women and girls who have gone missing."
-				/>
-				<meta property="og:locale" content="en_US" />
-				<meta property="og:type" content="article" />
-				<meta property="og:title" content="Missing" />
-				<meta
-					property="og:description"
-					content="Cases of women and girls who have gone missing."
-				/>
-				<meta
-					property="og:url"
-					content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`}
-				/>
-				<meta property="og:site_name" content="Hue and Cry" />
-				<meta
-					property="og:image"
-					content={`${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`}
-				/>
-				<meta name="twitter:card" content="summary_large_image" />
-				<meta name="twitter:creator" content="@thehueandcry" />
-				<meta name="twitter:site" content="@thehueandcry" />
-				<link
-					rel="canonical"
-					href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`}
-				/>
-			</head>
 			<CategoryLanding posts={posts} title="Missing" />
 		</>
 	)

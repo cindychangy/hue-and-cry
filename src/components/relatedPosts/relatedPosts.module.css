@@ -1,0 +1,61 @@
+.postContainer {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.post {
+	max-width: 14rem;
+	padding: 0 1rem;
+	position: relative;
+	text-align: center;
+
+	@media (max-width: 900px) {
+		max-width: 10rem;
+	}
+
+	@media (max-width: 600px) {
+		max-width: 16rem;
+	}
+}
+
+.relatedPostTitle {
+	font-size: 1.4rem;
+	text-transform: uppercase;
+	font-family: var(--font-secondary-semibold);
+	text-align: center;
+	margin-block: 4rem 2rem;
+}
+
+.postImage {
+	height: 8rem;
+	width: 8rem;
+	border-radius: 50%;
+	overflow: hidden;
+	position: relative;
+
+	@media (max-width: 900px) {
+		max-width: 100%;
+	}
+}
+
+.postImage img {
+	object-fit: cover;
+	object-position: 100% 30%;
+}
+
+.postTitle {
+	font-size: 1.2rem;
+	line-height: 1.4;
+	font-family: var(--font-secondary);
+	font-weight: 600;
+	color: var(--color-black);
+	text-decoration: none;
+	display: inline-block;
+	margin-block-end: 2rem;
+	text-align: center;
+}
+
+.postTitle:hover {
+	color: var(--color-gray);
+}

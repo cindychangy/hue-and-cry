@@ -1,0 +1,276 @@
+/* RESET */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+cite,
+small,
+strong,
+ol,
+ul,
+li,
+audio,
+video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* END RESET */
+
+:root {
+	--color-white: #ffffff;
+	--color-white-secondary: #fafafa;
+	--color-black: #151a1f;
+	--color-gray-primary: #727272;
+	--color-gray-secondary: #758193;
+	--color-gray-tertiary: #dce0e2;
+	--color-orange-primary: #ff8600;
+	--color-orange-secondary: #fff4e8;
+	--color-background-gray: #c3c8ce;
+
+	--font-primary: 'Tiempos Text', serif;
+	--font-primary-semibold: 'Tiempos Text Semibold', serif;
+	--font-secondary: 'Graphik', Helvetica, Arial, sans-serif;
+	--font-secondary-medium: 'Graphik Medium', Helvetica, Arial, sans-serif;
+	--font-secondary-semibold: 'Graphik Semibold', Helvetica, Arial, sans-serif;
+	--font-tertiary: 'Bebas Neue', Helvetica, Arial, sans-serif;
+}
+
+@font-face {
+	font-family: 'Bebas Neue';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('/fonts/bebas-neue.woff2') format('woff2'),
+		url('/fonts/bebas-neue.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Tiempos Text';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('/fonts/tiempos-regular-webfont.woff2') format('woff2'),
+		url('/fonts/tiempos-regular-webfont.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Tiempos Text Semibold';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('/fonts/tiempos-semibold-webfont.woff2') format('woff2'),
+		url('/fonts/tiempos-semibold-webfont.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('/fonts/graphik-regular.woff2') format('woff2'),
+		url('/fonts/graphik-regular.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik Medium';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('/fonts/graphik-medium.woff2') format('woff2'),
+		url('/fonts/graphik-medium.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik Semibold';
+	font-style: normal;
+	font-weight: 600;
+	src:
+		url('/fonts/graphik-semibold.woff2') format('woff2'),
+		url('/fonts/graphik-semibold.woff') format('woff');
+	font-display: swap;
+}
+
+html {
+	/* 62.5% of 16px browser = 10px */
+	font-size: 62.5%;
+}
+
+body {
+	font-size: 1.6rem;
+	font-family: var(--font-primary);
+	line-height: 1.7;
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+html,
+body {
+	overflow-x: hidden;
+}
+
+a {
+	transition: color 0.2s ease-in-out;
+	color: inherit;
+	cursor: pointer;
+	display: inline-block;
+}
+
+h1 {
+	font-family: var(--font-primary-semibold);
+	font-size: clamp(3.5rem, 5vw, 4.6rem);
+	line-height: 1.1;
+}
+
+h2 {
+	font-size: 3rem;
+	line-height: 1.2;
+	font-family: var(--font-primary-semibold);
+}
+
+h3,
+h3 a {
+	font-size: 1.9rem;
+	line-height: 1.2;
+	font-family: var(--font-primary-semibold);
+	color: var(--color-black);
+}
+
+h4 {
+	font-size: 2rem;
+	color: var(--color-orange-primary);
+	font-family: var(--font-secondary-semibold);
+}
+
+h5,
+h5 a {
+	font-size: 1rem;
+	line-height: 1;
+	color: var(--color-orange-primary);
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: var(--font-secondary-medium);
+}
+
+p {
+	font-size: 1.8rem;
+	font-family: var(--font-primary);
+}
+
+h3 a,
+h5 a {
+	text-decoration: none;
+
+	&:hover {
+		color: var(--color-orange-black);
+	}
+}
+
+small {
+	font-size: 1.3rem;
+	line-height: 1.5;
+	font-family: var(--font-secondary);
+	color: var(--color-gray-secondary);
+}
+
+.contentContainer {
+	max-width: 120rem;
+	padding: 2rem;
+	margin: auto;
+
+	@media (max-width: 600px) {
+		max-width: 100%;
+	}
+}
+
+.gridContainer {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	grid-template-rows: repeat(2, 1fr);
+	grid-column-gap: 2.5rem;
+	grid-row-gap: 4.5rem;
+
+	@media (max-width: 900px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+
+	@media (max-width: 600px) {
+		grid-template-columns: 1fr;
+		grid-row-gap: 3rem;
+	}
+}
+
+.mobile-nav {
+	@media (max-width: 1200px) {
+		display: none;
+		background: var(--color-white);
+		position: absolute;
+		top: 0;
+		left: 0;
+		right: 0;
+		z-index: 1;
+		height: 100vh;
+		padding: 4rem 2rem;
+	}
+}
+
+.disqus-comment-count {
+	font-size: 1.1rem;
+	padding-inline-start: 0.5rem;
+	font-family: var(--font-secondary);
+	color: var(--color-black);
+	position: relative;
+	top: -1px;
+}
+
+.wp-block-image figure {
+	@media (max-width: 600px) {
+		margin: 0;
+	}
+}
+
+.wp-block-image figure.aligncenter {
+	text-align: center;
+}
+
+.wp-block-image figure img {
+	max-width: 100%;
+	width: 100%;
+	height: auto;
+}
+
+.active-nav-item {
+	border-bottom: 3px solid #ff8600;
+	width: fit-content;
+}
+
+.show-mobile-nav {
+	display: block !important;
+}
+
+.mobile-nav li {
+	@media (max-width: 1200px) {
+		display: block !important;
+		font-size: 2rem !important;
+		line-height: 1.5;
+		margin-block-end: 1.5rem;
+	}
+}
+
+.active-nav-item {
+	border-bottom: 3px solid #ff8600;
+	width: fit-content;
+}
