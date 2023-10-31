@@ -25,7 +25,8 @@
 		"next-env.d.ts",
 		"src/**/*.ts",
 		"src/**/*.tsx",
-		".next/types/**/*.ts"
-, "src/app/highway-of-tears"	],
+		".next/types/**/*.ts",
+		"src/app/highway-of-tears"
+	],
 	"exclude": ["node_modules"]
 }
