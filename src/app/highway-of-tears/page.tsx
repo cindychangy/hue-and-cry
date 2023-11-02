@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
-import { TIMELINE_DATA } from '../../constants/timeline'
+import { TIMELINE_DATA } from '@/constants/timeline'
 import styles from './page.module.css'
 
 export const metadata: Metadata = {

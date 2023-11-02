@@ -1,5 +1,5 @@
 import './styles/globals.css'
-import { SiteFooter, SiteHeader, GoogleAnalytics, Scroll } from '../components'
+import { SiteFooter, SiteHeader, GoogleAnalytics, Scroll } from '@/components'
 
 export default function RootLayout({
 	children,
