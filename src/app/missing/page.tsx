@@ -1,7 +1,7 @@
 import { Metadata } from 'next'
 import { gql } from '@apollo/client'
-import client from '../../../apollo-client'
-import { CategoryLanding } from '../../components'
+import client from '@/lib/apollo-client'
+import { CategoryLanding } from '@/components'
 
 export const metadata: Metadata = {
 	title: 'Missing | Hue and Cry',

@@ -3,10 +3,10 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import styles from './page.module.css'
 import { gql } from '@apollo/client'
-import client from '../../apollo-client'
-import { Post } from '../api/types/post'
-import { PostGrid } from '../components'
-import { HIGHWAY_HOMEPAGE_CTA, HIGHWAY_STORIES } from '../constants/media'
+import client from '@/lib/apollo-client'
+import { Post } from '@/api/types/post'
+import { PostGrid } from '@/components'
+import { HIGHWAY_HOMEPAGE_CTA, HIGHWAY_STORIES } from '@/constants/media'
 
 export const metadata: Metadata = {
 	title: 'Hue and Cry | True Crime Blog',

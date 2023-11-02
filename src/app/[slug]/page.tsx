@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { gql } from '@apollo/client'
-import client from '../../../apollo-client'
+import client from '@/lib/apollo-client'
 import { getRelatedPosts } from 'api/actions/post'
-import { Post } from '../../api/types/post'
+import { Post } from '@/api/types/post'
 import {
 	PostHeader,
 	PostCta,
@@ -11,7 +11,7 @@ import {
 	RelatedVideos,
 	ShadowElevation,
 	Comments,
-} from '../../components'
+} from '@/components'
 import styles from './page.module.css'
 
 export async function generateStaticParams() {
