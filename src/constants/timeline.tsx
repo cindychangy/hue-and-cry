@@ -284,4 +284,14 @@ export const TIMELINE_DATA = [
 		photo:
 			'https://wordpress.thehueandcry.com/wp-content/uploads/cynthia-martin.png',
 	},
+	{
+		year: '2023',
+		location: 'Vanderhoof',
+		name: 'Chelsey Quaw',
+		blurb:
+			"Chelsey was 29 years old and was last seen leaving her father's house in the early morning. She never returned home.",
+		link: '/chelsey-quaw',
+		photo:
+			'https://wordpress.thehueandcry.com/wp-content/uploads/chelsey-photo.jpg',
+	},
 ]
