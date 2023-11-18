@@ -46,9 +46,6 @@ export type Post = {
 		digDeeper: string
 	}
 	postAssets: {
-		backgroundImage: {
-			sourceUrl: string
-		}
 		copyrightSources: string
 	}
 	storyFacts: {

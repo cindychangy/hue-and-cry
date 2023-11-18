@@ -67,9 +67,6 @@ export default async function PostPage({
             }
           }
           postAssets {
-            backgroundImage {
-              sourceUrl
-            }
             copyrightSources
           }
           storyFacts {
