@@ -21,7 +21,6 @@
 .ctaContainer p a {
 	text-decoration: underline;
 	font-weight: 600;
-	margin-block-end: 1rem;
 	color: var(--color-black);
 	display: inline-block;
 }
