@@ -14,6 +14,8 @@ import {
 } from '@/components'
 import styles from './page.module.css'
 
+export const dynamic = 'force-dynamic'
+
 export async function generateStaticParams() {
 	const { data } = await client.query({
 		query: gql`
