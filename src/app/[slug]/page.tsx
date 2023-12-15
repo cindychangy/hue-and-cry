@@ -14,8 +14,6 @@ import {
 } from '@/components'
 import styles from './page.module.css'
 
-export const fetchCache = 'force-no-store'
-
 export async function generateStaticParams() {
 	const { data } = await client.query({
 		query: gql`
