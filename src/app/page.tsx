@@ -8,8 +8,6 @@ import { Post } from '@/api/types/post'
 import { PostGrid } from '@/components'
 import { HIGHWAY_HOMEPAGE_CTA, HIGHWAY_STORIES } from '@/constants/media'
 
-// export const revalidate = 3600
-
 export const metadata: Metadata = {
 	title: 'Hue and Cry | True Crime Blog',
 	description:
