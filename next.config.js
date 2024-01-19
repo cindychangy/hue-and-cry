@@ -2,7 +2,7 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['i0.wp.com', 'wordpress.thehueandcry.com'],
+		domains: ['i0.wp.com', 'ejt.qso.mybluehost.me'],
 	},
 }
 
