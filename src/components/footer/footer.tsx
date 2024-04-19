@@ -15,7 +15,7 @@ export const SiteFooter = () => {
 					<Link className={styles.logo} href="/">
 						Hue and Cry
 					</Link>
-					<small> © 2023 Hue and Cry. All Rights Reserved.</small>
+					<small> © 2024 Hue and Cry. All Rights Reserved.</small>
 				</div>
 				<div>
 					<ul className={styles.navigation}>
