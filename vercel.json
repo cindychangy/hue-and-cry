@@ -1,0 +1,111 @@
+{
+	"redirects": [
+		{ "source": "/missing/lashaya-stine", "destination": "/lashaya-stine" },
+		{
+			"source": "/ramona-wilson/ramona-wilson-photo",
+			"destination": "/ramona-wilson"
+		},
+		{
+			"source": "/amy-lynn-bradley/amy-bradley-jas",
+			"destination": "/amy-lynn-bradley"
+		},
+		{
+			"source": "/alissa-turney/alyssa-turney",
+			"destination": "/alissa-turney"
+		},
+		{ "source": "/missing/alissa-turney", "destination": "/alissa-turney" },
+		{
+			"source": "/amy-lynn-bradley/amy-bradley-jas",
+			"destination": "/amy-lynn-bradley"
+		},
+		{
+			"source": "/missing/the-disappearance-of-sandra-crispo",
+			"destination": "/sandra-crispo"
+		},
+		{
+			"source": "/ada-elaine-brown/ada-elaine-brown",
+			"destination": "/ada-elaine-brown"
+		},
+		{
+			"source": "/alissa-turney/alissa-turney",
+			"destination": "/alissa-turney"
+		},
+		{
+			"source": "/missing/jepsy-amaga-kallungi",
+			"destination": "/jepsy-amaga-kallungi"
+		},
+		{ "source": "/missing/akia-eggleston", "destination": "/akia-eggleston" },
+		{ "source": "/missing/lashaya-stine", "destination": "/lashaya-stine" },
+		{ "source": "/missing/jennifer-kesse", "destination": "/jennifer-kesse" },
+		{ "source": "/missing/sandra-crispo", "destination": "/sandra-crispo" },
+		{
+			"source": "/sandra-crispo/sandra-crispo",
+			"destination": "/sandra-crispo"
+		},
+		{
+			"source": "/wp-content/uploads/ada-elaine-brown.jpg",
+			"destination": "/ada-elaine-brown"
+		},
+		{
+			"source": "/indigenous-women/alyssa-mclemore",
+			"destination": "/alyssa-mclemore"
+		},
+		{
+			"source": "/rosenda-strong/rosenda-strong",
+			"destination": "/rosenda-strong"
+		},
+		{
+			"source": "/indigenous-women/rosenda-strong",
+			"destination": "/rosenda-strong"
+		},
+		{
+			"source": "/indigenous-women/ashley-loring-heavyrunner",
+			"destination": "/ashley-loring-heavyrunner"
+		},
+		{
+			"source": "/indigenous-women/mary-papatsie",
+			"destination": "/mary-papatsie"
+		},
+		{
+			"source": "/indigenous-women/amber-tuccaro",
+			"destination": "/amber-tuccaro"
+		},
+		{
+			"source": "/indigenous-women/ada-elaine-brown",
+			"destination": "/ada-elaine-brown"
+		},
+		{
+			"source": "/highway-of-tears/ramona-wilson",
+			"destination": "/ramona-wilson"
+		},
+		{
+			"source": "/highway-of-tears/aielah-saric-auger",
+			"destination": "/aielah-saric-auger"
+		},
+		{
+			"source": "/highway-of-tears/delphine-nikal",
+			"destination": "/delphine-nikal"
+		},
+		{
+			"source": "/the-disappearance-of-sandra-crispo",
+			"destination": "/sandra-crispo"
+		},
+		{
+			"source": "/the-murder-of-aielah-saric-auger",
+			"destination": "/aielah-saric-auger"
+		},
+		{
+			"source": "/the-murder-of-ramona-wilson",
+			"destination": "/ramona-wilson"
+		},
+		{
+			"source": "/the-disappearance-of-lashaya-stine",
+			"destination": "/lashaya-stine"
+		},
+		{ "source": "/alyssa-turney", "destination": "/alissa-turney" },
+		{
+			"source": "/mysterious-murder-abigail-williams-and-liberty-german",
+			"destination": "/abigail-williams-and-liberty-german"
+		}
+	]
+}
