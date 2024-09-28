@@ -1,45 +1,24 @@
 {
-	"name": "hue-and-cry-blog",
-	"version": "0.1.0",
-	"private": true,
-	"scripts": {
-		"dev": "next dev",
-		"build": "next build",
-		"start": "next start",
-		"lint": "next lint",
-		"check-format": "prettier --write .",
-		"check-types": "tsc -p tsconfig.json",
-		"check-lint": "eslint --fix",
-		"prepare": "husky install"
-	},
-	"dependencies": {
-		"@apollo/client": "^3.8.1",
-		"classnames": "^2.3.2",
-		"date-fns": "^2.30.0",
-		"disqus-react": "^1.1.5",
-		"eslint": "8.48.0",
-		"eslint-config-next": "13.4.19",
-		"graphql": "^16.8.0",
-		"next": "13.5.4",
-		"react": "^18",
-		"react-dom": "^18"
-	},
-	"devDependencies": {
-		"@types/google.analytics": "^0.0.42",
-		"@types/node": "^20",
-		"@types/react": "^18",
-		"@types/react-dom": "^18",
-		"@typescript-eslint/eslint-plugin": "^6.4.1",
-		"eslint": "^8",
-		"eslint-config-next": "13.5.4",
-		"eslint-config-prettier": "^9.0.0",
-		"husky": "^8.0.3",
-		"prettier": "3.0.2",
-		"typescript": "^5"
-	},
-	"husky": {
-		"hooks": {
-			"pre-commit": "npm run precommit"
-		}
-	}
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "react": "^18",
+    "react-dom": "^18",
+    "next": "14.2.13"
+  },
+  "devDependencies": {
+    "typescript": "^5",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.2.13"
+  }
 }
