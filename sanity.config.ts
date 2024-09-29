@@ -1,13 +1,13 @@
-import { defineConfig } from 'sanity'
-import { structureTool } from 'sanity/structure'
-import { visionTool } from '@sanity/vision'
-import { schemaTypes } from './schemaTypes'
+import { defineConfig } from 'sanity';
+import { structureTool } from 'sanity/structure';
+import { visionTool } from '@sanity/vision';
+import { schemaTypes } from './schemaTypes';
 
 export default defineConfig({
 	name: 'hueandcry',
 	title: 'hue-and-cry',
-	projectId: 'i6ujk2hj',
-	dataset: 'production',
+	projectId: `${process.env.NEXT_PUBLIC_SANITY_PROJECT_ID}`,
+	dataset: `${process.env.NEXT_PUBLIC_SANITY_DATASET}`,
 	basePath: '/studio',
 
 	plugins: [structureTool(), visionTool()],
@@ -15,4 +15,4 @@ export default defineConfig({
 	schema: {
 		types: schemaTypes,
 	},
-})
+});

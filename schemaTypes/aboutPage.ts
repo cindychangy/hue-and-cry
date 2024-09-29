@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-	name: 'category',
-	title: 'Category',
+	name: 'aboutPage',
+	title: 'About Page',
 	type: 'document',
 	fields: [
 		defineField({
@@ -17,6 +17,11 @@ export default defineType({
 			options: {
 				source: 'title',
 			},
+		}),
+		defineField({
+			name: 'content',
+			title: 'Page Content',
+			type: 'blockContent',
 		}),
 	],
 });
