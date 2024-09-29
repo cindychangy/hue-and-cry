@@ -3,21 +3,21 @@ export const HERO_ABOUT = {
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-}
+};
 
 export const HERO_HOMEPAGE_CTA = {
 	backgroundImage: `url(${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-of-tears-banner.jpg)`,
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-}
+};
 
 export const HIGHWAY_HOMEPAGE_CTA = {
 	backgroundImage: `url('${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-16-photo.jpg')`,
 	backgroundSize: 'cover',
 	backgroundRepeat: 'no-repeat',
 	backgroundPosition: 'center',
-}
+};
 
 export const HIGHWAY_STORIES = [
 	{
@@ -41,4 +41,4 @@ export const HIGHWAY_STORIES = [
 		href: '/jessica-patrick-balczer',
 		title: 'The Murder of Jessica Patrick Balczer',
 	},
-]
+];

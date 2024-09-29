@@ -9,74 +9,74 @@ export enum CategoryName {
 export type Category = {
 	nodes: [
 		{
-			name: string
-			slug: string
+			name: string;
+			slug: string;
 		},
-	]
-}
+	];
+};
 
 export type Post = {
-	postId: number
-	date: string
-	title: string
-	excerpt: string
-	sourceUrl: string
-	commentCount: number
+	postId: number;
+	date: string;
+	title: string;
+	excerpt: string;
+	sourceUrl: string;
+	commentCount: number;
 	featuredImage: {
 		node: {
-			sourceUrl: string
-		}
-	}
-	categories: Category
-	date_gmt?: string
-	modified_gmt?: string
-	slug: string
+			sourceUrl: string;
+		};
+	};
+	categories: Category;
+	date_gmt?: string;
+	modified_gmt?: string;
+	slug: string;
 	tags: {
 		nodes: [
 			{
-				name: string
+				name: string;
 			},
-		]
-	}
-	content: string
+		];
+	};
+	content: string;
 	ctaHowToHelp: {
-		howToHelp: string
-	}
+		howToHelp: string;
+	};
 	ctaDigDeeper: {
-		digDeeper: string
-	}
+		digDeeper: string;
+	};
 	postAssets: {
-		copyrightSources: string
-	}
+		copyrightSources: string;
+	};
 	storyFacts: {
-		location: string
-		year: string
-	}
+		location: string;
+		year: string;
+	};
 	videos?: {
 		videos: [
 			{
-				link: string
-				video: string
-				videoTitle: string
+				link: string;
+				video: string;
+				videoTitle: string;
 			},
-		]
-	}
+		];
+	};
 	podcasts?: {
 		podcasts: [
 			{
-				link: string
-				podcastShow: string
-				showTitle: string
+				link: string;
+				podcastShow: string;
+				showTitle: string;
 			},
-		]
-	}
-}
+		];
+	};
+};
 
 export type RelatedPost = {
-	id: number
-	jetpack_featured_media_url: string
+	id: number;
+	jetpack_featured_media_url: string;
 	title: {
-		rendered: string
-	}
-	slug: string
-}
+		rendered: string;
+	};
+	slug: string;
+};

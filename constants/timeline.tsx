@@ -264,4 +264,4 @@ export const TIMELINE_DATA = [
 		link: '/chelsey-quaw',
 		photo: `${process.env.NEXT_PUBLIC_MEDIA_URL}/chelsey-photo.jpg`,
 	},
-]
+];
