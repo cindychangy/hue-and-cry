@@ -1,0 +1,9 @@
+.assetContainer {
+	margin-block-start: 4rem;
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	color: var(--color-black);
+}

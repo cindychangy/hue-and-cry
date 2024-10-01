@@ -1,0 +1,67 @@
+.postHeaderContainer {
+	width: 100%;
+	display: flex;
+	align-items: center;
+	margin-block-start: 2rem;
+
+	@media (max-width: 900px) {
+		flex-direction: column;
+		margin-block-start: 0.5rem;
+	}
+}
+
+.postImageContainer {
+	width: 45%;
+	height: 48.4rem;
+	position: relative;
+
+	@media (max-width: 1200px) {
+		height: 40rem;
+	}
+
+	@media (max-width: 900px) {
+		width: 100%;
+		object-fit: cover;
+	}
+}
+
+.postImageContainer img {
+	object-fit: contain;
+
+	@media (max-width: 600px) {
+		object-fit: cover;
+	}
+}
+
+.postMetaContainer {
+	width: 55%;
+	padding-inline-start: 6rem;
+
+	@media (max-width: 900px) {
+		width: 100%;
+		margin: 3rem 0 0 0;
+		padding-inline-start: 0;
+	}
+}
+
+.postCategory a {
+	display: inline-block;
+	font-size: 1.2rem;
+	letter-spacing: 4px;
+	margin-block-end: 1rem;
+}
+
+.postDateLocation {
+	font-size: 1.5rem;
+	color: var(--color-gray-primary);
+	font-family: var(--font-secondary);
+	margin-block-start: 3rem;
+
+	@media (max-width: 900px) {
+		margin-block-start: 2rem;
+	}
+}
+
+.metaTitle {
+	color: var(--color-black);
+}
