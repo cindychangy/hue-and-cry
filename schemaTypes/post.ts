@@ -20,8 +20,8 @@ export default defineType({
 			},
 		}),
 		defineField({
-			name: 'mainImage',
-			title: 'Main image',
+			name: 'featuredImage',
+			title: 'Featured image',
 			type: 'image',
 			options: {
 				hotspot: true,
@@ -36,12 +36,61 @@ export default defineType({
 		defineField({
 			name: 'publishedAt',
 			title: 'Published at',
-			type: 'datetime',
+			type: 'date',
 		}),
 		defineField({
 			name: 'body',
 			title: 'Body',
 			type: 'blockContent',
+		}),
+		defineField({
+			name: 'howToHelp',
+			title: 'How to Help',
+			type: 'blockContent',
+		}),
+		defineField({
+			name: 'copyright',
+			title: 'Copyrights',
+			type: 'text',
+		}),
+		defineField({
+			name: 'digDeeper',
+			title: 'Dig Deeper',
+			type: 'blockContent',
+		}),
+		defineField({
+			name: 'podcasts',
+			type: 'array',
+			title: 'Podcast Episodes',
+			of: [
+				{
+					type: 'object',
+					name: 'podcastItem',
+					title: 'Podcast Item',
+					fields: [
+						{ name: 'title', type: 'string', title: 'Episode title' },
+						{ name: 'source', type: 'string', title: 'Show title' },
+						{ name: 'link', type: 'url', title: 'Link to episode' },
+					],
+				},
+			],
+		}),
+		defineField({
+			name: 'videos',
+			type: 'array',
+			title: 'Videos',
+			of: [
+				{
+					type: 'object',
+					name: 'videoItem',
+					title: 'Video Item',
+					fields: [
+						{ name: 'title', type: 'string', title: 'Video title' },
+						{ name: 'videoCode', type: 'text', title: 'Embed code' },
+						{ name: 'link', type: 'url', title: 'Link to video' },
+					],
+				},
+			],
 		}),
 	],
 

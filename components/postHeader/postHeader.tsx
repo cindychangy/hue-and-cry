@@ -1,14 +1,14 @@
-import Link from 'next/link'
-import Image from 'next/image'
-import styles from './postHeader.module.css'
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from './postHeader.module.css';
 
 interface PostHeaderProps {
-	image: string
-	category: string
-	categorySlug: string
-	title: string
-	year: string
-	location: string
+	image: string;
+	category: string;
+	categorySlug: string;
+	title: string;
+	year: string;
+	location: string;
 }
 
 export const PostHeader = ({
@@ -36,5 +36,5 @@ export const PostHeader = ({
 				</div>
 			</div>
 		</div>
-	)
-}
+	);
+};
