@@ -39,6 +39,16 @@ export default defineType({
 			type: 'date',
 		}),
 		defineField({
+			name: 'location',
+			title: 'Location',
+			type: 'string',
+		}),
+		defineField({
+			name: 'year',
+			title: 'Year',
+			type: 'string',
+		}),
+		defineField({
 			name: 'body',
 			title: 'Body',
 			type: 'blockContent',
@@ -51,7 +61,7 @@ export default defineType({
 		defineField({
 			name: 'copyright',
 			title: 'Copyrights',
-			type: 'text',
+			type: 'string',
 		}),
 		defineField({
 			name: 'digDeeper',
