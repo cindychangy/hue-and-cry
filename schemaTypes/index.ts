@@ -3,6 +3,7 @@ import category from './category';
 import post from './post';
 import categoryPage from './categoryPage';
 import aboutPage from './aboutPage';
+import imageElement from './objects/imageElement';
 
 export const schemaTypes = [
 	post,
@@ -10,4 +11,5 @@ export const schemaTypes = [
 	blockContent,
 	categoryPage,
 	aboutPage,
+	imageElement,
 ];

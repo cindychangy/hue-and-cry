@@ -93,16 +93,17 @@ export default defineType({
 			],
 		}),
 	],
-
 	preview: {
 		select: {
 			title: 'title',
-			author: 'author.name',
-			media: 'mainImage',
+			date: 'date',
+			media: 'thumbnail',
 		},
-		prepare(selection) {
-			const { author } = selection;
-			return { ...selection, subtitle: author && `by ${author}` };
+		prepare({ title, media }) {
+			return {
+				title,
+				media,
+			};
 		},
 	},
 });
