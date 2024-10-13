@@ -1,4 +1,5 @@
 import { defineField, defineType } from 'sanity';
+import { formatArticleDate } from '../utils/post';
 
 export default defineType({
 	name: 'post',
@@ -47,6 +48,12 @@ export default defineType({
 			name: 'year',
 			title: 'Year',
 			type: 'string',
+		}),
+		defineField({
+			name: 'summary',
+			title: 'Summary',
+			type: 'text',
+			rows: 2,
 		}),
 		defineField({
 			name: 'body',
@@ -106,13 +113,14 @@ export default defineType({
 	preview: {
 		select: {
 			title: 'title',
-			date: 'date',
-			media: 'thumbnail',
+			date: 'publishedAt',
+			media: 'featuredImage',
 		},
-		prepare({ title, media }) {
+		prepare({ title, media, date }) {
 			return {
 				title,
 				media,
+				subtitle: date && `on ${formatArticleDate(date)}`,
 			};
 		},
 	},

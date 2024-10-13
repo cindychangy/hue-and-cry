@@ -21,20 +21,6 @@ export default defineType({
 					{ title: 'Strong', value: 'strong' },
 					{ title: 'Emphasis', value: 'em' },
 				],
-				annotations: [
-					{
-						title: 'URL',
-						name: 'link',
-						type: 'object',
-						fields: [
-							{
-								title: 'URL',
-								name: 'href',
-								type: 'url',
-							},
-						],
-					},
-				],
 			},
 		}),
 		defineField({
