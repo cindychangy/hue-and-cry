@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity';
 import { formatArticleDate } from '../utils/post';
+import { ComposeIcon } from '@sanity/icons';
 
 export default defineType({
 	name: 'post',
 	title: 'Post',
 	type: 'document',
+	icon: ComposeIcon,
 	fields: [
 		defineField({
 			name: 'title',
