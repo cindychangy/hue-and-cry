@@ -1,10 +1,12 @@
 import { defineField, defineType } from 'sanity';
 import { ImagePreview } from '@/components/Sanity/ImagePreview';
+import { ImageIcon } from '@sanity/icons';
 
 export default defineType({
 	name: 'imageElement',
 	title: 'Image',
 	type: 'object',
+	icon: ImageIcon,
 	fields: [
 		defineField({
 			name: 'image',

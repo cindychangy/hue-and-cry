@@ -55,7 +55,7 @@ export default defineType({
 			name: 'summary',
 			title: 'Summary',
 			type: 'text',
-			rows: 2,
+			rows: 4,
 		}),
 		defineField({
 			name: 'body',

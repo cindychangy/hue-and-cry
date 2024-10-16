@@ -31,5 +31,9 @@ export default defineType({
 			name: 'blockQuote',
 			type: 'blockQuote',
 		}),
+		defineField({
+			name: 'video',
+			type: 'video',
+		}),
 	],
 });
