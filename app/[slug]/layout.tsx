@@ -1,4 +1,4 @@
-import { SiteNav } from '@/components';
+import { SiteNav, SiteFooter } from '@/components';
 
 export default function PostPageLayout({
 	children,
@@ -9,6 +9,7 @@ export default function PostPageLayout({
 		<>
 			<SiteNav />
 			<div className="container">{children}</div>
+			<SiteFooter />
 		</>
 	);
 }

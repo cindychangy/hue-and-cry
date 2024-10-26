@@ -76,6 +76,7 @@
 
 .navigation ul li a {
 	text-decoration: none;
+	font-family: var(--font-primary-bold);
 
 	&:hover {
 		color: var(--color-orange);

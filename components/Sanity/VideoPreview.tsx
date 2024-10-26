@@ -1,10 +1,4 @@
 import type { PreviewProps } from 'sanity';
-import { CSSProperties } from 'react';
-
-const quoteStyles: CSSProperties = {
-	fontSize: '1.2rem',
-	fontWeight: 600,
-};
 
 export const VideoPreview = (props: PreviewProps) => {
 	return (
