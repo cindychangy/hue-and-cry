@@ -28,10 +28,9 @@ video {
 :root {
 	--color-white: #ffffff;
 	--color-black: #232323;
-	--color-gray-dark: #151a1f;
 	--color-orange: #e7725a;
-	--color-gray: #b1b1b1;
-
+	--color-gray: #bdbdcb;
+	--color-gray-dark: #151a1f;
 	--font-primary: 'Neue Haas Grotesk Display Pro', Helvetica, Arial, sans-serif;
 	--font-primary-bold: 'Neue Haas Grotesk Display Pro Bold', Helvetica, Arial,
 		sans-serif;
@@ -58,7 +57,7 @@ video {
 	--size-40: 2.5rem;
 	--size-60: 3.75rem;
 
-	--site-width: 120rem;
+	--site-width: 90rem;
 	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
 		-webkit-box-shadow 0.1s ease 0s;
 	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
@@ -142,10 +141,23 @@ a {
 }
 
 h1 {
-	font-size: 4rem;
-	font-weight: 800;
+	font-size: 4.2rem;
+	font-family: var(--font-primary-bold);
+	line-height: 1;
 }
 
+h3 {
+	color: var(--color-orange);
+	font-size: var(--size-16);
+	letter-spacing: 1px;
+	font-weight: 600;
+}
+
+p {
+	font-size: var(--size-16);
+	line-height: 1;
+	font-family: var(--font-secondary);
+}
 .active-nav-item {
 	border-bottom: 3px solid var(--color-orange);
 	width: fit-content;

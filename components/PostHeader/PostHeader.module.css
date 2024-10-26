@@ -1,0 +1,69 @@
+.postHeader {
+	height: 49.125rem;
+	display: flex;
+	justify-content: space-between;
+	position: relative;
+}
+
+.postImage {
+	width: 52%;
+	max-height: 45.75rem;
+	height: 48rem;
+	position: absolute;
+	overflow: hidden;
+	z-index: 1;
+	left: 0;
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& .box {
+		background-color: rgb(0 0 0 / 15%);
+		backdrop-filter: blur(50px);
+		height: 100%;
+		width: 100%;
+	}
+
+	& .featuredImage {
+		width: 500px;
+		position: absolute;
+		z-index: 2;
+	}
+}
+
+.postTitleContent {
+	background: var(--color-gray-dark);
+	width: 60%;
+	max-height: 49.125rem;
+	height: 100%;
+	position: absolute;
+	right: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	& .content {
+		margin-inline-start: 17.5rem;
+
+		& .title {
+			color: var(--color-white);
+		}
+
+		& .category {
+			margin-bottom: var(--size-6);
+		}
+
+		& .metaData {
+			color: var(--color-gray);
+			position: relative;
+			top: 14rem;
+
+			& .divider {
+				filter: brightness(0.5);
+			}
+		}
+	}
+}
