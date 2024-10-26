@@ -1,3 +1,24 @@
-.hp-section {
+.homepage {
 	background: #151a1f;
+	height: 80vh;
+	width: 100%;
+	padding: var(--size-60);
+	display: flex;
+	align-items: flex-end;
+}
+
+.homepageContainer {
+	display: flex;
+	width: 100%;
+}
+
+.logo {
+	font-family: var(--font-primary-bold);
+	color: var(--color-white);
+	text-transform: uppercase;
+
+	& span {
+		display: block;
+		line-height: 0.9;
+	}
 }
