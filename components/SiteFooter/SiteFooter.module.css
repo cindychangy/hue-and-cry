@@ -6,7 +6,7 @@
 	justify-content: space-between;
 	color: var(--color-black);
 	border-top: var(--size-4) solid var(--color-black);
-	margin-block-start: var(--size-24);
+	margin-block-start: var(--size-60);
 	padding-block-start: var(--size-24);
 
 	@media (max-width: 600px) {

@@ -5,6 +5,11 @@
 	position: relative;
 }
 
+.headerContent {
+	max-width: var(--site-width);
+	width: 100%;
+}
+
 .postImage {
 	width: 52%;
 	max-height: 45.75rem;
@@ -57,12 +62,13 @@
 		}
 
 		& .metaData {
-			color: var(--color-gray);
+			color: var(--color-gray-light);
+			filter: brightness(0.7);
 			position: relative;
 			top: 14rem;
 
 			& .divider {
-				filter: brightness(0.5);
+				filter: brightness(0.55);
 			}
 		}
 	}

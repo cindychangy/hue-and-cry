@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+
 /* RESET */
 body,
 h1,
@@ -29,14 +31,10 @@ video {
 	--color-white: #ffffff;
 	--color-black: #232323;
 	--color-orange: #e7725a;
-	--color-gray: #bdbdcb;
+	--color-gray-light: #dde0e2;
+	--color-gray: #778191;
 	--color-gray-dark: #151a1f;
-	--font-primary: 'Neue Haas Grotesk Display Pro', Helvetica, Arial, sans-serif;
-	--font-primary-bold: 'Neue Haas Grotesk Display Pro Bold', Helvetica, Arial,
-		sans-serif;
-	--font-secondary: 'Suisse', Helvetica, Arial, sans-serif;
-	--font-secondary-medium: 'Suisse Medium', Helvetica, Arial, sans-serif;
-	--font-secondary-bold: 'Suisse Bold', Helvetica, Arial, sans-serif;
+	--font-primary: 'Inter', Helvetica, Arial, sans-serif;
 
 	--font-size-body: 1rem;
 	--font-size-small: 0.75rem;
@@ -55,6 +53,8 @@ video {
 	--size-28: 1.75rem;
 	--size-32: 2rem;
 	--size-40: 2.5rem;
+	--size-42: 2.625rem;
+	--size-46: 2.875rem;
 	--size-60: 3.75rem;
 
 	--site-width: 90rem;
@@ -62,54 +62,6 @@ video {
 		-webkit-box-shadow 0.1s ease 0s;
 	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
 		rgb(255 161 88) 0px -34px 0px inset;
-}
-
-@font-face {
-	font-family: 'Neue Haas Grotesk Display Pro';
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url('/fonts/neue-haas-grotesk-display-pro.woff2') format('woff2'),
-		url('/fonts/neue-haas-grotesk-display-pro.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Neue Haas Grotesk Display Pro Bold';
-	font-style: normal;
-	font-weight: 700;
-	src: url('/fonts/75b.woff2') format('woff2');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Suisse';
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url('/fonts/suisse-regular.woff2') format('woff2'),
-		url('/fonts/suisse-regular.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Suisse Medium';
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url('/fonts/suisse-medium.woff2') format('woff2'),
-		url('/fonts/suisse-medium.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Suisse Bold';
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url('/fonts/suisse-bold.woff2') format('woff2'),
-		url('/fonts/suisse-bold.woff') format('woff');
-	font-display: swap;
 }
 
 body {
@@ -131,6 +83,7 @@ a {
 	color: inherit;
 	cursor: pointer;
 	display: inline-block;
+	text-decoration: none;
 }
 
 .container {

@@ -8,7 +8,7 @@ export default function PostPageLayout({
 	return (
 		<>
 			<SiteNav />
-			<div className="container">{children}</div>
+			{children}
 			<SiteFooter />
 		</>
 	);

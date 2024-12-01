@@ -7,12 +7,8 @@ export enum CategoryName {
 }
 
 export type Category = {
-	nodes: [
-		{
-			name: string;
-			slug: string;
-		},
-	];
+	title: string;
+	slug: string;
 };
 
 export type Post = {
