@@ -1,12 +1,12 @@
-'use client'
-import React from 'react'
-import { DiscussionEmbed } from 'disqus-react'
-import styles from './comments.module.css'
+'use client';
+import React from 'react';
+import { DiscussionEmbed } from 'disqus-react';
+import styles from './comments.module.css';
 
 interface CommentsProps {
-	postSlug: string
-	postId: number
-	postTitle: string
+	postSlug: string;
+	postId: number;
+	postTitle: string;
 }
 
 export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
@@ -14,7 +14,7 @@ export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${postSlug}`,
 		identifier: postId.toString(),
 		title: postTitle,
-	}
+	};
 
 	return (
 		<>
@@ -26,5 +26,4 @@ export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
 				/>
 			</div>
 		</>
-	)
-}
+	);
