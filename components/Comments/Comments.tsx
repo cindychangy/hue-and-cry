@@ -27,3 +27,4 @@ export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
 			</div>
 		</>
 	);
+};
