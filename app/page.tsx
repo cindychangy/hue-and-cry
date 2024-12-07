@@ -3,7 +3,6 @@ import { SiteNav, Grid, PostPreview } from '@/components';
 import { client } from '@/lib/sanity.client';
 import { getHomepage } from '@/lib/queries/pages';
 import { Post } from '@/types/post';
-
 import styles from './page.module.css';
 
 export default async function Homepage() {
@@ -11,10 +10,10 @@ export default async function Homepage() {
 
 	return (
 		<>
+			<div className={styles.navWrapper}>
+				<SiteNav />
+			</div>
 			<div className={styles.homepageIntro}>
-				<div className={styles.homepageHeader}>
-					<span className={styles.logo}>Hue and Cry</span>
-				</div>
 				<div className={styles.contentWrapper}>
 					<h1 className={styles.headline}>
 						Bringing awareness to unsolved crimes against women and girls.

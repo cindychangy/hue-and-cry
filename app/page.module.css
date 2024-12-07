@@ -1,5 +1,5 @@
 .homepageIntro {
-	background: #151a1f;
+	background: var(--color-gray-dark);
 	height: 90vh;
 	width: 100%;
 	display: flex;
@@ -45,4 +45,8 @@
 .homepageContent {
 	max-width: var(--site-width);
 	margin: auto;
+}
+
+.navWrapper {
+	background: var(--color-gray-dark);
 }

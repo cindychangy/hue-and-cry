@@ -1,6 +1,6 @@
 import { ContentFormatter } from '@/components';
 import type { PortableTextBlock } from '@portabletext/types';
-import styles from './postCta.module.css';
+import styles from './PostCTA.module.css';
 
 interface PostCTAProps {
 	howToHelp: PortableTextBlock;

@@ -1,4 +1,36 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
+
+@font-face {
+	font-family: 'Graphik';
+	font-style: normal;
+	font-weight: 400;
+	src:
+		url('/fonts/graphik-regular.woff2') format('woff2'),
+		url('/fonts/graphik-regular.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik Medium';
+	font-style: normal;
+	font-weight: 500;
+	src:
+		url('/fonts/graphik-medium.woff2') format('woff2'),
+		url('/fonts/graphik-medium.woff') format('woff');
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Graphik Semibold';
+	font-style: normal;
+	font-weight: 600;
+	src:
+		url('/fonts/graphik-semibold.woff2') format('woff2'),
+		url('/fonts/graphik-semibold.woff') format('woff');
+	font-display: swap;
+}
 
 /* RESET */
 body,
@@ -34,7 +66,10 @@ video {
 	--color-gray-light: #dde0e2;
 	--color-gray: #778191;
 	--color-gray-dark: #151a1f;
-	--font-primary: 'Inter', Helvetica, Arial, sans-serif;
+	--color-text: #1a1a1a;
+	--font-sans-serif: 'Inter', Helvetica, Arial, sans-serif;
+	--font-body: 'Merriweather', Helvetica, Arial, sans-serif;
+	--font-logo: 'Bebas Neue', Helvetica, Arial, sans-serif;
 
 	--font-size-body: 1rem;
 	--font-size-small: 0.75rem;
@@ -57,7 +92,7 @@ video {
 	--size-46: 2.875rem;
 	--size-60: 3.75rem;
 
-	--site-width: 90rem;
+	--site-width: 80rem;
 	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
 		-webkit-box-shadow 0.1s ease 0s;
 	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
@@ -66,8 +101,9 @@ video {
 
 body {
 	font-size: var(--size-16);
-	font-family: var(--font-primary);
+	font-family: var(--font-body);
 	line-height: 1.7;
+	color: var(--color-text);
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 }
@@ -95,8 +131,9 @@ a {
 
 h1 {
 	font-size: 4.2rem;
-	font-family: var(--font-primary-bold);
+	font-family: var(--font-sans-serif);
 	line-height: 1;
+	font-weight: 800;
 }
 
 h3 {
@@ -106,10 +143,15 @@ h3 {
 	font-weight: 600;
 }
 
+h4 {
+	font-size: 1.2rem;
+	font-weight: 700;
+}
+
 p {
 	font-size: var(--size-16);
-	line-height: 1;
 	font-family: var(--font-secondary);
+	line-height: 1.875;
 }
 .active-nav-item {
 	border-bottom: 3px solid var(--color-orange);

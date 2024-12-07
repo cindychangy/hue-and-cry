@@ -7,6 +7,10 @@
 	justify-content: space-between;
 	gap: var(--size-60);
 	margin-block-start: var(--size-40);
+
+	& .postContent {
+		max-width: 36.875rem;
+	}
 }
 
 .socialIcons {

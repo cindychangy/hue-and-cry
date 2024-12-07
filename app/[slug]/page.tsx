@@ -111,18 +111,21 @@ export default async function PostPage({ params }: PageProps) {
 						</div>
 					</Link>
 				</div>
-				<div>
+				<div className={styles.postContent}>
 					<ContentFormatter content={post.content} />
 				</div>
 			</div>
-			<PostCTA howToHelp={post.howToHelp} digDeeper={post.digDeeper} />
-			{post.podcasts && <RelatedVideos videos={post.videos} />}
-			{post.videos && (
-				<>
-					<div className={styles.divider} />
-					<RelatedPodcasts podcasts={post.podcasts} />
-				</>
-			)}
+			<div className="container">
+				<PostCTA howToHelp={post.howToHelp} digDeeper={post.digDeeper} />
+				{post.podcasts && <RelatedVideos videos={post.videos} />}
+				{post.videos && (
+					<>
+						<div className={styles.divider} />
+						<RelatedPodcasts podcasts={post.podcasts} />
+					</>
+				)}
+			</div>
+
 			<div className={styles.commentsWrapper}>
 				<Comments
 					postSlug={post.slug}

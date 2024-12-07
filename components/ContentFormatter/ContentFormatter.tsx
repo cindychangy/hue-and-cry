@@ -13,11 +13,14 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 		imageElement: ({ value }) => (
 			<div className={styles.image}>
 				<img src={urlForImage(value.image)} alt={value.caption} />
-				<p className={styles.caption}>{value.caption}</p>
+				{value.caption && <p className={styles.caption}>{value.caption}</p>}
 			</div>
 		),
 		blockQuote: ({ value }) => (
-			<blockquote className={styles.blockquote}>{value.quote}</blockquote>
+			<div className={styles.quoteContainer}>
+				<blockquote className={styles.blockquote}>{value.quote}</blockquote>
+				<cite className={styles.caption}>{value.source}</cite>
+			</div>
 		),
 	},
 	block: {
@@ -31,27 +34,11 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 		number: ({ children }) => <ol className={styles.list}>{children}</ol>,
 	},
 	marks: {
-		link: ({ value, children }) => {
-			const isExternal = value.href.startsWith('http');
-
-			if (isExternal) {
-				return (
-					<a
-						href={value.href}
-						rel="noopener noreferrer"
-						className={styles.link}
-					>
-						{children}
-					</a>
-				);
-			} else {
-				return (
-					<Link href={value.href} className={styles.link}>
-						{children}
-					</Link>
-				);
-			}
-		},
+		link: ({ value, children }) => (
+			<Link href={value.href} className={styles.link}>
+				{children}
+			</Link>
+		),
 	},
 };
 
