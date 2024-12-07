@@ -1,7 +1,16 @@
 import Link from 'next/link';
 import styles from './page.module.css';
-import { PostHeader, ContentFormatter } from '@/components';
+import {
+	PostHeader,
+	ContentFormatter,
+	PostCTA,
+	RelatedPodcasts,
+	RelatedVideos,
+	Comments,
+	RelatedPosts,
+} from '@/components';
 import { getSlugs, getPost } from '@/lib/queries/post';
+import Logger from '@/components/Logger/Logger';
 
 interface PageProps {
 	params: {
@@ -21,16 +30,15 @@ export default async function PostPage({ params }: PageProps) {
 		return null;
 	}
 
-	console.log(post);
-
 	return (
 		<>
+			<Logger data={post} />
 			<PostHeader
 				title={post.title}
-				category={post.categories[0]}
+				category={post.categories}
 				location={post.location}
 				year={post.year}
-				image={post.image}
+				image={post.featuredImage}
 			/>
 			<div className={styles.postBody}>
 				<div className={styles.socialIcons}>
@@ -106,6 +114,30 @@ export default async function PostPage({ params }: PageProps) {
 				<div>
 					<ContentFormatter content={post.content} />
 				</div>
+			</div>
+			<PostCTA howToHelp={post.howToHelp} digDeeper={post.digDeeper} />
+			{post.podcasts && <RelatedVideos videos={post.videos} />}
+			{post.videos && (
+				<>
+					<div className={styles.divider} />
+					<RelatedPodcasts podcasts={post.podcasts} />
+				</>
+			)}
+			<div className={styles.commentsWrapper}>
+				<Comments
+					postSlug={post.slug}
+					postTitle={post.title}
+					postId={post.id}
+				/>
+			</div>
+			<RelatedPosts posts={post.relatedPosts ?? []} />
+			<div className={styles.copyright}>
+				<small>
+					All images and videos used for this story are not the property of The
+					Hue and Cry. They are property of their original owners/publications.
+					Photos are from&nbsp;
+					{post.copyright}.
+				</small>
 			</div>
 		</>
 	);

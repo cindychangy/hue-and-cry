@@ -1,3 +1,5 @@
+import type { PortableTextBlock } from '@portabletext/types';
+
 export enum CategoryName {
 	MISSING = 'Missing',
 	MURDERED = 'Murdered',
@@ -11,68 +13,40 @@ export type Category = {
 	slug: string;
 };
 
+export type Video = {
+	link: string;
+	videoCode: string;
+	title: string;
+};
+
+export type Podcast = {
+	link: string;
+	source: string;
+	title: string;
+};
+
 export type Post = {
-	postId: number;
+	id: string;
 	date: string;
 	title: string;
-	excerpt: string;
-	sourceUrl: string;
+	summary: string;
 	commentCount: number;
-	featuredImage: {
-		node: {
-			sourceUrl: string;
-		};
-	};
-	categories: Category;
-	date_gmt?: string;
-	modified_gmt?: string;
+	featuredImage: string;
+	category: Category;
 	slug: string;
-	tags: {
-		nodes: [
-			{
-				name: string;
-			},
-		];
-	};
-	content: string;
-	ctaHowToHelp: {
-		howToHelp: string;
-	};
-	ctaDigDeeper: {
-		digDeeper: string;
-	};
-	postAssets: {
-		copyrightSources: string;
-	};
-	storyFacts: {
-		location: string;
-		year: string;
-	};
-	videos?: {
-		videos: [
-			{
-				link: string;
-				video: string;
-				videoTitle: string;
-			},
-		];
-	};
-	podcasts?: {
-		podcasts: [
-			{
-				link: string;
-				podcastShow: string;
-				showTitle: string;
-			},
-		];
-	};
+	content: PortableTextBlock;
+	howToHelp: PortableTextBlock;
+	digDeeper: PortableTextBlock;
+	copyright: string;
+	location: string;
+	year: string;
+	videos?: Video[];
+	podcasts?: Podcast[];
 };
 
 export type RelatedPost = {
-	id: number;
-	jetpack_featured_media_url: string;
-	title: {
-		rendered: string;
-	};
+	id: string;
+	featuredImage: string;
+	title: string;
 	slug: string;
 };

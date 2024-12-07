@@ -2,7 +2,12 @@
 const nextConfig = {
 	reactStrictMode: true,
 	images: {
-		domains: ['i0.wp.com', 'ejt.qso.mybluehost.me'],
+		remotePatterns: [
+			{
+				protocol: 'https',
+				hostname: 'cdn.sanity.io',
+			},
+		],
 	},
 };
 

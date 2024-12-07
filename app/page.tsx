@@ -1,21 +1,37 @@
 import Link from 'next/link';
+import { SiteNav, Grid, PostPreview } from '@/components';
+import { client } from '@/lib/sanity.client';
+import { getHomepage } from '@/lib/queries/pages';
+import { Post } from '@/types/post';
+
 import styles from './page.module.css';
 
-export default function Home() {
+export default async function Homepage() {
+	const posts = await getHomepage(client);
+
 	return (
-		<div className={styles.homepage}>
-			<div className={styles.homepageHeader}>
-				<span className={styles.logo}>Hue and Cry</span>
+		<>
+			<div className={styles.homepageIntro}>
+				<div className={styles.homepageHeader}>
+					<span className={styles.logo}>Hue and Cry</span>
+				</div>
+				<div className={styles.contentWrapper}>
+					<h1 className={styles.headline}>
+						Bringing awareness to unsolved crimes against women and girls.
+					</h1>
+					<h3 className={styles.seeAllLink}>
+						<Link href="">See all stories</Link>
+					</h3>
+				</div>
 			</div>
-			<div className={styles.contentWrapper}>
-				<h1 className={styles.headline}>They deserve justice.</h1>
-				<h2 className={styles.subheading}>
-					Here are their stories. They may be gone but we will not forget them.
-				</h2>
-				<h3 className={styles.seeAllLink}>
-					<Link href="">See all stories</Link>
-				</h3>
+			<div className={styles.homepageContent}>
+				<SiteNav />
+				<Grid columns={4} gap="32">
+					{posts.map((post: Post) => (
+						<PostPreview key={post.id} post={post} />
+					))}
+				</Grid>
 			</div>
-		</div>
+		</>
 	);
 }

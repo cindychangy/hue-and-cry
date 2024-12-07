@@ -11,10 +11,6 @@ export const projectId = assertValue(
 export const apiVersion =
 	process.env.NEXT_PUBLIC_SANITY_API_VERSION || '2024-07-15';
 
-export const useCdn = process.env.NODE_ENV === 'production';
-
-export const token = process.env.SANITY_API_TOKEN || null;
-
 function assertValue<T>(v: T | undefined, errorMessage: string): T {
 	if (v === undefined) {
 		throw new Error(errorMessage);

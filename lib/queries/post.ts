@@ -1,28 +1,34 @@
 import { groq } from 'next-sanity';
 import { client } from '@/lib/sanity.client';
 
-export const postLightWeightFields = `
-  title, 
-  "date": publishedAt,
+export const postFieldsCompact = `
+  title,
   "id": _id,
+  "date": publishedAt,
   "slug": slug.current,
-  summary,
-  "image": featuredImage.asset -> url,
-  categories[]-> 
+  "category": categories[0]-> 
     {
       "slug": slug.current,
       "title": title,
     },
+  "featuredImage": featuredImage.asset -> url,
+  summary,
 `;
 
 const postFields = `
   title, 
+  "id": _id,
   "date": publishedAt,
   "id": _id,
+  summary,
+  "featuredImage": featuredImage.asset -> url,
+  "slug": slug.current,
+  "content": body,
   location,
   year,
   copyright,
   digDeeper[] {
+    _type,
     children[] { 
       text, 
       _type, 
@@ -30,6 +36,7 @@ const postFields = `
     }
   },
   howToHelp[] {
+      _type,
       children[] { 
       text, 
       _type, 
@@ -46,15 +53,11 @@ const postFields = `
     videoCode,
     title,
   },
-  "content": body,
-  categories[]-> 
+  categories[0]-> 
     {
       "slug": slug.current,
       "title": title,
     },
-  summary,
-  "image": featuredImage.asset -> url,
-  "slug": slug.current,
 `;
 
 const post = groq`*[_type == "post" && slug.current == $slug][0]
