@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import styles from './relatedPodcasts.module.css';
 import { AssetTitle } from '@/components';
 import { Podcast } from '@/types/post';
+import styles from './RelatedPodcasts.module.css';
 
 export const RelatedPodcasts = ({ podcasts }: { podcasts: Podcast[] }) => {
 	const podcastList =

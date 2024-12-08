@@ -10,13 +10,15 @@ interface PostCTAProps {
 export const PostCTA = ({ howToHelp, digDeeper }: PostCTAProps) => {
 	return (
 		<div className={styles.ctaContainer}>
-			<div className={styles.helpInfo}>
-				<h4>Help this case</h4>
-				<ContentFormatter content={howToHelp} />
-			</div>
-			<div className={styles.sources}>
-				<h4>Sources and links</h4>
-				<ContentFormatter content={digDeeper} />
+			<div className={styles.content}>
+				<div className={styles.howToHelp}>
+					<h4>Help this case</h4>
+					<ContentFormatter content={howToHelp} />
+				</div>
+				<div>
+					<h4>Sources and links</h4>
+					<ContentFormatter content={digDeeper} />
+				</div>
 			</div>
 		</div>
 	);

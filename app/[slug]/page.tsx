@@ -26,6 +26,8 @@ export async function generateStaticParams() {
 export default async function PostPage({ params }: PageProps) {
 	const post = await getPost(params.slug);
 
+	console.log(post);
+
 	if (!post) {
 		return null;
 	}
@@ -115,7 +117,7 @@ export default async function PostPage({ params }: PageProps) {
 					<ContentFormatter content={post.content} />
 				</div>
 			</div>
-			<div className="container">
+			<div className={styles.contentSecondary}>
 				<PostCTA howToHelp={post.howToHelp} digDeeper={post.digDeeper} />
 				{post.podcasts && <RelatedVideos videos={post.videos} />}
 				{post.videos && (

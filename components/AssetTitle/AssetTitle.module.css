@@ -7,3 +7,7 @@
 .title {
 	color: var(--color-black);
 }
+
+.icon {
+	margin-inline-start: var(--size-8);
+}

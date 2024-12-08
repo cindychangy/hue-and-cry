@@ -21,7 +21,7 @@ export const PostHeader = ({
 	return (
 		<div className={styles.postHeader}>
 			<div className={styles.headerContent}>
-				<Flex gap="60">
+				<Flex responsive gap="60">
 					<div className={styles.imageContainer}>
 						<img src={image} alt={title} className={styles.featuredImage} />
 					</div>

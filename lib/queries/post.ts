@@ -33,6 +33,11 @@ const postFields = `
       text, 
       _type, 
       marks 
+    },
+    markDefs[] {
+      _key,
+      _type,
+      href
     }
   },
   howToHelp[] {
@@ -41,6 +46,11 @@ const postFields = `
       text, 
       _type, 
       marks 
+    },
+    markDefs[] {
+      _key,
+      _type,
+      href
     }
   },
   podcasts[] {

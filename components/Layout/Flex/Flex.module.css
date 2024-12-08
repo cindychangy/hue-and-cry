@@ -50,7 +50,7 @@
 	flex-wrap: wrap;
 }
 
-@media (max-width: 776px) {
+@media (max-width: 900px) {
 	.responsive {
 		flex-direction: column;
 	}

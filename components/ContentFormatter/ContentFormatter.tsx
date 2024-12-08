@@ -1,4 +1,3 @@
-import Link from 'next/link';
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import type { PortableTextBlock } from '@portabletext/types';
 import { urlForImage } from '@/lib/sanity.image';
@@ -35,9 +34,9 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 	},
 	marks: {
 		link: ({ value, children }) => (
-			<Link href={value.href} className={styles.link}>
+			<a href={value.href} className={styles.link}>
 				{children}
-			</Link>
+			</a>
 		),
 	},
 };

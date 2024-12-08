@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import { AssetTitle } from '@/components';
 import { Video } from '@/types/post';
-import styles from './relatedVideos.module.css';
+import styles from './RelatedVideos.module.css';
 
 export const RelatedVideos = ({ videos }: { videos: Video[] }) => {
 	const VIDEO_LIST =

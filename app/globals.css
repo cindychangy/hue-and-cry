@@ -2,36 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
-@font-face {
-	font-family: 'Graphik';
-	font-style: normal;
-	font-weight: 400;
-	src:
-		url('/fonts/graphik-regular.woff2') format('woff2'),
-		url('/fonts/graphik-regular.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Graphik Medium';
-	font-style: normal;
-	font-weight: 500;
-	src:
-		url('/fonts/graphik-medium.woff2') format('woff2'),
-		url('/fonts/graphik-medium.woff') format('woff');
-	font-display: swap;
-}
-
-@font-face {
-	font-family: 'Graphik Semibold';
-	font-style: normal;
-	font-weight: 600;
-	src:
-		url('/fonts/graphik-semibold.woff2') format('woff2'),
-		url('/fonts/graphik-semibold.woff') format('woff');
-	font-display: swap;
-}
-
 /* RESET */
 body,
 h1,
@@ -60,16 +30,17 @@ video {
 /* END RESET */
 
 :root {
-	--color-white: #ffffff;
+	--color-neutral: #ffffff;
+	--color-neutral-100: #f5f6f7;
 	--color-black: #232323;
 	--color-orange: #e7725a;
-	--color-gray-light: #dde0e2;
-	--color-gray: #778191;
-	--color-gray-dark: #151a1f;
-	--color-text: #1a1a1a;
-	--font-sans-serif: 'Inter', Helvetica, Arial, sans-serif;
-	--font-body: 'Merriweather', Helvetica, Arial, sans-serif;
+	--color-gray-100: #dde0e2;
+	--color-gray-500: #778191;
+	--color-gray-900: #151a1f;
+	--font-family-primary: 'Merriweather', Helvetica, Arial, sans-serif;
+	--font-family-secondary: 'Inter', Helvetica, Arial, sans-serif;
 	--font-logo: 'Bebas Neue', Helvetica, Arial, sans-serif;
+	--font-weight-bold: 600;
 
 	--font-size-body: 1rem;
 	--font-size-small: 0.75rem;
@@ -92,7 +63,7 @@ video {
 	--size-46: 2.875rem;
 	--size-60: 3.75rem;
 
-	--site-width: 80rem;
+	--site-width: 87.5rem;
 	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
 		-webkit-box-shadow 0.1s ease 0s;
 	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
@@ -101,7 +72,7 @@ video {
 
 body {
 	font-size: var(--size-16);
-	font-family: var(--font-body);
+	font-family: var(--font-family-primary);
 	line-height: 1.7;
 	color: var(--color-text);
 	-webkit-font-smoothing: antialiased;
@@ -123,17 +94,23 @@ a {
 }
 
 .container {
-	width: 100%;
-	max-width: var(--site-width);
 	margin: 0 auto;
+	max-width: var(--site-width);
 	padding: 0 var(--size-20);
 }
 
 h1 {
 	font-size: 4.2rem;
-	font-family: var(--font-sans-serif);
-	line-height: 1;
-	font-weight: 800;
+	font-family: var(--font-family-secondary);
+	line-height: 1.1;
+
+	@media (max-width: 1367px) {
+		font-size: 3.2rem;
+	}
+
+	@media (max-width: 767px) {
+		font-size: 3.2rem;
+	}
 }
 
 h3 {
@@ -146,27 +123,11 @@ h3 {
 h4 {
 	font-size: 1.2rem;
 	font-weight: 700;
+	font-family: var(--font-family-primary);
 }
 
 p {
 	font-size: var(--size-16);
 	font-family: var(--font-secondary);
 	line-height: 1.875;
-}
-.active-nav-item {
-	border-bottom: 3px solid var(--color-orange);
-	width: fit-content;
-}
-
-.show-mobile-nav {
-	display: block !important;
-}
-
-.mobile-nav li {
-	@media (max-width: 1200px) {
-		display: block !important;
-		font-size: 2rem !important;
-		line-height: 1.5;
-		margin-block-end: 1.5rem;
-	}
 }

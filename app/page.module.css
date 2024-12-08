@@ -1,24 +1,10 @@
 .homepageIntro {
-	background: var(--color-gray-dark);
+	background: var(--color-gray-900);
 	height: 90vh;
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
 	flex-direction: column;
-}
-
-.logo {
-	font-family: var(--font-primary);
-	color: var(--color-gray);
-	text-transform: uppercase;
-	font-size: var(--size-24);
-	font-weight: 700;
-	letter-spacing: -1px;
-
-	& span {
-		display: block;
-		line-height: 0.9;
-	}
 }
 
 .headline {
@@ -32,7 +18,7 @@
 	max-width: 50rem;
 	margin: auto;
 	text-align: center;
-	color: var(--color-white);
+	color: var(--color-neutral);
 }
 
 .seeAllLink {
@@ -48,5 +34,5 @@
 }
 
 .navWrapper {
-	background: var(--color-gray-dark);
+	background: var(--color-gray-900);
 }

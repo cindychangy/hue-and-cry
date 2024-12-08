@@ -1,74 +1,74 @@
 .siteNav {
-	position: absolute;
-	z-index: 1;
-	height: 60px;
-	color: var(--color-white);
+	background: var(--color-gray-900);
 }
 
-.mobileNavIcon {
-	display: none;
+.navContainer {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	max-width: var(--site-width);
+	margin: auto;
+	padding-block-start: var(--size-16);
 
-	@media (max-width: 1200px) {
-		display: block;
-		position: absolute;
-		top: calc(6rem / 2);
-		right: 1.2rem;
-		z-index: 3;
+	@media (max-width: 1600px) {
+		padding-inline: var(--size-24);
 	}
-
-	@media (max-width: 600px) {
-		top: calc(4rem / 1.8);
-	}
-}
-
-.mobileNavIcon button {
-	position: relative;
-	top: -10px;
-	background: transparent;
-	border: 0;
-	cursor: pointer;
-	transition: color 0.5s ease 0s;
-	color: var(--color-black);
 }
 
 .logo {
 	font-family: var(--font-logo);
-	text-decoration: none;
-	font-size: var(--size-28);
-	text-transform: uppercase;
-	letter-spacing: -1px;
-	transition: var(--link-transition);
+	font-size: 2.4rem;
+	color: var(--color-neutral-100);
+
+	@media (max-width: 900px) {
+		font-size: var(--size-32);
+	}
 }
 
-.logo:hover {
-	box-shadow: var(--link-box-shadow);
-}
+.menu {
+	color: var(--color-neutral-100);
+	cursor: pointer;
+	font-size: var(--size-32);
+	display: flex;
+	position: relative;
 
-.navigation ul {
-	list-style: none;
-
-	@media (max-width: 1200px) {
-		display: none;
+	@media (max-width: 900px) {
+		font-size: 1.7rem;
 	}
 
-	& li {
-		display: inline-block;
-		margin-inline-start: 2rem;
-		font-family: var(--font-secondary-medium);
-		font-size: var(--size-18);
-
-		@media (max-width: 600px) {
-			margin-block-end: 1.8rem;
-			line-height: 1.5;
+	& svg {
+		&:hover {
+			color: var(--color-orange);
 		}
 	}
 }
 
-.navigation ul li a {
-	text-decoration: none;
-	font-family: var(--font-primary-bold);
+.menuItems {
+	& ul {
+		display: flex;
+		list-style: none;
+		gap: var(--size-24);
+		margin-inline-end: var(--size-32);
 
-	&:hover {
-		color: var(--color-orange);
+		@media (max-width: 900px) {
+			flex-direction: column;
+			position: absolute;
+			right: 0;
+			background: var(--color-gray-900);
+		}
+
+		& li {
+			font-size: var(--size-16);
+			color: var(--color-neutral-100);
+			font-family: var(--font-family-secondary);
+
+			& :hover {
+				color: var(--color-orange);
+			}
+		}
 	}
+}
+
+.hide {
+	display: none;
 }
