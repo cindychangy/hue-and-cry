@@ -6,11 +6,12 @@
 	justify-content: space-between;
 	color: var(--color-black);
 	border-top: var(--size-4) solid var(--color-black);
+	padding-block: var(--size-24);
 	margin-block-start: var(--size-60);
-	padding-block-start: var(--size-24);
 
 	@media (max-width: 600px) {
 		flex-direction: column;
+		padding-inline: var(--size-24);
 	}
 }
 
@@ -26,8 +27,9 @@
 .navigation li {
 	display: inline-block;
 	margin-inline-start: 1.8rem;
-	font-size: var(--size-18);
-	font-family: var(--font-primary-bold);
+	font-size: var(--size-16);
+	font-family: var(--font-family-secondary);
+	font-weight: 700;
 
 	& a {
 		text-decoration: none;
@@ -44,7 +46,8 @@
 }
 
 .copyright {
-	font-size: var(--size-20);
-	font-family: var(--font-primary-bold);
+	font-size: var(--size-16);
+	font-family: var(--font-family-secondary);
 	letter-spacing: -0.5px;
+	font-weight: 500;
 }

@@ -1,11 +1,12 @@
 .assetContainer {
-	margin-block-start: 4rem;
+	margin-block-start: var(--size-48);
 	display: flex;
 	align-items: center;
 }
 
 .title {
 	color: var(--color-black);
+	font-size: var(--size-22);
 }
 
 .icon {

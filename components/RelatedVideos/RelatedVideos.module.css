@@ -33,7 +33,8 @@
 }
 
 .videoTitle:hover {
+	color: var(--color-orange);
 	box-shadow:
-		var(--color-orange-primary) 0px -1px inset,
+		var(--color-orange) 0px -1px inset,
 		var(--color-black) 0px -1px 0px inset;
 }

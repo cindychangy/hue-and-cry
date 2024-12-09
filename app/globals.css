@@ -32,6 +32,7 @@ video {
 :root {
 	--color-neutral: #ffffff;
 	--color-neutral-100: #f5f6f7;
+	--color-neutral-200: #f3f3f5;
 	--color-black: #232323;
 	--color-orange: #e7725a;
 	--color-gray-100: #dde0e2;
@@ -50,6 +51,7 @@ video {
 	--size-8: 0.5rem;
 	--size-10: 0.625rem;
 	--size-12: 0.75rem;
+	--size-13: 0.813rem;
 	--size-14: 0.875rem;
 	--size-16: 1rem;
 	--size-18: 1.125rem;
@@ -61,6 +63,7 @@ video {
 	--size-40: 2.5rem;
 	--size-42: 2.625rem;
 	--size-46: 2.875rem;
+	--size-48: 3rem;
 	--size-60: 3.75rem;
 
 	--site-width: 87.5rem;
@@ -130,4 +133,11 @@ p {
 	font-size: var(--size-16);
 	font-family: var(--font-secondary);
 	line-height: 1.875;
+}
+
+small {
+	font-size: var(--size-13);
+	font-family: var(--font-family-secondary);
+	color: var(--color-gray-500);
+	display: inline-block;
 }

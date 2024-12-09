@@ -128,14 +128,17 @@ export default async function PostPage({ params }: PageProps) {
 				)}
 			</div>
 
-			<div className={styles.commentsWrapper}>
+			<div className={styles.grayWrapper}>
 				<Comments
 					postSlug={post.slug}
 					postTitle={post.title}
 					postId={post.id}
 				/>
 			</div>
-			<RelatedPosts posts={post.relatedPosts ?? []} />
+			<div className={styles.grayWrapper}>
+				<RelatedPosts posts={post.relatedPosts ?? []} />
+			</div>
+
 			<div className={styles.copyright}>
 				<small>
 					All images and videos used for this story are not the property of The

@@ -17,12 +17,9 @@
 }
 
 .podcastTitle {
-	color: var(--color-gray-500);
 	font-family: var(--font-family-secondary);
-	font-size: var(--size-16);
-	font-weight: 500;
-	line-height: 1.2;
-	text-decoration: none;
+	font-size: 0.938rem;
+	line-height: 1.3;
 }
 
 .podcastEpisode {
@@ -41,6 +38,7 @@
 }
 
 .podcastEpisode:hover {
+	color: var(--color-orange);
 	box-shadow:
 		var(--color-orange) 0px -1px inset,
 		var(--color-black) 0px -1px 0px inset;

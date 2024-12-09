@@ -1,7 +1,7 @@
 'use client';
 import React from 'react';
 import { DiscussionEmbed } from 'disqus-react';
-import styles from './comments.module.css';
+import styles from './Comments.module.css';
 
 interface CommentsProps {
 	postSlug: string;

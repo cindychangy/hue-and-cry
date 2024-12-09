@@ -2,6 +2,7 @@
 import { useState } from 'react';
 import { HiOutlineMenuAlt3 } from 'react-icons/hi';
 import { AiOutlineClose } from 'react-icons/ai';
+import { NAV_LINKS } from '@/constants/routes';
 import Link from 'next/link';
 import styles from './SiteNav.module.css';
 import classNames from 'classnames';
@@ -19,24 +20,11 @@ export const SiteNav = () => {
 					{showMenuItems && (
 						<div className={styles.menuItems}>
 							<ul>
-								<li>
-									<Link href="missing">Missing</Link>
-								</li>
-								<li>
-									<Link href="highway-of-tears">Highway of Tears</Link>
-								</li>
-								<li>
-									<Link href="murdered">Murdered</Link>
-								</li>
-								<li>
-									<Link href="indigenous-women">Indigenous Women</Link>
-								</li>
-								<li>
-									<Link href="military">Military</Link>
-								</li>
-								<li>
-									<Link href="about">About</Link>
-								</li>
+								{NAV_LINKS.map((item) => (
+									<li key={item.title}>
+										<Link href={item.url}>{item.title}</Link>
+									</li>
+								))}
 							</ul>
 						</div>
 					)}
