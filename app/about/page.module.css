@@ -8,7 +8,7 @@
 	line-height: 1.5;
 	letter-spacing: -1px;
 
-	@media (max-width: 900px) {
+	@media (max-width: 992px) {
 		font-size: 3rem;
 	}
 }
@@ -44,7 +44,7 @@
 	margin: auto;
 	padding-block: 4rem;
 
-	@media (max-width: 900px) {
+	@media (max-width: 992px) {
 		max-width: 100%;
 	}
 }

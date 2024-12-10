@@ -63,7 +63,7 @@ const postFields = `
     videoCode,
     title,
   },
-  categories[0]-> 
+  "category": categories[0]-> 
     {
       "slug": slug.current,
       "title": title,

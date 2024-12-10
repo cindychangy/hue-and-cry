@@ -2,7 +2,6 @@ import Link from 'next/link';
 import { Flex } from '@/components';
 import { Category } from '@/types/post';
 import styles from './PostHeader.module.css';
-
 interface PostHeaderProps {
 	title: string;
 	location: string;
@@ -21,12 +20,12 @@ export const PostHeader = ({
 	return (
 		<div className={styles.postHeader}>
 			<div className={styles.headerContent}>
-				<Flex responsive gap="60">
+				<div className={styles.flexContainer}>
 					<div className={styles.imageContainer}>
 						<img src={image} alt={title} className={styles.featuredImage} />
 					</div>
 					<Flex justify="center" direction="column">
-						<h3 className={styles.category}>
+						<h3 className="category">
 							<Link href={category.slug}>{category.title}</Link>
 						</h3>
 						<div className={styles.titleContainer}>
@@ -38,7 +37,7 @@ export const PostHeader = ({
 							</p>
 						</div>
 					</Flex>
-				</Flex>
+				</div>
 			</div>
 		</div>
 	);

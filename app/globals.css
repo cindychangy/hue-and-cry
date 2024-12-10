@@ -34,8 +34,10 @@ video {
 	--color-neutral-100: #f5f6f7;
 	--color-neutral-200: #f3f3f5;
 	--color-black: #232323;
+	--color-text: #1a1a1a;
 	--color-orange: #e7725a;
 	--color-gray-100: #dde0e2;
+	--color-gray-200: #adb3c2;
 	--color-gray-500: #778191;
 	--color-gray-900: #151a1f;
 	--font-family-primary: 'Merriweather', Helvetica, Arial, sans-serif;
@@ -60,11 +62,13 @@ video {
 	--size-24: 1.5rem;
 	--size-28: 1.75rem;
 	--size-32: 2rem;
+	--size-36: 2.25rem;
 	--size-40: 2.5rem;
 	--size-42: 2.625rem;
 	--size-46: 2.875rem;
 	--size-48: 3rem;
 	--size-60: 3.75rem;
+	--size-64: 4rem;
 
 	--site-width: 87.5rem;
 	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
@@ -107,7 +111,7 @@ h1 {
 	font-family: var(--font-family-secondary);
 	line-height: 1.1;
 
-	@media (max-width: 1367px) {
+	@media (max-width: 1276px) {
 		font-size: 3.2rem;
 	}
 
@@ -140,4 +144,28 @@ small {
 	font-family: var(--font-family-secondary);
 	color: var(--color-gray-500);
 	display: inline-block;
+}
+
+.category {
+	font-family: var(--font-family-secondary);
+	font-weight: 600;
+	text-transform: uppercase;
+	font-size: 0.67rem;
+	letter-spacing: 0.35em;
+}
+
+strong {
+	font-weight: var(--font-weight-bold);
+}
+
+.hide-mobile {
+	@media (max-width: 992px) {
+		display: none;
+	}
+}
+
+.show-mobile {
+	@media (min-width: 992px) {
+		display: none;
+	}
 }

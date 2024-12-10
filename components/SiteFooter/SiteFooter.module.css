@@ -1,14 +1,17 @@
 .siteFooter {
+	width: 100%;
+	border-top: var(--size-4) solid var(--color-black);
+	padding-block: var(--size-24);
+	display: flex;
+	justify-content: center;
+}
+
+.footerContent {
 	max-width: var(--site-width);
 	width: 100%;
-	margin: auto;
 	display: flex;
 	justify-content: space-between;
 	color: var(--color-black);
-	border-top: var(--size-4) solid var(--color-black);
-	padding-block: var(--size-24);
-	margin-block-start: var(--size-60);
-
 	@media (max-width: 600px) {
 		flex-direction: column;
 		padding-inline: var(--size-24);
