@@ -32,6 +32,8 @@ export default async function PostPage({ params }: PageProps) {
 		return null;
 	}
 
+	console.log(post);
+
 	return (
 		<>
 			<Logger data={post} />
@@ -131,7 +133,7 @@ export default async function PostPage({ params }: PageProps) {
 					postId={post.id}
 				/>
 			</div>
-			<div className={styles.grayWrapper}>
+			<div className={styles.contentWrapper}>
 				<RelatedPosts posts={post.relatedPosts ?? []} />
 			</div>
 

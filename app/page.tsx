@@ -24,7 +24,6 @@ export default async function Homepage() {
 				</div>
 			</div>
 			<div className={styles.homepageContent}>
-				<SiteNav />
 				<Grid columns={4} gap="32">
 					{posts.map((post: Post) => (
 						<PostPreview key={post.id} post={post} />

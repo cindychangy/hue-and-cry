@@ -43,10 +43,3 @@ export type Post = {
 	videos?: Video[];
 	podcasts?: Podcast[];
 };
-
-export type RelatedPost = {
-	id: string;
-	featuredImage: string;
-	title: string;
-	slug: string;
-};

@@ -63,11 +63,14 @@ const postFields = `
     videoCode,
     title,
   },
-  "category": categories[0]-> 
-    {
-      "slug": slug.current,
-      "title": title,
-    },
+  "category": categories[0]-> {
+    "slug": slug.current,
+    "title": title,
+  },
+  "relatedPosts": *[
+      _type == "post" && defined(^.categories[0]._ref) && references(^.categories[0]._ref) && _id != ^._id] | order(_id asc) [0...3] {
+      ${postFieldsCompact}
+    }
 `;
 
 const post = groq`*[_type == "post" && slug.current == $slug][0]
