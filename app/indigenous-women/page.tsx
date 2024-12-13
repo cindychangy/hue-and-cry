@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { client } from '@/lib/sanity.client';
 import { CategoryLanding } from '@/components';
-import { getIndigenousWomenPosts } from '@/lib/queries';
+import { getIndigenousWomenPosts } from '@/lib/queries/pages';
 
 export const metadata: Metadata = {
 	title: 'Indigenous Women | Hue and Cry',

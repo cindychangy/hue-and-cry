@@ -2,6 +2,7 @@ import Link from 'next/link';
 import { SiteNav, Grid, PostPreview } from '@/components';
 import { client } from '@/lib/sanity.client';
 import { getHomepage } from '@/lib/queries/pages';
+import { NAV_LINKS } from '@/constants/routes';
 import { Post } from '@/types/post';
 import styles from './page.module.css';
 
@@ -14,7 +15,7 @@ export default async function Homepage() {
 				<SiteNav />
 			</div>
 			<div className={styles.homepageIntro}>
-				<div className={styles.contentWrapper}>
+				<div className={styles.introContent}>
 					<h1 className={styles.headline}>
 						Bringing awareness to unsolved crimes against women and girls.
 					</h1>
@@ -24,11 +25,23 @@ export default async function Homepage() {
 				</div>
 			</div>
 			<div className={styles.homepageContent}>
-				<Grid columns={4} gap="32">
-					{posts.map((post: Post) => (
-						<PostPreview key={post.id} post={post} />
-					))}
-				</Grid>
+				<aside>
+					<ul className={styles.navLinks}>
+						{NAV_LINKS.map((item) => (
+							<li key={item.title}>
+								<Link href={item.url}>{item.title}.</Link>
+							</li>
+						))}
+					</ul>
+				</aside>
+				<main>
+					<h4 className={styles.allStories}>All stories.</h4>
+					<div className={styles.postGrid}>
+						{posts.map((post: Post) => (
+							<PostPreview key={post.id} post={post} />
+						))}
+					</div>
+				</main>
 			</div>
 		</>
 	);

@@ -121,16 +121,22 @@ h1 {
 }
 
 h3 {
-	color: var(--color-orange);
-	font-size: var(--size-16);
-	letter-spacing: 1px;
-	font-weight: 600;
+	font-size: 19px;
+	font-family: var(--font-family-secondary);
+	font-weight: 700;
+	line-height: 1.3;
 }
 
 h4 {
 	font-size: 1.2rem;
 	font-weight: 700;
 	font-family: var(--font-family-primary);
+}
+
+h5 {
+	font-size: var(--size-14);
+	font-family: var(--font-family-secondary);
+	/* text-transform: uppercase; */
 }
 
 p {

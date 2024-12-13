@@ -1,6 +1,6 @@
 import { Post } from '@/types/post';
 import { Grid, PostPreview } from '@/components';
-import styles from './categoryLanding.module.css';
+import styles from './CategoryLanding.module.css';
 
 interface CategoryLandingProps {
 	title: string;

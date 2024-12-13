@@ -32,8 +32,6 @@ export default async function PostPage({ params }: PageProps) {
 		return null;
 	}
 
-	console.log(post);
-
 	return (
 		<>
 			<Logger data={post} />

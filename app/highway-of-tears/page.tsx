@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { client } from '@/lib/sanity.client';
 import { CategoryLanding } from '@/components';
-import { getHighwayOfTearsPosts } from '@/lib/queries';
+import { getHighwayOfTearsPosts } from '@/lib/queries/pages';
 
 export const metadata: Metadata = {
 	title: 'The Highway of Tears | Hue and Cry',

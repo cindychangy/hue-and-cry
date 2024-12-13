@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { client } from '@/lib/sanity.client';
 import { CategoryLanding } from '@/components';
-import { getMurderedPosts } from '@/lib/queries';
+import { getMurderedPosts } from '@/lib/queries/pages';
 
 export const metadata: Metadata = {
 	title: 'Murdered | Hue and Cry',

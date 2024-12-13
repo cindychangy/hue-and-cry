@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { client } from '@/lib/sanity.client';
 import { CategoryLanding } from '@/components';
-import { getMissingPosts } from '@/lib/queries';
+import { getMissingPosts } from '@/lib/queries/pages';
 
 export const metadata: Metadata = {
 	title: 'Missing | Hue and Cry',

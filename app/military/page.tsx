@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import { client } from '@/lib/sanity.client';
 import { CategoryLanding } from '@/components';
-import { getMilitaryPosts } from '@/lib/queries';
+import { getMilitaryPosts } from '@/lib/queries/pages';
 
 export const metadata: Metadata = {
 	title: 'Military | Hue and Cry',
