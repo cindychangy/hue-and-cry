@@ -17,7 +17,7 @@
 }
 
 .videoTitle {
-	color: var(--color-black);
+	color: var(--color-text);
 	font-family: var(--font-family-secondary);
 	font-size: var(--size-16);
 	font-weight: 400;
@@ -26,15 +26,15 @@
 		box-shadow 0.2s ease 0s,
 		-webkit-box-shadow 0.2s ease 0s;
 	box-shadow:
-		var(--color-black) 0px -1px inset,
-		var(--color-black) 0px -1px 0px inset;
+		var(--color-text) 0px -1px inset,
+		var(--color-text) 0px -1px 0px inset;
 	text-decoration: none;
 	display: inline;
 }
 
 .videoTitle:hover {
-	color: var(--color-orange);
+	color: var(--color-orange-500);
 	box-shadow:
-		var(--color-orange) 0px -1px inset,
-		var(--color-black) 0px -1px 0px inset;
+		var(--color-orange-500) 0px -1px inset,
+		var(--color-text) 0px -1px 0px inset;
 }

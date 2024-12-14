@@ -23,18 +23,21 @@
 }
 
 .category a {
-	color: var(--color-orange);
+	color: var(--color-orange-500);
 	text-transform: uppercase;
 	font-size: 11px;
 	letter-spacing: 2px;
-	color: var(--color-orange);
 	font-weight: 600;
+
+	&:hover {
+		color: var(--color-gray-900);
+	}
 }
 
 .postTitle a {
 	margin-block-start: var(--size-6);
 	&:hover {
-		color: var(--color-gray-500);
+		color: var(--color-orange-500);
 	}
 }
 

@@ -49,8 +49,8 @@
 			height: var(--size-36);
 
 			&:hover {
-				border: 1px solid var(--color-orange);
-				color: var(--color-orange);
+				border: 1px solid var(--color-orange-500);
+				color: var(--color-orange-500);
 			}
 
 			& svg {
@@ -67,7 +67,7 @@
 }
 
 .socialIcons a div:hover > svg {
-	color: var(--color-orange);
+	color: var(--color-orange-500);
 }
 
 .grayWrapper {

@@ -31,7 +31,13 @@ export default async function HighwayOfTears() {
 
 	return (
 		<>
-			<CategoryLanding posts={posts} title="Highway of Tears" />
+			<CategoryLanding
+				posts={posts}
+				title="Highway of Tears"
+				text="face a murder rate which is ten times higher than what it is for the general U.S. population."
+				sourceTitle="Silent Crisis - North Dakota Law"
+				sourceLink="https://blogs.und.edu/ndlaw/2022/10/silent-crisis-thousands-of-missing-and-murdered-native-americans-professor-lewerenz-is-quoted/"
+			/>
 		</>
 	);
 }

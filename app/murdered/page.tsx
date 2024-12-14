@@ -28,7 +28,13 @@ export default async function Murdered() {
 
 	return (
 		<>
-			<CategoryLanding posts={posts} title="Murdered" />
+			<CategoryLanding
+				posts={posts}
+				title="Murderd"
+				text="women are often the victims of a crime commited by someone they know. It is estimated that around the world, a woman or girl is killed every 11 minutes."
+				sourceTitle="A Femicide Factsheet"
+				sourceLink="https://www.womankind.org.uk/resource/a-femicide-factsheet-global-stats-calls-to-action/"
+			/>
 		</>
 	);
 }

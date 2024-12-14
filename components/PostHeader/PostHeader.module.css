@@ -1,7 +1,7 @@
 .postHeader {
 	height: 40rem;
-	width: 100%;
-	background: var(--color-gray-900);
+	max-width: 100%;
+	background: var(--color-gray-800);
 	display: flex;
 	align-items: center;
 	justify-content: center;
@@ -13,7 +13,7 @@
 
 .headerContent {
 	margin: auto;
-	max-width: 87.5rem;
+	max-width: 80vw;
 	padding-inline: var(--size-20);
 
 	@media (max-width: 767px) {

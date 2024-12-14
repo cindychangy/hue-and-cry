@@ -21,9 +21,6 @@ export const PostHeader = ({
 		<div className={styles.postHeader}>
 			<div className={styles.headerContent}>
 				<div className={styles.flexContainer}>
-					<div className={styles.imageContainer}>
-						<img src={image} alt={title} className={styles.featuredImage} />
-					</div>
 					<Flex justify="center" direction="column">
 						<h3 className="category">
 							<Link href={category.slug}>{category.title}</Link>
@@ -37,6 +34,9 @@ export const PostHeader = ({
 							</p>
 						</div>
 					</Flex>
+					<div className={styles.imageContainer}>
+						<img src={image} alt={title} className={styles.featuredImage} />
+					</div>
 				</div>
 			</div>
 		</div>

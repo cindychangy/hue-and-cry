@@ -12,7 +12,7 @@
 }
 
 .commentTitle {
-	color: var(--color-black);
+	color: var(--color-text);
 	font-size: var(--size-32);
 	text-align: center;
 	margin-block: var(--size-16) var(--size-24);

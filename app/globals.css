@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
@@ -33,13 +33,14 @@ video {
 	--color-neutral: #ffffff;
 	--color-neutral-100: #f5f6f7;
 	--color-neutral-200: #f3f3f5;
-	--color-black: #232323;
 	--color-text: #1a1a1a;
-	--color-orange: #e7725a;
+	--color-orange-500: #e7725a;
+	--color-orange-700: #eb563d;
 	--color-gray-100: #dde0e2;
 	--color-gray-200: #adb3c2;
 	--color-gray-500: #778191;
-	--color-gray-900: #151a1f;
+	--color-gray-800: #151a1f;
+	--color-gray-900: #232323;
 	--font-family-primary: 'Merriweather', Helvetica, Arial, sans-serif;
 	--font-family-secondary: 'Inter', Helvetica, Arial, sans-serif;
 	--font-logo: 'Bebas Neue', Helvetica, Arial, sans-serif;
@@ -70,7 +71,7 @@ video {
 	--size-60: 3.75rem;
 	--size-64: 4rem;
 
-	--site-width: 87.5rem;
+	--site-width: 95vw;
 	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
 		-webkit-box-shadow 0.1s ease 0s;
 	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
@@ -102,7 +103,7 @@ a {
 
 .container {
 	margin: 0 auto;
-	max-width: var(--site-width);
+	max-width: 95vw;
 	padding: 0 var(--size-20);
 }
 

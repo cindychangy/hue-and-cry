@@ -30,7 +30,13 @@ export default async function Military() {
 
 	return (
 		<>
-			<CategoryLanding posts={posts} title="Military" />
+			<CategoryLanding
+				posts={posts}
+				title="Military"
+				text="victims of sexual assault and harassment report abuse to their commanding officer who then often control the investigation, often creating a conflict of interest."
+				sourceTitle="Time magazine"
+				sourceLink="https://time.com/6129740/vanessa-guillen-sexual-misconduct-military/"
+			/>
 		</>
 	);
 }

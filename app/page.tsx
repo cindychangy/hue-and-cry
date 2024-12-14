@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import { SiteNav, Grid, PostPreview } from '@/components';
+import { PostPreview } from '@/components';
 import { client } from '@/lib/sanity.client';
 import { getHomepage } from '@/lib/queries/pages';
 import { NAV_LINKS } from '@/constants/routes';
@@ -11,9 +11,6 @@ export default async function Homepage() {
 
 	return (
 		<>
-			<div className={styles.navWrapper}>
-				<SiteNav />
-			</div>
 			<div className={styles.homepageIntro}>
 				<div className={styles.introContent}>
 					<h1 className={styles.headline}>
@@ -25,7 +22,7 @@ export default async function Homepage() {
 				</div>
 			</div>
 			<div className={styles.homepageContent}>
-				<aside>
+				<aside className="hide-mobile">
 					<ul className={styles.navLinks}>
 						{NAV_LINKS.map((item) => (
 							<li key={item.title}>

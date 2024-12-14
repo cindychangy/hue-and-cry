@@ -5,16 +5,29 @@ import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
 import { Post } from '@/types/post';
 import styles from './PostPreview.module.css';
-import Logger from '@/components/Logger/Logger';
 
-export const PostPreview = ({ post }: { post: Post }) => {
+interface PostPreviewProps {
+	post: Post;
+	isCategoryPage?: boolean;
+}
+
+export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 	const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
 
-	console.log(post);
+	const truncateTitle = (title: string) => {
+		const phrasesToRemove = ['The Disappearance of', 'The Murder of'];
+
+		for (const phrase of phrasesToRemove) {
+			if (title.startsWith(phrase)) {
+				return title.slice(phrase.length).trim();
+			}
+		}
+
+		return title;
+	};
 
 	return (
 		<>
-			<Logger data={post} />
 			<div className={styles.postContainer}>
 				<Link href={post.slug}>
 					<div className={styles.postImage}>
@@ -33,7 +46,9 @@ export const PostPreview = ({ post }: { post: Post }) => {
 					</h5>
 				)}
 				<h3 className={styles.postTitle}>
-					<Link href={post.slug}>{post.title}</Link>
+					<Link href={post.slug}>
+						{isCategoryPage ? truncateTitle(post.title) : post.title}
+					</Link>
 				</h3>
 				<div className={styles.postMeta}>
 					<p className={styles.date}>{dateFormatted}</p>

@@ -1,5 +1,5 @@
 .h3 {
-	color: var(--color-black);
+	color: var(--color-text);
 	font-family: var(--font-primary-bold);
 	font-size: var(--size-22);
 	margin-block-start: var(--size-46);

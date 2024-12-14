@@ -28,7 +28,13 @@ export default async function Missing() {
 
 	return (
 		<>
-			<CategoryLanding posts={posts} title="Missing" />
+			<CategoryLanding
+				posts={posts}
+				title="Missing"
+				text="women are often the victims of male rage. The FBI reports	 that more than 80% of violent crimes are committed by men."
+				sourceTitle="Do We Have an Epidemic of Missing Women?"
+				sourceLink="https://www.damemagazine.com/2022/01/10/do-we-have-an-epidemic-of-missing-women/"
+			/>
 		</>
 	);
 }

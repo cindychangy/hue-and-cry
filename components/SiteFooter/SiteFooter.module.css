@@ -1,9 +1,10 @@
 .siteFooter {
 	width: 100%;
-	border-top: var(--size-4) solid var(--color-black);
+	border-top: var(--size-4) solid var(--color-gray-900);
 	padding-block: var(--size-24);
 	display: flex;
 	justify-content: center;
+	margin-block-start: var(--size-46);
 }
 
 .footerContent {
@@ -11,7 +12,7 @@
 	width: 100%;
 	display: flex;
 	justify-content: space-between;
-	color: var(--color-black);
+	color: var(--color-text);
 	@media (max-width: 600px) {
 		flex-direction: column;
 		padding-inline: var(--size-24);
@@ -38,7 +39,7 @@
 		text-decoration: none;
 
 		&:hover {
-			color: var(--color-orange);
+			color: var(--color-orange-500);
 		}
 	}
 
@@ -51,6 +52,5 @@
 .copyright {
 	font-size: var(--size-16);
 	font-family: var(--font-family-secondary);
-	letter-spacing: -0.5px;
 	font-weight: 500;
 }
