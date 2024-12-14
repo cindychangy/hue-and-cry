@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import Image from 'next/image';
-import { CommentCount } from 'disqus-react';
+// import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
 import { Post } from '@/types/post';

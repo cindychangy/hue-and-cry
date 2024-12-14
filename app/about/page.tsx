@@ -1,6 +1,4 @@
 import { Metadata } from 'next';
-import { client } from '@/lib/sanity.client';
-import { getMissingPosts } from '@/lib/queries/pages';
 import styles from './page.module.css';
 
 export const metadata: Metadata = {
