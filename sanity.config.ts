@@ -12,7 +12,13 @@ export default defineConfig({
 	useCdn: false,
 	basePath: '/studio',
 
-	plugins: [structureTool(), visionTool()],
+	plugins: [
+		structureTool({
+			name: 'content',
+			title: 'Content',
+		}),
+		visionTool(),
+	],
 
 	schema: {
 		types: schemaTypes,
