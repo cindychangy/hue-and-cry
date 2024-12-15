@@ -6,6 +6,12 @@ import { NAV_LINKS } from '@/constants/routes';
 import { Post } from '@/types/post';
 import styles from './page.module.css';
 
+export const metadata = {
+	title: 'Hue and Cry | True Crime Blog',
+	description:
+		'A true crime blog focusing on crimes against women and girls who have yet to see justice.',
+};
+
 export default async function Homepage() {
 	const posts = await getHomepage(client);
 
@@ -17,7 +23,7 @@ export default async function Homepage() {
 						Bringing awareness to unsolved crimes against women and girls.
 					</h1>
 					<h3 className={styles.seeAllLink}>
-						<Link href="">See all stories</Link>
+						<Link href="#stories">See all stories</Link>
 					</h3>
 				</div>
 			</div>
@@ -31,7 +37,7 @@ export default async function Homepage() {
 						))}
 					</ul>
 				</aside>
-				<main>
+				<main id="stories">
 					<h4 className={styles.allStories}>All stories.</h4>
 					<div className={styles.postGrid}>
 						{posts.map((post: Post) => (

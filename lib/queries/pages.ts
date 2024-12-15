@@ -30,8 +30,13 @@ const indigenousWomenPosts = groq`*[_type == "post" && "Indigenous Women" in cat
   ${postFieldsCategoryPage}
 }`;
 
-const highwayOfTearsPosts = groq`*[_type == "post" && "Highway of Tears" in categories[]->title] | order(publishedAt desc){
-  ${postFieldsCategoryPage}
+const highwayOfTearsPosts = groq`*[_type == "highwayOfTears"] | order(year asc){
+  title,
+  location,
+  year,
+  description,
+  "image": image.asset -> url,
+  "link": ArticleLink -> slug.current,
 }`;
 
 export async function getHomepage(client: SanityClient) {
