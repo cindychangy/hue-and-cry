@@ -44,10 +44,10 @@
 }
 
 .blockquote {
-	line-height: 1.35;
+	line-height: 1.4;
 	letter-spacing: 0.5px;
 	font-family: var(--font-family-secondary);
-	font-size: var(--size-24);
+	font-size: var(--size-22);
 	font-weight: 700;
 	letter-spacing: -1px;
 	margin-block-end: var(--size-16);

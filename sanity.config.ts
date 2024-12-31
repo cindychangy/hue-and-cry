@@ -2,10 +2,12 @@ import { defineConfig } from 'sanity';
 import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './schemaTypes';
+import { media } from 'sanity-plugin-media';
+import { structure } from '@/structure/structure';
 
 export default defineConfig({
 	name: 'hueandcry',
-	title: 'hue-and-cry',
+	title: 'Hue and Cry',
 	projectId: process.env.NEXT_PUBLIC_SANITY_PROJECT_ID as string,
 	dataset: process.env.NEXT_PUBLIC_SANITY_DATASET as string,
 	apiVersion: process.env.NEXT_PUBLIC_SANITY_API_VERSION as string,
@@ -16,8 +18,10 @@ export default defineConfig({
 		structureTool({
 			name: 'content',
 			title: 'Content',
+			structure: structure,
 		}),
 		visionTool(),
+		media(),
 	],
 
 	schema: {

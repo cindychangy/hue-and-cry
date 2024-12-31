@@ -10,6 +10,18 @@ export const metadata = {
 	title: 'Hue and Cry | True Crime Blog',
 	description:
 		'A true crime blog focusing on crimes against women and girls who have yet to see justice.',
+	openGraph: {
+		title: 'Hue and Cry | True Crime Blo',
+		description:
+			'A true crime blog focusing on crimes against women and girls who have yet to see justice.',
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
+		siteName: 'Hue and Cry',
+		images: [
+			{
+				url: 'https://cdn.sanity.io/images/i6ujk2hj/production/d4e3d821b9f2eec8e7e0ee306b7d2f11ac7cfaf5-600x600.jpg',
+			},
+		],
+	},
 };
 
 export default async function Homepage() {

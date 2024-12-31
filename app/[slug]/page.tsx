@@ -150,9 +150,9 @@ export default async function PostPage({ params }: PageProps) {
 					postId={post.id}
 				/>
 			</div>
-			<div className={styles.contentWrapper}>
+			{/* <div className={styles.contentWrapper}>
 				<RelatedPosts posts={post.relatedPosts ?? []} />
-			</div>
+			</div> */}
 
 			<div className={styles.copyrightWrapper}>
 				<small className={styles.postCopyright}>
