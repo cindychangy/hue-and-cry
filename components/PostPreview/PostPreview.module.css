@@ -23,10 +23,7 @@
 }
 
 .category a {
-	color: var(--color-orange-500);
-	text-transform: uppercase;
 	font-size: 11px;
-	letter-spacing: 2px;
 	font-weight: 600;
 
 	&:hover {

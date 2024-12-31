@@ -141,7 +141,13 @@ h4 {
 h5 {
 	font-size: var(--size-14);
 	font-family: var(--font-family-secondary);
-	/* text-transform: uppercase; */
+	text-transform: uppercase;
+	color: var(--color-orange-500);
+	letter-spacing: 2px;
+
+	&:hover {
+		color: var(--color-gray-500);
+	}
 }
 
 p {

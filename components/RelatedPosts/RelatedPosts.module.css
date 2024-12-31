@@ -2,4 +2,5 @@
 	font-size: var(--size-16);
 	font-family: var(--font-family-secondary);
 	font-weight: var(--font-weight-bold);
+	margin-block-end: var(--size-12);
 }

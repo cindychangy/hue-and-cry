@@ -12,7 +12,6 @@ import {
 import { getSlugs, getPost } from '@/lib/queries/post';
 import { FaTwitter, FaFacebookF, FaEnvelope } from 'react-icons/fa';
 import classNames from 'classnames';
-import Logger from '@/components/Logger/Logger';
 
 interface PageProps {
 	params: {
@@ -34,7 +33,27 @@ export default async function PostPage({ params }: PageProps) {
 
 	return (
 		<>
-			<Logger data={post} />
+			<title>{post.title}</title>
+			<meta name="description" content={post.summary} />
+			<meta property="og:locale" content="en_US" />
+			<meta property="og:type" content="article" />
+			<meta property="og:title" content={post.title} />
+			<meta property="og:description" content={post.summary} />
+			<meta
+				property="og:url"
+				content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+			/>
+			<meta property="og:site_name" content="Hue and Cry" />
+			<meta property="og:image" content={post.featuredImage} />
+			<meta name="twitter:title" content={post.title} />
+			<meta name="twitter:description" content={post.summary} />
+			<meta name="twitter:card" content="summary_large_image" />
+			<meta name="twitter:site" content="@thehueandcry" />
+			<meta name="twitter:image" content={post.featuredImage} />
+			<link
+				rel="canonical"
+				href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
+			/>
 			<PostHeader
 				title={post.title}
 				category={post.category}
@@ -81,7 +100,7 @@ export default async function PostPage({ params }: PageProps) {
 				<PostCTA howToHelp={post.howToHelp} digDeeper={post.digDeeper} />
 				{post.videos && (
 					<>
-						<RelatedVideos videos={post.videos} />{' '}
+						<RelatedVideos videos={post.videos} />
 						<div className={styles.divider} />
 					</>
 				)}

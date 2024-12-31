@@ -5,7 +5,7 @@ import styles from './CategoryLanding.module.css';
 interface CategoryLandingProps {
 	title: string;
 	text: string;
-	posts: Post[];
+	posts?: Post[];
 	sourceTitle: string;
 	sourceLink: string;
 }
@@ -36,13 +36,15 @@ export const CategoryLanding = ({
 				</div>
 			</div>
 
-			<div className={styles.postContainer}>
-				<Grid columns={3} gap="46">
-					{posts.map((post: Post) => (
-						<PostPreview key={post.id} post={post} isCategoryPage />
-					))}
-				</Grid>
-			</div>
+			{posts && (
+				<div className={styles.postContainer}>
+					<Grid columns={3} gap="46">
+						{posts?.map((post: Post) => (
+							<PostPreview key={post.id} post={post} isCategoryPage />
+						))}
+					</Grid>
+				</div>
+			)}
 		</>
 	);
 };
