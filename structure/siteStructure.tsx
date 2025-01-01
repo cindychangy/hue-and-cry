@@ -1,6 +1,6 @@
 import type { StructureResolver } from 'sanity/structure';
 
-export const structure: StructureResolver = (S) =>
+export const siteStructure: StructureResolver = (S) =>
 	S.list()
 		.id('root')
 		.items([
