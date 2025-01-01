@@ -49,7 +49,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 				setCommentCount(count);
 			});
 		}
-	}, [post]);
+	}, [post, disqusConfig.identifier, disqusConfig.title, disqusConfig.url]);
 
 	return (
 		<>
@@ -79,12 +79,14 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 					<p className={styles.date}>{dateFormatted}</p>
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
-					{commentCount > 0 && (
-						<CommentCount
-							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
-							config={disqusConfig}
-						/>
-					)}
+					<div className={styles.commentCount}>
+						{commentCount > 0 && (
+							<CommentCount
+								shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+								config={disqusConfig}
+							/>
+						)}
+					</div>
 				</div>
 				<p className={styles.summary}>{post.summary}</p>
 			</div>

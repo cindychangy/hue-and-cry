@@ -1,6 +1,6 @@
 .postBody {
 	display: grid;
-	max-width: 64rem;
+	max-width: 52rem;
 	margin: auto;
 	grid-template-columns: 1fr 3fr;
 	align-items: start;

@@ -185,7 +185,11 @@ strong {
 	}
 }
 
-@media (min-width: 992px) {
+.show-mobile {
+	display: none;
+}
+
+@media (max-width: 992px) {
 	.show-mobile {
 		display: block;
 	}
