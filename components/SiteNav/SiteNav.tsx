@@ -16,26 +16,33 @@ export const SiteNav = () => {
 				<Link href="/" className={styles.logo}>
 					Hue and Cry
 				</Link>
-				<div className={styles.menu}>
-					{showMenuItems && (
-						<div className={styles.menuItems}>
-							<ul>
-								{NAV_LINKS.map((item) => (
-									<li key={item.title}>
-										<Link href={item.url}>{item.title}</Link>
-									</li>
-								))}
-							</ul>
-						</div>
-					)}
+				<div>
+					<div className={styles.menu}>
+						{showMenuItems && (
+							<div className={styles.menuItems}>
+								<ul>
+									{NAV_LINKS.map((item) => (
+										<li key={item.title}>
+											<Link href={item.url}>{item.title}</Link>
+										</li>
+									))}
+								</ul>
+							</div>
+						)}
+					</div>
 					<HiOutlineMenuAlt3
 						onClick={() => setShowMenuItems(!showMenuItems)}
-						className={classNames({ [styles.hide]: showMenuItems })}
+						className={classNames(
+							{ [styles.hide]: showMenuItems },
+							styles.menuIcon
+						)}
+						size={28}
 					/>
 					{showMenuItems && (
 						<AiOutlineClose
 							size="26"
 							onClick={() => setShowMenuItems(!showMenuItems)}
+							className={styles.menuIcon}
 						/>
 					)}
 				</div>

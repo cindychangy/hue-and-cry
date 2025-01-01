@@ -28,18 +28,18 @@ export default async function About() {
 			<div className={styles.aboutHeader}>
 				<div className={styles.headerContent}>
 					<h1>Hue and Cry</h1>
-					<p>[Noun]</p>
+					<p className={styles.accent}>[Noun]</p>
 					<div className={styles.aboutDefinition}>
 						<p>
-							a. The pursuit of a suspect or a written proclamation for the
-							capture of a suspect.
+							<span className={styles.accent}>a.</span> The pursuit of a suspect
+							or a written proclamation for the capture of a suspect.
 						</p>
 						<p>
-							b. A loud outcry formerly used in the pursuit of one who is
-							suspected of a crime.
+							<span className={styles.accent}>b</span>. A loud outcry formerly
+							used in the pursuit of one who is suspected of a crime.
 						</p>
 					</div>
-					<cite className={styles.aboutCite}>Merriam Webster dictionary</cite>
+					<cite className={styles.aboutCite}>Merriam Webster Dictionary</cite>
 				</div>
 			</div>
 			<div className={styles.contentContainer}>

@@ -5,9 +5,9 @@
 }
 
 .postImage {
-	height: 14.063rem;
+	height: 15.25rem;
 	width: 100%;
-	background: var(--color-neutral-200);
+	background: var(--color-neutral-200) top center;
 	position: relative;
 	overflow: hidden;
 	margin-block-end: var(--size-12);
@@ -19,6 +19,10 @@
 	&:hover {
 		filter: sepia(100%);
 		transition: filter 0.3s ease;
+	}
+
+	& .image {
+		object-fit: cover;
 	}
 }
 
@@ -76,4 +80,19 @@
 	font-size: var(--size-12);
 	font-family: var(--font-family-secondary);
 	margin-inline-start: var(--size-4);
+}
+
+.updateTag {
+	position: relative;
+	left: 10px;
+	top: 10px;
+	z-index: 1;
+	background: var(--color-orange-500);
+	color: var(--color-neutral-100);
+	width: 3.4rem;
+	font-size: var(--size-12);
+	padding-inline: var(--size-8);
+	text-transform: uppercase;
+	font-family: var(--font-family-secondary);
+	font-weight: 600;
 }

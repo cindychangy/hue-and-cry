@@ -1,14 +1,21 @@
 .aboutHeader {
 	background: var(--color-gray-800);
-	height: 36vh;
 	width: 100%;
 	color: var(--color-neutral);
 	padding-block: var(--size-32);
+
+	@media (min-width: 992px) {
+		height: 48vh;
+	}
 }
 
 .headerContent {
 	margin: auto;
-	width: 40vw;
+	padding-inline: var(--size-24);
+
+	@media (min-width: 992px) {
+		width: 44vw;
+	}
 
 	& h1 {
 		font-weight: 800;
@@ -36,9 +43,13 @@
 }
 
 .contentContainer {
-	max-width: 40vw;
-	margin: auto;
 	margin-block: var(--size-46) var(--size-64);
+	margin-inline: var(--size-24);
+
+	@media (min-width: 992px) {
+		max-width: 40vw;
+		margin-inline: auto;
+	}
 }
 
 .contactLink {
@@ -47,4 +58,9 @@
 	&:hover {
 		color: var(--color-orange-500);
 	}
+}
+
+.accent {
+	color: var(--color-gray-500);
+	font-family: var(--font-family-secondary);
 }

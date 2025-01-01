@@ -13,6 +13,9 @@ export const postFieldsCompact = `
     },
   "featuredImage": featuredImage.asset -> url,
   summary,
+    tags[]->{
+    title
+  },
 `;
 
 const postFields = `

@@ -1,10 +1,11 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
+import Logger from '../Logger/Logger';
 import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
-import { Post } from '@/types/post';
+import { Post, Tag } from '@/types/post';
 import styles from './PostPreview.module.css';
 
 interface PostPreviewProps {
@@ -53,13 +54,17 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 
 	return (
 		<>
+			<Logger data={post} />
 			<div className={styles.postContainer}>
 				<a href={post.slug}>
 					<div className={styles.postImage}>
+						{post.tags?.some((tag: Tag) => tag.title === 'Updated') && (
+							<div className={styles.updateTag}>Updated</div>
+						)}
 						<Image
 							alt={post.title}
 							src={post.featuredImage}
-							style={{ objectFit: 'cover' }}
+							className={styles.image}
 							sizes="(max-width: 600px) 100vw, (max-width: 1200px) 50vw, 33vw"
 							fill
 						/>

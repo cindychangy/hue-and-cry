@@ -42,4 +42,9 @@ export type Post = {
 	year: string;
 	videos?: Video[];
 	podcasts?: Podcast[];
+	tags?: Tag[];
+};
+
+export type Tag = {
+	title: string;
 };

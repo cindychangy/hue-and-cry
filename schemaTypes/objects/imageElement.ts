@@ -1,5 +1,4 @@
 import { defineField, defineType } from 'sanity';
-import { ImagePreview } from '@/components/Sanity/ImagePreview';
 import { ImageIcon } from '@sanity/icons';
 
 export default defineType({
@@ -20,8 +19,4 @@ export default defineType({
 			type: 'string',
 		}),
 	],
-	components: {
-		//@ts-expect-error expect type error
-		preview: ImagePreview,
-	},
 });

@@ -24,6 +24,10 @@
 	@media (max-width: 992px) {
 		font-size: var(--size-32);
 	}
+
+	&:hover {
+		color: var(--color-orange-500);
+	}
 }
 
 .menu {
@@ -34,27 +38,34 @@
 
 	@media (max-width: 992px) {
 		font-size: 1.7rem;
-	}
-
-	& svg {
-		&:hover {
-			color: var(--color-orange-500);
-		}
+		width: 100%;
+		position: absolute;
+		left: 0;
+		top: 60px;
+		bottom: 0;
+		right: 0;
 	}
 }
 
 .menuItems {
+	@media (max-width: 992px) {
+		width: 100%;
+		background: var(--color-gray-800);
+		z-index: 2;
+		padding-block-start: var(--size-32);
+		border-top: 1px solid #32353e;
+		margin-block-start: var(--size-20);
+	}
+
 	& ul {
 		display: flex;
 		list-style: none;
 		gap: var(--size-24);
-		margin-inline-end: var(--size-32);
+		margin-inline-end: var(--size-64);
 
 		@media (max-width: 992px) {
 			flex-direction: column;
-			position: absolute;
-			right: 0;
-			background: var(--color-gray-800);
+			margin-inline-start: var(--size-24);
 		}
 
 		& li {
@@ -65,7 +76,26 @@
 			& :hover {
 				color: var(--color-orange-500);
 			}
+
+			@media (max-width: 992px) {
+				font-size: var(--size-20);
+			}
 		}
+	}
+}
+
+.menuIcon {
+	cursor: pointer;
+	position: absolute;
+	top: 34px;
+	right: 40px;
+
+	&:hover {
+		color: var(--color-orange-500);
+	}
+
+	@media (max-width: 992px) {
+		right: 24px;
 	}
 }
 

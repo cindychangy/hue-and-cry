@@ -1,5 +1,4 @@
 import { defineField, defineType } from 'sanity';
-import { BlockQuotePreview } from '@/components/Sanity/BlockQuotePreview';
 import { AddCommentIcon } from '@sanity/icons';
 
 export default defineType({
@@ -19,8 +18,4 @@ export default defineType({
 			type: 'string',
 		}),
 	],
-	components: {
-		//@ts-expect-error. Preview works
-		preview: BlockQuotePreview,
-	},
 });
