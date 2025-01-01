@@ -50,7 +50,7 @@ export default async function Homepage() {
 					</ul>
 				</aside>
 				<main id="stories">
-					<h4 className={styles.allStories}>All stories.</h4>
+					<h4 className={styles.allStories}>Featured stories.</h4>
 					<div className={styles.postGrid}>
 						{posts.map((post: Post) => (
 							<PostPreview key={post.id} post={post} />

@@ -115,12 +115,16 @@ h1 {
 	font-size: 3.2rem;
 	font-family: var(--font-family-secondary);
 	line-height: 1.1;
+}
 
-	@media (max-width: 767px) {
+@media (max-width: 767px) {
+	h1 {
 		font-size: 2.8rem;
 	}
+}
 
-	@media (max-width: 567px) {
+@media (max-width: 567px) {
+	h1 {
 		font-size: 2.2rem;
 	}
 }
@@ -175,14 +179,14 @@ strong {
 	font-weight: var(--font-weight-bold);
 }
 
-.hide-mobile {
-	@media (max-width: 992px) {
+@media (max-width: 992px) {
+	.hide-mobile {
 		display: none;
 	}
 }
 
-.show-mobile {
-	@media (min-width: 992px) {
-		display: none;
+@media (min-width: 992px) {
+	.show-mobile {
+		display: block;
 	}
 }
