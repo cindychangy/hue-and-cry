@@ -10,7 +10,7 @@ export const postFieldsCategoryPage = `
   summary,
 `;
 
-const homepagePosts = groq`*[_type == "post"] | order(publishedAt desc) {
+const homepagePosts = groq`*[_type == "post" && "Featured" in tags[]->title] | order(publishedAt desc) {
   ${postFieldsCompact}
 }`;
 

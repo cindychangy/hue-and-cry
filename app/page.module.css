@@ -59,6 +59,10 @@
 	@media screen and (max-width: 576px) {
 		max-width: 100%;
 	}
+
+	& main {
+		margin-block-end: var(--size-64);
+	}
 }
 
 .navLinks {

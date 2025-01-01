@@ -1,6 +1,5 @@
 'use client';
 import { useState, useEffect } from 'react';
-import Link from 'next/link';
 import Image from 'next/image';
 import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
@@ -55,7 +54,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 	return (
 		<>
 			<div className={styles.postContainer}>
-				<Link href={post.slug}>
+				<a href={post.slug}>
 					<div className={styles.postImage}>
 						<Image
 							alt={post.title}
@@ -65,16 +64,16 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 							fill
 						/>
 					</div>
-				</Link>
+				</a>
 				{post.category && (
 					<h5 className={styles.category}>
-						<Link href={post?.category?.slug}>{post?.category?.title}</Link>
+						<a href={post?.category?.slug}>{post?.category?.title}</a>
 					</h5>
 				)}
 				<h3 className={styles.postTitle}>
-					<Link href={post.slug}>
+					<a href={post.slug}>
 						{isCategoryPage ? truncateTitle(post.title) : post.title}
-					</Link>
+					</a>
 				</h3>
 				<div className={styles.postMeta}>
 					<p className={styles.date}>{dateFormatted}</p>
