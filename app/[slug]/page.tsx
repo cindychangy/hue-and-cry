@@ -7,7 +7,6 @@ import {
 	RelatedPodcasts,
 	RelatedVideos,
 	Comments,
-	RelatedPosts,
 } from '@/components';
 import { getSlugs, getPost } from '@/lib/queries/post';
 import { FaTwitter, FaFacebookF, FaEnvelope } from 'react-icons/fa';

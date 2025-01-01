@@ -1,6 +1,8 @@
+'use client';
+import { useState, useEffect } from 'react';
 import Link from 'next/link';
 import Image from 'next/image';
-// import { CommentCount } from 'disqus-react';
+import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
 import { Post } from '@/types/post';
@@ -12,7 +14,13 @@ interface PostPreviewProps {
 }
 
 export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
+	const [commentCount, setCommentCount] = useState(0);
 	const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
+	const disqusConfig = {
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
+		identifier: post.id.toString(),
+		title: post.title,
+	};
 
 	const truncateTitle = (title: string) => {
 		const phrasesToRemove = ['The Disappearance of', 'The Murder of'];
@@ -25,6 +33,24 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 
 		return title;
 	};
+
+	useEffect(() => {
+		if (window.DISQUS) {
+			window.DISQUS.reset({
+				reload: true,
+				config: function () {
+					this.page.url = disqusConfig.url;
+					this.page.identifier = disqusConfig.identifier;
+					this.page.title = disqusConfig.title;
+				},
+			});
+
+			window.DISQUS.on('ready', function () {
+				const count = window.DISQUS.config.callbacks.commentCount || 0;
+				setCommentCount(count);
+			});
+		}
+	}, [post]);
 
 	return (
 		<>
@@ -54,14 +80,12 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 					<p className={styles.date}>{dateFormatted}</p>
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
-					{/* <CommentCount
-						shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
-						config={{
-							url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
-							identifier: post.id.toString(),
-							title: post.title,
-						}}
-					/> */}
+					{commentCount > 0 && (
+						<CommentCount
+							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+							config={disqusConfig}
+						/>
+					)}
 				</div>
 				<p className={styles.summary}>{post.summary}</p>
 			</div>
