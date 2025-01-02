@@ -95,7 +95,8 @@
 	}
 
 	@media (max-width: 992px) {
-		right: 24px;
+		top: var(--size-24);
+		right: var(--size-24);
 	}
 }
 

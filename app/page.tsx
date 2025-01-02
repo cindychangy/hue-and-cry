@@ -35,7 +35,9 @@ export default async function Homepage() {
 						Bringing awareness to unsolved crimes against women and girls.
 					</h1>
 					<h3 className={styles.seeAllLink}>
-						<Link href="#stories">See all stories</Link>
+						<Link href="#stories" className="hide-mobile">
+							See all stories
+						</Link>
 					</h3>
 				</div>
 			</div>

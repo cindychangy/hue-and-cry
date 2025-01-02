@@ -56,8 +56,12 @@
 	}
 
 	& .yearLocation {
-		@media screen and (min-width: 976px) {
-			min-width: 9rem;
+		min-width: 9rem;
+		max-width: auto;
+
+		@media screen and (max-width: 576px) {
+			max-width: 5.5rem;
+			min-width: 5.5rem;
 		}
 
 		& .year {
@@ -106,7 +110,7 @@
 				margin-block-start: var(--size-8);
 
 				@media screen and (max-width: 776px) {
-					width: 90%;
+					width: 100%;
 				}
 			}
 		}

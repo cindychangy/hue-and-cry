@@ -1,5 +1,4 @@
 import { Metadata } from 'next';
-import Link from 'next/link';
 import { CategoryLanding } from '@/components';
 import { client } from '@/sanity/lib/client';
 import { getHighwayOfTearsPosts } from '@/lib/queries/pages';
@@ -92,9 +91,9 @@ export default async function HighwayOfTears() {
 								<div className={styles.description}>
 									<p>{story.description}&nbsp;</p>
 									{story.link && (
-										<Link href={story.link} className={styles.readMore}>
+										<a href={story.link} className={styles.readMore}>
 											Read more
-										</Link>
+										</a>
 									)}
 								</div>
 							</div>

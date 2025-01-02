@@ -6,7 +6,8 @@
 	color: var(--color-neutral);
 
 	@media screen and (max-width: 767px) {
-		height: 32vh;
+		height: auto;
+		padding-block: var(--size-46);
 	}
 }
 

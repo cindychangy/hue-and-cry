@@ -1,7 +1,6 @@
 'use client';
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import Logger from '../Logger/Logger';
 import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
@@ -54,7 +53,6 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 
 	return (
 		<>
-			<Logger data={post} />
 			<div className={styles.postContainer}>
 				<a href={post.slug}>
 					<div className={styles.postImage}>

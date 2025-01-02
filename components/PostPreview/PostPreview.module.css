@@ -17,7 +17,7 @@
 	}
 
 	&:hover {
-		filter: sepia(100%);
+		filter: grayscale(100%);
 		transition: filter 0.3s ease;
 	}
 
@@ -36,8 +36,14 @@
 	}
 }
 
-.postTitle a:hover {
-	color: var(--color-orange-500);
+.postTitle {
+	@media (max-width: 576px) {
+		font-size: var(--size-22);
+	}
+
+	&:hover {
+		color: var(--color-orange-500);
+	}
 }
 
 .postMeta {
@@ -49,6 +55,10 @@
 		color: var(--color-gray-500);
 		font-family: var(--font-family-secondary);
 		font-size: var(--size-12);
+
+		@media (max-width: 576px) {
+			font-size: var(--size-13);
+		}
 	}
 
 	& .divider {
