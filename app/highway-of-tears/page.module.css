@@ -67,7 +67,7 @@
 
 		& .year {
 			font-family: var(--font-family-secondary);
-			font-size: var(--size-42);
+			font-size: var(--size-36);
 			font-weight: 800;
 			line-height: 1;
 			letter-spacing: -1px;
@@ -108,14 +108,14 @@
 
 	.story h2 {
 		font-family: var(--font-family-secondary);
-		font-size: var(--size-36);
+		font-size: var(--size-32);
 		font-weight: 800;
 		line-height: 1.2;
 		letter-spacing: -1px;
 
 		@media screen and (max-width: 976px) {
 			font-size: var(--size-28);
-			line-height: 1;
+			line-height: 1.1;
 		}
 	}
 
