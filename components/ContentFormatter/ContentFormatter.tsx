@@ -11,7 +11,14 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 	types: {
 		imageElement: ({ value }) => (
 			<div className={styles.image}>
-				<img src={urlForImage(value.image)} alt={value.caption} />
+				<img
+					src={urlForImage(value.image)}
+					alt={value.caption}
+					style={{
+						width: value.width ? `${value.width}px !important` : '',
+						height: 'auto',
+					}}
+				/>
 				{value.caption && <p className={styles.caption}>{value.caption}</p>}
 			</div>
 		),
@@ -20,6 +27,19 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 				<blockquote className={styles.blockquote}>{value.quote}</blockquote>
 				<cite className={styles.caption}>{value.source}</cite>
 			</div>
+		),
+		video: ({ value }) => (
+			<iframe
+				width="560"
+				height="315"
+				src={value.embedUrl}
+				frameBorder="0"
+				title="YouTube video player"
+				allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+				referrerPolicy="strict-origin-when-cross-origin"
+				allowFullScreen
+				style={{ width: '100%', marginBottom: '1.5rem' }}
+			></iframe>
 		),
 	},
 	block: {

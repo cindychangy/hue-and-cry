@@ -1,8 +1,7 @@
 .videoContainer {
 	display: grid;
-	grid-template-columns: repeat(4, 1fr);
-	grid-column-gap: 2.5rem;
-	grid-row-gap: 4.5rem;
+	grid-template-columns: repeat(3, 1fr);
+	gap: 5rem;
 	margin-block: 1.5rem 3rem;
 	padding-inline-end: 1rem;
 
@@ -14,27 +13,23 @@
 
 .video {
 	max-width: 100%;
+
+	& iframe {
+		@media (max-width: 776px) {
+			width: 320px;
+			height: 200px;
+		}
+	}
 }
 
 .videoTitle {
 	color: var(--color-text);
 	font-family: var(--font-family-secondary);
-	font-size: var(--size-16);
-	font-weight: 400;
-	transition:
-		all 0.2s ease 0s,
-		box-shadow 0.2s ease 0s,
-		-webkit-box-shadow 0.2s ease 0s;
-	box-shadow:
-		var(--color-text) 0px -1px inset,
-		var(--color-text) 0px -1px 0px inset;
-	text-decoration: none;
-	display: inline;
+	font-size: var(--size-15);
+	line-height: 1.4;
+	text-decoration: underline;
 }
 
 .videoTitle:hover {
 	color: var(--color-orange-500);
-	box-shadow:
-		var(--color-orange-500) 0px -1px inset,
-		var(--color-text) 0px -1px 0px inset;
 }

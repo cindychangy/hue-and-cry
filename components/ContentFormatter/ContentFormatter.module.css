@@ -1,8 +1,12 @@
 .h3 {
 	color: var(--color-text);
-	font-family: var(--font-primary-bold);
-	font-size: var(--size-22);
-	margin-block-start: var(--size-46);
+	font-size: var(--size-18);
+	margin-block: var(--size-46) var(--size-4);
+	font-weight: 800;
+
+	& strong {
+		font-weight: 800;
+	}
 }
 
 .image {
@@ -21,7 +25,7 @@
 	&::after {
 		display: block;
 		content: '—';
-		color: var(--color-gray-500);
+		color: var(--color-gray-200);
 	}
 }
 
@@ -31,9 +35,11 @@
 
 .link {
 	text-decoration: underline;
+	display: inline;
+	font-weight: var(--font-weight-bold);
 
 	&:hover {
-		text-decoration: none;
+		color: var(--color-orange-500);
 	}
 }
 
@@ -45,6 +51,7 @@
 
 .blockquote {
 	line-height: 1.4;
+	font-size: var(--size-24);
 	letter-spacing: 0.5px;
 	font-family: var(--font-family-secondary);
 	font-size: var(--size-22);

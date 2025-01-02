@@ -18,5 +18,10 @@ export default defineType({
 			title: 'Image Caption',
 			type: 'string',
 		}),
+		defineField({
+			name: 'width',
+			title: 'Custom width',
+			type: 'string',
+		}),
 	],
 });

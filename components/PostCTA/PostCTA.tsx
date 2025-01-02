@@ -15,7 +15,7 @@ export const PostCTA = ({ howToHelp, digDeeper }: PostCTAProps) => {
 					<h4>Help this case</h4>
 					<ContentFormatter content={howToHelp} />
 				</div>
-				<div>
+				<div className={styles.sources}>
 					<h4>Sources and links</h4>
 					<ContentFormatter content={digDeeper} />
 				</div>

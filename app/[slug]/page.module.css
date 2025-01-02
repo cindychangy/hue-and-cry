@@ -6,13 +6,14 @@
 	align-items: start;
 	justify-content: space-between;
 	gap: var(--size-60);
-	margin-block-start: var(--size-40);
+	margin-block-start: var(--size-64);
 	padding: 0;
 
 	@media (max-width: 992px) {
 		grid-template-columns: 1fr;
 		max-width: 100%;
 		padding: var(--size-20);
+		margin-block-start: var(--size-24);
 	}
 
 	& .postContent {
@@ -83,10 +84,10 @@
 .contentWrapper {
 	max-width: 72.5rem;
 	margin: var(--size-60) auto var(--size-24);
+	padding: var(--size-24);
 
 	@media (max-width: 992px) {
 		max-width: 100%;
-		padding: var(--size-20);
 		margin-block-start: var(--size-16);
 	}
 }

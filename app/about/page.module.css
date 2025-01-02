@@ -3,6 +3,7 @@
 	width: 100%;
 	color: var(--color-neutral);
 	padding-block: var(--size-32);
+	display: flex;
 
 	@media (min-width: 992px) {
 		height: 48vh;

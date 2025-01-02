@@ -75,10 +75,7 @@ video {
 	--size-64: 4rem;
 
 	--site-width: 95vw;
-	--link-transition: all 0.1s ease 0s, box-shadow 0.1s ease 0s,
-		-webkit-box-shadow 0.1s ease 0s;
-	--link-box-shadow: rgb(255 255 255) 0px -20px inset,
-		rgb(255 161 88) 0px -34px 0px inset;
+	--link-transition: color 0.2s ease-in-out;
 }
 
 body {
@@ -93,12 +90,11 @@ body {
 html,
 body {
 	height: 100%;
-	overflow-x: hidden;
 	scroll-behavior: smooth;
 }
 
 a {
-	transition: color 0.2s ease-in-out;
+	transition: var(--link-transition);
 	color: inherit;
 	cursor: pointer;
 	display: inline-block;
