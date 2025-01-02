@@ -17,7 +17,7 @@
 	margin: auto;
 	text-align: center;
 
-	& .title {
+	& h2.title {
 		font-family: var(--font-family-secondary);
 		font-size: var(--size-46);
 		line-height: 1.2;
