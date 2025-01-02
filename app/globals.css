@@ -122,6 +122,13 @@ h1 {
 	}
 }
 
+h2 {
+	font-size: var(--size-46);
+	font-family: var(--font-family-secondary);
+	font-weight: 700;
+	line-height: 1.2;
+}
+
 h3 {
 	font-size: 19px;
 	font-family: var(--font-family-secondary);
