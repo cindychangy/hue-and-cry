@@ -1,5 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
-@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700;1,900&display=swap');
 
@@ -44,8 +43,6 @@ video {
 	--color-gray-900: #232323;
 	--font-family-primary: 'Merriweather', Helvetica, Arial, sans-serif;
 	--font-family-secondary: 'Inter', Helvetica, Arial, sans-serif;
-	--font-family-title: 'Neue Haas Grotesk Display Pro', Helvetica, Arial,
-		sans-serif;
 	--font-logo: 'Bebas Neue', Helvetica, Arial, sans-serif;
 	--font-weight-bold: 600;
 

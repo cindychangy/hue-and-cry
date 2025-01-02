@@ -98,6 +98,7 @@
 	.postCopyright {
 		max-width: 100ch;
 		padding-block: var(--size-42);
+		padding-inline: var(--size-24);
 	}
 }
 
