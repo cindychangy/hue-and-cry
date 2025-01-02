@@ -10,6 +10,10 @@ import classNames from 'classnames';
 export const SiteNav = () => {
 	const [showMenuItems, setShowMenuItems] = useState(false);
 
+	const handleMenuItemClick = () => {
+		setShowMenuItems(false);
+	};
+
 	return (
 		<div className={styles.siteNav}>
 			<div className={styles.navContainer}>
@@ -22,7 +26,7 @@ export const SiteNav = () => {
 							<div className={styles.menuItems}>
 								<ul>
 									{NAV_LINKS.map((item) => (
-										<li key={item.title}>
+										<li key={item.title} onClick={handleMenuItemClick}>
 											<Link href={item.url}>{item.title}</Link>
 										</li>
 									))}
