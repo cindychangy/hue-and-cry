@@ -1,5 +1,5 @@
 'use client';
-import { SiteNav, SiteFooter } from '@/components';
+import { SiteNav, SiteFooter, GoogleAnalytics } from '@/components';
 import { usePathname } from 'next/navigation';
 import './globals.css';
 
@@ -17,6 +17,7 @@ export default function RootLayout({
 		<html lang="en">
 			<body>
 				{!isStudioRoute && <SiteNav />}
+				{!isStudioRoute && <GoogleAnalytics />}
 				{children}
 				{!isStudioRoute && <SiteFooter />}
 			</body>
