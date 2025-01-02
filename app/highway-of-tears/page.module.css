@@ -18,6 +18,11 @@
 	text-align: center;
 
 	& .title {
+		font-family: var(--font-family-secondary);
+		font-size: var(--size-46);
+		line-height: 1.2;
+		font-weight: 700;
+
 		@media screen and (max-width: 976px) {
 			font-size: var(--size-24);
 		}
