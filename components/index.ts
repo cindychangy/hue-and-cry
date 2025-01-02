@@ -14,3 +14,4 @@ export { Comments } from './Comments/Comments';
 export { RelatedPosts } from './RelatedPosts/RelatedPosts';
 export { CategoryLanding } from './CategoryLanding/CategoryLanding';
 export { GoogleAnalytics } from './GoogleAnalytics/GoogleAnalytics';
+export { CommentCount } from './CommentCount/CommentCount';

@@ -1,8 +1,7 @@
-'use client';
 import Image from 'next/image';
-import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
+import { CommentCount } from '@/components';
 import { Post, Tag } from '@/types/post';
 import styles from './PostPreview.module.css';
 
@@ -37,7 +36,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 				<a href={post.slug}>
 					<div className={styles.postImage}>
 						{post.tags?.some((tag: Tag) => tag.title === 'Updated') && (
-							<div className={styles.updateTag}>Updated</div>
+							<div className={styles.updateTag}>Update</div>
 						)}
 						<Image
 							alt={post.title}
