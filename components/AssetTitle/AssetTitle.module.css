@@ -1,0 +1,14 @@
+.assetContainer {
+	margin-block-start: var(--size-48);
+	display: flex;
+	align-items: center;
+}
+
+.title {
+	color: var(--color-gray-900);
+	font-size: var(--size-22);
+}
+
+.icon {
+	margin-inline-start: var(--size-8);
+}

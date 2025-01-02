@@ -1,0 +1,23 @@
+.commentContainer {
+	background: var(--color-neutral);
+	max-width: 48rem;
+	margin: auto;
+	text-align: center;
+	padding: 6rem;
+
+	@media (max-width: 992px) {
+		max-width: 100%;
+		padding: var(--size-24);
+	}
+}
+
+.commentTitle {
+	color: var(--color-text);
+	font-size: var(--size-32);
+	text-align: center;
+	margin-block: var(--size-16) var(--size-24);
+
+	@media (max-width: 992px) {
+		font-size: var(--size-32);
+	}
+}

@@ -1,0 +1,62 @@
+.h3 {
+	color: var(--color-text);
+	font-size: var(--size-18);
+	margin-block: var(--size-46) var(--size-4);
+	font-weight: 800;
+
+	& strong {
+		font-weight: 800;
+	}
+}
+
+.image {
+	margin-block: var(--size-32);
+
+	& img {
+		width: 100%;
+		max-width: 100%;
+	}
+}
+
+.caption {
+	font-size: 0.8125rem;
+	font-weight: 400;
+	margin-block-start: var(--size-8);
+
+	&::after {
+		display: block;
+		content: '—';
+		color: var(--color-gray-200);
+	}
+}
+
+.p {
+	margin-block-end: var(--size-24);
+}
+
+.link {
+	text-decoration: underline;
+	display: inline;
+	font-weight: var(--font-weight-bold);
+
+	&:hover {
+		color: var(--color-orange-500);
+	}
+}
+
+.quoteContainer {
+	position: relative;
+	margin-block-start: var(--size-42);
+	margin-block-end: var(--size-32);
+}
+
+.blockquote {
+	line-height: 1.4;
+	font-size: var(--size-24);
+	letter-spacing: 0.5px;
+	font-family: var(--font-family-secondary);
+	font-size: var(--size-22);
+	font-weight: 700;
+	letter-spacing: -1px;
+	margin-block-end: var(--size-16);
+}
