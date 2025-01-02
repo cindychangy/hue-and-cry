@@ -73,7 +73,7 @@ export default async function HighwayOfTears() {
 				title="The Highway of Tears"
 				text="is an isolated 725-kilometer stretch of Highway
 						16 in British Columbia which has been the location of many
-						unsolved murders and disappearances of Indigenous women beginning as
+						unsolved murders and disappearances of women beginning as
 						early as 1969."
 				sourceTitle="The Canadian Encyclopedia"
 				sourceLink="https://www.thecanadianencyclopedia.ca/en/article/highway-of-tears"
