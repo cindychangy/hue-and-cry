@@ -117,6 +117,11 @@ export default defineType({
 				},
 			],
 		}),
+		defineField({
+			name: 'disqusId',
+			title: 'Disqus Id',
+			type: 'string',
+		}),
 	],
 	preview: {
 		select: {
