@@ -1,6 +1,6 @@
 import { PortableText, PortableTextReactComponents } from '@portabletext/react';
 import type { PortableTextBlock } from '@portabletext/types';
-import { urlForImage } from '@/lib/sanity.image';
+import { urlForImage } from '@/sanity/lib/image';
 import styles from './ContentFormatter.module.css';
 import React from 'react';
 interface ContentFormatterProps {

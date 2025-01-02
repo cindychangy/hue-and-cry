@@ -1,6 +1,6 @@
 import Link from 'next/link';
 import { PostPreview } from '@/components';
-import { client } from '@/lib/sanity.client';
+import { client } from '@/sanity/lib/client';
 import { getHomepage } from '@/lib/queries/pages';
 import { NAV_LINKS } from '@/constants/routes';
 import { Post } from '@/types/post';

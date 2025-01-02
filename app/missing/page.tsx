@@ -1,5 +1,5 @@
 import { Metadata } from 'next';
-import { client } from '@/lib/sanity.client';
+import { client } from '@/sanity/lib/client';
 import { CategoryLanding } from '@/components';
 import { getMissingPosts } from '@/lib/queries/pages';
 

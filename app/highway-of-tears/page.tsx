@@ -1,7 +1,7 @@
 import { Metadata } from 'next';
 import Link from 'next/link';
 import { CategoryLanding } from '@/components';
-import { client } from '@/lib/sanity.client';
+import { client } from '@/sanity/lib/client';
 import { getHighwayOfTearsPosts } from '@/lib/queries/pages';
 import styles from './page.module.css';
 

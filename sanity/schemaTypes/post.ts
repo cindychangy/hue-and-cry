@@ -1,5 +1,5 @@
 import { defineField, defineType } from 'sanity';
-import { formatArticleDate } from '../utils/post';
+import { formatArticleDate } from '../../utils/post';
 import { ComposeIcon } from '@sanity/icons';
 
 export default defineType({

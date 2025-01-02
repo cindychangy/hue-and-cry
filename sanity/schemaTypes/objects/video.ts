@@ -1,5 +1,6 @@
 import { defineField, defineType } from 'sanity';
 import { PlayIcon } from '@sanity/icons';
+// import { VideoPreview } from '@/components/Sanity/VideoPreview';
 
 export default defineType({
 	name: 'video',
@@ -13,4 +14,7 @@ export default defineType({
 			type: 'string',
 		}),
 	],
+	// components: {
+	// 	preview: VideoPreview,
+	// },
 });
