@@ -54,7 +54,12 @@ const contentComponent: Partial<PortableTextReactComponents> = {
 	},
 	marks: {
 		link: ({ value, children }) => (
-			<a href={value.href} className={styles.link}>
+			<a
+				href={value.href}
+				className={styles.link}
+				target="_blank"
+				rel="noopener noreferrer"
+			>
 				{children}
 			</a>
 		),
