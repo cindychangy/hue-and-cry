@@ -3,7 +3,7 @@ import { structureTool } from 'sanity/structure';
 import { visionTool } from '@sanity/vision';
 import { schemaTypes } from './schemaTypes';
 import { media } from 'sanity-plugin-media';
-import { siteStructure } from './structure/siteStructure';
+import { structure } from './structure/structure';
 
 export default defineConfig({
 	name: 'hueandcry',
@@ -16,11 +16,14 @@ export default defineConfig({
 
 	plugins: [
 		structureTool({
+			structure,
 			name: 'content',
 			title: 'Content',
-			structure: siteStructure,
 		}),
-		visionTool(),
+		visionTool({
+			name: 'groq',
+			title: 'GROQ',
+		}),
 		media(),
 	],
 

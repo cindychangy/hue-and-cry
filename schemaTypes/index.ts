@@ -6,6 +6,7 @@ import blockQuote from './objects/blockQuote';
 import video from './objects/video';
 import highwayOfTears from './highwayOfTears';
 import tag from './tag';
+import homepage from './homepage';
 
 export const schemaTypes = [
 	post,
@@ -16,4 +17,5 @@ export const schemaTypes = [
 	video,
 	highwayOfTears,
 	tag,
+	homepage,
 ];

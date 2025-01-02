@@ -25,7 +25,7 @@ export const metadata = {
 };
 
 export default async function Homepage() {
-	const posts = await getHomepage(client);
+	const homepage = await getHomepage(client);
 
 	return (
 		<>
@@ -52,7 +52,7 @@ export default async function Homepage() {
 				<main id="stories">
 					<h4 className={styles.allStories}>Featured stories.</h4>
 					<div className={styles.postGrid}>
-						{posts.map((post: Post) => (
+						{homepage.featuredPosts.map((post: Post) => (
 							<PostPreview key={post.id} post={post} />
 						))}
 					</div>

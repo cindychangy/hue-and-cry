@@ -1,6 +1,6 @@
 import type { StructureResolver } from 'sanity/structure';
 
-export const siteStructure: StructureResolver = (S) =>
+export const structure: StructureResolver = (S) =>
 	S.list()
 		.id('root')
 		.items([
@@ -8,4 +8,5 @@ export const siteStructure: StructureResolver = (S) =>
 			S.documentTypeListItem('category').title('Categories'),
 			S.documentTypeListItem('tag').title('Tags'),
 			S.documentTypeListItem('highwayOfTears').title('Highway of Tears'),
+			S.documentTypeListItem('homepage').title('Homepage'),
 		]);

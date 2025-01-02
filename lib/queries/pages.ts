@@ -10,8 +10,10 @@ export const postFieldsCategoryPage = `
   summary,
 `;
 
-const homepagePosts = groq`*[_type == "post" && "Featured" in tags[]->title] | order(publishedAt desc) {
-  ${postFieldsCompact}
+const homepagePosts = groq`*[_type == "homepage"][0]{
+  featuredPosts[]-> {  
+    ${postFieldsCompact}
+  }
 }`;
 
 const missingPosts = groq`*[_type == "post" && "Missing" in categories[]->title] | order(publishedAt desc){
