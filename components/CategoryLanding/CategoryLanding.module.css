@@ -4,6 +4,8 @@
 	width: 100%;
 	display: flex;
 	color: var(--color-neutral);
+	position: relative;
+	z-index: 1;
 
 	@media screen and (max-width: 767px) {
 		height: auto;
