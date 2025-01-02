@@ -16,6 +16,7 @@ export const postFieldsCompact = `
     tags[]->{
     title
   },
+  disqusId,
 `;
 
 const postFields = `
@@ -30,6 +31,7 @@ const postFields = `
   location,
   year,
   copyright,
+  disqusId,
   digDeeper[] {
     _type,
     children[] { 
@@ -74,6 +76,7 @@ const postFields = `
       _type == "post" && defined(^.categories[0]._ref) && references(^.categories[0]._ref) && _id != ^._id] | order(_id asc) [0...3] {
       ${postFieldsCompact}
     }
+      
 `;
 
 const post = groq`*[_type == "post" && slug.current == $slug][0]

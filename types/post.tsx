@@ -43,6 +43,7 @@ export type Post = {
 	videos?: Video[];
 	podcasts?: Podcast[];
 	tags?: Tag[];
+	disqusId: string;
 };
 
 export type Tag = {

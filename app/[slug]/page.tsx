@@ -146,7 +146,7 @@ export default async function PostPage({ params }: PageProps) {
 				<Comments
 					postSlug={post.slug}
 					postTitle={post.title}
-					postId={post.id}
+					disqusId={post.disqusId}
 				/>
 			</div>
 			{/* <div className={styles.contentWrapper}>

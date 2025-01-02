@@ -5,14 +5,14 @@ import styles from './Comments.module.css';
 
 interface CommentsProps {
 	postSlug: string;
-	postId: number;
+	disqusId: string;
 	postTitle: string;
 }
 
-export const Comments = ({ postSlug, postId, postTitle }: CommentsProps) => {
+export const Comments = ({ postSlug, disqusId, postTitle }: CommentsProps) => {
 	const DISQUS_CONFIG = {
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}${postSlug}`,
-		identifier: postId.toString(),
+		identifier: disqusId,
 		title: postTitle,
 	};
 

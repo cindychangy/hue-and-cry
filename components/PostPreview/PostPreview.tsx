@@ -1,5 +1,4 @@
 'use client';
-import { useState, useEffect } from 'react';
 import Image from 'next/image';
 import { CommentCount } from 'disqus-react';
 import { BsChatRightFill } from 'react-icons/bs';
@@ -13,11 +12,10 @@ interface PostPreviewProps {
 }
 
 export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
-	const [commentCount, setCommentCount] = useState(0);
 	const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
 	const disqusConfig = {
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
-		identifier: post.id.toString(),
+		identifier: post.disqusId,
 		title: post.title,
 	};
 
@@ -32,24 +30,6 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 
 		return title;
 	};
-
-	useEffect(() => {
-		if (window.DISQUS) {
-			window.DISQUS.reset({
-				reload: true,
-				config: function () {
-					this.page.url = disqusConfig.url;
-					this.page.identifier = disqusConfig.identifier;
-					this.page.title = disqusConfig.title;
-				},
-			});
-
-			window.DISQUS.on('ready', function () {
-				const count = window.DISQUS.config.callbacks.commentCount || 0;
-				setCommentCount(count);
-			});
-		}
-	}, [post, disqusConfig.identifier, disqusConfig.title, disqusConfig.url]);
 
 	return (
 		<>
@@ -83,12 +63,10 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
 					<div className={styles.commentCount}>
-						{commentCount > 0 && (
-							<CommentCount
-								shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
-								config={disqusConfig}
-							/>
-						)}
+						<CommentCount
+							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
+							config={disqusConfig}
+						/>
 					</div>
 				</div>
 				<p className={styles.summary}>{post.summary}</p>
