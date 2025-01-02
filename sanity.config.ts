@@ -8,9 +8,9 @@ import { structure } from './structure/structure';
 export default defineConfig({
 	name: 'hueandcry',
 	title: 'Hue and Cry',
-	projectId: 'i6ujk2hj',
-	dataset: 'production',
-	apiVersion: '2025-01-02',
+	projectId: process.env.SANITY_STUDIO_PROJECT_ID as string,
+	dataset: process.env.SANITY_STUDIO_DATASET as string,
+	apiVersion: process.env.SANITY_STUDIO_API_VERSION as string,
 	useCdn: false,
 	basePath: '/studio',
 
