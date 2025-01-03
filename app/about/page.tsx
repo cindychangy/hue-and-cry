@@ -25,24 +25,21 @@ export const metadata: Metadata = {
 export default async function About() {
 	return (
 		<>
-			<div className={styles.aboutHeader}>
-				<div className={styles.headerContent}>
-					<h1>Hue and Cry</h1>
-					[Noun]
-					<div className={styles.aboutDefinition}>
-						<p>
-							a. The pursuit of a suspect or a written proclamation for the
-							capture of a suspect.
-						</p>
-						<p>
-							b. A loud outcry formerly used in the pursuit of one who is
-							suspected of a crime.
-						</p>
-					</div>
+			<div className={styles.aboutHeader} />
+			<div className={styles.contentContainer}>
+				<h1>Hue and Cry</h1>
+				<span className={styles.accent}>[Noun]</span>
+				<div className={styles.aboutDefinition}>
+					<p>
+						a. The pursuit of a suspect or a written proclamation for the
+						capture of a suspect.
+					</p>
+					<p>
+						b. A loud outcry formerly used in the pursuit of one who is
+						suspected of a crime.
+					</p>
 					<cite className={styles.aboutCite}>Merriam Webster Dictionary</cite>
 				</div>
-			</div>
-			<div className={styles.contentContainer}>
 				<p>
 					The mission is to bring awareness to cases of unsolved crimes against
 					women and girls. Hue and Cry is a true crime blog-but you won't find
