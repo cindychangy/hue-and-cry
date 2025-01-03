@@ -22,17 +22,20 @@ export const SiteNav = () => {
 				</Link>
 				<div>
 					<div className={styles.menu}>
-						{showMenuItems && (
-							<div className={styles.menuItems}>
-								<ul>
-									{NAV_LINKS.map((item) => (
-										<li key={item.title} onClick={handleMenuItemClick}>
-											<Link href={item.url}>{item.title}</Link>
-										</li>
-									))}
-								</ul>
-							</div>
-						)}
+						<div
+							className={classNames(
+								styles.menuItems,
+								showMenuItems && styles.visible
+							)}
+						>
+							<ul>
+								{NAV_LINKS.map((item) => (
+									<li key={item.title} onClick={handleMenuItemClick}>
+										<Link href={item.url}>{item.title}</Link>
+									</li>
+								))}
+							</ul>
+						</div>
 					</div>
 					<HiOutlineMenuAlt3
 						onClick={() => setShowMenuItems(!showMenuItems)}
