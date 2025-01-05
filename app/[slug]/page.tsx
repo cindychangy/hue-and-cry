@@ -7,6 +7,7 @@ import {
 	RelatedPodcasts,
 	RelatedVideos,
 	Comments,
+	RelatedPosts,
 } from '@/components';
 import { getSlugs, getPost } from '@/lib/queries/post';
 import { FaTwitter, FaFacebookF, FaEnvelope } from 'react-icons/fa';
@@ -149,9 +150,7 @@ export default async function PostPage({ params }: PageProps) {
 					disqusId={post.disqusId}
 				/>
 			</div>
-			{/* <div className={styles.contentWrapper}>
-				<RelatedPosts posts={post.relatedPosts ?? []} />
-			</div> */}
+			<RelatedPosts posts={post.relatedPosts ?? []} />
 
 			<div className={styles.copyrightWrapper}>
 				<small className={styles.postCopyright}>

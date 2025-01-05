@@ -73,7 +73,7 @@ const postFields = `
     "title": title,
   },
   "relatedPosts": *[
-      _type == "post" && defined(^.categories[0]._ref) && references(^.categories[0]._ref) && _id != ^._id] | order(_id asc) [0...3] {
+      _type == "post" && defined(^.categories[0]._ref) && references(^.categories[0]._ref) && _id != ^._id] | order(_id asc) [0...4] {
       ${postFieldsCompact}
     }
       
