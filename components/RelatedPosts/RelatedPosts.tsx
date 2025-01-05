@@ -1,4 +1,3 @@
-import { Grid } from '@/components';
 import { Post } from '@/types/post';
 import Image from 'next/image';
 import styles from './RelatedPosts.module.css';
