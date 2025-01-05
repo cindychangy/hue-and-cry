@@ -99,10 +99,11 @@
 	z-index: 1;
 	background: var(--color-orange-500);
 	color: var(--color-neutral-100);
-	width: 3.4rem;
+	width: 3.8rem;
 	font-size: var(--size-12);
-	padding-inline: var(--size-8);
 	text-transform: uppercase;
 	font-family: var(--font-family-secondary);
 	font-weight: 600;
+	display: flex;
+	justify-content: center;
 }

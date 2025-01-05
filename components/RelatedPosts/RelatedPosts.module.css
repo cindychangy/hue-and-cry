@@ -1,6 +1,72 @@
+.relatedPosts {
+	margin: auto;
+	max-width: 60rem;
+	width: 100%;
+	text-align: center;
+	padding-block-start: var(--size-32);
+	margin-block: var(--size-24);
+
+	@media (max-width: 667px) {
+		margin-block: 0;
+	}
+}
+
 .relatedPostTitle {
 	font-size: var(--size-16);
 	font-family: var(--font-family-secondary);
 	font-weight: var(--font-weight-bold);
+	margin-block-end: var(--size-32);
+
+	@media (max-width: 667px) {
+		margin-block-end: var(--size-12);
+	}
+}
+
+.postGrid {
+	display: grid;
+	grid-template-columns: repeat(4, 1fr);
+	gap: var(--size-16);
+	padding-inline: var(--size-24);
+
+	@media (max-width: 667px) {
+		grid-template-columns: repeat(2, 1fr);
+	}
+}
+
+.postImage {
+	height: 120px;
+	width: 120px;
+	border-radius: 50%;
+	background: var(--color-neutral-200) top center;
+	position: relative;
+	overflow: hidden;
 	margin-block-end: var(--size-12);
+
+	&:hover {
+		filter: grayscale(100%);
+		transition: filter 0.3s ease;
+	}
+
+	& .image {
+		object-fit: cover;
+	}
+}
+
+.postTitle {
+	font-size: var(--size-14);
+	font-weight: 600;
+	font-family: var(--font-family-secondary);
+	line-height: 1.3;
+
+	&:hover {
+		color: var(--color-gray-500);
+	}
+
+	@media (max-width: 576px) {
+		margin-block-end: var(--size-24);
+	}
+}
+
+.accent {
+	color: var(--color-gray-500);
 }
