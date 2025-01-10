@@ -1,6 +1,6 @@
 import type { Image } from '@sanity/types';
 import { Flex } from '../Layout/Flex/Flex';
-import { urlForImage } from '@/sanity/lib/image';
+import { urlForImage } from '../../sanity/lib/image';
 import { CSSProperties } from 'react';
 
 interface ActionsProps {
