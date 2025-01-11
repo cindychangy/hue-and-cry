@@ -1,8 +1,11 @@
+'use client';
+import { useEffect } from 'react';
 import Image from 'next/image';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
 import { CommentCount } from '@/components';
 import { Post, Tag } from '@/types/post';
+import { CommentCountProps } from '@/types/post';
 import styles from './PostPreview.module.css';
 
 interface PostPreviewProps {
@@ -28,6 +31,16 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 		}
 
 		return title;
+	};
+
+	const DisqusCommentCount = ({ shortname, config }: CommentCountProps) => {
+		useEffect(() => {
+			if (window.DISQUSWIDGETS) {
+				window.DISQUSWIDGETS.getCount({ reset: true });
+			}
+		}, [config.url, config.identifier]);
+
+		return <CommentCount shortname={shortname} config={config} />;
 	};
 
 	return (
@@ -62,7 +75,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
 					<div className={styles.commentCount}>
-						<CommentCount
+						<DisqusCommentCount
 							shortname={`${process.env.NEXT_PUBLIC_DISQUS_SHORTNAME}`}
 							config={disqusConfig}
 						/>

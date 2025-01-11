@@ -1,6 +1,8 @@
 declare global {
 	interface Window {
-		DISQUS: any;
+		DISQUSWIDGETS?: {
+			getCount: (options: { reset: boolean }) => void;
+		};
 	}
 }
 
