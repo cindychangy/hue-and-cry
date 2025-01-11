@@ -39,7 +39,7 @@
 .storyContainer {
 	display: flex;
 	gap: var(--size-32);
-	padding-block-start: var(--size-60);
+	padding-block: var(--size-42) var(--size-24);
 
 	&:not(:last-child) {
 		border-bottom: 1px solid var(--color-gray-100);
