@@ -59,10 +59,11 @@ export default async function About() {
 				</p>
 				<br />
 				<p>
-					I am not a professional writer or journalist. Just a true crime
-					obsessee who wanted to re-tell stories that I heard, read, watched,
-					and couldn't stop thinking about. All my knowledge comes from
-					articles, podcasts or shows cited at the bottom of each article.
+					I am not a professional writer or journalist. I hope that by retelling
+					these stories - stories that have stayed with me long after I heard
+					them - I can help these girls and women finally find the justice they
+					deserve. All my knowledge comes from articles, podcasts, and shows
+					cited at the bottom of each article.
 				</p>
 				<br />
 				<p>
