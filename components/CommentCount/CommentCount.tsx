@@ -20,8 +20,9 @@ export const CommentCount = ({ shortname, config }: CommentCountProps) => {
 			mutations.forEach((mutation) => {
 				if (mutation.type === 'childList') {
 					const element = containerRef.current;
-					if (element && element.textContent === '0') {
-						setShouldShow(false);
+					if (element) {
+						// Delay the update to ensure the Disqus widget has time to render
+						setShouldShow(element.textContent?.trim() !== '0');
 					}
 				}
 			});
@@ -34,16 +35,16 @@ export const CommentCount = ({ shortname, config }: CommentCountProps) => {
 			});
 		}
 
-		return () => observer.disconnect();
+		return () => {
+			observer.disconnect();
+		};
 	}, []);
 
-	if (!shouldShow) {
-		return null;
-	}
-
-	return (
+	return shouldShow ? (
 		<div ref={containerRef}>
 			<DisqusCommentCount shortname={shortname} config={config} />
 		</div>
+	) : (
+		<></>
 	);
 };
