@@ -49,3 +49,12 @@ export type Post = {
 export type Tag = {
 	title: string;
 };
+
+export type CommentCountProps = {
+	shortname: string;
+	config: {
+		url: string;
+		identifier: string;
+		title: string;
+	};
+};
