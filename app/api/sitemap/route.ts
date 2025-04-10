@@ -3,8 +3,7 @@ import { groq } from 'next-sanity';
 import { client } from '@/sanity/lib/client';
 
 const getSiteUrl = () => {
-	const siteUrl =
-		process.env.NEXT_PUBLIC_APP_DOMAIN || 'https://thehueandcry.com';
+	const siteUrl = process.env.NEXT_PUBLIC_APP_DOMAIN;
 	return siteUrl;
 };
 
@@ -13,7 +12,6 @@ interface Page {
 	updatedAt: string;
 }
 
-// Sanity query to fetch your pages/posts
 const fetchPages = async () => {
 	const query = groq`
     *[_type == "page" && !(_id in path("drafts.**"))] {
@@ -27,10 +25,8 @@ const fetchPages = async () => {
 
 export async function GET() {
 	try {
-		// Fetch published pages/posts from Sanity
 		const pages = await fetchPages();
 
-		// Base URL for your site (adjust this part to your setup)
 		const siteUrl = getSiteUrl();
 
 		// Generate sitemap XML
@@ -54,7 +50,6 @@ export async function GET() {
       </urlset>
     `;
 
-		// Ensure no extra whitespace before the XML declaration
 		return new NextResponse(sitemap.trim(), {
 			headers: {
 				'Content-Type': 'application/xml',
