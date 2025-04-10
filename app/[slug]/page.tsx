@@ -13,19 +13,16 @@ import { getSlugs, getPost } from '@/lib/queries/post';
 import { FaTwitter, FaFacebookF, FaEnvelope } from 'react-icons/fa';
 import classNames from 'classnames';
 
-interface PageProps {
-	params: {
-		slug: string;
-	};
-}
-
 export async function generateStaticParams() {
 	const slugs = await getSlugs();
 	return slugs;
 }
 
-export default async function PostPage({ params }: PageProps) {
-	const post = await getPost(params.slug);
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+export default async function PostPage({ params }: { params: any }) {
+	const { slug } = await params;
+
+	const post = await getPost(slug);
 
 	if (!post) {
 		return null;
