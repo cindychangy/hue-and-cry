@@ -16,6 +16,16 @@ export const CommentCount = ({ shortname, config }: CommentCountProps) => {
 	const [shouldShow, setShouldShow] = useState(true);
 
 	useEffect(() => {
+		const loadCommentCounts = () => {
+			if (typeof window !== 'undefined' && window.DISQUSWIDGETS) {
+				window.DISQUSWIDGETS.getCount({ reset: true });
+			}
+		};
+
+		loadCommentCounts();
+
+		const timer = setTimeout(loadCommentCounts, 1000);
+
 		const observer = new MutationObserver((mutations) => {
 			mutations.forEach((mutation) => {
 				if (mutation.type === 'childList') {
@@ -36,6 +46,7 @@ export const CommentCount = ({ shortname, config }: CommentCountProps) => {
 		}
 
 		return () => {
+			clearTimeout(timer);
 			observer.disconnect();
 		};
 	}, []);
