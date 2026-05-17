@@ -2,6 +2,7 @@ import { Metadata } from 'next';
 import { CategoryLanding } from '@/components';
 import { client } from '@/sanity/lib/client';
 import { getHighwayOfTearsPosts } from '@/lib/queries/pages';
+import { SITE_OG_IMAGE } from '@/constants/seo';
 import styles from './page.module.css';
 
 interface Story {
@@ -13,27 +14,27 @@ interface Story {
 	link?: string;
 }
 
+const description =
+	'The Highway of Tears is an isolated 725-kilometer stretch of Highway 16. It has been the location of many unsolved murders and disappearances of Indigenous women.';
+
 export const metadata: Metadata = {
 	title: 'The Highway of Tears | Hue and Cry',
-	description:
-		'The Highway of Tears is an isolated 725-kilometer stretch of Highway 16. It has been the location of many unsolved murders and disappearances of Indigenous women.',
-	metadataBase: new URL(
-		`${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`
-	),
+	description,
 	alternates: {
 		canonical: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`,
 	},
 	openGraph: {
 		title: 'The Highway of Tears | Hue and Cry',
-		description:
-			'The Highway of Tears is an isolated 725-kilometer stretch of Highway 16. It has been the location of many unsolved murders and disappearances of Indigenous women.',
+		description,
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/highway-of-tears`,
 		siteName: 'Hue and Cry',
-		images: [
-			{
-				url: `${process.env.NEXT_PUBLIC_MEDIA_URL}/highway-of-tears`,
-			},
-		],
+		images: [{ url: SITE_OG_IMAGE }],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'The Highway of Tears | Hue and Cry',
+		description,
+		images: [SITE_OG_IMAGE],
 	},
 };
 

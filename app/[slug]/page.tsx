@@ -19,11 +19,10 @@ export async function generateStaticParams() {
 	return slugs;
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export async function generateMetadata({
 	params,
 }: {
-	params: any;
+	params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
 	const { slug } = await params;
 	const post = await getPost(slug);
@@ -57,8 +56,11 @@ export async function generateMetadata({
 	};
 }
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
-export default async function PostPage({ params }: { params: any }) {
+export default async function PostPage({
+	params,
+}: {
+	params: Promise<{ slug: string }>;
+}) {
 	const { slug } = await params;
 
 	const post = await getPost(slug);
@@ -67,26 +69,49 @@ export default async function PostPage({ params }: { params: any }) {
 		return null;
 	}
 
-	const jsonLd = {
+	const domain = process.env.NEXT_PUBLIC_APP_DOMAIN;
+	const postUrl = `${domain}/${post.slug}`;
+
+	const articleSchema = {
 		'@context': 'https://schema.org',
 		'@type': 'Article',
 		headline: post.title,
 		description: post.summary,
 		image: post.featuredImage,
-		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
+		url: postUrl,
 		datePublished: post.date,
 		publisher: {
 			'@type': 'Organization',
 			name: 'Hue and Cry',
-			url: process.env.NEXT_PUBLIC_APP_DOMAIN,
+			url: domain,
 		},
+	};
+
+	const breadcrumbSchema = {
+		'@context': 'https://schema.org',
+		'@type': 'BreadcrumbList',
+		itemListElement: [
+			{ '@type': 'ListItem', position: 1, name: 'Home', item: domain },
+			{
+				'@type': 'ListItem',
+				position: 2,
+				name: post.category.title,
+				item: `${domain}/${post.category.slug}`,
+			},
+			{ '@type': 'ListItem', position: 3, name: post.title, item: postUrl },
+		],
 	};
 
 	return (
 		<>
 			<script
 				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+			/>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+
 			/>
 			<PostHeader
 				title={post.title}

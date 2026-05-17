@@ -1,4 +1,5 @@
 import Image from 'next/image';
+import Link from 'next/link';
 import { BsChatRightFill } from 'react-icons/bs';
 import { format, parseISO } from 'date-fns';
 import { CommentCount } from '@/components';
@@ -33,7 +34,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 	return (
 		<>
 			<div className={styles.postContainer}>
-				<a href={post.slug}>
+				<Link href={`/${post.slug}`}>
 					<div className={styles.postImage}>
 						{post.tags?.some((tag: Tag) => tag.title === 'Updated') && (
 							<div className={styles.updateTag}>Update</div>
@@ -46,16 +47,16 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 							fill
 						/>
 					</div>
-				</a>
+				</Link>
 				{post.category && (
 					<h5 className={styles.category}>
-						<a href={post?.category?.slug}>{post?.category?.title}</a>
+						<Link href={`/${post?.category?.slug}`}>{post?.category?.title}</Link>
 					</h5>
 				)}
 				<h3 className={styles.postTitle}>
-					<a href={post.slug}>
+					<Link href={`/${post.slug}`}>
 						{isCategoryPage ? truncateTitle(post.title) : post.title}
-					</a>
+					</Link>
 				</h3>
 				<div className={styles.postMeta}>
 					<p className={styles.date}>{dateFormatted}</p>

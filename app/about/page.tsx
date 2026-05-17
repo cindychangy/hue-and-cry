@@ -1,24 +1,25 @@
 import { Metadata } from 'next';
 import styles from './page.module.css';
-import { SITE_DESCRIPTION } from '@/constants/seo';
+import { SITE_DESCRIPTION, SITE_OG_IMAGE } from '@/constants/seo';
 
 export const metadata: Metadata = {
 	title: 'About | Hue and Cry',
-	description: `${SITE_DESCRIPTION}`,
-	metadataBase: new URL('https://thehueandcry.com/about'),
+	description: SITE_DESCRIPTION,
 	alternates: {
-		canonical: 'https://thehueandcry.com/about',
+		canonical: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`,
 	},
 	openGraph: {
 		title: 'About | Hue and Cry',
-		description: `${SITE_DESCRIPTION}`,
-		url: 'https://thehueandcry.com/about',
+		description: SITE_DESCRIPTION,
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/about`,
 		siteName: 'Hue and Cry',
-		images: [
-			{
-				url: `${process.env.NEXT_PUBLIC_MEDIA_URL}/thumbprint-banner.jpg`,
-			},
-		],
+		images: [{ url: SITE_OG_IMAGE }],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'About | Hue and Cry',
+		description: SITE_DESCRIPTION,
+		images: [SITE_OG_IMAGE],
 	},
 };
 export default async function About() {

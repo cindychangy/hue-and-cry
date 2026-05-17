@@ -1,5 +1,6 @@
 import { Post } from '@/types/post';
 import Image from 'next/image';
+import Link from 'next/link';
 import styles from './RelatedPosts.module.css';
 
 export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
@@ -11,7 +12,7 @@ export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
 			<div className={styles.postGrid}>
 				{posts.map((post) => (
 					<div key={post.id} className={styles.relatedPostContainer}>
-						<a href={post.slug}>
+						<Link href={`/${post.slug}`}>
 							<div className={styles.postImage}>
 								<Image
 									alt={post.title}
@@ -21,9 +22,9 @@ export const RelatedPosts = ({ posts }: { posts: Post[] }) => {
 									fill
 								/>
 							</div>
-						</a>
+						</Link>
 						<p className={styles.postTitle}>
-							<a href={post.slug}>{post.title}</a>
+							<Link href={`/${post.slug}`}>{post.title}</Link>
 						</p>
 					</div>
 				))}

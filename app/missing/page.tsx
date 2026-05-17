@@ -2,24 +2,29 @@ import { Metadata } from 'next';
 import { client } from '@/sanity/lib/client';
 import { CategoryLanding } from '@/components';
 import { getMissingPosts } from '@/lib/queries/pages';
+import { SITE_OG_IMAGE } from '@/constants/seo';
+
+const description =
+	'Stories of women and girls who vanished without a trace. Hue and Cry covers unsolved missing persons cases and brings awareness to each victim.';
 
 export const metadata: Metadata = {
 	title: 'Missing | Hue and Cry',
-	description: 'Cases of women and girls who have gone missing.',
-	metadataBase: new URL(`${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`),
+	description,
 	alternates: {
 		canonical: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`,
 	},
 	openGraph: {
 		title: 'Missing | Hue and Cry',
-		description: 'Cases of women and girls who have gone missing.',
+		description,
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/missing`,
 		siteName: 'Hue and Cry',
-		images: [
-			{
-				url: `${process.env.NEXT_PUBLIC_MEDIA_URL}/hueandcry.jpg`,
-			},
-		],
+		images: [{ url: SITE_OG_IMAGE }],
+	},
+	twitter: {
+		card: 'summary_large_image',
+		title: 'Missing | Hue and Cry',
+		description,
+		images: [SITE_OG_IMAGE],
 	},
 };
 
