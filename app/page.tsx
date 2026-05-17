@@ -7,11 +7,10 @@ import { Post } from '@/types/post';
 import styles from './page.module.css';
 
 export const metadata = {
-	title: 'Hue and Cry | True Crime Blog',
-	description:
-		'A true crime blog focusing on crimes against women and girls who have yet to see justice.',
+	title: 'Hue and Cry | Unsolved Crimes Against Women & Girls',
+	description: `Hue and Cry covers unsolved murders and disappearances of women and girls, with a focus on Indigenous women, women of color, and the Highway of Tears. Read each woman's story.`,
 	openGraph: {
-		title: 'Hue and Cry | True Crime Blo',
+		title: 'Hue and Cry | Unsolved Crimes Against Women & Girls',
 		description:
 			'A true crime blog focusing on crimes against women and girls who have yet to see justice.',
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
