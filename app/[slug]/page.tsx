@@ -45,6 +45,8 @@ export async function generateMetadata({
 			title: post.title,
 			description: post.summary,
 			images: [{ url: post.featuredImage }],
+			publishedTime: post.date,
+			modifiedTime: post.updatedAt,
 		},
 		twitter: {
 			card: 'summary_large_image',
@@ -80,6 +82,7 @@ export default async function PostPage({
 		image: post.featuredImage,
 		url: postUrl,
 		datePublished: post.date,
+		dateModified: post.updatedAt,
 		publisher: {
 			'@type': 'Organization',
 			name: 'Hue and Cry',

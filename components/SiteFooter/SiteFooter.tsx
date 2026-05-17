@@ -10,13 +10,15 @@ export const SiteFooter = () => {
 				<p className={styles.copyright}>
 					© {new Date().getFullYear()} Hue and Cry. All Rights Reserved.
 				</p>
-				<ul className={styles.navigation}>
-					{NAV_LINKS.map((item) => (
-						<li key={item.title}>
-							<Link href={item.url}>{item.title}</Link>
-						</li>
-					))}
-				</ul>
+				<nav aria-label="Footer navigation">
+					<ul className={styles.navigation}>
+						{NAV_LINKS.map((item) => (
+							<li key={item.title}>
+								<Link href={item.url}>{item.title}</Link>
+							</li>
+						))}
+					</ul>
+				</nav>
 			</div>
 		</div>
 	);

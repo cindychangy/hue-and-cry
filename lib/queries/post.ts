@@ -20,10 +20,10 @@ export const postFieldsCompact = `
 `;
 
 const postFields = `
-  title, 
+  title,
   "id": _id,
   "date": publishedAt,
-  "id": _id,
+  "updatedAt": _updatedAt,
   summary,
   "featuredImage": featuredImage.asset -> url,
   "slug": slug.current,

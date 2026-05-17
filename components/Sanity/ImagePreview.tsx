@@ -37,7 +37,7 @@ export const ImagePreview = ({ actions }: ImagePreviewProps) => {
 				src={urlForImage(image as Image)}
 				width="100%"
 				height="auto"
-				alt=""
+				alt={caption || ''}
 			/>
 			<p style={captionStyles}>{caption}</p>
 		</Flex>

@@ -28,6 +28,7 @@ export type Podcast = {
 export type Post = {
 	id: string;
 	date: string;
+	updatedAt: string;
 	title: string;
 	summary: string;
 	commentCount: number;
