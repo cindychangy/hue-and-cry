@@ -1,18 +1,17 @@
 import { Metadata } from 'next';
 import styles from './page.module.css';
+import { SITE_DESCRIPTION } from '@/constants/seo';
 
 export const metadata: Metadata = {
 	title: 'About | Hue and Cry',
-	description:
-		'Hue and Cry is a true crime blog focusing on crimes against women and girls who have yet to see justice. We focus on crimes that are committed against women of color.',
+	description: `${SITE_DESCRIPTION}`,
 	metadataBase: new URL('https://thehueandcry.com/about'),
 	alternates: {
 		canonical: 'https://thehueandcry.com/about',
 	},
 	openGraph: {
-		title: 'About Hue and Cry',
-		description:
-			'Hue and Cry is a true crime blog focusing on crimes against women and girls who have yet to see justice. We focus on crimes that are committed against women of color.',
+		title: 'About | Hue and Cry',
+		description: `${SITE_DESCRIPTION}`,
 		url: 'https://thehueandcry.com/about',
 		siteName: 'Hue and Cry',
 		images: [
