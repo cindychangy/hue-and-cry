@@ -50,7 +50,9 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 				</Link>
 				{post.category && (
 					<h5 className={styles.category}>
-						<Link href={`/${post?.category?.slug}`}>{post?.category?.title}</Link>
+						<Link href={`/${post?.category?.slug}`}>
+							{post?.category?.title}
+						</Link>
 					</h5>
 				)}
 				<h3 className={styles.postTitle}>

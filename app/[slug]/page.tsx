@@ -111,7 +111,6 @@ export default async function PostPage({
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
-
 			/>
 			<PostHeader
 				title={post.title}
