@@ -20,7 +20,11 @@ export async function generateStaticParams() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+export async function generateMetadata({
+	params,
+}: {
+	params: any;
+}): Promise<Metadata> {
 	const { slug } = await params;
 	const post = await getPost(slug);
 
