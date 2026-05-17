@@ -3,15 +3,15 @@ import { PostPreview } from '@/components';
 import { client } from '@/sanity/lib/client';
 import { getHomepage } from '@/lib/queries/pages';
 import { NAV_LINKS } from '@/constants/routes';
-import { SITE_DESCRIPTION } from '@/constants/seo';
+import { SITE_TITLE, SITE_DESCRIPTION } from '@/constants/seo';
 import { Post } from '@/types/post';
 import styles from './page.module.css';
 
 export const metadata = {
-	title: 'Hue and Cry | Unsolved Crimes Against Women & Girls',
+	title: SITE_TITLE,
 	description: `${SITE_DESCRIPTION}`,
 	openGraph: {
-		title: 'Hue and Cry | Unsolved Crimes Against Women & Girls',
+		title: SITE_TITLE,
 		description: `${SITE_DESCRIPTION}`,
 		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}`,
 		siteName: 'Hue and Cry',

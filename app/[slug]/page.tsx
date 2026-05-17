@@ -67,8 +67,27 @@ export default async function PostPage({ params }: { params: any }) {
 		return null;
 	}
 
+	const jsonLd = {
+		'@context': 'https://schema.org',
+		'@type': 'Article',
+		headline: post.title,
+		description: post.summary,
+		image: post.featuredImage,
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
+		datePublished: post.date,
+		publisher: {
+			'@type': 'Organization',
+			name: 'Hue and Cry',
+			url: process.env.NEXT_PUBLIC_APP_DOMAIN,
+		},
+	};
+
 	return (
 		<>
+			<script
+				type="application/ld+json"
+				dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+			/>
 			<PostHeader
 				title={post.title}
 				category={post.category}
