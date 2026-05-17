@@ -1,3 +1,4 @@
+import type { Metadata } from 'next';
 import Link from 'next/link';
 import styles from './page.module.css';
 import {
@@ -19,6 +20,40 @@ export async function generateStaticParams() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
+export async function generateMetadata({ params }: { params: any }): Promise<Metadata> {
+	const { slug } = await params;
+	const post = await getPost(slug);
+
+	if (!post) return {};
+
+	const url = `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`;
+
+	return {
+		title: post.title,
+		description: post.summary,
+		alternates: {
+			canonical: url,
+		},
+		openGraph: {
+			type: 'article',
+			locale: 'en_US',
+			url,
+			siteName: 'Hue and Cry',
+			title: post.title,
+			description: post.summary,
+			images: [{ url: post.featuredImage }],
+		},
+		twitter: {
+			card: 'summary_large_image',
+			site: '@thehueandcry',
+			title: post.title,
+			description: post.summary,
+			images: [post.featuredImage],
+		},
+	};
+}
+
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export default async function PostPage({ params }: { params: any }) {
 	const { slug } = await params;
 
@@ -30,27 +65,6 @@ export default async function PostPage({ params }: { params: any }) {
 
 	return (
 		<>
-			<title>{post.title}</title>
-			<meta name="description" content={post.summary} />
-			<meta property="og:locale" content="en_US" />
-			<meta property="og:type" content="article" />
-			<meta property="og:title" content={post.title} />
-			<meta property="og:description" content={post.summary} />
-			<meta
-				property="og:url"
-				content={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-			/>
-			<meta property="og:site_name" content="Hue and Cry" />
-			<meta property="og:image" content={post.featuredImage} />
-			<meta name="twitter:title" content={post.title} />
-			<meta name="twitter:description" content={post.summary} />
-			<meta name="twitter:card" content="summary_large_image" />
-			<meta name="twitter:site" content="@thehueandcry" />
-			<meta name="twitter:image" content={post.featuredImage} />
-			<link
-				rel="canonical"
-				href={`${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`}
-			/>
 			<PostHeader
 				title={post.title}
 				category={post.category}
