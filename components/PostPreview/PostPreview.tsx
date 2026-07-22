@@ -1,8 +1,8 @@
 import Image from 'next/image';
 import Link from 'next/link';
-import { BsChatRightFill } from 'react-icons/bs';
-import { format, parseISO } from 'date-fns';
-import { CommentCount } from '@/components';
+// import { BsChatRightFill } from 'react-icons/bs';
+// import { format, parseISO } from 'date-fns';
+// import { CommentCount } from '@/components';
 import { Post, Tag } from '@/types/post';
 import styles from './PostPreview.module.css';
 
@@ -12,12 +12,12 @@ interface PostPreviewProps {
 }
 
 export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
-	const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
-	const disqusConfig = {
-		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
-		identifier: post.disqusId,
-		title: post.title,
-	};
+	// const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
+	// const disqusConfig = {
+	// 	url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
+	// 	identifier: post.disqusId,
+	// 	title: post.title,
+	// };
 
 	const truncateTitle = (title: string) => {
 		const phrasesToRemove = ['The Disappearance of', 'The Murder of'];
