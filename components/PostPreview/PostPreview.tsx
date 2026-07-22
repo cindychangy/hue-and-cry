@@ -60,7 +60,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 						{isCategoryPage ? truncateTitle(post.title) : post.title}
 					</Link>
 				</h3>
-				<div className={styles.postMeta}>
+				{/* <div className={styles.postMeta}>
 					<p className={styles.date}>{dateFormatted}</p>
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
@@ -70,7 +70,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 							config={disqusConfig}
 						/>
 					</div>
-				</div>
+				</div> */}
 				<p className={styles.summary}>{post.summary}</p>
 			</div>
 		</>
