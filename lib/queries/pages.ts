@@ -8,6 +8,9 @@ export const postFieldsCategoryPage = `
   "slug": slug.current,
   "featuredImage": featuredImage.asset -> url,
   summary,
+  showUpdatedTag,
+  updatedTagAt,
+  disqusId,
 `;
 
 const homepagePosts = groq`*[_type == "homepage"][0]{

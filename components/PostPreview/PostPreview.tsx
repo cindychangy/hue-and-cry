@@ -1,9 +1,10 @@
 import Image from 'next/image';
 import Link from 'next/link';
-// import { BsChatRightFill } from 'react-icons/bs';
-// import { format, parseISO } from 'date-fns';
-// import { CommentCount } from '@/components';
-import { Post, Tag } from '@/types/post';
+import { BsChatRightFill } from 'react-icons/bs';
+import { format, parseISO } from 'date-fns';
+import { CommentCount, UpdatedBadge } from '@/components';
+import { Post } from '@/types/post';
+import { shouldShowUpdatedBadge } from '@/utils/post';
 import styles from './PostPreview.module.css';
 
 interface PostPreviewProps {
@@ -12,12 +13,12 @@ interface PostPreviewProps {
 }
 
 export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
-	// const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
-	// const disqusConfig = {
-	// 	url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
-	// 	identifier: post.disqusId,
-	// 	title: post.title,
-	// };
+	const dateFormatted = format(parseISO(post.date), 'MMMM d, yyyy');
+	const disqusConfig = {
+		url: `${process.env.NEXT_PUBLIC_APP_DOMAIN}/${post.slug}`,
+		identifier: post.disqusId,
+		title: post.title,
+	};
 
 	const truncateTitle = (title: string) => {
 		const phrasesToRemove = ['The Disappearance of', 'The Murder of'];
@@ -36,9 +37,10 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 			<div className={styles.postContainer}>
 				<Link href={`/${post.slug}`}>
 					<div className={styles.postImage}>
-						{post.tags?.some((tag: Tag) => tag.title === 'Updated') && (
-							<div className={styles.updateTag}>Update</div>
-						)}
+						{shouldShowUpdatedBadge(
+							post.showUpdatedBadge,
+							post.updatedBadgeAt
+						) && <UpdatedBadge />}
 						<Image
 							alt={post.title}
 							src={post.featuredImage}
@@ -60,8 +62,8 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 						{isCategoryPage ? truncateTitle(post.title) : post.title}
 					</Link>
 				</h3>
-				{/* <div className={styles.postMeta}>
-					<p className={styles.date}>{dateFormatted}</p>
+				<div className={styles.postMeta}>
+					<p className={styles.date}>Published: {dateFormatted}</p>
 					<div className={styles.divider} />
 					<BsChatRightFill size={12} />
 					<div className={styles.commentCount}>
@@ -70,7 +72,7 @@ export const PostPreview = ({ post, isCategoryPage }: PostPreviewProps) => {
 							config={disqusConfig}
 						/>
 					</div>
-				</div> */}
+				</div>
 				<p className={styles.summary}>{post.summary}</p>
 			</div>
 		</>

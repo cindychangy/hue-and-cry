@@ -6,6 +6,7 @@ export { SiteFooter } from './SiteFooter/SiteFooter';
 export { PostHeader } from './PostHeader/PostHeader';
 export { ContentFormatter } from './ContentFormatter/ContentFormatter';
 export { PostPreview } from './PostPreview/PostPreview';
+export { UpdatedBadge } from './UpdatedBadge/UpdatedBadge';
 export { PostCTA } from './PostCTA/PostCTA';
 export { AssetTitle } from './AssetTitle/AssetTitle';
 export { RelatedPodcasts } from './RelatedPodcasts/RelatedPodcasts';

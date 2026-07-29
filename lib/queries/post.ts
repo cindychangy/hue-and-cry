@@ -13,9 +13,11 @@ export const postFieldsCompact = `
     },
   "featuredImage": featuredImage.asset -> url,
   summary,
-    tags[]->{
+  tags[]->{
     title
   },
+  showUpdatedBadge,
+  updatedBadgeAt,
   disqusId,
 `;
 

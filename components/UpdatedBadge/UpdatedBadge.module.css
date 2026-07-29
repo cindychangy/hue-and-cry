@@ -1,0 +1,14 @@
+.updatedBadge {
+	position: absolute;
+	top: var(--size-10);
+	right: var(--size-10);
+	z-index: 1;
+	background: var(--color-orange-500);
+	opacity: 0.8;
+	color: var(--color-neutral-100);
+	font-size: var(--size-12);
+	font-family: var(--font-family-secondary);
+	font-weight: 600;
+	padding: var(--size-4) var(--size-8);
+	text-transform: uppercase;
+}

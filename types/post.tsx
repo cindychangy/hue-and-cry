@@ -44,6 +44,8 @@ export type Post = {
 	videos?: Video[];
 	podcasts?: Podcast[];
 	tags?: Tag[];
+	showUpdatedBadge?: boolean;
+	updatedBadgeAt?: string;
 	disqusId: string;
 };
 

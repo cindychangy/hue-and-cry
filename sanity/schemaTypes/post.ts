@@ -48,6 +48,36 @@ export default defineType({
 			type: 'date',
 		}),
 		defineField({
+			name: 'showUpdatedBadge',
+			title: 'Show Updated Badge',
+			type: 'boolean',
+			description:
+				'Display an "Updated" badge on post previews. The badge hides automatically 4 weeks after the date below.',
+			options: {
+				layout: 'checkbox',
+			},
+			initialValue: false,
+		}),
+		defineField({
+			name: 'updatedBadgeAt',
+			title: 'Updated Badge Date',
+			type: 'datetime',
+			description:
+				'Set to today when enabling the Updated badge. The badge will hide 4 weeks after this date.',
+			hidden: ({ parent }) => !parent?.showUpdatedBadge,
+			initialValue: () => new Date().toISOString(),
+			validation: (Rule) =>
+				Rule.custom((value, context) => {
+					const parent = context.parent as { showUpdatedBadge?: boolean };
+
+					if (parent?.showUpdatedBadge && !value) {
+						return 'Required when showing the Updated badge';
+					}
+
+					return true;
+				}),
+		}),
+		defineField({
 			name: 'location',
 			title: 'Location',
 			type: 'string',
